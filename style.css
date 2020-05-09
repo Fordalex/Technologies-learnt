@@ -1,0 +1,63 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Merriweather', serif;
+}
+
+p,
+dd,
+dt,
+dl {
+    font-family: 'Roboto', sans-serif;
+}
+
+dd {
+    margin-left: 15px;
+}
+
+dt {
+    margin-left: 0px;
+    font-size: 18px;
+    color: rgb(88, 88, 88);
+    margin-bottom: 10px;
+}
+
+dl {
+    padding: 10px;
+    border: solid lightgray 1px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+}
+
+span {
+    color: gray;
+}
+
+.btn-main {
+    background-image: linear-gradient(rgb(124, 233, 245), rgb(100, 209, 221));
+}
+
+.page-container {
+    max-width: 1200px;
+}
+
+body {
+    background-color: rgb(20, 20, 20);
+}
+
+.secondary-background {
+    border: solid lightgray 1px;
+    border-radius: 10px;
+    background-color: rgb(247, 247, 247);
+}
+
+.container-style {
+    background-color: rgb(255, 255, 255);
+}
+
+.fas {
+    color: rgb(109, 226, 238);
+}
