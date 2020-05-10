@@ -1,16 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap');
+
 /* bootstrap overide */
 
 .card-body {
     padding: 3px;
 }
 
-.card {
-    border: rgb(240, 240, 240) solid 1px;
-    box-shadow: rgba(0, 0, 0, 0.03) 0px 0px 7px 1px;
-}
-
 
 /* base styling */
+
+body {
+    background: url('images/brick-background.png') center fixed;
+    background-size: 100%;
+}
 
 h1,
 h2,
@@ -28,17 +30,40 @@ dl {
     font-family: 'Roboto', sans-serif;
 }
 
+h2 {
+    font-family: 'Finger Paint', cursive;
+    color: white;
+    font-size: 45px;
+}
+
+h3 {
+    color: rgb(54, 54, 54);
+}
+
+h4 {
+    background-color: rgba(250, 250, 250, 0.02);
+    box-shadow: rgba(250, 250, 250, 0.03) 0px 0px 30px 5px;
+    color: rgb(66, 66, 66);
+}
+
 
 /* icons */
 
 .small-icon {
-    font-size: 10px;
-    position: relative;
-    bottom: 2px;
+    font-size: 12px;
+    float: right;
+    margin-right: 10px;
     cursor: pointer;
+    position: relative;
+    top: 9px;
 }
 
 .web-icon {
+    cursor: pointer;
+    float: right;
+}
+
+.click-icon {
     cursor: pointer;
 }
 
@@ -46,11 +71,15 @@ dl {
 /* list style */
 
 dd {
-    margin-left: 15px;
+    margin-left: 10px;
+}
+
+dd:last-of-type {
+    margin-bottom: 0px;
 }
 
 dt {
-    margin-left: 0px;
+    margin-left: 3px;
     font-size: 18px;
     color: rgb(88, 88, 88);
     margin-bottom: 7px;
@@ -61,7 +90,18 @@ dl {
     border: solid rgb(220, 220, 220) 1px;
     border-radius: 5px;
     background-color: rgba(255, 255, 255);
-    box-shadow: rgba(0, 0, 0, 0.06) 0px 0px 7px 1px;
+    box-shadow: rgba(0, 0, 0, 0.22) 0px 0px 20px 1px;
+}
+
+
+/*  */
+
+.wrapper {
+    box-sizing: border-box;
+    border: rgb(211, 211, 211) solid 1px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 7px 1px;
+    padding-right: 18px;
+    border-radius: 5px;
 }
 
 span {
@@ -76,15 +116,12 @@ span {
     max-width: 1200px;
 }
 
-body {
-    background-color: rgb(35, 35, 35);
-}
-
 .secondary-background {
-    border: solid lightgray 1px;
+    border: solid grey 1px;
     border-radius: 5px;
-    background-color: rgb(247, 247, 247);
-    box-shadow: rgba(255, 255, 255, 0.38) 0px 0px 25px 4px;
+    backdrop-filter: blur(5px);
+    box-shadow: rgba(255, 255, 255, 0.3) 0px 0px 28px 4px;
+    background-color: rgba(250, 250, 250, 0.75);
 }
 
 .container-style {
@@ -92,6 +129,6 @@ body {
 }
 
 .fas {
-    color: #90caf9;
+    color: #649fd0;
     font-size: 20px;
 }

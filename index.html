@@ -17,7 +17,7 @@
 
         <div class="row m-0 p-0">
             <div class="col-12">
-                <h2 class="text-center my-4 text-light">Technologies</h2>
+                <h2 class="text-center my-4">Technologies</h2>
             </div>
         </div>
 
@@ -25,18 +25,36 @@
             <div class="col-12 col-lg-6 p-0 p-lg-2">
                 <div class="row m-0 p-1 secondary-background">
                     <div class="col-12 p-0">
-                        <h3 class="my-3 text-center"><u>FrontEnd</u><img src="https://img.icons8.com/ios/25/000000/open-sign.png" id="open-all-front" class="ml-2 web-icon"></h3>
+                        <h3 class="my-3 text-center"><u>FrontEnd</u><img src="https://img.icons8.com/ultraviolet/30/000000/open-sign.png" id="open-all-front" class="ml-2 click-icon"></h3>
                     </div>
+                    <!-- languages -->
                     <div class="col-12 p-0">
                         <h4 class="mb-3">Languages<i class="fas fa-language ml-2"></i></h4>
                     </div>
                     <div class="col-12 px-0 px-lg-2">
                         <dl>
-                            <dt>HTML</dt>
-                            <dt>CSS <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#css"></i></dt>
-                            <dd class="ml-3 collapse" id="css">Sass</dd>
-                            <dt>JavaScript (OOP)<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#js"></i></dt>
-                            <dd class="ml-3 collapse" id="js">Jquery</dd>
+                            <dt><img src="https://img.icons8.com/color/15/000000/html-5.png" class="mr-2" />HTML</dt>
+                            <dt><img src="https://img.icons8.com/color/15/000000/css3.png" class="mr-2" />CSS <i
+                                    class="far fa-plus-square ml-2 small-icon front-plus" data-toggle="collapse"
+                                    href="#css"></i></dt>
+                            <div class="collapse wrapper" id="css">
+                                <div class="p-2">
+                                    <dd>Sass
+                                        <a href="https://sass-lang.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                    </dd>
+                                </div>
+                            </div>
+
+                            <dt><img src="https://img.icons8.com/color/15/000000/javascript.png"
+                                    class="mr-2" />JavaScript (OOP)<i
+                                    class="far fa-plus-square ml-2 small-icon front-plus" data-toggle="collapse"
+                                    href="#js"></i></dt>
+                            <div class="collapse wrapper" id="js">
+                                <div class="p-2">
+                                    <dd>Jquery</dd>
+                                </div>
+                            </div>
+
                         </dl>
                     </div>
                     <!-- add ons -->
@@ -45,14 +63,20 @@
                     </div>
                     <div class="col-12 px-0 px-lg-2">
                         <dl>
-                            <dt>Framework<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#frame"></i></dt>
-                            <div id="frame" class="collapse ml-3">
-                                <dd>Bootstrap
-                                    <a href="https://getbootstrap.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
-                                </dd>
-                                <dd>Materialize
-                                    <a href="https://materializecss.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
-                                </dd>
+                            <dt><img src="https://img.icons8.com/color/15/000000/under-construction.png"
+                                    class="mr-2" />Framework<i class="far fa-plus-square ml-2 small-icon front-plus"
+                                    data-toggle="collapse" href="#frame"></i></dt>
+                            <div id="frame" class="collapse wrapper">
+                                <div class="p-2">
+                                    <dd>Bootstrap
+
+                                        <a href="https://getbootstrap.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                    </dd>
+                                    <dd>Materialize
+                                        <a href="https://materializecss.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                    </dd>
+                                </div>
+
                             </div>
 
                         </dl>
@@ -64,135 +88,172 @@
                     <div class="col-12 px-0 px-lg-2">
                         <dl>
 
-                            <div class="card card-body mb-3">
-                                <dt>Animation<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#animation"></i></dt>
-                                <dd class="collapse" id="animation"><b>type.js</b><img src="https://img.icons8.com/metro/18/000000/info.png" class="ml-2 web-icon" data-toggle="collapse" href="#type"> <span class="collapse" id="type">Animates a list of words from an array.</span>
-                                    <a href="https://github.com/mattboldt/typed.js" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
-                                </dd>
-                            </div>
+                            <div class="mb-3">
+                                <dt><img src="https://img.icons8.com/color/18/000000/pixar-lamp.png"
+                                        class="mr-2" />Animation<i class="far fa-plus-square ml-2 small-icon front-plus"
+                                        data-toggle="collapse" href="#animation"></i></dt>
 
-                            <div class="card card-body">
-                                <dt>Charts<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#charts"></i></dt>
-                                <div class="collapse" id="charts">
-                                    <dd><b>d3.js</b><img src="https://img.icons8.com/metro/18/000000/info.png" class="ml-2 web-icon" data-toggle="collapse" href="#d3"><span class="collapse" id="d3">Used for creating charts.</span>
-                                        <a href="https://d3js.org/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+
+                                <div class="collapse wrapper" id="animation">
+                                    <div class="p-2">
+                                        <dd>
+                                            <b>type.js</b><img src="https://img.icons8.com/metro/18/000000/info.png" class="ml-2 web-icon" data-toggle="collapse" href="#type"> <span class="collapse" id="type">Animates a list of words from an
+                                                array.</span>
+                                            <a href="https://github.com/mattboldt/typed.js" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                        </dd>
+                                    </div>
+
+
                                     </dd>
-                                    <dd><b>dc.js</b><img src="https://img.icons8.com/metro/18/000000/info.png" class="ml-2 web-icon" data-toggle="collapse" href="#dc"> <span class="collapse" id="dc">Dimensional charting.</span>
-                                        <a href="https://dc-js.github.io/dc.js/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
-                                    </dd>
-                                    <dd><b>chart.js</b> <span>charts.</span></dd>
-                                    <dd><b>crossfilter.js</b> <span>Making interactive charts.</span></dd>
                                 </div>
 
-                            </div>
+                                <div>
+                                    <dt><img src="https://img.icons8.com/plasticine/18/000000/combo-chart.png"
+                                        class="mr-2" />Charts<i class="far fa-plus-square ml-2 small-icon front-plus"
+                                        data-toggle="collapse" href="#charts"></i></dt>
+                                    <div class="collapse wrapper" id="charts">
+                                        <div class="p-2">
+                                            <dd><b>d3.js</b><img src="https://img.icons8.com/metro/18/000000/info.png" class="ml-2 web-icon" data-toggle="collapse" href="#d3"><span class="collapse" id="d3">Used for creating charts.</span>
+                                                <a href="https://d3js.org/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                            </dd>
+                                            <dd><b>dc.js</b><img src="https://img.icons8.com/metro/18/000000/info.png" class="ml-2 web-icon" data-toggle="collapse" href="#dc"> <span class="collapse" id="dc">Dimensional charting.</span>
+                                                <a href="https://dc-js.github.io/dc.js/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                            </dd>
+                                            <dd><b>chart.js</b> <span>charts.</span></dd>
+                                            <dd><b>crossfilter.js</b> <span>Making interactive charts.</span></dd>
+                                        </div>
+                                    </div>
 
-                        </dl>
-
-                    </div>
-                    <div class="col-12 p-0">
-                        <h4 class="mb-3">Styling<i class="fas fa-fighter-jet ml-2"></i></h4>
-                    </div>
-                    <div class="col-12 px-0 px-lg-2">
-                        <dl>
-                            <div class="card card-body mb-3">
-                                <dt>Icons<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#icons"></i></dt>
-                                <div class="collapse" id="icons">
-                                    <dd class="ml-3">Fontawesome
-                                        <a href="https://fontawesome.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
-                                    </dd>
-                                    <dd class="ml-3">Icons8
-                                        <a href="https://icons8.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
-                                    </dd>
-                                    <dd class="ml-3">IconsShock
-                                        <a href="https://www.iconshock.com/open-icons/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
-                                    </dd>
                                 </div>
-                            </div>
-                            <div class="card card-body">
-                                <dt>Fonts<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#fonts"></i></dt>
-                                <dd class="ml-3 collapse" id="fonts">Google Fonts
-                                    <a href="https://fonts.google.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
-                                </dd>
-                            </div>
+
                         </dl>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-lg-6 mt-3 mt-lg-0 p-0 p-lg-2">
-                <div class="row m-0 p-1 secondary-background">
-                    <div class="col-12 p-0 ">
-                        <h3 class="my-3 text-center"><u>Backend</u><img src="https://img.icons8.com/ios/25/000000/open-sign.png" id="open-all-back" class="ml-2 web-icon"></h3>
-                    </div>
-                    <div class="col-12 p-0 ">
-                        <h4 class="mb-3 ">Languages<i class="fas fa-language ml-2"></i></h4>
-                    </div>
-                    <div class="col-12 px-0 px-lg-2">
-                        <dl>
-                            <dt>Python</dt>
-                        </dl>
-                    </div>
-                    <div class="col-12 p-0 ">
-                        <h4 class="mb-3 ">Add ons<i class="fas fa-puzzle-piece ml-2"></i></h4>
-                    </div>
-                    <div class="col-12 px-0 px-lg-2">
-                        <dl>
-                            <div class="card card-body mb-3">
-                                <dt>Framework<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#framework"></i></dt>
-                                <div class="collapse" id="framework">
-                                    <dd class="ml-3">Flask</dd>
-                                    <dt class="ml-3">Django<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django"></i></dt>
-                                    <div class="collapse ml-4" id="django">
-                                        <dt>Python Modules</dt>
-                                        <dd>bootrapforms</dd>
+
+                        </div>
+                        <!-- styling -->
+                        <div class="col-12 p-0">
+                            <h4 class="mb-3">Styling<i class="fas fa-fighter-jet ml-2"></i></h4>
+                        </div>
+                        <div class="col-12 px-0 px-lg-2">
+                            <dl>
+                                <div class="mb-3">
+                                    <dt><img src="https://img.icons8.com/color/17/000000/medium-icons.png"
+                                        class="mr-2" />Icons<i class="far fa-plus-square ml-2 small-icon front-plus"
+                                        data-toggle="collapse" href="#icons"></i></dt>
+                                    <div class="collapse wrapper" id="icons">
+                                        <div class="p-2">
+                                            <dd class="ml-3">Fontawesome
+                                                <a href="https://fontawesome.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                            </dd>
+                                            <dd class="ml-3">Icons8
+                                                <a href="https://icons8.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                            </dd>
+                                            <dd class="ml-3">IconsShock
+                                                <a href="https://www.iconshock.com/open-icons/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                            </dd>
+                                        </div>
+
                                     </div>
                                 </div>
-                            </div>
-                            <div class="card card-body">
-                                <dt>Python modules<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#modules"></i></dt>
-                                <dd class="ml-3 collapse" id="modules"><b>pyperclip</b></dd>
+                                <div>
+                                    <dt><img src="https://img.icons8.com/ios-glyphs/16/000000/sentence-case--v2.png"
+                                        class="mr-2" />Fonts<i class="far fa-plus-square ml-2 small-icon front-plus"
+                                        data-toggle="collapse" href="#fonts"></i></dt>
+                                    <div class="ml-3 collapse wrapper" id="fonts">
+                                        <div class="p-2">
+                                            <dd>Google Fonts
+                                                <a href="https://fonts.google.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                            </dd>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 mt-3 mt-lg-0 p-0 p-lg-2">
+                    <div class="row m-0 p-1 secondary-background">
+                        <div class="col-12 p-0 ">
+                            <h3 class="my-3 text-center"><u>Backend</u><img src="https://img.icons8.com/ios/25/000000/open-sign.png" id="open-all-back" class="ml-2 click-icon"></h3>
+                        </div>
+                        <!-- languages -->
+                        <div class="col-12 p-0 ">
+                            <h4 class="mb-3 ">Languages<i class="fas fa-language ml-2"></i></h4>
+                        </div>
+                        <div class="col-12 px-0 px-lg-2">
+                            <dl>
+                                <dt><img src="https://img.icons8.com/color/15/000000/python.png" class="mr-2" />Python</dt>
+                            </dl>
+                        </div>
+                        <!-- add ons -->
+                        <div class="col-12 p-0 ">
+                            <h4 class="mb-3 ">Add ons<i class="fas fa-puzzle-piece ml-2"></i></h4>
+                        </div>
+                        <div class="col-12 px-0 px-lg-2">
+                            <dl>
+                                <div class="card card-body mb-3">
+                                    <dt><img src="https://img.icons8.com/color/15/000000/under-construction.png"
+                                        class="mr-2" />Framework<i class="far fa-plus-square ml-2 small-icon"
+                                        data-toggle="collapse" href="#framework"></i></dt>
+                                    <div class="collapse" id="framework">
+                                        <dd class="ml-3">Flask</dd>
+                                        <dt class="ml-3">Django<i class="far fa-plus-square ml-2 small-icon"
+                                            data-toggle="collapse" href="#django"></i></dt>
+                                        <div class="collapse ml-4" id="django">
+                                            <dt>Python Modules</dt>
+                                            <dd>bootrapforms</dd>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card card-body">
+                                    <dt><img src="https://img.icons8.com/offices/18/000000/module.png" class="mr-2" />Python
+                                    modules<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse"
+                                        href="#modules"></i></dt>
+                                    <dd class="ml-3 collapse" id="modules"><b>pyperclip</b></dd>
 
 
-                            </div>
-                        </dl>
+                                </div>
+                            </dl>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="row m-0 p-0">
-            <div class="col-12">
-                <h2 class="text-center my-4 text-light">Education</h2>
-            </div>
-        </div>
-
-        <div class="row m-0 p-0">
-            <div class="col-12 col-lg-6">
-                <div class="row m-0 p-3 secondary-background">
-                    <div class="col-12 p-0">
-                        <h3 class="my-3 text-center"><u>Development</u></h3>
-                    </div>
-
+            <div class="row m-0 p-0">
+                <div class="col-12">
+                    <h2 class="text-center my-4 text-light">Education</h2>
                 </div>
             </div>
-            <div class="col-12 col-lg-6 mt-3 mt-lg-0">
-                <div class="row m-0 p-3 secondary-background">
-                    <div class="col-12 p-0 ">
-                        <h3 class="my-3 text-center"><u>Design</u></h3>
+
+            <div class="row m-0 p-0">
+                <div class="col-12 col-lg-6">
+                    <div class="row m-0 p-3 secondary-background">
+                        <div class="col-12 p-0">
+                            <h3 class="my-3 text-center"><u>Development</u></h3>
+                        </div>
+
                     </div>
+                </div>
+                <div class="col-12 col-lg-6 mt-3 mt-lg-0">
+                    <div class="row m-0 p-3 secondary-background">
+                        <div class="col-12 p-0 ">
+                            <h3 class="my-3 text-center"><u>Design</u></h3>
+                        </div>
 
 
+                    </div>
                 </div>
             </div>
+
         </div>
 
-    </div>
 
 
-
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="javascript.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="javascript.js"></script>
 </body>
 
 </html>

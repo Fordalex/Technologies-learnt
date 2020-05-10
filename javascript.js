@@ -6,10 +6,17 @@ $('#open-all-front').on('click', function() {
     $('#charts').collapse('toggle');
     $('#icons').collapse('toggle');
     $('#fonts').collapse('toggle');
+    $('.front-plus').toggleClass('fa-plus-square')
+    $('.front-plus').toggleClass('fa-minus-square')
 });
 
 $('#open-all-back').on('click', function() {
     $('#framework').collapse('toggle');
     $('#django').collapse('toggle');
     $('#modules').collapse('toggle');
+});
+
+$('.far').on('click', function() {
+    $(this).toggleClass('fa-plus-square')
+    $(this).toggleClass('fa-minus-square')
 });
