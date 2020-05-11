@@ -7,11 +7,36 @@
     <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto:wght@300&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d4ed0579d0.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="static/css/style.css">
     <title>Technologies</title>
 </head>
 
-<body class="p-2 d-flex justify-content-center">
+<body class="p-0 d-flex justify-content-center">
+
+    <!-- modals -->
+
+    <!-- css -->
+    <div class="modal-style closed" id="sassModal">
+        <img src="https://img.icons8.com/plasticine/50/000000/crossed-arrow.png" class="float-right sassModalButton arrow-button" />
+        <h4 class="mt-2"><span class="t-letter">S</span><span class="t-letter">a</span><span class="t-letter">s</span><span class="t-letter">s</span></h4>
+        <hr class="mt-3">
+        <!-- content -->
+        <div class="scroll-container">
+
+        </div>
+    </div>
+
+    <!-- gsap -->
+    <div class="modal-style closed" id="gsapModal">
+        <img src="https://img.icons8.com/plasticine/50/000000/crossed-arrow.png" class="float-right gsapModalButton arrow-button" />
+        <h4 class="mt-2"><span class="t-letter">G</span><span class="t-letter">s</span><span class="t-letter">a</span><span class="t-letter">p</span></h4>
+        <hr class="mt-3">
+        <!-- content -->
+        <div class="scroll-container">
+            <p>Great for creating more complex animations!</p>
+        </div>
+    </div>
+
 
     <div class="page-container">
 
@@ -43,6 +68,7 @@
                                 <div class="p-2">
                                     <dd>Sass
                                         <a href="https://sass-lang.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                        <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 sassModalButton">
                                     </dd>
                                 </div>
                             </div>
@@ -93,7 +119,6 @@
                     </div>
                     <div class="col-12 px-0 px-lg-2">
                         <dl>
-
                             <div>
                                 <dt><img src="https://img.icons8.com/color/18/000000/pixar-lamp.png"
                                         class="mr-2" />Animation<i class="far fa-plus-square ml-2 small-icon front-plus"
@@ -104,6 +129,13 @@
                                             type.js
                                             <a href="https://github.com/mattboldt/typed.js" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
                                         </dd>
+                                        <hr>
+                                        <dd>
+                                            gsap
+                                            <a href="https://greensock.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                            <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 gsapModalButton">
+                                        </dd>
+
                                     </div>
                                     </dd>
                                 </div>
@@ -130,8 +162,6 @@
                                         </dd>
                                     </div>
                                 </div>
-
-
                         </dl>
 
                         </div>
@@ -202,24 +232,23 @@
                             <dl>
 
                                 <dt><img src="https://img.icons8.com/color/15/000000/under-construction.png"
-                                        class="mr-2" />Framework<i class="far fa-plus-square ml-2 small-icon"
-                                        data-toggle="collapse" href="#framework"></i></dt>
+                                    class="mr-2" />Framework<i class="far fa-plus-square ml-2 small-icon"
+                                    data-toggle="collapse" href="#framework"></i></dt>
                                 <div class="collapse wrapper" id="framework">
                                     <div class="p-2">
                                         <dd class="ml-3">Flask</dd>
                                         <dt class="ml-3">Django<i class="far fa-plus-square ml-2 small-icon"
-                                                data-toggle="collapse" href="#django"></i></dt>
+                                            data-toggle="collapse" href="#django"></i></dt>
                                         <div class="collapse ml-4" id="django">
                                             <dt>Python Modules</dt>
                                             <dd>bootrapforms</dd>
                                         </div>
                                     </div>
-
                                 </div>
                                 <hr>
                                 <dt><img src="https://img.icons8.com/offices/18/000000/module.png" class="mr-2" />Python
-                                    modules<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse"
-                                        href="#modules"></i></dt>
+                                modules<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse"
+                                    href="#modules"></i></dt>
                                 <div class="collapse wrapper mt-2" id="modules">
                                     <div class="p-2">
                                         <dd>pyperclip
@@ -227,9 +256,21 @@
                                         </dd>
                                     </div>
                                 </div>
+                                <hr>
+                                <dt><img src="https://img.icons8.com/dusk/18/000000/add-database.png"
+                                    class="mr-2" />Databases<i class="far fa-plus-square ml-2 small-icon"
+                                    data-toggle="collapse" href="#database"></i></dt>
+                                <div class="collapse wrapper mt-2" id="database">
+                                    <div class="p-2">
+                                        <dd>MongoDB
+                                            <a href="https://www.mongodb.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                        </dd>
+                                        <hr>
+                                        <dd>Postgres
 
-
-
+                                        </dd>
+                                    </div>
+                                </div>
                             </dl>
                         </div>
                     </div>
@@ -243,7 +284,7 @@
             </div>
 
             <div class="row m-0 p-0">
-                <div class="col-12 col-lg-6">
+                <div class="col-12 col-lg-6 p-0">
                     <div class="row m-0 p-3 secondary-background">
                         <div class="col-12 p-0">
                             <h3 class="my-3 text-center"><u>Development</u></h3>
@@ -251,25 +292,26 @@
 
                     </div>
                 </div>
-                <div class="col-12 col-lg-6 mt-3 mt-lg-0">
+                <div class="col-12 col-lg-6 mt-3 mt-lg-0 p-0">
                     <div class="row m-0 p-3 secondary-background">
                         <div class="col-12 p-0 ">
                             <h3 class="my-3 text-center"><u>Design</u></h3>
                         </div>
-
-
                     </div>
                 </div>
             </div>
-
         </div>
+
 
 
 
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-        <script src="javascript.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+        <script src="static/js/modal.js"></script>
+        <script src="static/js/javascript.js"></script>
+
 </body>
 
 </html>

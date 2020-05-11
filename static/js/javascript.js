@@ -14,6 +14,7 @@ $('#open-all-back').on('click', function() {
     $('#framework').collapse('toggle');
     $('#django').collapse('toggle');
     $('#modules').collapse('toggle');
+    $('#database').collapse('toggle');
 });
 
 $('.far').on('click', function() {
