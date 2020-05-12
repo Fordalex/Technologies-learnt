@@ -173,11 +173,17 @@ span {
     border: rgb(233, 233, 233) solid 1px;
     box-shadow: rgba(0, 0, 0, 0.045) 0px 0px 7px 1px inset;
     border-radius: 5px;
-    background-color: rgb(179, 179, 179);
+    background-color: white;
 }
 
 .t-letter {
-    bottom: 50px;
+    bottom: 100px;
+    position: relative;
+    color: black;
+}
+
+.d-letter {
+    bottom: 100px;
     position: relative;
     color: black;
 }
