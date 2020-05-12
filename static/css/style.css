@@ -78,6 +78,13 @@ h4 {
 }
 
 
+/* title */
+
+.secondary-title {
+    background: radial-gradient(rgba(142, 244, 255, 0.15), rgba(255, 255, 255, 0));
+}
+
+
 /* list style */
 
 dd {
@@ -182,7 +189,7 @@ span {
     overflow-y: auto;
     padding: 10px;
     border: rgb(190, 190, 190) solid 1px;
-    box-shadow: rgba(0, 0, 0, 0.045) 0px 0px 7px 1px inset;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 7px 1px inset;
     border-radius: 5px;
     background-color: white;
 }

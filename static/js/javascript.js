@@ -6,8 +6,13 @@ $('#open-all-front').on('click', function() {
     $('#charts').collapse('toggle');
     $('#icons').collapse('toggle');
     $('#fonts').collapse('toggle');
-    $('.front-plus').toggleClass('fa-plus-square')
-    $('.front-plus').toggleClass('fa-minus-square')
+    $('#forms').collapse('toggle');
+    $('.front-plus').toggleClass('fa-plus-square');
+    $('.front-plus').toggleClass('fa-minus-square');
+    $('#illustrations').collapse('toggle');
+    $('#photos').collapse('toggle');
+    $('#svg').collapse('toggle');
+    $('#inspiration').collapse('toggle');
 });
 
 $('#open-all-back').on('click', function() {
