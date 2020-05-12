@@ -11,7 +11,7 @@
 /* base styling */
 
 body {
-    background: url('../../images/code-background-1.jpg') center fixed;
+    background: url('../../images/code-background-1.png') center fixed;
     background-size: 100%;
 }
 
@@ -146,6 +146,8 @@ span {
     font-size: 20px;
     float: right;
     margin-right: 20px;
+    position: relative;
+    top: 3px;
 }
 
 
@@ -171,11 +173,41 @@ span {
     border: rgb(233, 233, 233) solid 1px;
     box-shadow: rgba(0, 0, 0, 0.045) 0px 0px 7px 1px inset;
     border-radius: 5px;
-    background-color: white;
+    background-color: rgb(179, 179, 179);
 }
 
 .t-letter {
     bottom: 50px;
     position: relative;
     color: black;
+}
+
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    background: lightgrey;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(rgb(12, 201, 226), rgb(6, 177, 199));
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
