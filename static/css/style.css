@@ -128,6 +128,8 @@ span {
 
 .page-container {
     max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .secondary-background {
@@ -153,12 +155,21 @@ span {
 
 /* modal */
 
+.arrow-button {
+    position: relative;
+    bottom: 8px;
+}
+
+.dark-hr {
+    background-color: darkgrey;
+}
+
 .modal-style {
     padding: 10px;
     left: 0;
     top: 800px;
     z-index: 10;
-    background-color: rgb(250, 250, 250);
+    background-color: rgb(200, 200, 200);
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -170,20 +181,20 @@ span {
     width: 100%;
     overflow-y: auto;
     padding: 10px;
-    border: rgb(233, 233, 233) solid 1px;
+    border: rgb(190, 190, 190) solid 1px;
     box-shadow: rgba(0, 0, 0, 0.045) 0px 0px 7px 1px inset;
     border-radius: 5px;
     background-color: white;
 }
 
 .t-letter {
-    bottom: 100px;
+    bottom: 1000px;
     position: relative;
     color: black;
 }
 
 .d-letter {
-    bottom: 100px;
+    bottom: 1000px;
     position: relative;
     color: black;
 }
