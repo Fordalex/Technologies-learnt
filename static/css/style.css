@@ -13,6 +13,7 @@
 body {
     background: url('../../images/code-background-1.png') center fixed;
     background-size: 100%;
+    overflow-x: hidden;
 }
 
 hr {
@@ -134,6 +135,7 @@ span {
 }
 
 .page-container {
+    opacity: 0;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
@@ -172,6 +174,8 @@ span {
 }
 
 .modal-style {
+    background: url('../../images/code-background-1.png') center fixed;
+    background-size: 100%;
     padding: 10px;
     left: 0;
     top: 100vh;
@@ -236,4 +240,32 @@ span {
 
  ::-webkit-scrollbar-thumb:hover {
     background: #555;
+}
+
+
+/* onload shutters */
+
+.left-shutter {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0vw;
+    height: 100vh;
+    width: 50vw;
+    background-image: url("../../images/onload-shutters.png");
+    background-size: 200% 100%;
+}
+
+.right-shutter {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0vw;
+    height: 100vh;
+    width: 50vw;
+    background-image: url("../../images/onload-shutters.png");
+    background-size: 200% 100%;
+    background-position-x: 100%;
 }
