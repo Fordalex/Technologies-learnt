@@ -254,7 +254,8 @@ span {
     height: 100vh;
     width: 50vw;
     background-image: url("../../images/onload-shutters.png");
-    background-size: 200% 100%;
+    background-size: 400% 100%;
+    background-position-x: 300%;
 }
 
 .right-shutter {
@@ -266,6 +267,6 @@ span {
     height: 100vh;
     width: 50vw;
     background-image: url("../../images/onload-shutters.png");
-    background-size: 200% 100%;
-    background-position-x: 100%;
+    background-size: 400% 100%;
+    background-position-x: 200%;
 }
