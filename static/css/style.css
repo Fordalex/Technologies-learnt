@@ -174,7 +174,7 @@ span {
 .modal-style {
     padding: 10px;
     left: 0;
-    top: 800px;
+    top: 100vh;
     z-index: 10;
     background-color: rgb(200, 200, 200);
     position: fixed;
@@ -198,12 +198,14 @@ span {
     bottom: 1000px;
     position: relative;
     color: black;
+    opacity: 0;
 }
 
 .d-letter {
     bottom: 1000px;
     position: relative;
     color: black;
+    opacity: 0;
 }
 
 

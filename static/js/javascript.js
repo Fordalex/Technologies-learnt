@@ -1,3 +1,10 @@
+// on load animation
+
+var tl = gsap.timeline()
+
+tl.from('.wobble-onload', 1, { transform: 'scaleY(0)', ease: 'elastic', stagger: 0.1 })
+tl.from('.main-title', 1, { opacity: 0, ease: 'power2' }, '-=0.7')
+
 $('#open-all-front').on('click', function() {
     $('#css').collapse('toggle');
     $('#js').collapse('toggle');
