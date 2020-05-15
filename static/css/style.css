@@ -85,7 +85,7 @@ h4 {
 .nav-link-container {
     padding: 8px;
     position: fixed;
-    top: 56px;
+    top: 55px;
     left: 100%;
     height: 100vh;
     width: 60vw;
@@ -93,13 +93,14 @@ h4 {
 }
 
 .nav-backdrop {
+    z-index: 0;
     backdrop-filter: blur(0px);
     background-color: rgba(0, 0, 0, 0.0);
     position: fixed;
     top: 56px;
     right: 100%;
     height: 100vh;
-    width: 40vw;
+    width: 100vw;
 }
 
 .nav-header {
@@ -211,7 +212,7 @@ span {
     margin-right: auto;
     border-left: solid white 1px;
     border-right: solid white 1px;
-    background-color: rgba(00, 0, 0, 0.5);
+    background-color: rgba(116, 124, 52, 0.35);
 }
 
 .secondary-background {
@@ -253,7 +254,6 @@ span {
 .modal-style {
     background: url('../../images/code-background-1.png') center fixed;
     background-size: 100%;
-    padding: 10px;
     left: 0;
     top: 100vh;
     z-index: 10;
@@ -326,8 +326,8 @@ span {
     z-index: 100;
     position: fixed;
     bottom: -30vh;
-    left: -60vw;
-    height: 160vh;
+    left: -50vw;
+    height: 200vh;
     width: 110vw;
     background-image: linear-gradient(rgb(12, 201, 226), rgb(6, 177, 199));
     background-size: 400% 100%;
@@ -338,9 +338,9 @@ span {
 .right-shutter {
     z-index: 100;
     position: fixed;
-    bottom: -30vh;
-    left: 54vw;
-    height: 160vh;
+    bottom: -60vh;
+    left: 45vw;
+    height: 200vh;
     width: 110vw;
     background-image: linear-gradient(rgb(78, 219, 238), rgb(255, 211, 113));
     background-size: 400% 100%;

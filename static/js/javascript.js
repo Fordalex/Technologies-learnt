@@ -46,7 +46,7 @@ $('.toggle-nav').on('click', function() {
     var tl = gsap.timeline()
     if ($('.mobile-navigation').hasClass('closed')) {
         tl.to('.nav-link-container', 0.5, { left: '40vw' });
-        tl.to('.nav-backdrop', 0.05, { right: '60vw' }, '-=0.5');
+        tl.to('.nav-backdrop', 0.05, { right: '0vw' }, '-=0.5');
         tl.to('.nav-backdrop', 1, { backdropFilter: 'blur(4px)', backgroundColor: 'rgba(0, 0, 0, 0.25)' }, '-=0.5');
         tl.from('.nav-button', 0.5, { left: '65vw', stagger: 0.05 }, '-=0.9');
         $('.mobile-navigation').toggleClass('closed');
