@@ -13,6 +13,29 @@
 
 <body class="p-0 d-flex justify-content-center">
 
+    <!-- mobile navigation -->
+
+    <div class="d-block d-lg-none mobile-navigation closed">
+        <div class="nav-link-container">
+            <h4 class="mt-2 mx-0 text-center nav-header">Technologies</h4>
+            <div>
+                <a class="nav-button toggle-nav" href="#frontend-section">Frontend</a>
+                <a class="nav-button toggle-nav" href="#backend-section">Backend</a>
+                <a class="nav-button toggle-nav" href="#mywork-section">My Work</a>
+                <a class="nav-button toggle-nav" href="#programmes-section">Programmes</a>
+                <a class="nav-button toggle-nav" href="#developed-section">Developed</a>
+            </div>
+            <h4 class="mt-2 mx-0 text-center nav-header">Education</h4>
+            <div>
+                <a class="nav-button toggle-nav" href="#development-section">Development</a>
+                <a class="nav-button toggle-nav" href="#design-section">Design</a>
+                <a class="nav-button toggle-nav" href="#pro-section">Programmes</a>
+            </div>
+        </div>
+        <div class="nav-backdrop toggle-nav"></div>
+        <img src="https://img.icons8.com/cotton/50/000000/beefburger.png" class="burger-button toggle-nav" />
+    </div>
+
     <!-- Technologies modals -->
 
     <!-- css -->
@@ -113,7 +136,7 @@
     </div>
 
 
-    <div class="page-container">
+    <div class="page-container px-0 px-md-2 mt-5 mt-lg-0">
 
         <div class="row m-0 p-0">
             <div class="col-12">
@@ -126,7 +149,7 @@
             <!-- frontend section -->
 
             <div class="col-12 col-md-6 col-lg-4 p-0 p-md-2">
-                <div class="row m-0 p-1 secondary-background wobble-onload">
+                <div class="row m-0 p-1 secondary-background wobble-onload full-height" id="frontend-section">
                     <div class="col-12 p-0">
                         <h3 class="py-3 text-center secondary-title">FrontEnd<img src="https://img.icons8.com/cotton/32/000000/detective.png" id="open-all-front" class="ml-2 click-icon"></h3>
                         <hr>
@@ -489,7 +512,7 @@
 
                 <div class="col-12 col-md-6 col-lg-4 mt-3 mt-md-0 p-0 p-md-2 ">
                     <!-- backend -->
-                    <div class="row m-0 p-1 secondary-background wobble-onload">
+                    <div class="row m-0 p-1 secondary-background wobble-onload" id="backend-section">
                         <div class="col-12 p-0 ">
                             <h3 class="py-3 text-center secondary-title">Backend<img src="https://img.icons8.com/cotton/32/000000/detective.png" id="open-all-back" class="ml-2 click-icon"></h3>
                             <hr>
@@ -585,7 +608,7 @@
                         </div>
                     </div>
                     <!-- My Work -->
-                    <div class="row m-0 p-1 secondary-background wobble-onload mt-3">
+                    <div class="row m-0 p-1 secondary-background wobble-onload mt-3" id="mywork-section">
                         <div class="col-12 p-0 ">
                             <h3 class="py-3 text-center secondary-title">My Work<img src="https://img.icons8.com/cotton/32/000000/detective.png" id="open-all-back" class="ml-2 click-icon"></h3>
                             <hr>
@@ -693,7 +716,7 @@
 
                 <div class="col-12 col-md-6 col-lg-4 mt-3 mt-md-0 p-0 p-md-2 ">
                     <!-- programmes -->
-                    <div class="row m-0 p-1 secondary-background wobble-onload">
+                    <div class="row m-0 p-1 secondary-background wobble-onload" id="programmes-section">
                         <div class="col-12 p-0 ">
                             <h3 class="py-3 text-center secondary-title">Programmes<img src="https://img.icons8.com/cotton/32/000000/detective.png" id="open-all-back" class="ml-2 click-icon"></h3>
                             <hr>
@@ -751,7 +774,7 @@
                         </div>
                     </div>
                     <!-- developed -->
-                    <div class="row m-0 p-1 secondary-background wobble-onload mt-3">
+                    <div class="row m-0 p-1 secondary-background wobble-onload mt-3" id="developed-section">
                         <div class="col-12 p-0 ">
                             <h3 class="py-3 text-center secondary-title">Developed<img src="https://img.icons8.com/cotton/32/000000/detective.png" id="open-all-back" class="ml-2 click-icon"></h3>
                             <hr>
@@ -881,7 +904,7 @@
                                 <h5>Visitor Types</h5>
                                 <dl>
                                     <dt>No's</dt>
-                                    <dd>These people will not but your product/service, because of the price of they just don't need it.</dd>
+                                    <dd>These people will not but your product/service, because of the price or they just don't need it.</dd>
                                 </dl>
                                 <dl>
                                     <dt>Maybe's</dt>
@@ -889,7 +912,7 @@
                                 </dl>
                                 <dl>
                                     <dt>Yes's</dt>
-                                    <dd>Don't really matter how your site is structured or designed these are people who have already made up their mind.</dd>
+                                    <dd>Doesn't really matter how your site is structured or designed these are people who have already made up their mind.</dd>
                                 </dl>
                             </div>
                         </div>
@@ -906,7 +929,7 @@
             <div class="row m-0 p-0">
                 <!-- Development -->
                 <div class="col-12 col-md-6 col-lg-4 mt-3 mt-md-0 p-0 p-md-2 ">
-                    <div class="row m-0 p-1 secondary-background wobble-onload">
+                    <div class="row m-0 p-1 secondary-background wobble-onload" id="development-section">
                         <div class="col-12 p-0 ">
                             <h3 class="py-3 text-center secondary-title">Development<img src="https://img.icons8.com/cotton/32/000000/detective.png" id="open-all-back" class="ml-2 click-icon"></h3>
                             <hr>
@@ -968,7 +991,7 @@
                 </div>
                 <!-- Design -->
                 <div class="col-12 col-md-6 col-lg-4 mt-3 mt-md-0 p-0 p-md-2 ">
-                    <div class="row m-0 p-1 secondary-background wobble-onload">
+                    <div class="row m-0 p-1 secondary-background wobble-onload" id="design-section">
                         <div class="col-12 p-0 ">
                             <h3 class="py-3 text-center secondary-title">Design<img src="https://img.icons8.com/cotton/32/000000/detective.png" id="open-all-back" class="ml-2 click-icon"></h3>
                             <hr>
@@ -1029,7 +1052,7 @@
                 </div>
                 <!-- Programmes -->
                 <div class="col-12 col-md-6 col-lg-4 mt-3 mt-md-0 p-0 p-md-2 ">
-                    <div class="row m-0 p-1 secondary-background wobble-onload">
+                    <div class="row m-0 p-1 secondary-background wobble-onload" id="pro-section">
                         <div class="col-12 p-0 ">
                             <h3 class="py-3 text-center secondary-title">Programmes<img src="https://img.icons8.com/cotton/32/000000/detective.png" id="open-all-back" class="ml-2 click-icon"></h3>
                             <hr>
