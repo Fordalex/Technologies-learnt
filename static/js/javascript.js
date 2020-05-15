@@ -7,7 +7,7 @@ tl.to('.right-shutter', 0.7, {}, '-=0.7');
 tl.to('.page-container', 0.1, { opacity: 1 }, '-=0.7')
 tl.to('.left-shutter', 1.5, { x: '-60vw' })
 tl.to('.right-shutter', 1.5, { x: '60vw' }, '-=1.5')
-tl.from('.wobble-onload', 1, { transform: 'scaleY(0)', ease: 'elastic', stagger: 0.1 }, '-=1.2')
+tl.from('.wobble-onload', 1, { transform: 'scale(0)', ease: 'elastic', stagger: 0.1 }, '-=1.2')
 tl.from('.main-title', 1, { opacity: 0, ease: 'power2' }, '-=0.7')
 
 $('#open-all-front').on('click', function() {
