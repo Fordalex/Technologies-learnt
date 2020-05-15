@@ -2,14 +2,14 @@
 
 var tl = gsap.timeline()
 
-tl.to('.left-shutter', 0.7, {})
-tl.to('.right-shutter', 0.7, {}, '-=0.7');
+tl.to('.left-shutter', 0.5, {})
+tl.to('.right-shutter', 0.5, {}, '-=0.7');
 tl.to('.page-container', 0.1, { opacity: 1 }, '-=0.7')
-tl.to('.left-shutter', 1.5, { x: '-60vw' })
-tl.to('.right-shutter', 1.5, { x: '60vw' }, '-=1.5')
-tl.from('.wobble-onload', 1, { transform: 'scale(0)', ease: 'elastic', stagger: 0.1 }, '-=1.3')
-tl.from('.main-title', 1, { opacity: 0, ease: 'power2' }, '-=0.8')
-tl.from('.mobile-navigation', 0.7, { top: '-55px' }, '-=0.9')
+tl.to('.left-shutter', 1, { left: '-150vw' })
+tl.to('.right-shutter', 1, { left: '150vw' }, '-=1')
+tl.from('.wobble-onload', 1, { transform: 'scale(0)', ease: 'bounce', stagger: 0.1 }, '-=1.1')
+tl.from('.main-title', 1, { opacity: 0, ease: 'power2' }, '-=1.1')
+tl.to('.mobile-navigation', 0.7, { top: '0px', opacity: 1, }, '-=1.1')
 
 // open all categories for a selected section.
 
