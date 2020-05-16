@@ -60,6 +60,14 @@ h4 {
     margin-left: 15px;
 }
 
+.fancy-font {
+    font-family: 'Righteous', cursive;
+    color: white;
+    padding: 17px 17px;
+    margin: 0;
+    color: white;
+}
+
 
 /* mobile navigation */
 
@@ -71,7 +79,7 @@ h4 {
     right: 0;
     height: 55px;
     border-bottom: solid white 1px;
-    background-image: linear-gradient(rgb(12, 201, 226), rgb(6, 177, 199));
+    background-image: linear-gradient(rgb(226, 180, 12), rgb(255, 193, 99));
     z-index: 50;
 }
 
@@ -85,11 +93,11 @@ h4 {
 .nav-link-container {
     padding: 8px;
     position: fixed;
-    top: 55px;
+    top: 54px;
     left: 100%;
     height: 100vh;
     width: 60vw;
-    background-image: linear-gradient(rgb(12, 201, 226), rgb(6, 177, 199));
+    background-image: linear-gradient( rgb(255, 193, 99), rgb(226, 180, 12));
 }
 
 .nav-backdrop {
@@ -97,14 +105,14 @@ h4 {
     backdrop-filter: blur(0px);
     background-color: rgba(0, 0, 0, 0.0);
     position: fixed;
-    top: 56px;
+    top: 55px;
     right: 100%;
     height: 100vh;
     width: 100vw;
 }
 
 .nav-header {
-    color: rgb(255, 211, 113);
+    color: rgb(0, 0, 0);
 }
 
 .nav-button {
@@ -114,15 +122,15 @@ h4 {
     text-align: center;
     color: white;
     font-size: 20px;
-    background-color: rgba(0, 0, 0, 0.09);
+    background-color: rgba(250, 250, 250, 0.19);
     font-family: 'Righteous', cursive;
-    border: solid #5ee4f5 1px;
+    border: solid #c4b2b2 1px;
     margin-top: 6px;
-    border-radius: 2px;
+    border-radius: 4px;
 }
 
 .nav-button:hover {
-    color: rgb(12, 201, 226);
+    color: rgb(255, 193, 99);
     background-color: white;
     text-decoration: none;
 }
@@ -212,7 +220,7 @@ span {
     margin-right: auto;
     border-left: solid white 1px;
     border-right: solid white 1px;
-    background-color: rgba(116, 124, 52, 0.35);
+    background-color: rgba(190, 158, 66, 0.2);
 }
 
 .secondary-background {
@@ -231,7 +239,7 @@ span {
 }
 
 .fas {
-    color: #00BCD4;
+    color: #ffce1d;
     font-size: 20px;
     float: right;
     margin-right: 20px;
@@ -307,7 +315,7 @@ span {
 /* Handle */
 
  ::-webkit-scrollbar-thumb {
-    background-image: linear-gradient(rgb(12, 201, 226), rgb(6, 177, 199));
+    background-image: linear-gradient(rgb(226, 180, 12), rgb(255, 193, 99));
     border-radius: 5px;
     cursor: pointer;
 }
@@ -329,7 +337,7 @@ span {
     left: -50vw;
     height: 200vh;
     width: 110vw;
-    background-image: linear-gradient(rgb(12, 201, 226), rgb(6, 177, 199));
+    background-image: linear-gradient( rgb(255, 193, 99), rgb(226, 180, 12));
     background-size: 400% 100%;
     background-position-x: 300%;
     transform: rotateZ(20deg);
@@ -342,7 +350,7 @@ span {
     left: 45vw;
     height: 200vh;
     width: 110vw;
-    background-image: linear-gradient(rgb(78, 219, 238), rgb(255, 211, 113));
+    background-image: linear-gradient( rgb(255, 193, 99), rgb(223, 198, 111));
     background-size: 400% 100%;
     background-position-x: 200%;
     transform: rotateZ(20deg);

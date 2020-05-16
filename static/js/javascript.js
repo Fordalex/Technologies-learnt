@@ -2,14 +2,14 @@
 
 var tl = gsap.timeline()
 
-tl.to('.left-shutter', 0.5, {})
-tl.to('.right-shutter', 0.5, {}, '-=0.7');
+tl.to('.left-shutter', 0.3, {})
+tl.to('.right-shutter', 0.3, {}, '-=0.7');
 tl.to('.page-container', 0.1, { opacity: 1 }, '-=0.7')
 tl.to('.left-shutter', 1, { left: '-150vw' })
 tl.to('.right-shutter', 1, { left: '150vw' }, '-=1')
-tl.from('.wobble-onload', 1, { transform: 'scale(0)', ease: 'bounce', stagger: 0.1 }, '-=1.1')
+tl.from('.wobble-onload', 1, { transform: 'scale(0)', ease: 'power3', stagger: 0.1 }, '-=1.1')
 tl.from('.main-title', 1, { opacity: 0, ease: 'power2' }, '-=1.1')
-tl.to('.mobile-navigation', 0.7, { top: '0px', opacity: 1, }, '-=1.1')
+tl.to('.mobile-navigation', 0.7, { top: '0px', opacity: 1, ease: 'power3' }, '-=1.3')
 
 // open all categories for a selected section.
 
@@ -52,7 +52,8 @@ $('.toggle-nav').on('click', function() {
         $('.mobile-navigation').toggleClass('closed');
     } else {
         tl.to('.nav-link-container', 0.5, { left: '100vw' });
-        tl.to('.nav-backdrop', 0.2, { right: '100vw', backdropFilter: 'blur(0px)', backgroundColor: 'rgba(0, 0, 0, 0.0)' }, '-=0.5');
+        tl.to('.nav-backdrop', 0.2, { backdropFilter: 'blur(0px)', backgroundColor: 'rgba(0, 0, 0, 0.0)' }, '-=0.5');
+        tl.to('.nav-backdrop', 0.01, { right: '100vw' })
         $('.mobile-navigation').toggleClass('closed');
     }
 
