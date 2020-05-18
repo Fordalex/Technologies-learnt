@@ -7,6 +7,17 @@ html {
     scroll-behavior: smooth;
 }
 
+.loader {
+    background: url('../../images/loading.gif') no-repeat;
+    background-size: 100%;
+    position: fixed;
+    height: 50px;
+    width: 50px;
+    top: 50vh;
+    right: 50vw;
+    z-index: 500;
+}
+
 .card-body {
     padding: 3px;
 }

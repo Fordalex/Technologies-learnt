@@ -1,15 +1,22 @@
 // on load animation
 
-var tl = gsap.timeline()
+$(document).ready(function() {
+    var tl = gsap.timeline()
 
-tl.to('.left-shutter', 0.3, {})
-tl.to('.right-shutter', 0.3, {}, '-=0.7');
-tl.to('.page-container', 0.1, { opacity: 1 }, '-=0.7')
-tl.to('.left-shutter', 1, { left: '-150vw' })
-tl.to('.right-shutter', 1, { left: '150vw' }, '-=1')
-tl.from('.wobble-onload', 1, { transform: 'scale(0)', ease: 'power3', stagger: 0.1 }, '-=1.1')
-tl.from('.main-title', 1, { opacity: 0, ease: 'power2' }, '-=1.1')
-tl.to('.mobile-navigation', 0.7, { top: '0px', opacity: 1, ease: 'power3' }, '-=1.3')
+    tl.to('.left-shutter', 0.3, {})
+    tl.to('.right-shutter', 0.3, {}, '-=0.7');
+    tl.to('.page-container', 0.1, { opacity: 1 }, '-=0.7')
+    tl.to('.left-shutter', 1.5, { left: '-150vw', ease: 'power3' })
+    tl.to('.right-shutter', 1.5, { left: '150vw', ease: 'power3' }, '-=1.5')
+    tl.from('.wobble-onload', 1, { transform: 'scale(0)', ease: 'power3', stagger: 0.1 }, '-=1.1')
+    tl.from('.main-title', 1, { opacity: 0, ease: 'power2' }, '-=1.1')
+    tl.to('.mobile-navigation', 0.7, { top: '0px', opacity: 1, ease: 'power3' }, '-=1.3')
+    setTimeout(function() {
+        $('.loader').remove()
+    }, 100);
+
+})
+
 
 // open all categories for a selected section.
 

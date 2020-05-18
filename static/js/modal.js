@@ -1,6 +1,7 @@
 // Technologies
 
 // django modal
+
 $('.djangoModalButton').on('click', function() {
     var modalTarget = '#djangoModal';
     var tl = gsap.timeline();
