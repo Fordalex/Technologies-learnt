@@ -7,15 +7,32 @@ html {
     scroll-behavior: smooth;
 }
 
-.loader {
-    background: url('../../images/loading.gif') no-repeat;
-    background-size: 100%;
+.loader-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
     position: fixed;
-    height: 50px;
-    width: 50px;
-    top: 50vh;
-    right: 50vw;
+}
+
+.loader {
+    height: 80px;
+    width: 80px;
     z-index: 500;
+    border-radius: 50%;
+    border: solid black 1px;
+    animation: spinning infinite 1s linear;
+    overflow: hidden;
+}
+
+@keyframes spinning {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
 }
 
 .card-body {
@@ -342,27 +359,24 @@ span {
 /* onload shutters */
 
 .left-shutter {
-    z-index: 100;
+    z-index: 101;
     position: fixed;
     bottom: -30vh;
-    left: -50vw;
+    left: -44vw;
     height: 200vh;
     width: 110vw;
     background-image: linear-gradient( rgb(255, 193, 99), rgb(226, 180, 12));
-    background-size: 400% 100%;
-    background-position-x: 300%;
     transform: rotateZ(20deg);
+    border-right: solid white 2px;
 }
 
 .right-shutter {
     z-index: 100;
     position: fixed;
     bottom: -60vh;
-    left: 45vw;
+    left: 40vw;
     height: 200vh;
     width: 110vw;
     background-image: linear-gradient( rgb(255, 193, 99), rgb(223, 198, 111));
-    background-size: 400% 100%;
-    background-position-x: 200%;
     transform: rotateZ(20deg);
 }
