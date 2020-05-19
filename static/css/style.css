@@ -7,32 +7,67 @@ html {
     scroll-behavior: smooth;
 }
 
-.loader-container {
+.loading-align-center {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    z-index: 999;
+}
+
+.loading-container {
+    width: 65px;
+    height: 65px;
+    background-color: lightgrey;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-wrapper {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    overflow: hidden;
+    positon: relative;
+    margin: 0 auto;
+    background-color: white;
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    width: 100vw;
-    position: fixed;
 }
 
 .loader {
+    background-color: orange;
     height: 80px;
-    width: 80px;
-    z-index: 500;
-    border-radius: 50%;
-    border: solid black 1px;
-    animation: spinning infinite 1s linear;
-    overflow: hidden;
+    width: 40px;
+    animation: spinning 0.55s linear infinite;
+    position: static;
 }
 
 @keyframes spinning {
     0% {
-        transform: rotateZ(0deg);
+        transform: rotatez(0deg);
+        background-color: rgb(252, 218, 48);
+    }
+    50% {
+        transform: rotatez(180deg);
+        background-color: orange;
     }
     100% {
-        transform: rotateZ(360deg);
+        transform: rotatez(360deg);
+        background-color: rgb(252, 218, 48);
     }
+}
+
+.loading-text {
+    font-size: 12px;
+    text-align: center;
+    color: rgb(50, 50, 50);
 }
 
 .card-body {
@@ -361,22 +396,21 @@ span {
 .left-shutter {
     z-index: 101;
     position: fixed;
-    bottom: -30vh;
-    left: -44vw;
-    height: 200vh;
-    width: 110vw;
+    bottom: 0;
+    left: 0vw;
+    height: 100vh;
+    width: 50vw;
     background-image: linear-gradient( rgb(255, 193, 99), rgb(226, 180, 12));
-    transform: rotateZ(20deg);
-    border-right: solid white 2px;
+    border-right: solid white 1px;
 }
 
 .right-shutter {
     z-index: 100;
     position: fixed;
-    bottom: -60vh;
-    left: 40vw;
-    height: 200vh;
-    width: 110vw;
-    background-image: linear-gradient( rgb(255, 193, 99), rgb(223, 198, 111));
-    transform: rotateZ(20deg);
+    bottom: 0;
+    left: 50vw;
+    height: 100vh;
+    width: 50vw;
+    background-image: linear-gradient( rgb(255, 193, 99), rgb(226, 180, 12));
+    border-left: solid white 1px;
 }

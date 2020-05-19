@@ -1,8 +1,8 @@
 // on load animation
 
+
 window.addEventListener("load", function() {
     var tl = gsap.timeline()
-
     tl.to('.page-container', 0.1, { opacity: 1 }, '-=0.7')
     tl.to('.left-shutter', 1.5, { left: '-150vw', ease: 'power3' })
     tl.to('.right-shutter', 1.5, { left: '150vw', ease: 'power3' }, '-=1.5')
@@ -10,9 +10,12 @@ window.addEventListener("load", function() {
     tl.from('.main-title', 1, { ease: 'power2' }, '-=1.5')
     tl.to('.mobile-navigation', 0.7, { top: '0px', opacity: 1, ease: 'power3' }, '-=1.5')
     setTimeout(function() {
-        // $('.loader').remove()
+        $('.loading-align-center').remove()
     });
 });
+
+
+
 
 
 // open all categories for a selected section.
