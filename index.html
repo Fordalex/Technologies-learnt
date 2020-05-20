@@ -127,6 +127,10 @@
                             <dt>Add template file:</dt>
                             <dd>{% extends 'base.html' %}</dd>
                         </dl>
+                        <dl>
+                            <dt>When a user is logged in:</dt>
+                            <dd>{% if user.is_authenticated %}</dd>
+                        </dl>
                     </div>
                     <div class="col-12 col-md-6 m-0 p-0 pl-lg-2">
                         <h5 class="my-2">4. Create urls</h5>
@@ -154,14 +158,37 @@
                             <dt>Adding the urls:</dt>
                             <dd>url(r'^accounts/', include(urls_accounts))</dd>
                         </dl>
+                        <dl>
+                            <dt>Linking to a url:</dt>
+                            <dd>url(r'^accounts/', include(urls_accounts))</dd>
+                        </dl>
                     </div>
                     <div class="col-12 col-md-6 m-0 p-0 pl-lg-2">
-                        <h5 class="my-2">4. Create views</h5>
+                        <h5 class="my-2">5. Create views</h5>
                         <dl>
                             <dt>import render, redirect, reverse:</dt>
                             <dd>from django.shortcuts import render</dd>
                         </dl>
-
+                    </div>
+                    <div class="col-12 col-md-6 m-0 p-0 pl-lg-2">
+                        <h5 class="my-2">6. Models</h5>
+                        <dl>
+                            <dt>Create a class:</dt>
+                            <dd>class Task(models.Model):</dd>
+                        </dl>
+                        <dl>
+                            <dt>Text field:</dt>
+                            <dd>models.CharField(max_length=200)</dd>
+                        </dl>
+                        <dl>
+                            <dt>True or false</dt>
+                            <dd>models.BooleanField(blank=True)</dd>
+                        </dl>
+                        <dl>
+                            <dt>Add time:</dt>
+                            <dd>from django.utils import timezone</dd>
+                            <dd>models.DateTimeField(blank=True, null=True, default=timezone.now)</dd>
+                        </dl>
                     </div>
                 </div>
             </div>
