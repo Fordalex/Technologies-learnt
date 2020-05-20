@@ -125,14 +125,18 @@
                         </dl>
                         <dl>
                             <dt>Add template file:</dt>
-                            <dd>{% extend 'base.html' %}</dd>
+                            <dd>{% extends 'base.html' %}</dd>
                         </dl>
                     </div>
                     <div class="col-12 col-md-6 m-0 p-0 pl-lg-2">
                         <h5 class="my-2">4. Create urls</h5>
                         <dl>
-                            <dt>Import url:</dt>
-                            <dd>from django.conf.urls import url</dd>
+                            <dt>Import url and include:</dt>
+                            <dd>from django.conf.urls import url, include</dd>
+                        </dl>
+                        <dl>
+                            <dt>Url patterns:</dt>
+                            <dd>urlpatterns = []</dd>
                         </dl>
                         <dl>
                             <dt>Standard url:</dt>
@@ -141,6 +145,21 @@
                         <dl>
                             <dt>Pass data into a route:</dt>
                             <dd>url(r'^edit/(?P&lt;id&gt;\d+)$', editTask),</dd>
+                        </dl>
+                        <dl>
+                            <dt>Get urls from a different app:</dt>
+                            <dd>from appname import urls as urls_appname</dd>
+                        </dl>
+                        <dl>
+                            <dt>Adding the urls:</dt>
+                            <dd>url(r'^accounts/', include(urls_accounts))</dd>
+                        </dl>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 p-0 pl-lg-2">
+                        <h5 class="my-2">4. Create views</h5>
+                        <dl>
+                            <dt>import render, redirect, reverse:</dt>
+                            <dd>from django.shortcuts import render</dd>
                         </dl>
 
                     </div>
