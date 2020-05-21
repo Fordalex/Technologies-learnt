@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto:wght@300&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d4ed0579d0.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="images/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="static/css/style.css">
     <title>Technologies</title>
@@ -211,6 +212,26 @@
                         <dl>
                             <dt>HTML form:</dt>
                             <dd>method="POST" action="/addFood/"</dd>
+                        </dl>
+                        <dl>
+                            <dt>Saving the data:</dt>
+                            <dd>if request.method == 'POST'</dd>
+                            <dd>data = formName(request.POST)</dd>
+                            <dd>if data.is_valid():</dd>
+                            <dd>data.save()</dd>
+                        </dl>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 p-0 pl-lg-2">
+                        <h5 class="my-2">8. Admin</h5>
+                        <dl>
+                            <dt>Show data on admin panel:</dt>
+                            <dd>form .models import Data</dd>
+                            <dd>admin.site.register(Data)</dd>
+                        </dl>
+                        <dl>
+                            <dt>Show model name:</dt>
+                            <dd>def __str__(self):</dd>
+                            <dd> return self.name</dd>
                         </dl>
                     </div>
                 </div>
@@ -959,6 +980,25 @@
                                 </div>
                                 <hr>
                                 <dt><img src="https://img.icons8.com/color/15/000000/python.png" class="mr-2" />Python</dt>
+                            </dl>
+                        </div>
+                        <!-- More -->
+                        <div class="col-12 p-0 ">
+                            <h4 class="mb-3 ">More<i class="fas fa-user-tie ml-2"></i></h4>
+                        </div>
+                        <div class="col-12 px-0 px-lg-2">
+                            <dl>
+                                <dt><img src="https://img.icons8.com/color/17/000000/travis-ci.png" class="mr-2" />Testing <i
+                                    class="far fa-plus-square ml-2 small-icon front-plus" data-toggle="collapse"
+                                    href="#testing"></i></dt>
+
+                                <div class="collapse wrapper mt-2" id="testing">
+                                    <div class="p-2">
+                                        <dd>Travis
+                                            <a href="https://travis-ci.org/getting_started" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                        </dd>
+                                    </div>
+                                </div>
                             </dl>
                         </div>
                         <!-- How -->
