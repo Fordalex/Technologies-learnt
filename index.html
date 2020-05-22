@@ -62,213 +62,221 @@
             <!-- content -->
             <div class="scroll-container">
                 <div class="row m-0 p-0">
-                    <div class="col-12 m-0 p-0 d-flex justify-content-between">
-                        <a href="https://docs.djangoproject.com/en/3.0/topics/db/queries/" target="_blank" class="main-colour">Making queries</a>
-                        <a href="https://docs.djangoproject.com/en/3.0/ref/models/instances/" target="_blank" class="main-colour">Model instance reference</a>
-                    </div>
                     <!-- <div class="col-12 m-0 p-0 d-flex justify-content-between">
                         <a href="https://docs.djangoproject.com/en/3.0/topics/db/queries/" target="_blank" class="main-colour">Making queries</a>
                         <a href="https://docs.djangoproject.com/en/3.0/ref/models/instances/" target="_blank" class="main-colour">Model instance reference</a>
                     </div> -->
                     <div class="col-12 m-0 p-0 mt-2">
-                        <h4>Creating a project</h4>
+                        <h4>Creating a project <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_project"></i></h4>
                     </div>
-                    <div class="col-12 col-md-6 m-0 p-0 p-md-2">
-                        <h5 class="my-2">1. Installation</h5>
-                        <dl>
-                            <dt>Create a virtual environment:</dt>
-                            <dd>python3 -m venv .venv</dd>
-                        </dl>
-                        <dl>
-                            <dt>Run the virtual environment:</dt>
-                            <dd>source .venv/bin/activate</dd>
-                        </dl>
-                        <dl>
-                            <dt>Install django:</dt>
-                            <dd>pip install django</dd>
-                        </dl>
-                        <dl>
-                            <dt>start project:</dt>
-                            <dd>django-admin startproject project-name .</dd>
-                        </dl>
-                        <dl>
-                            <dt>Create app:</dt>
-                            <dd>django-admin startapp appname</dd>
-                        </dl>
-                    </div>
-                    <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
-                        <h5 class="my-2">2. Settings file</h5>
-                        <dl>
-                            <dt>Install apps:</dt>
-                            <dd>INSTALLED_APPS = ['appname']</dd>
-                        </dl>
-                        <dl>
-                            <dt>Locate template folder:</dt>
-                            <dd>Templates = ['DIRS':[os.path.join(BASE_DIR, 'templates')],]</dd>
-                        </dl>
-                        <dl>
-                            <dt>Locate Static folder:</dt>
-                            <dd>STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)</dd>
-                        </dl>
-                    </div>
-                    <div class="col-12 col-md-6 m-0 p-0 p-md-2">
-                        <h5 class="my-2">3. Jinja</h5>
-                        <dl>
-                            <dt>Load in static folder:</dt>
-                            <dd class="mb-0">{% load static %}</dd>
-                            <dd>href="{% static 'css/style.css' %}"</dd>
-                        </dl>
-                        <dl>
-                            <dt>Add content:</dt>
-                            <dd>{% block content %}{% endblock %}</dd>
-                        </dl>
-                        <dl>
-                            <dt>Add template file:</dt>
-                            <dd>{% extends 'base.html' %}</dd>
-                        </dl>
-                        <dl>
-                            <dt>When a user is logged in:</dt>
-                            <dd>{% if user.is_authenticated %}</dd>
-                        </dl>
-                        <dl>
-                            <dt>Jinja and javascipt:</dt>
-                            <dt>template</dt>
-                            <dd>{% block name_js %}</dd>
-                            <dd>{% endblock %}</dd>
-                            <dt>base.html in the head:</dt>
-                            <dd>{% block name_js %}</dd>
-                            <dd>{% endblock %}</dd>
-                        </dl>
-                    </div>
-                    <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
-                        <h5 class="my-2">4. Create urls</h5>
-                        <dl>
-                            <dt>Import url and include:</dt>
-                            <dd>from django.conf.urls import url, include</dd>
-                        </dl>
-                        <dl>
-                            <dt>Url patterns:</dt>
-                            <dd>urlpatterns = []</dd>
-                        </dl>
-                        <dl>
-                            <dt>Standard url:</dt>
-                            <dd>url(r'^$', index, name="index"),</dd>
-                        </dl>
-                        <dl>
-                            <dt>Pass data into a route:</dt>
-                            <dd>url(r'^edit/(?P&lt;id&gt;\d+)$', editTask),</dd>
-                        </dl>
-                        <dl>
-                            <dt>Get urls from a different app:</dt>
-                            <dd>from appname import urls as urls_appname</dd>
-                        </dl>
-                        <dl>
-                            <dt>Adding the urls:</dt>
-                            <dd>url(r'^accounts/', include(urls_accounts))</dd>
-                        </dl>
-                        <dl>
-                            <dt>Linking to a url:</dt>
-                            <dd>url(r'^accounts/', include(urls_accounts))</dd>
-                        </dl>
-                    </div>
-                    <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
-                        <h5 class="my-2">5. Create views</h5>
-                        <dl>
-                            <dt>import render, redirect, reverse:</dt>
-                            <dd>from django.shortcuts import render</dd>
-                        </dl>
-                    </div>
-                    <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
-                        <h5 class="my-2">6. Models</h5>
-                        <dl>
-                            <dt>Create a class:</dt>
-                            <dd>class Task(models.Model):</dd>
-                        </dl>
-                        <dl>
-                            <dt>Text field:</dt>
-                            <dd>models.CharField(max_length=200)</dd>
-                        </dl>
-                        <dl>
-                            <dt>True or false</dt>
-                            <dd>models.BooleanField(blank=True)</dd>
-                        </dl>
-                        <dl>
-                            <dt>Add time:</dt>
-                            <dd>from django.utils import timezone</dd>
-                            <dd>models.DateTimeField(blank=True, null=True, default=timezone.now)</dd>
-                        </dl>
-                    </div>
-                    <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
-                        <h5 class="my-2">7. Forms</h5>
-                        <dl>
-                            <dt>Import forms and models:</dt>
-                            <dd>from django import forms</dd>
-                            <dd>from django.forms import ModelForm</dd>
-                            <dd>form .models import Name, Name</dd>
-                        </dl>
-                        <dl>
-                            <dt>Create a class:</dt>
-                            <dd>class inputTask(forms.ModelForm):</dd>
-                            <dd>class Meta:</dd>
-                        </dl>
-                        <dl>
-                            <dt>define modal name and fields:</dt>
-                            <dd>model = Food</dd>
-                            <dd>fields = ('name', 'complete', 'notes')</dd>
-                        </dl>
-                        <dl>
-                            <dt>HTML form:</dt>
-                            <dd>method="POST" action="/addFood/"</dd>
-                        </dl>
-                        <dl>
-                            <dt>Saving the data:</dt>
-                            <dd>if request.method == 'POST'</dd>
-                            <dd>data = formName(request.POST)</dd>
-                            <dd>if data.is_valid():</dd>
-                            <dd>data.save()</dd>
-                        </dl>
-                        <dl>
-                            <dt>Changing data before saving:</dt>
-                            <dd>item = inputItem(request.POST)</dd>
-                            <dd>if item.is_valid():</dd>
-                            <dd>instance = item.save(commit=False)</dd>
-                            <dd>instance.author = request.user.username</dd>
-                            <dd>instance.save()</dd>
-                        </dl>
-                    </div>
-                    <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
-                        <h5 class="my-2">8. Admin</h5>
-                        <dl>
-                            <dt>Show data on admin panel:</dt>
-                            <dd>form .models import Data</dd>
-                            <dd>admin.site.register(Data)</dd>
-                        </dl>
-                        <dl>
-                            <dt>Show model name:</dt>
-                            <dd>def __str__(self):</dd>
-                            <dd> return self.name</dd>
-                        </dl>
-                    </div>
-                    <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
-                        <h5 class="my-2">8. Showing the data on a page:</h5>
-                        <dl>
-                            <dt>Passing into a view:</dt>
-                            <dd>from .models import Data</dd>
-                            <dd>data = Data.objects.all()</dd>
-                            <dd>"page.html", {"data": data}</dd>
-                        </dl>
+                    <div class="col-12 m-0 p-0">
+                        <div id="django_project" class="collapse row m-0 p-0">
+                            <div class="col-12 col-md-6 m-0 p-0 p-md-2">
+                                <h5 class="my-2">1. Installation</h5>
+                                <dl>
+                                    <dt>Create a virtual environment:</dt>
+                                    <dd>python3 -m venv .venv</dd>
+                                </dl>
+                                <dl>
+                                    <dt>Run the virtual environment:</dt>
+                                    <dd>source .venv/bin/activate</dd>
+                                </dl>
+                                <dl>
+                                    <dt>Install django:</dt>
+                                    <dd>pip install django</dd>
+                                </dl>
+                                <dl>
+                                    <dt>start project:</dt>
+                                    <dd>django-admin startproject project-name .</dd>
+                                </dl>
+                                <dl>
+                                    <dt>Create app:</dt>
+                                    <dd>django-admin startapp appname</dd>
+                                </dl>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
+                                <h5 class="my-2">2. Settings file</h5>
+                                <dl>
+                                    <dt>Install apps:</dt>
+                                    <dd>INSTALLED_APPS = ['appname']</dd>
+                                </dl>
+                                <dl>
+                                    <dt>Locate template folder:</dt>
+                                    <dd>Templates = ['DIRS':[os.path.join(BASE_DIR, 'templates')],]</dd>
+                                </dl>
+                                <dl>
+                                    <dt>Locate Static folder:</dt>
+                                    <dd>STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)</dd>
+                                </dl>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 p-0 p-md-2">
+                                <h5 class="my-2">3. Jinja</h5>
+                                <dl>
+                                    <dt>Load in static folder:</dt>
+                                    <dd class="mb-0">{% load static %}</dd>
+                                    <dd>href="{% static 'css/style.css' %}"</dd>
+                                </dl>
+                                <dl>
+                                    <dt>Add content:</dt>
+                                    <dd>{% block content %}{% endblock %}</dd>
+                                </dl>
+                                <dl>
+                                    <dt>Add template file:</dt>
+                                    <dd>{% extends 'base.html' %}</dd>
+                                </dl>
+                                <dl>
+                                    <dt>When a user is logged in:</dt>
+                                    <dd>{% if user.is_authenticated %}</dd>
+                                </dl>
+                                <dl>
+                                    <dt>Jinja and javascipt:</dt>
+                                    <dt>template</dt>
+                                    <dd>{% block name_js %}</dd>
+                                    <dd>{% endblock %}</dd>
+                                    <dt>base.html in the head:</dt>
+                                    <dd>{% block name_js %}</dd>
+                                    <dd>{% endblock %}</dd>
+                                </dl>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
+                                <h5 class="my-2">4. Create urls</h5>
+                                <dl>
+                                    <dt>Import url and include:</dt>
+                                    <dd>from django.conf.urls import url, include</dd>
+                                </dl>
+                                <dl>
+                                    <dt>Url patterns:</dt>
+                                    <dd>urlpatterns = []</dd>
+                                </dl>
+                                <dl>
+                                    <dt>Standard url:</dt>
+                                    <dd>url(r'^$', index, name="index"),</dd>
+                                </dl>
+                                <dl>
+                                    <dt>Pass data into a route:</dt>
+                                    <dd>url(r'^edit/(?P&lt;id&gt;\d+)$', editTask),</dd>
+                                </dl>
+                                <dl>
+                                    <dt>Get urls from a different app:</dt>
+                                    <dd>from appname import urls as urls_appname</dd>
+                                </dl>
+                                <dl>
+                                    <dt>Adding the urls:</dt>
+                                    <dd>url(r'^accounts/', include(urls_accounts))</dd>
+                                </dl>
+                                <dl>
+                                    <dt>Linking to a url:</dt>
+                                    <dd>url(r'^accounts/', include(urls_accounts))</dd>
+                                </dl>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
+                                <h5 class="my-2">5. Create views</h5>
+                                <dl>
+                                    <dt>import render, redirect, reverse:</dt>
+                                    <dd>from django.shortcuts import render</dd>
+                                </dl>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
+                                <h5 class="my-2">6. Models</h5>
+                                <div class="container-fluid d-flex justify-content-between">
+                                    <a href="https://docs.djangoproject.com/en/3.0/topics/db/queries/" target="_blank" class="main-colour">Making queries</a>
+                                    <a href="https://docs.djangoproject.com/en/3.0/ref/models/instances/" target="_blank" class="main-colour">Model instance reference</a>
+                                </div>
+                                <dl>
+                                    <dt>Create a class:</dt>
+                                    <dd>class Task(models.Model):</dd>
+                                </dl>
+                                <dl>
+                                    <dt>Text field:</dt>
+                                    <dd>models.CharField(max_length=200)</dd>
+                                </dl>
+                                <dl>
+                                    <dt>True or false</dt>
+                                    <dd>models.BooleanField(blank=True)</dd>
+                                </dl>
+                                <dl>
+                                    <dt>Add time:</dt>
+                                    <dd>from django.utils import timezone</dd>
+                                    <dd>models.DateTimeField(blank=True, null=True, default=timezone.now)</dd>
+                                </dl>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
+                                <h5 class="my-2">7. Forms</h5>
+                                <dl>
+                                    <dt>Import forms and models:</dt>
+                                    <dd>from django import forms</dd>
+                                    <dd>from django.forms import ModelForm</dd>
+                                    <dd>form .models import Name, Name</dd>
+                                </dl>
+                                <dl>
+                                    <dt>Create a class:</dt>
+                                    <dd>class inputTask(forms.ModelForm):</dd>
+                                    <dd>class Meta:</dd>
+                                </dl>
+                                <dl>
+                                    <dt>define modal name and fields:</dt>
+                                    <dd>model = Food</dd>
+                                    <dd>fields = ('name', 'complete', 'notes')</dd>
+                                </dl>
+                                <dl>
+                                    <dt>HTML form:</dt>
+                                    <dd>method="POST" action="/addFood/"</dd>
+                                </dl>
+                                <dl>
+                                    <dt>Saving the data:</dt>
+                                    <dd>if request.method == 'POST'</dd>
+                                    <dd>data = formName(request.POST)</dd>
+                                    <dd>if data.is_valid():</dd>
+                                    <dd>data.save()</dd>
+                                </dl>
+                                <dl>
+                                    <dt>Changing data before saving:</dt>
+                                    <dd>item = inputItem(request.POST)</dd>
+                                    <dd>if item.is_valid():</dd>
+                                    <dd>instance = item.save(commit=False)</dd>
+                                    <dd>instance.author = request.user.username</dd>
+                                    <dd>instance.save()</dd>
+                                </dl>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
+                                <h5 class="my-2">8. Admin</h5>
+                                <dl>
+                                    <dt>Show data on admin panel:</dt>
+                                    <dd>form .models import Data</dd>
+                                    <dd>admin.site.register(Data)</dd>
+                                </dl>
+                                <dl>
+                                    <dt>Show model name:</dt>
+                                    <dd>def __str__(self):</dd>
+                                    <dd> return self.name</dd>
+                                </dl>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
+                                <h5 class="my-2">8. Showing the data on a page:</h5>
+                                <dl>
+                                    <dt>Passing into a view:</dt>
+                                    <dd>from .models import Data</dd>
+                                    <dd>data = Data.objects.all()</dd>
+                                    <dd>"page.html", {"data": data}</dd>
+                                </dl>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-12 m-0 p-0 mt-2">
-                        <h4>Hosting the project</h4>
+                        <h4>Hosting the project <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_hosting"></i></h4>
                     </div>
-                    <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
-                        <h5 class="my-2">1. Showing the data on a page:</h5>
-                        <dl>
-                            <dt>Passing into a view:</dt>
-                            <dd>from .models import Data</dd>
-                            <dd>data = Data.objects.all()</dd>
-                            <dd>"page.html", {"data": data}</dd>
-                        </dl>
+                    <div class="col-12 m-0 p-0">
+                        <div id="django_hosting" class="collapse row m-0 p-0">
+                            <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
+                                <h5 class="my-2">1. Showing the data on a page:</h5>
+                                <dl>
+                                    <dt>Passing into a view:</dt>
+                                    <dd>from .models import Data</dd>
+                                    <dd>data = Data.objects.all()</dd>
+                                    <dd>"page.html", {"data": data}</dd>
+                                </dl>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
