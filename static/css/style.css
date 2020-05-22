@@ -131,6 +131,15 @@ h4 {
     color: white;
 }
 
+.main-colour {
+    color: rgb(255, 182, 73);
+}
+
+.main-colour:hover {
+    color: rgb(190, 111, 0);
+    text-decoration: underline;
+}
+
 
 /* mobile navigation */
 

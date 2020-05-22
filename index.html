@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto:wght@300&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d4ed0579d0.js" crossorigin="anonymous"></script>
-    <link rel="icon" href="images/icon.png" type="image/x-icon">
+    <link rel="icon" href="images/icon.PNG" type="image/x-icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="static/css/style.css">
     <title>Technologies</title>
@@ -53,19 +53,6 @@
 
     <!-- Technologies modals -->
 
-    <!-- css -->
-    <div class="modal-style closed" id="sassModal">
-        <div class="page-container">
-            <img src="https://img.icons8.com/plasticine/50/000000/crossed-arrow.png" class="float-right sassModalButton arrow-button click-icon" />
-            <h4 class="mt-2"><span class="t-letter">S</span><span class="t-letter">a</span><span class="t-letter">s</span><span class="t-letter">s</span></h4>
-            <hr class="mt-3 dark-hr">
-            <!-- content -->
-            <div class="scroll-container">
-
-            </div>
-        </div>
-    </div>
-
     <!-- Django (backend) -->
     <div class="modal-style closed" id="djangoModal">
         <div class="page-container p-2 pt-3">
@@ -75,7 +62,15 @@
             <!-- content -->
             <div class="scroll-container">
                 <div class="row m-0 p-0">
-                    <div class="col-12 col-md-6 m-0 p-0">
+                    <div class="col-12 m-0 p-0 d-flex justify-content-between">
+                        <a href="https://docs.djangoproject.com/en/3.0/topics/db/queries/" target="_blank" class="main-colour">Making queries</a>
+                        <a href="https://docs.djangoproject.com/en/3.0/ref/models/instances/" target="_blank" class="main-colour">Model instance reference</a>
+                    </div>
+                    <!-- <div class="col-12 m-0 p-0 d-flex justify-content-between">
+                        <a href="https://docs.djangoproject.com/en/3.0/topics/db/queries/" target="_blank" class="main-colour">Making queries</a>
+                        <a href="https://docs.djangoproject.com/en/3.0/ref/models/instances/" target="_blank" class="main-colour">Model instance reference</a>
+                    </div> -->
+                    <div class="col-12 col-md-6 m-0 p-0 p-md-2">
                         <h5 class="my-2">1. Installation</h5>
                         <dl>
                             <dt>Create a virtual environment:</dt>
@@ -98,7 +93,7 @@
                             <dd>django-admin startapp appname</dd>
                         </dl>
                     </div>
-                    <div class="col-12 col-md-6 m-0 p-0 pl-lg-2">
+                    <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
                         <h5 class="my-2">2. Settings file</h5>
                         <dl>
                             <dt>Install apps:</dt>
@@ -113,7 +108,7 @@
                             <dd>STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)</dd>
                         </dl>
                     </div>
-                    <div class="col-12 col-md-6 m-0 p-0">
+                    <div class="col-12 col-md-6 m-0 p-0 p-md-2">
                         <h5 class="my-2">3. Jinja</h5>
                         <dl>
                             <dt>Load in static folder:</dt>
@@ -132,8 +127,17 @@
                             <dt>When a user is logged in:</dt>
                             <dd>{% if user.is_authenticated %}</dd>
                         </dl>
+                        <dl>
+                            <dt>Jinja and javascipt:</dt>
+                            <dt>template</dt>
+                            <dd>{% block name_js %}</dd>
+                            <dd>{% endblock %}</dd>
+                            <dt>base.html in the head:</dt>
+                            <dd>{% block name_js %}</dd>
+                            <dd>{% endblock %}</dd>
+                        </dl>
                     </div>
-                    <div class="col-12 col-md-6 m-0 p-0 pl-lg-2">
+                    <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
                         <h5 class="my-2">4. Create urls</h5>
                         <dl>
                             <dt>Import url and include:</dt>
@@ -164,14 +168,14 @@
                             <dd>url(r'^accounts/', include(urls_accounts))</dd>
                         </dl>
                     </div>
-                    <div class="col-12 col-md-6 m-0 p-0 pl-lg-2">
+                    <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
                         <h5 class="my-2">5. Create views</h5>
                         <dl>
                             <dt>import render, redirect, reverse:</dt>
                             <dd>from django.shortcuts import render</dd>
                         </dl>
                     </div>
-                    <div class="col-12 col-md-6 m-0 p-0 pl-lg-2">
+                    <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
                         <h5 class="my-2">6. Models</h5>
                         <dl>
                             <dt>Create a class:</dt>
@@ -191,7 +195,7 @@
                             <dd>models.DateTimeField(blank=True, null=True, default=timezone.now)</dd>
                         </dl>
                     </div>
-                    <div class="col-12 col-md-6 m-0 p-0 pl-lg-2">
+                    <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
                         <h5 class="my-2">7. Forms</h5>
                         <dl>
                             <dt>Import forms and models:</dt>
@@ -220,8 +224,16 @@
                             <dd>if data.is_valid():</dd>
                             <dd>data.save()</dd>
                         </dl>
+                        <dl>
+                            <dt>Changing data before saving:</dt>
+                            <dd>item = inputItem(request.POST)</dd>
+                            <dd>if item.is_valid():</dd>
+                            <dd>instance = item.save(commit=False)</dd>
+                            <dd>instance.author = request.user.username</dd>
+                            <dd>instance.save()</dd>
+                        </dl>
                     </div>
-                    <div class="col-12 col-md-6 m-0 p-0 pl-lg-2">
+                    <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
                         <h5 class="my-2">8. Admin</h5>
                         <dl>
                             <dt>Show data on admin panel:</dt>
@@ -234,10 +246,94 @@
                             <dd> return self.name</dd>
                         </dl>
                     </div>
+                    <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
+                        <h5 class="my-2">8. Showing the data on a page:</h5>
+                        <dl>
+                            <dt>Passing into a view:</dt>
+                            <dd>from .models import Data</dd>
+                            <dd>data = Data.objects.all()</dd>
+                            <dd>"page.html", {"data": data}</dd>
+                        </dl>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- stripe -->
+    <div class="modal-style closed" id="stripeModal">
+        <div class="page-container p-2 pt-3">
+            <img src="https://img.icons8.com/plasticine/50/000000/crossed-arrow.png" class="float-right stripeModalButton arrow-button click-icon" />
+            <h4 class="mt-2"><span class="t-letter">S</span><span class="t-letter">t</span><span class="t-letter">r</span><span class="t-letter">i</span><span class="t-letter">p</span><span class="t-letter">e</span></h4>
+            <hr class="mt-3 dark-hr">
+            <!-- content -->
+            <div class="scroll-container">
+                <div class="row m-0 p-0">
+                    <div class="col-12 col-md-6 m-0 p-0 p-md-2">
+                        <h5>1. Installation</h5>
+                        <dl>
+                            <dt>Install</dt>
+                            <dd>pip install stripe</dd>
+                        </dl>
+                        <dl>
+                            <dt>Get api keys:</dt>
+                            <dd>Develops tab</dd>
+                            <dd>API keys</dd>
+                            <dd></dd>
+                        </dl>
+                        <dl>
+                            <dt>Adding the api keys to the settings:</dt>
+                            <dd>import env</dd>
+                            <dd>STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE')</dd>
+                            <dd>STRIPE_SECRET = os.getenv('STRIPE_SECRET')</dd>
+                        </dl>
+                        <dl>
+                            <dt>Add the key values in env.py:</dt>
+                            <dd>import os</dd>
+                            <dd>os.environ.setdefault("STRIPE_PUBLISHABLE", "")</dd>
+                            <dd>os.environ.setdefault("STRIPE_SECRET", "")</dd>
+                        </dl>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 p-0 p-md-2">
+                        <p>Create a new app.</p>
+                        <h5>2. Create a form</h5>
+                        <dl>
+                            <dt>Import the files:</dt>
+                            <dd>from django import forms</dd>
+                            <dd>from django.forms import ModelForm</dd>
+                        </dl>
+                        <dl>
+                            <dt>Payment form:</dt>
+                            <dd>class MakePaymentForm(forms.Form):</dd>
+                            <dd>MONTH_CHOICES = [(i, i) for i in range(1, 12)]</dd>
+                            <dd>YEAR_CHOICES = [(i, i) for i in range(2019, 2036)]</dd>
+                            <dd>credit_card_number = forms.CharField(label='Credit card number', required=False)</dd>
+                            <dd>cvv = forms.CharField(label='Security code (CVV)', required=False)</dd>
+                            <dd>expiry_month = forms.ChoiceField(label='Month', choices=MONTH_CHOICES, required=False)</dd>
+                            <dd>expiry_year = forms.ChoiceField(label='Year', choices=YEAR_CHOICES, required=False)</dd>
+                            <dd>stripe_id = forms.CharField(widget=forms.HiddenInput)</dd>
+                        </dl>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 p-0 p-md-2">
+                        <h5>3. Creating the view</h5>
+                        <dl>
+                            <dt>Import files:</dt>
+                            <dd>from django.contrib.auth.decorators import login_required</dd>
+                            <dd>from django.conf import settings</dd>
+                            <dd>import stripe</dd>
+                        </dl>
+                        <dl>
+                            <dt>Stripe and login required:</dt>
+                            <dd>stripe.api_key = settings.STRIPE_SECRET</dd>
+                            <dd>@login_required()</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
 
     <div class="page-container px-0 px-md-2 pt-5 pt-lg-0">
@@ -667,7 +763,8 @@
                                         </dd>
                                         <hr>
                                         <dd>Stripe
-                                            <a href="https://pypi.org/project/stripe/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                            <a href="https://dashboard.stripe.com/test/apikeys" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                            <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 stripeModalButton click-icon">
                                         </dd>
                                     </div>
                                 </div>
@@ -1025,7 +1122,7 @@
             <div class="modal-style closed" id="landingModal">
                 <div class="page-container">
                     <img src="https://img.icons8.com/plasticine/50/000000/crossed-arrow.png" class="float-right landingModalButton arrow-button click-icon" />
-                    <h4 class="mt-2"><span class="t-letter">L</span><span class="t-letter">a</span><span class="t-letter">n</span><span class="t-letter">d</span><span class="t-letter">i</span><span class="t-letter">n</span><span class="t-letter">g</span></h4>
+                    <h4 class="mt-2"></h4>
                     <hr class="mt-3 dark-hr">
                     <!-- content -->
                     <div class="scroll-container">
