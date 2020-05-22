@@ -77,16 +77,18 @@
                     <div class="col-12 m-0 p-0">
                         <div id="django_settings" class="collapse row m-0 tip-container">
                             <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
-                                <h5 class="my-2">1. imports:</h5>
-                                <dl>
-                                    <dt>dj_database_url</dt>
-                                    <dd>This module to connect postgres with heroku.</dd>
-                                </dl>
-                                <dl class="list-no-margin">
-                                    <dt>env</dt>
-                                    <dd>if os.path.exists('env.py'):</dd>
-                                    <dd>import env</dd>
-                                </dl>
+                                <div class="section-container">
+                                    <h5 class="my-2">1. imports:</h5>
+                                    <dl>
+                                        <dt>dj_database_url</dt>
+                                        <dd>This module to connect postgres with heroku.</dd>
+                                    </dl>
+                                    <dl class="list-no-margin">
+                                        <dt>env</dt>
+                                        <dd>if os.path.exists('env.py'):</dd>
+                                        <dd>import env</dd>
+                                    </dl>
+                                </div>
                             </div>
                             <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
                                 <h5 class="my-2">2. SECRET_KEY:</h5>
@@ -98,7 +100,8 @@
                             <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
                                 <h5 class="my-2">3. ALLOWED_HOSTS:</h5>
                                 <dl>
-                                    <dt>['127.0.0.1', '<span class="text-danger">herokuProjectname</span>.herokuapp.com']</dt>
+                                    <dt>['127.0.0.1', '<span
+                                            class="text-danger">herokuProjectname</span>.herokuapp.com']</dt>
                                     <dd>The project name needs to be added to the allowed hosts to run the project.</dd>
                                 </dl>
                             </div>
@@ -106,7 +109,9 @@
                                 <h5 class="my-2">4. INSTALLED_APPS:</h5>
                                 <dl>
                                     <dt>'<span class="text-danger">appname</span>',</dt>
-                                    <dd>After creating a new app with <span class="text-secondary">django-admin startapp <span class="text-danger">appname</span> the app then needs to be install.</dd>
+                                    <dd>After creating a new app with <span class="text-secondary">django-admin startapp
+                                            <span class="text-danger">appname</span> the app then needs to be install.
+                                    </dd>
                                 </dl>
                             </div>
                             <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
@@ -173,12 +178,14 @@
                     <div class="col-12 m-0 p-0">
                         <div id="django_admin" class="collapse row m-0 tip-container">
                             <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
-                                <h5 class="my-2">1. Add model to the admin panel:</h5>
-                                <dl class="list-no-margin">
-                                    <dd>from django.contrib import admin</dd>
-                                    <dd>from .models import <span class="text-primary">Data</span></dd>
-                                    <dd>admin.site.register(<span class="text-primary">Data</span>)</dd>
-                                </dl>
+                                <div class="section-container">
+                                    <h5 class="my-2">1. Add model to the admin panel:</h5>
+                                    <dl class="list-no-margin">
+                                        <dd>from django.contrib import admin</dd>
+                                        <dd>from .models import <span class="text-primary">Data</span></dd>
+                                        <dd>admin.site.register(<span class="text-primary">Data</span>)</dd>
+                                    </dl>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -189,34 +196,43 @@
                     <div class="col-12 m-0 p-0">
                         <div id="django_views" class="collapse row m-0 tip-container">
                             <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
-                                <h5 class="my-2">1. imports:</h5>
-                                <dl>
-                                    <dd>from django.shortcuts import render, redirect, reverse:</dd>
-                                </dl>
+                                <div class="section-container">
+                                    <h5 class="my-2">1. imports:</h5>
+                                    <dl>
+                                        <dd>from django.shortcuts import render, redirect, reverse:</dd>
+                                    </dl>
+                                </div>
                             </div>
                             <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
-                                <h5 class="my-2">2. Create a route:</h5>
-                                <dl>
-                                    <dd>def <span class="text-danger">route_name</span>(request):</dd>
-                                </dl>
+                                <div class="section-container">
+                                    <h5 class="my-2">2. Create a route:</h5>
+                                    <dl>
+                                        <dd>def <span class="text-danger">route_name</span>(request):</dd>
+                                    </dl>
+                                </div>
                             </div>
                             <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
-                                <h5 class="my-2">3. Render a page:</h5>
-                                <dl>
-                                    <dd>return render(request, '<span class="text-danger">pagename</span>.html')</dd>
-                                </dl>
+                                <div class="section-container">
+                                    <h5 class="my-2">3. Render a page:</h5>
+                                    <dl>
+                                        <dd>return render(request, '<span class="text-danger">pagename</span>.html')</dd>
+                                    </dl>
+                                </div>
                             </div>
                             <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
-                                <h5 class="my-2">3. Passing data into a view:</h5>
-                                <dl class="list-no-margin">
-                                    <dd>from .models import <span class="text-info">Products</span></dd>
-                                    <dd>
-                                        <p></p>
-                                    </dd>
-                                    <dd>def <span class="text-danger">route_name</span>(request):</dd>
-                                    <dd><span class="text-success">products</span> = <span class="text-info">products</span>.objects.all()</dd>
-                                    <dd>return render(request, '<span class="text-danger">pagename</span>.html', {<span class="text-danger">"products": <span class="text-success">products</span></span>})</dd>
-                                </dl>
+                                <div class="section-container">
+                                    <h5 class="my-2">3. Passing data into a view:</h5>
+                                    <dl class="list-no-margin">
+                                        <dd>from .models import <span class="text-info">Products</span></dd>
+                                        <dd>
+                                            <p></p>
+                                        </dd>
+                                        <dd>def <span class="text-danger">route_name</span>(request):</dd>
+                                        <dd><span class="text-success">products</span> = <span class="text-info">products</span>.objects.all()</dd>
+                                        <dd>return render(request, '<span class="text-danger">pagename</span>.html', {<span class="text-danger">"products": <span
+                                                class="text-success">products</span></span>})</dd>
+                                    </dl>
+                                </div>
                             </div>
 
                         </div>
@@ -293,7 +309,8 @@
                                     <dd>
                                         <p></p>
                                     </dd>
-                                    <dd><span class="text-info">models</span>.DateTimeField(blank=True, null=True, default=<span class="text-success">timezone</span>.now)</dd>
+                                    <dd><span class="text-info">models</span>.DateTimeField(blank=True, null=True, default=
+                                        <span class="text-success">timezone</span>.now)</dd>
                                 </dl>
                             </div>
                             <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
@@ -590,7 +607,8 @@
                                 </dl>
                                 <dl class="list-no-margin">
                                     <dt>Config Vars<input type="checkbox" class="ml-2"></dt>
-                                    <dd>DATABASE_URL &emsp;&emsp;&emsp; <span class="text-success">postgres://</span></dd>
+                                    <dd>DATABASE_URL &emsp;&emsp;&emsp; <span class="text-success">postgres://</span>
+                                    </dd>
                                     <dd>DISABLE_COLLECTSTATIC &emsp;&emsp; 1</dd>
                                 </dl>
                             </div>
@@ -601,7 +619,92 @@
         </div>
     </div>
 
-    <!-- stripe -->
+    <!-- dj_database_url (backend) -->
+    <div class="modal-style closed" id="dj_database_modal">
+        <div class="page-container p-2 pt-3">
+            <img src="https://img.icons8.com/plasticine/50/000000/crossed-arrow.png" class="float-right djdatabaseModalButton arrow-button click-icon" />
+            <h4 class="mt-2">
+                <span class="tt-letter letter-style">d</span>
+                <span class="tt-letter letter-style">j</span>
+                <span class="tt-letter letter-style">_</span>
+                <span class="tt-letter letter-style">d</span>
+                <span class="tt-letter letter-style">a</span>
+                <span class="tt-letter letter-style">t</span>
+                <span class="tt-letter letter-style">a</span>
+                <span class="tt-letter letter-style">b</span>
+                <span class="tt-letter letter-style">a</span>
+                <span class="tt-letter letter-style">s</span>
+                <span class="tt-letter letter-style">e</span>
+                <span class="tt-letter letter-style">_</span>
+                <span class="tt-letter letter-style">u</span>
+                <span class="tt-letter letter-style">r</span>
+                <span class="tt-letter letter-style">l</span></h4>
+            <hr class="mt-3 dark-hr">
+            <!-- content -->
+            <div class="scroll-container">
+                <div class="row m-0 p-0">
+                    <div class="col-12 p-0 m-0">
+                        <p class="m-0 my-2">This python module is used to connect postgres to the project either from a local computer or from Heroku.</p>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 p-0 p-md-2">
+                        <div class="section-container">
+                            <h4>1. Setting up the database</h4>
+                            <dl>
+                                <dt>Configure Add-ons</dt>
+                                <dd>Heroku Postgres</dd>
+                            </dl>
+                            <p>This will create a new database using Postgres.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 p-0 p-md-2">
+                        <div class="section-container">
+                            <h4>2. Installation</h4>
+                            <dl>
+                                <dd>pip install dj_database_url</dd>
+                            </dl>
+                            <dl>
+                                <dt>Add this to the requirements file:</dt>
+                                <dd>pip install freeze --local > requirements.txt</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 p-0 p-md-2">
+                        <div class="section-container">
+                            <h4>3. env.py</h4>
+                            <dl>
+                                <dd>os.environ.setdefault('<span class="text-info">DATABASE_URL</span>', 'postgres://')</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 p-0 p-md-2">
+                        <div class="section-container">
+                            <h4>4. Settings.py</h4>
+                            <dl>
+                                <dd>import dj_database_url</dd>
+                            </dl>
+                            <dl>
+                                <dt>Use postgres or db.sqlite3</dt>
+                                <dd>if "<span class="text-info">DATABASE_URL</span>" in os.environ:</dd>
+                                <dd>&emsp;DATABASES = {</dd>
+                                <dd>&emsp;'default': dj_database_url.parse(os.environ.get('<span class="text-info">DATABASE_URL</span>'))</dd>
+                                <dd>&emsp;} </dd>
+                                <dd>else:</dd>
+                                <dd>&emsp;print("postgres URL not found, using sqlite instead")</dd>
+                                <dd>&emsp;DATABASES = {</dd>
+                                <dd>&emsp;&emsp;'default': {</dd>
+                                <dd>&emsp;&emsp;&emsp;'ENGINE': 'django.db.backends.sqlite3',</dd>
+                                <dd>&emsp;&emsp;&emsp;'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),</dd>
+                                <dd>&emsp;&emsp;}</dd>
+                                <dd>&emsp;}</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- stripe (backend) -->
     <div class="modal-style closed" id="stripeModal">
         <div class="page-container p-2 pt-3">
             <img src="https://img.icons8.com/plasticine/50/000000/crossed-arrow.png" class="float-right stripeModalButton arrow-button click-icon" />
@@ -611,85 +714,91 @@
             <div class="scroll-container">
                 <div class="row m-0 p-0">
                     <div class="col-12 col-md-6 m-0 p-0 p-md-2">
+                        <div class="section-container">
+                            <h5>1. Installation</h5>
+                            <dl>
+                                <dt>Install</dt>
+                                <dd>pip install stripe</dd>
+                            </dl>
+                            <dl>
+                                <dt>Get api keys:</dt>
+                                <dd>1. Develops tab</dd>
+                                <dd>2. API keys</dd>
+                                <dd></dd>
+                            </dl>
+                            <dl>
+                                <dt>Adding the api keys to the settings:</dt>
+                                <dd>import env</dd>
+                                <dd>STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE')</dd>
+                                <dd>STRIPE_SECRET = os.getenv('STRIPE_SECRET')</dd>
+                            </dl>
+                            <dl>
+                                <dt>Add the key values in env.py:</dt>
+                                <dd>import os</dd>
+                                <dd>os.environ.setdefault("STRIPE_PUBLISHABLE", "")</dd>
+                                <dd>os.environ.setdefault("STRIPE_SECRET", "")</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 p-0 p-md-2">
+                        <div class="section-container">
+                            <p>Create a new app.</p>
+                            <h5>2. Create a form</h5>
+                            <dl>
+                                <dt>Import the files:</dt>
+                                <dd>from django import forms</dd>
+                                <dd>from django.forms import ModelForm</dd>
+                            </dl>
+                            <dl>
+                                <dt>Payment form:</dt>
+                                <dd>class MakePaymentForm(forms.Form):</dd>
+                                <dd>MONTH_CHOICES = [(i, i) for i in range(1, 12)]</dd>
+                                <dd>YEAR_CHOICES = [(i, i) for i in range(2019, 2036)]</dd>
+                                <dd>credit_card_number = forms.CharField(label='Credit card number', required=False)</dd>
+                                <dd>cvv = forms.CharField(label='Security code (CVV)', required=False)</dd>
+                                <dd>expiry_month = forms.ChoiceField(label='Month', choices=MONTH_CHOICES, required=False)
+                                </dd>
+                                <dd>expiry_year = forms.ChoiceField(label='Year', choices=YEAR_CHOICES, required=False)</dd>
+                                <dd>stripe_id = forms.CharField(widget=forms.HiddenInput)</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 p-0 p-md-2">
+                        <div class="section-container">
 
-                        <h5>1. Installation</h5>
-                        <dl>
-                            <dt>Install</dt>
-                            <dd>pip install stripe</dd>
-                        </dl>
-                        <dl>
-                            <dt>Get api keys:</dt>
-                            <dd>1. Develops tab</dd>
-                            <dd>2. API keys</dd>
-                            <dd></dd>
-                        </dl>
-                        <dl>
-                            <dt>Adding the api keys to the settings:</dt>
-                            <dd>import env</dd>
-                            <dd>STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE')</dd>
-                            <dd>STRIPE_SECRET = os.getenv('STRIPE_SECRET')</dd>
-                        </dl>
-                        <dl>
-                            <dt>Add the key values in env.py:</dt>
-                            <dd>import os</dd>
-                            <dd>os.environ.setdefault("STRIPE_PUBLISHABLE", "")</dd>
-                            <dd>os.environ.setdefault("STRIPE_SECRET", "")</dd>
-                        </dl>
-                    </div>
-                    <div class="col-12 col-md-6 m-0 p-0 p-md-2">
-                        <hr>
-                        <p>Create a new app.</p>
-                        <h5>2. Create a form</h5>
-                        <dl>
-                            <dt>Import the files:</dt>
-                            <dd>from django import forms</dd>
-                            <dd>from django.forms import ModelForm</dd>
-                        </dl>
-                        <dl>
-                            <dt>Payment form:</dt>
-                            <dd>class MakePaymentForm(forms.Form):</dd>
-                            <dd>MONTH_CHOICES = [(i, i) for i in range(1, 12)]</dd>
-                            <dd>YEAR_CHOICES = [(i, i) for i in range(2019, 2036)]</dd>
-                            <dd>credit_card_number = forms.CharField(label='Credit card number', required=False)</dd>
-                            <dd>cvv = forms.CharField(label='Security code (CVV)', required=False)</dd>
-                            <dd>expiry_month = forms.ChoiceField(label='Month', choices=MONTH_CHOICES, required=False)
-                            </dd>
-                            <dd>expiry_year = forms.ChoiceField(label='Year', choices=YEAR_CHOICES, required=False)</dd>
-                            <dd>stripe_id = forms.CharField(widget=forms.HiddenInput)</dd>
-                        </dl>
-                    </div>
-                    <div class="col-12 col-md-6 m-0 p-0 p-md-2">
-                        <hr>
-                        <h5>3. Creating the view</h5>
-                        <dl>
-                            <dt>Import files:</dt>
-                            <dd>from django.contrib.auth.decorators import login_required</dd>
-                            <dd>from django.conf import settings</dd>
-                            <dd>import stripe</dd>
-                        </dl>
-                        <dl>
-                            <dt>Stripe and login required:</dt>
-                            <dd>stripe.api_key = settings.STRIPE_SECRET</dd>
-                            <dd>@login_required()</dd>
-                            <dt>Pass the publishable key into the view:</dt>
-                            <dd>"publishable": settings.STRIPE_PUBLISHABLE</dd>
-                        </dl>
+                            <h5>3. Creating the view</h5>
+                            <dl>
+                                <dt>Import files:</dt>
+                                <dd>from django.contrib.auth.decorators import login_required</dd>
+                                <dd>from django.conf import settings</dd>
+                                <dd>import stripe</dd>
+                            </dl>
+                            <dl>
+                                <dt>Stripe and login required:</dt>
+                                <dd>stripe.api_key = settings.STRIPE_SECRET</dd>
+                                <dd>@login_required()</dd>
+                                <dt>Pass the publishable key into the view:</dt>
+                                <dd>"publishable": settings.STRIPE_PUBLISHABLE</dd>
+                            </dl>
+                        </div>
                     </div>
 
                     <div class="col-12 col-md-6 m-0 p-0 p-md-2">
-                        <hr>
-                        <p>First a script has to be created with the Stripe publishable key and added into the base head, then the payment details form can be created and submitted by the user.</p>
-                        <h5>4. Creating the page</h5>
-                        <dl>
-                            <dt>The page:</dt>
-                            <dd>{% block head_js %}</dd>
-                            <dd>&lt;script type="text/javascript" src="https://js.stripe.com/v2/">&lt;/script></dd>
-                            <dd>&lt;script type="text/javascript"></dd>
-                            <dd>Stripe.publishableKey = '{{ publishable }}';</dd>
-                            <dd>&lt;/script></dd>
-                            <dd>&lt;script type="text/javascript" src="{% static 'js/stripe.js' %}">&lt;/script></dd>
-                            <dd>{% endblock %}</dd>
-                        </dl>
+                        <div class="section-container">
+
+                            <p>First a script has to be created with the Stripe publishable key and added into the base head, then the payment details form can be created and submitted by the user.</p>
+                            <h5>4. Creating the page</h5>
+                            <dl>
+                                <dt>The page:</dt>
+                                <dd>{% block head_js %}</dd>
+                                <dd>&lt;script type="text/javascript" src="https://js.stripe.com/v2/">&lt;/script></dd>
+                                <dd>&lt;script type="text/javascript"></dd>
+                                <dd>Stripe.publishableKey = '{{ publishable }}';</dd>
+                                <dd>&lt;/script></dd>
+                                <dd>&lt;script type="text/javascript" src="{% static 'js/stripe.js' %}">&lt;/script></dd>
+                                <dd>{% endblock %}</dd>
+                            </dl>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1123,6 +1232,15 @@
                                         <hr>
                                         <dd>Pillow
                                             <a href="https://pypi.org/project/Pillow/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                        </dd>
+                                        <hr>
+                                        <dd>Whitenoise
+                                            <a href="http://whitenoise.evans.io/en/stable/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                        </dd>
+                                        <hr>
+                                        <dd>dj_database_url
+                                            <a href="https://pypi.org/project/dj-database-url/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                            <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 djdatabaseModalButton click-icon">
                                         </dd>
                                         <hr>
                                         <dd>Stripe
