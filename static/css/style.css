@@ -371,6 +371,13 @@ span {
     opacity: 0;
 }
 
+.l-s {
+    bottom: 1000px;
+    position: relative;
+    color: black;
+    opacity: 0;
+}
+
 .t-letter {
     bottom: 1000px;
     position: relative;
