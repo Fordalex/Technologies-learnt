@@ -70,6 +70,9 @@
                         <a href="https://docs.djangoproject.com/en/3.0/topics/db/queries/" target="_blank" class="main-colour">Making queries</a>
                         <a href="https://docs.djangoproject.com/en/3.0/ref/models/instances/" target="_blank" class="main-colour">Model instance reference</a>
                     </div> -->
+                    <div class="col-12 m-0 p-0 mt-2">
+                        <h4>Creating a project</h4>
+                    </div>
                     <div class="col-12 col-md-6 m-0 p-0 p-md-2">
                         <h5 class="my-2">1. Installation</h5>
                         <dl>
@@ -255,6 +258,18 @@
                             <dd>"page.html", {"data": data}</dd>
                         </dl>
                     </div>
+                    <div class="col-12 m-0 p-0 mt-2">
+                        <h4>Hosting the project</h4>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
+                        <h5 class="my-2">1. Showing the data on a page:</h5>
+                        <dl>
+                            <dt>Passing into a view:</dt>
+                            <dd>from .models import Data</dd>
+                            <dd>data = Data.objects.all()</dd>
+                            <dd>"page.html", {"data": data}</dd>
+                        </dl>
+                    </div>
                 </div>
             </div>
         </div>
@@ -270,6 +285,7 @@
             <div class="scroll-container">
                 <div class="row m-0 p-0">
                     <div class="col-12 col-md-6 m-0 p-0 p-md-2">
+
                         <h5>1. Installation</h5>
                         <dl>
                             <dt>Install</dt>
@@ -277,8 +293,8 @@
                         </dl>
                         <dl>
                             <dt>Get api keys:</dt>
-                            <dd>Develops tab</dd>
-                            <dd>API keys</dd>
+                            <dd>1. Develops tab</dd>
+                            <dd>2. API keys</dd>
                             <dd></dd>
                         </dl>
                         <dl>
@@ -295,6 +311,7 @@
                         </dl>
                     </div>
                     <div class="col-12 col-md-6 m-0 p-0 p-md-2">
+                        <hr>
                         <p>Create a new app.</p>
                         <h5>2. Create a form</h5>
                         <dl>
@@ -315,6 +332,7 @@
                         </dl>
                     </div>
                     <div class="col-12 col-md-6 m-0 p-0 p-md-2">
+                        <hr>
                         <h5>3. Creating the view</h5>
                         <dl>
                             <dt>Import files:</dt>
@@ -326,6 +344,24 @@
                             <dt>Stripe and login required:</dt>
                             <dd>stripe.api_key = settings.STRIPE_SECRET</dd>
                             <dd>@login_required()</dd>
+                            <dt>Pass the publishable key into the view:</dt>
+                            <dd>"publishable": settings.STRIPE_PUBLISHABLE</dd>
+                        </dl>
+                    </div>
+
+                    <div class="col-12 col-md-6 m-0 p-0 p-md-2">
+                        <hr>
+                        <p>First a script has to be created with the Stripe publishable key and added into the base head, then the payment details form can be created and submitted by the user.</p>
+                        <h5>4. Creating the page</h5>
+                        <dl>
+                            <dt>The page:</dt>
+                            <dd>{% block head_js %}</dd>
+                            <dd>&lt;script type="text/javascript" src="https://js.stripe.com/v2/">&lt;/script></dd>
+                            <dd>&lt;script type="text/javascript"></dd>
+                            <dd>Stripe.publishableKey = '{{ publishable }}';</dd>
+                            <dd>&lt;/script></dd>
+                            <dd>&lt;script type="text/javascript" src="{% static 'js/stripe.js' %}">&lt;/script></dd>
+                            <dd>{% endblock %}</dd>
                         </dl>
                     </div>
                 </div>
