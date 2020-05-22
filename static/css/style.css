@@ -123,6 +123,10 @@ h4 {
     margin-left: 15px;
 }
 
+input:hover {
+    cursor: pointer;
+}
+
 .fancy-font {
     font-family: 'Righteous', cursive;
     color: white;
@@ -264,6 +268,11 @@ dl {
     border-radius: 5px;
     background-color: rgba(255, 255, 255);
     box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 20px 1px;
+    word-wrap: break-word;
+}
+
+.list-no-margin dd {
+    margin: 0;
 }
 
 
@@ -369,6 +378,13 @@ span {
     opacity: 0;
 }
 
+.tip-container {
+    border: solid rgb(194, 194, 194) 1px;
+    box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 10px;
+}
+
 
 /* width */
 
@@ -379,14 +395,14 @@ span {
 
 /* Track */
 
- ::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
     background: lightgrey;
 }
 
 
 /* Handle */
 
- ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background-image: linear-gradient(rgb(226, 180, 12), rgb(96, 209, 230));
     border-radius: 5px;
     cursor: pointer;
@@ -395,7 +411,7 @@ span {
 
 /* Handle on hover */
 
- ::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
 

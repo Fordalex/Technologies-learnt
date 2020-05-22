@@ -66,11 +66,266 @@
                         <a href="https://docs.djangoproject.com/en/3.0/topics/db/queries/" target="_blank" class="main-colour">Making queries</a>
                         <a href="https://docs.djangoproject.com/en/3.0/ref/models/instances/" target="_blank" class="main-colour">Model instance reference</a>
                     </div> -->
+                    <div class="col-12 m-0 p-0">
+                        <p class="m-0"><b>Key:</b></p>
+                        <p class="m-0 text-danger">Name should be changed</p>
+                        <hr>
+                    </div>
                     <div class="col-12 m-0 p-0 mt-2">
+                        <h4>Settings.py <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_settings"></i></h4>
+                    </div>
+                    <div class="col-12 m-0 p-0">
+                        <div id="django_settings" class="collapse row m-0 tip-container">
+                            <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
+                                <h5 class="my-2">1. imports:</h5>
+                                <dl>
+                                    <dt>dj_database_url</dt>
+                                    <dd>This module to connect postgres with heroku.</dd>
+                                </dl>
+                                <dl class="list-no-margin">
+                                    <dt>env</dt>
+                                    <dd>if os.path.exists('env.py'):</dd>
+                                    <dd>import env</dd>
+                                </dl>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
+                                <h5 class="my-2">2. SECRET_KEY:</h5>
+                                <dl>
+                                    <dt>SECRET_KEY = os.environ.get('SECRET_KEY')</dt>
+                                    <dd>It's important to add the SECRET_KEY in a env.py file and when hosting the project on heroku to add the SECRET_KEY to the Config Vars.</dd>
+                                </dl>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
+                                <h5 class="my-2">3. ALLOWED_HOSTS:</h5>
+                                <dl>
+                                    <dt>['127.0.0.1', '<span class="text-danger">herokuProjectname</span>.herokuapp.com']</dt>
+                                    <dd>The project name needs to be added to the allowed hosts to run the project.</dd>
+                                </dl>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
+                                <h5 class="my-2">4. INSTALLED_APPS:</h5>
+                                <dl>
+                                    <dt>'<span class="text-danger">appname</span>',</dt>
+                                    <dd>After creating a new app with <span class="text-secondary">django-admin startapp <span class="text-danger">appname</span> the app then needs to be install.</dd>
+                                </dl>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
+                                <h5 class="my-2">5. MIDDLEWARE:</h5>
+                                <dl>
+                                    <dt>'whitenoise.middleware.WhiteNoiseMiddleware',</dt>
+                                    <dd>This is used when adding static files to a Django project.</dd>
+                                </dl>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
+                                <h5 class="my-2">6. TEMPLATES:</h5>
+                                <dl>
+                                    <dt>'DIRS': [os.path.join(BASE_DIR, 'templates')],</dt>
+                                    <dd>The name of the directory used to keep the HTML files.</dd>
+                                </dl>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
+                                <h5 class="my-2">7. DATABASES:</h5>
+                                <dl class="list-no-margin">
+                                    <dt>Use postgres or db.sqlite3</dt>
+                                    <dd>if "<span class="text-primary">DATABASE_URL</span>" in os.environ:</dd>
+                                    <dd>&emsp;DATABASES = {</dd>
+                                    <dd>&emsp;'default': dj_database_url.parse(os.environ.get('<span class="text-primary">DATABASE_URL</span>'))</dd>
+                                    <dd>&emsp;} </dd>
+                                    <dd>else:</dd>
+                                    <dd>&emsp;print("postgres URL not found, using sqlite instead")</dd>
+                                    <dd>&emsp;DATABASES = {</dd>
+                                    <dd>&emsp;&emsp;'default': {</dd>
+                                    <dd>&emsp;&emsp;&emsp;'ENGINE': 'django.db.backends.sqlite3',</dd>
+                                    <dd>&emsp;&emsp;&emsp;'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),</dd>
+                                    <dd>&emsp;&emsp;}</dd>
+                                    <dd>&emsp;}</dd>
+                                </dl>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
+                                <h5 class="my-2">7. Static files:</h5>
+                                <dl>
+                                    <dt>STATIC_URL =</dt>
+                                    <dd>'/static/'</dd>
+                                </dl>
+                                <dl>
+                                    <dt>STATICFILES_DIRS =</dt>
+                                    <dd>(os.path.join(BASE_DIR, 'static'), )</dd>
+                                </dl>
+                                <dl>
+                                    <dt>STATIC_ROOT =</dt>
+                                    <dd>os.path.join(BASE_DIR, 'staticfiles')</dd>
+                                </dl>
+                                <dl>
+                                    <dt>MEDIA_URL =</dt>
+                                    <dd>'/media/'</dd>
+                                </dl>
+                                <dl>
+                                    <dt>MEDIA_ROOT =</dt>
+                                    <dd>os.path.join(BASE_DIR, 'media')</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 m-0 p-0 mt-2">
+                        <hr class="mb-4">
+                        <h4>admin.py <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_admin"></i></h4>
+                    </div>
+                    <div class="col-12 m-0 p-0">
+                        <div id="django_admin" class="collapse row m-0 tip-container">
+                            <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
+                                <h5 class="my-2">1. Add model to the admin panel:</h5>
+                                <dl class="list-no-margin">
+                                    <dd>from django.contrib import admin</dd>
+                                    <dd>from .models import <span class="text-primary">Data</span></dd>
+                                    <dd>admin.site.register(<span class="text-primary">Data</span>)</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 m-0 p-0 mt-2">
+                        <hr class="mb-4">
+                        <h4>views.py <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_views"></i></h4>
+                    </div>
+                    <div class="col-12 m-0 p-0">
+                        <div id="django_views" class="collapse row m-0 tip-container">
+                            <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
+                                <h5 class="my-2">1. imports:</h5>
+                                <dl>
+                                    <dd>from django.shortcuts import render, redirect, reverse:</dd>
+                                </dl>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
+                                <h5 class="my-2">2. Create a route:</h5>
+                                <dl>
+                                    <dd>def <span class="text-danger">route_name</span>(request):</dd>
+                                </dl>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
+                                <h5 class="my-2">3. Render a page:</h5>
+                                <dl>
+                                    <dd>return render(request, '<span class="text-danger">pagename</span>.html')</dd>
+                                </dl>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
+                                <h5 class="my-2">3. Passing data into a view:</h5>
+                                <dl class="list-no-margin">
+                                    <dd>from .models import <span class="text-info">Products</span></dd>
+                                    <dd>
+                                        <p></p>
+                                    </dd>
+                                    <dd>def <span class="text-danger">route_name</span>(request):</dd>
+                                    <dd><span class="text-success">products</span> = <span class="text-info">products</span>.objects.all()</dd>
+                                    <dd>return render(request, '<span class="text-danger">pagename</span>.html', {<span class="text-danger">"products": <span class="text-success">products</span></span>})</dd>
+                                </dl>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-12 m-0 p-0 mt-2">
+                        <hr class="mb-4">
+                        <h4>urls.py <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_urls"></i></h4>
+                    </div>
+                    <div class="col-12 m-0 p-0">
+                        <div id="django_urls" class="collapse row m-0 tip-container">
+                            <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
+                                <h5 class="my-2">1. imports:</h5>
+                                <dl>
+                                    <dt></dt>
+                                    <dd></dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 m-0 p-0 mt-2">
+                        <hr class="mb-4">
+                        <h4>tests.py <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_tests"></i></h4>
+                    </div>
+                    <div class="col-12 m-0 p-0">
+                        <div id="django_tests" class="collapse row m-0 tip-container">
+                            <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
+                                <h5 class="my-2">1. imports:</h5>
+                                <dl>
+                                    <dt></dt>
+                                    <dd></dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 m-0 p-0 mt-2">
+                        <hr class="mb-4">
+                        <h4>models.py <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_models"></i></h4>
+                    </div>
+                    <div class="col-12 m-0 p-0">
+                        <div id="django_models" class="collapse row m-0 tip-container">
+                            <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2 ">
+                                <h5 class="my-2">1. imports:</h5>
+                                <dl>
+                                    <dd>from django.db import <span class="text-info">models</span></dd>
+                                </dl>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
+                                <h5 class="my-2">2. Create a class:</h5>
+                                <dl>
+                                    <dd>class <span class="text-danger">Modelname</span>(<span class="text-info">models</span>.Model):</dd>
+                                </dl>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
+                                <h5 class="my-2">3. Fields:</h5>
+                                <dl>
+                                    <dt>Short text field</dt>
+                                    <dd><span class="text-info">models</span>.CharField(max_length=150)</dd>
+                                </dl>
+                                <dl>
+                                    <dt>Text field</dt>
+                                    <dd><span class="text-info">models</span>.TextField()</dd>
+                                </dl>
+                                <dl>
+                                    <dt>Boolean field</dt>
+                                    <dd><span class="text-info">models</span>.BooleanField(blank=True)</dd>
+                                </dl>
+                                <dl>
+                                    <dt>Integer field</dt>
+                                    <dd><span class="text-info">models</span>.IntegerField(default=0)</dd>
+                                </dl>
+                                <dl>
+                                    <dt>Time field</dt>
+                                    <dd>from django.utils import <span class="text-success">timezone</span></dd>
+                                    <dd>
+                                        <p></p>
+                                    </dd>
+                                    <dd><span class="text-info">models</span>.DateTimeField(blank=True, null=True, default=<span class="text-success">timezone</span>.now)</dd>
+                                </dl>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
+                                <h5 class="my-2">4. Display model name in admin panel:</h5>
+                                <dl>
+                                    <dd>def __str__(self):</dd>
+                                    <dd>&emsp;return self.name</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 m-0 p-0 mt-2">
+                        <hr class="mb-4">
+                        <h4>forms.py <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_forms"></i></h4>
+                    </div>
+                    <div class="col-12 m-0 p-0">
+                        <div id="django_forms" class="collapse row m-0 tip-container">
+                            <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
+                                <h5 class="my-2">1. imports:</h5>
+                                <dl>
+                                    <dt></dt>
+                                    <dd></dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 m-0 p-0 mt-2">
+                        <hr class="mb-4">
                         <h4>Creating a project <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_project"></i></h4>
                     </div>
                     <div class="col-12 m-0 p-0">
-                        <div id="django_project" class="collapse row m-0 p-0">
+                        <div id="django_project" class="collapse row m-0 tip-container">
                             <div class="col-12 col-md-6 m-0 p-0 p-md-2">
                                 <h5 class="my-2">1. Installation</h5>
                                 <dl>
@@ -263,17 +518,80 @@
                         </div>
                     </div>
                     <div class="col-12 m-0 p-0 mt-2">
+                        <hr class="mb-4">
                         <h4>Hosting the project <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_hosting"></i></h4>
                     </div>
                     <div class="col-12 m-0 p-0">
-                        <div id="django_hosting" class="collapse row m-0 p-0">
+                        <div id="django_hosting" class="collapse row m-0 tip-container">
                             <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
-                                <h5 class="my-2">1. Showing the data on a page:</h5>
+                                <h5 class="my-2">1. Install dependencies:</h5>
+                                <dl class="list-no-margin">
+                                    <dt>Install dj_database_url<input type="checkbox" class="ml-2"></dt>
+                                    <dd>pip install dj_database_url</dd>
+                                    <dt>settings.py<input type="checkbox" class="ml-2"></dt>
+                                    <dd>import dj_database_url</dd>
+                                </dl>
                                 <dl>
-                                    <dt>Passing into a view:</dt>
-                                    <dd>from .models import Data</dd>
-                                    <dd>data = Data.objects.all()</dd>
-                                    <dd>"page.html", {"data": data}</dd>
+                                    <dt>Install pillow (images)<input type="checkbox" class="ml-2"></dt>
+                                    <dd>pip install pillow</dd>
+                                </dl>
+                                <dl>
+                                    <dt>Install whitenoise (static)<input type="checkbox" class="ml-2"></dt>
+                                    <dd>pip install whitenoise</dd>
+                                </dl>
+                                <dl>
+                                    <dt>psycopy2<input type="checkbox" class="ml-2"></dt>
+                                    <dd>pip install psycopg2-binary</dd>
+                                </dl>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
+                                <h5 class="my-2">2. Creating the required files:</h5>
+                                <dl>
+                                    <dt>Procfile:<input type="checkbox" class="ml-2"></dt>
+                                    <dd>web: gunicorn <span class="text-danger">projectname</span>.wsgi:application</dd>
+                                </dl>
+                                <dl>
+                                    <dt>requirements.txt:<input type="checkbox" class="ml-2"></dt>
+                                    <dd>pip freeze --local > requirements.txt</dd>
+                                </dl>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
+                                <h5 class="my-2">3. Postgres:</h5>
+                                <dl class="list-no-margin">
+                                    <dt>settings.py<input type="checkbox" class="ml-2"></dt>
+                                    <dd>if os.path.exists('env.py'):</dd>
+                                    <dd>&emsp;import env</dd>
+                                </dl>
+                                <dl>
+                                    <dt>env.py <input type="checkbox" class="ml-2"></dt>
+                                    <dd>os.environ.setdefault('<span class="text-primary">DATABASE_URL</span>', '<span class="text-success">postgres://</span>')</dd>
+                                </dl>
+                                <dl class="list-no-margin">
+                                    <dt>Settings.py:<input type="checkbox" class="ml-2"></dt>
+                                    <dd>if "<span class="text-primary">DATABASE_URL</span>" in os.environ:</dd>
+                                    <dd>&emsp;DATABASES = {</dd>
+                                    <dd>&emsp;'default': dj_database_url.parse(os.environ.get('<span class="text-primary">DATABASE_URL</span>'))</dd>
+                                    <dd>&emsp;} </dd>
+                                    <dd>else:</dd>
+                                    <dd>&emsp;print("postgres URL not found, using sqlite instead")</dd>
+                                    <dd>&emsp;DATABASES = {</dd>
+                                    <dd>&emsp;&emsp;'default': {</dd>
+                                    <dd>&emsp;&emsp;&emsp;'ENGINE': 'django.db.backends.sqlite3',</dd>
+                                    <dd>&emsp;&emsp;&emsp;'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),</dd>
+                                    <dd>&emsp;&emsp;}</dd>
+                                    <dd>&emsp;}</dd>
+                                </dl>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
+                                <h5 class="my-2">4. Heroku:</h5>
+                                <dl>
+                                    <dt>Configure Add-ons<input type="checkbox" class="ml-2"></dt>
+                                    <dd>Add 'Heroku Postgres'</dd>
+                                </dl>
+                                <dl class="list-no-margin">
+                                    <dt>Config Vars<input type="checkbox" class="ml-2"></dt>
+                                    <dd>DATABASE_URL &emsp;&emsp;&emsp; <span class="text-success">postgres://</span></dd>
+                                    <dd>DISABLE_COLLECTSTATIC &emsp;&emsp; 1</dd>
                                 </dl>
                             </div>
                         </div>
@@ -334,7 +652,8 @@
                             <dd>YEAR_CHOICES = [(i, i) for i in range(2019, 2036)]</dd>
                             <dd>credit_card_number = forms.CharField(label='Credit card number', required=False)</dd>
                             <dd>cvv = forms.CharField(label='Security code (CVV)', required=False)</dd>
-                            <dd>expiry_month = forms.ChoiceField(label='Month', choices=MONTH_CHOICES, required=False)</dd>
+                            <dd>expiry_month = forms.ChoiceField(label='Month', choices=MONTH_CHOICES, required=False)
+                            </dd>
                             <dd>expiry_year = forms.ChoiceField(label='Year', choices=YEAR_CHOICES, required=False)</dd>
                             <dd>stripe_id = forms.CharField(widget=forms.HiddenInput)</dd>
                         </dl>
@@ -1129,8 +1448,8 @@
                         </div>
                         <div class="col-12 px-0 px-lg-2">
                             <dl>
-                                <dt><img src="https://img.icons8.com/color/17/000000/travis-ci.png" class="mr-2" />Testing <i
-                                    class="far fa-plus-square ml-2 small-icon front-plus" data-toggle="collapse"
+                                <dt><img src="https://img.icons8.com/color/17/000000/travis-ci.png" class="mr-2" />Testing
+                                <i class="far fa-plus-square ml-2 small-icon front-plus" data-toggle="collapse"
                                     href="#testing"></i></dt>
 
                                 <div class="collapse wrapper mt-2" id="testing">
