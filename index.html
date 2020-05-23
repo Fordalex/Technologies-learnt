@@ -489,10 +489,7 @@
                             <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
                                 <div class="section-container">
                                     <h5 class="my-2">6. Models</h5>
-                                    <div class="container-fluid d-flex justify-content-between">
-                                        <a href="https://docs.djangoproject.com/en/3.0/topics/db/queries/" target="_blank" class="main-colour">Making queries</a>
-                                        <a href="https://docs.djangoproject.com/en/3.0/ref/models/instances/" target="_blank" class="main-colour">Model instance reference</a>
-                                    </div>
+
                                     <dl>
                                         <dt>Create a class:</dt>
                                         <dd>class Task(models.Model):</dd>
@@ -510,6 +507,10 @@
                                         <dd>from django.utils import timezone</dd>
                                         <dd>models.DateTimeField(blank=True, null=True, default=timezone.now)</dd>
                                     </dl>
+                                    <div class="container-fluid d-flex justify-content-between p-0 mb-1">
+                                        <a href="https://docs.djangoproject.com/en/3.0/topics/db/queries/" target="_blank" class="main-colour btn text-light">Making queries</a>
+                                        <a href="https://docs.djangoproject.com/en/3.0/ref/models/instances/" target="_blank" class="main-colour btn text-light">Model instance reference</a>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
@@ -829,6 +830,23 @@
         </div>
     </div>
 
+    <!-- psycopg2-binary (backend) -->
+    <div class="modal-style closed" id="psycopg2_modal">
+        <div class="page-container p-2 pt-3">
+            <img src="https://img.icons8.com/plasticine/50/000000/crossed-arrow.png" class="float-right psycopg2ModalButton arrow-button click-icon" />
+            <h4 class="mt-2">
+                <span class="ps-letter l-s">Psy</span><span class="ps-letter l-s">co</span><span class="ps-letter l-s">pg</span><span class="ps-letter l-s">2-</span><span class="ps-letter l-s">bin</span><span class="ps-letter l-s">ary</span>
+            </h4>
+            <hr class="mt-3 dark-hr">
+            <!-- content -->
+            <div class="scroll-container">
+                <div class="row m-0 p-0">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- stripe (backend) -->
     <div class="modal-style closed" id="stripeModal">
         <div class="page-container p-2 pt-3">
@@ -867,8 +885,8 @@
                     </div>
                     <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
                         <div class="section-container">
-                            <p>Create a new app.</p>
                             <h5>2. Create a form</h5>
+                            <p>Create a new app.</p>
                             <dl>
                                 <dt>Import the files:</dt>
                                 <dd>from django import forms</dd>
@@ -886,6 +904,7 @@
                                 <dd>expiry_year = forms.ChoiceField(label='Year', choices=YEAR_CHOICES, required=False)</dd>
                                 <dd>stripe_id = forms.CharField(widget=forms.HiddenInput)</dd>
                             </dl>
+
                         </div>
                     </div>
                     <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
@@ -911,7 +930,7 @@
                     <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
                         <div class="section-container">
 
-                            <p>First a script has to be created with the Stripe publishable key and added into the base head, then the payment details form can be created and submitted by the user.</p>
+
                             <h5>4. Creating the page</h5>
                             <dl>
                                 <dt>The page:</dt>
@@ -923,6 +942,7 @@
                                 <dd>&lt;script type="text/javascript" src="{% static 'js/stripe.js' %}">&lt;/script></dd>
                                 <dd>{% endblock %}</dd>
                             </dl>
+                            <p>First a script has to be created with the Stripe publishable key and added into the base head, then the payment details form can be created and submitted by the user.</p>
                         </div>
                     </div>
                 </div>
@@ -1342,18 +1362,50 @@
                                     </div>
                                 </div>
                                 <hr>
-                                <!-- python modules -->
-                                <dt><img src="https://img.icons8.com/offices/18/000000/module.png" class="mr-2" />Python
-                                modules<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse"
-                                    href="#modules"></i></dt>
-                                <div class="collapse wrapper mt-2" id="modules">
+                                <dt><img src="https://img.icons8.com/dusk/18/000000/add-database.png"
+                                    class="mr-2" />Databases<i class="far fa-plus-square ml-2 small-icon"
+                                    data-toggle="collapse" href="#database"></i></dt>
+                                <div class="collapse wrapper mt-2" id="database">
+                                    <div class="p-2">
+                                        <dd>MongoDB
+                                            <a href="https://www.mongodb.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                        </dd>
+                                        <hr>
+                                        <dd>Postgres
+
+                                        </dd>
+                                    </div>
+                                </div>
+                            </dl>
+                        </div>
+                        <!-- python modules -->
+                        <div class="col-12 p-0">
+                            <h4 class="mb-3">Python modules
+                                <i class="fas fa-microchip"></i></h4>
+                        </div>
+                        <div class="col-12 px-0 px-lg-2">
+                            <dl>
+                                <dd><img src="https://img.icons8.com/ios-glyphs/17/000000/settings-3.png" class="mr-2" />Automation<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#automation"></i>
+                                </dd>
+                                <div class="collapse wrapper mt-2" id="automation">
                                     <div class="p-2">
                                         <dd>Pyperclip
                                             <a href="https://pypi.org/project/pyperclip/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
                                         </dd>
-                                        <hr>
-                                        <dt class="ml-2">For Django</dt>
-                                        <hr>
+                                    </div>
+                                </div>
+                                <hr>
+                                <dd><img src="https://img.icons8.com/ios-filled/17/000000/sport-bottle.png" class="mr-2" />Flask<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#flask-modules"></i>
+                                </dd>
+                                <div class="collapse wrapper mt-2" id="flask-modules">
+                                    <div class="p-2">
+
+                                    </div>
+                                </div>
+                                <hr>
+                                <dd><img src="https://img.icons8.com/windows/17/000000/django.png" class="mr-2" />Django<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django-modules"></i></dd>
+                                <div class="collapse wrapper mt-2" id="django-modules">
+                                    <div class="p-2">
                                         <dd>Gunicorn
                                             <a href="https://gunicorn.org/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
                                             <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 gunicornModalButton click-icon">
@@ -1362,6 +1414,11 @@
                                         <dd>dj_database_url
                                             <a href="https://pypi.org/project/dj-database-url/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
                                             <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 djdatabaseModalButton click-icon">
+                                        </dd>
+                                        <hr>
+                                        <dd>psycopg2-binary
+                                            <a href="https://pypi.org/project/dj-database-url/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                            <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 psycopg2ModalButton click-icon">
                                         </dd>
                                         <hr>
                                         <dd>Pillow
@@ -1380,32 +1437,6 @@
                                         </dd>
                                     </div>
                                 </div>
-                                <hr>
-                                <dt><img src="https://img.icons8.com/dusk/18/000000/add-database.png"
-                                    class="mr-2" />Databases<i class="far fa-plus-square ml-2 small-icon"
-                                    data-toggle="collapse" href="#database"></i></dt>
-                                <div class="collapse wrapper mt-2" id="database">
-                                    <div class="p-2">
-                                        <dd>MongoDB
-                                            <a href="https://www.mongodb.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
-                                        </dd>
-                                        <hr>
-                                        <dd>Postgres
-
-                                        </dd>
-                                    </div>
-                                </div>
-                            </dl>
-                        </div>
-                        <!-- How -->
-                        <div class="col-12 p-0">
-                            <h4 class="mb-3">How?<i class="fas fa-question ml-2"></i></h4>
-                        </div>
-                        <div class="col-12 px-0 px-lg-2">
-                            <dl>
-                                <dd>Jinja and JavaScript to communicate</dd>
-                                <hr>
-                                <dd>Add data to a chart</dd>
                             </dl>
                         </div>
                     </div>
@@ -1812,6 +1843,17 @@
                                 </div>
                                 <hr>
                                 <dt><img src="https://img.icons8.com/clouds/18/000000/vector.png" class="mr-2" />Youtube<i
+                                    class="far fa-plus-square ml-2 small-icon" data-toggle="collapse"
+                                    href="#illustrationssvg"></i></dt>
+                                <div class="collapse wrapper mt-2" id="illustrationssvg">
+                                    <div class="p-2">
+                                        <dd>Adobe Illustrator</dd>
+                                        <hr>
+                                        <dd>Figma</dd>
+                                    </div>
+                                </div>
+                                <hr>
+                                <dt><img src="https://img.icons8.com/clouds/18/000000/vector.png" class="mr-2" />Superhi<i
                                     class="far fa-plus-square ml-2 small-icon" data-toggle="collapse"
                                     href="#illustrationssvg"></i></dt>
                                 <div class="collapse wrapper mt-2" id="illustrationssvg">

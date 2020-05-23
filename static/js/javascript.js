@@ -6,7 +6,7 @@ window.addEventListener("load", function() {
     tl.to('.page-container', 0.1, { opacity: 1 }, '-=0.7')
     tl.to('.left-shutter', 1.5, { left: '-150vw', ease: 'power3' })
     tl.to('.right-shutter', 1.5, { left: '150vw', ease: 'power3' }, '-=1.5')
-    tl.from('.wobble-onload', 1, { transform: 'scale(0)', ease: 'power3', stagger: 0.1 }, '-=1.5')
+    tl.from('.wobble-onload', 1, { transform: 'scale(0.85)', ease: 'power3', opacity: 0, stagger: 0.1 }, '-=1.5')
     tl.from('.main-title', 1, { ease: 'power2' }, '-=1.5')
     tl.to('.mobile-navigation', 0.7, { top: '0px', opacity: 1, ease: 'power3' }, '-=1.5')
     setTimeout(function() {
