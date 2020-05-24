@@ -193,7 +193,7 @@
     <!-- Django (backend) -->
     <div class="modal-style closed" id="djangoModal">
         <div class="page-container p-2 pt-3">
-            <img src="https://img.icons8.com/plasticine/50/000000/crossed-arrow.png" class="float-right djangoModalButton arrow-button click-icon mb-2" />
+            <img src="https://img.icons8.com/plasticine/50/000000/crossed-arrow.png" class="float-right arrow-button click-icon mb-2" onclick="call_modal('djangoModal', 'd-letter','off' )" />
             <h4><span class="d-letter">D</span><span class="d-letter">j</span><span class="d-letter">a</span><span class="d-letter">n</span><span class="d-letter">g</span><span class="d-letter">o</span></h4>
             <hr class="mt-3 dark-hr">
             <!-- content -->
@@ -1558,12 +1558,12 @@
                                     <div class="p-2">
                                         <dd>Flask
                                             <a href="https://flask.palletsprojects.com/en/1.1.x/quickstart/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
-                                            <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 click-icon">
+                                            <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 click-icon" onclick="call_modal('flaskModal', 'd-letter','on' )">
                                         </dd>
                                         <hr>
                                         <dd>Django
                                             <a href="https://www.djangoproject.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
-                                            <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 djangoModalButton click-icon">
+                                            <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 click-icon" onclick="call_modal('djangoModal', 'd-letter','on' )">
                                         </dd>
                                     </div>
                                 </div>
@@ -1574,7 +1574,7 @@
                                 <div class="collapse wrapper mt-2" id="database">
                                     <div class="p-2">
                                         <dd>MongoDB
-                                            <a href="https://www.mongodb.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                            <a href="https://www.mongodb.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" onclick="call_modal('mongoDBModal', 'd-letter','on' )" /></a>
                                         </dd>
                                         <hr>
                                         <dd>Postgres
@@ -1614,17 +1614,17 @@
                                     <div class="p-2">
                                         <dd>Gunicorn
                                             <a href="https://gunicorn.org/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
-                                            <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 gunicornModalButton click-icon">
+                                            <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 click-icon" onclick="call_modal('gunicornModal', 'd-letter','on' )">
                                         </dd>
                                         <hr>
                                         <dd>dj_database_url
                                             <a href="https://pypi.org/project/dj-database-url/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
-                                            <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 djdatabaseModalButton click-icon">
+                                            <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 click-icon" onclick="call_modal('djDatabaseModal', 'd-letter','on' )">
                                         </dd>
                                         <hr>
                                         <dd>psycopg2-binary
                                             <a href="https://pypi.org/project/dj-database-url/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
-                                            <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 psycopg2ModalButton click-icon">
+                                            <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 click-icon" onclick="call_modal('psycopg2Modal', 'd-letter','on' )">
                                         </dd>
                                         <hr>
                                         <dd>Pillow
@@ -1634,12 +1634,12 @@
                                         <hr>
                                         <dd>Whitenoise
                                             <a href="http://whitenoise.evans.io/en/stable/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
-                                            <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 whiteNoiseModalButton click-icon">
+                                            <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 click-icon" onclick="call_modal('whiteNoiseModal', 'd-letter','on' )">
                                         </dd>
                                         <hr>
                                         <dd>Stripe
                                             <a href="https://dashboard.stripe.com/test/apikeys" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
-                                            <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 stripeModalButton click-icon">
+                                            <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 click-icon" onclick="call_modal('stripeModal', 'd-letter','on' )">
                                         </dd>
                                     </div>
                                 </div>
