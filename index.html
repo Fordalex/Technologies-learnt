@@ -270,9 +270,15 @@
                                 <div class="section-container">
                                     <h5 class="my-2">6. TEMPLATES:</h5>
                                     <dl>
-                                        <dt>'DIRS': [os.path.join(BASE_DIR, 'templates')],</dt>
-                                        <dd>The name of the directory used to keep the HTML files.</dd>
+                                        <dd>'DIRS': [os.path.join(BASE_DIR, 'templates')],</dd>
                                     </dl>
+                                    <p>The name of the directory used to keep the HTML files.</p>
+                                    <dl class="list-no-margin">
+                                        <dd>'OPTIONS': {</dd>
+                                        <dd>'context_processors': [</dd>
+                                        <dd>'django.template.context_processors.media',</dd>
+                                    </dl>
+                                    <p>This will allow us to serve out our media files.</p>
                                 </div>
                             </div>
                             <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
@@ -298,24 +304,24 @@
                             <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
                                 <div class="section-container">
                                     <h5 class="my-2">7. Static files:</h5>
-                                    <dl>
-                                        <dt>STATIC_URL =</dt>
+                                    <dl class="list-no-margin">
+                                        <dd>STATIC_URL =</dd>
                                         <dd>'/static/'</dd>
                                     </dl>
-                                    <dl>
-                                        <dt>STATICFILES_DIRS =</dt>
+                                    <dl class="list-no-margin">
+                                        <dd>STATICFILES_DIRS =</dd>
                                         <dd>(os.path.join(BASE_DIR, 'static'), )</dd>
                                     </dl>
-                                    <dl>
-                                        <dt>STATIC_ROOT =</dt>
+                                    <dl class="list-no-margin">
+                                        <dd>STATIC_ROOT =</dd>
                                         <dd>os.path.join(BASE_DIR, 'staticfiles')</dd>
                                     </dl>
-                                    <dl>
-                                        <dt>MEDIA_URL =</dt>
+                                    <dl class="list-no-margin">
+                                        <dd>MEDIA_URL =</dd>
                                         <dd>'/media/'</dd>
                                     </dl>
-                                    <dl>
-                                        <dt>MEDIA_ROOT =</dt>
+                                    <dl class="list-no-margin">
+                                        <dd>MEDIA_ROOT =</dd>
                                         <dd>os.path.join(BASE_DIR, 'media')</dd>
                                     </dl>
                                 </div>
@@ -334,6 +340,9 @@
                                     <dl class="list-no-margin">
                                         <dd>from django.contrib import admin</dd>
                                         <dd>from .models import <span class="text-primary">Data</span></dd>
+                                        <dd>
+                                            <p></p>
+                                        </dd>
                                         <dd>admin.site.register(<span class="text-primary">Data</span>)</dd>
                                     </dl>
                                 </div>
@@ -430,7 +439,7 @@
                         <div id="django_models" class="collapse row m-0">
                             <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
                                 <div class="section-container">
-                                    <h5 class="my-2">1. imports:</h5>
+                                    <h5 class="my-2">1. imports</h5>
                                     <dl>
                                         <dd>from django.db import <span class="text-info">models</span></dd>
                                     </dl>
@@ -438,7 +447,7 @@
                             </div>
                             <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
                                 <div class="section-container">
-                                    <h5 class="my-2">2. Create a class:</h5>
+                                    <h5 class="my-2">2. Create a class</h5>
                                     <dl>
                                         <dd>class <span class="text-danger">Modelname</span>(<span class="text-info">models</span>.Model):</dd>
                                     </dl>
@@ -446,7 +455,7 @@
                             </div>
                             <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
                                 <div class="section-container">
-                                    <h5 class="my-2">3. Fields:</h5>
+                                    <h5 class="my-2">3. Fields</h5>
                                     <dl>
                                         <dt>Short text field</dt>
                                         <dd><span class="text-info">models</span>.CharField(max_length=150)</dd>
@@ -457,12 +466,17 @@
                                     </dl>
                                     <dl>
                                         <dt>Boolean field</dt>
-                                        <dd><span class="text-info">models</span>.BooleanField(blank=True)</dd>
+                                        <dd><span class="text-info">models</span>.BooleanField()</dd>
                                     </dl>
                                     <dl>
                                         <dt>Integer field</dt>
                                         <dd><span class="text-info">models</span>.IntegerField(default=0)</dd>
                                     </dl>
+                                    <dl>
+                                        <dt>Image field</dt>
+                                        <dd><span class="text-info">models</span>.imageField(upload_to="img")</dd>
+                                    </dl>
+                                    <p class="ml-2">upload_to="img" is the name of the folder under the media directory. Also requires <b>Pillow</b>.</p>
                                     <dl>
                                         <dt>Time field</dt>
                                         <dd>from django.utils import <span class="text-success">timezone</span></dd>
@@ -476,7 +490,21 @@
                             </div>
                             <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
                                 <div class="section-container">
-                                    <h5 class="my-2">4. Display model name in admin panel:</h5>
+                                    <h5 class="my-2">4. Attributes</h5>
+                                    <dl>
+                                        <dt>Non user input:</dt>
+                                        <dd>default=<span class="text-danger">0</span></dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>Allow blank field:</dt>
+                                        <dd>null=<span class="text-danger">True</span></dd>
+                                    </dl>
+
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">5. Display model name in admin panel:</h5>
                                     <dl>
                                         <dd>def __str__(self):</dd>
                                         <dd>&emsp;return self.name</dd>
@@ -493,10 +521,21 @@
                         <div id="django_forms" class="collapse row m-0">
                             <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
                                 <div class="section-container">
-                                    <h5 class="my-2">1. imports:</h5>
+                                    <h5 class="my-2">1. Imports</h5>
                                     <dl>
-                                        <dt></dt>
-                                        <dd></dd>
+                                        <dd>from django import <span class="text-info">forms</span></dd>
+                                        <dd>from .models import <span class="text-success">ModelName</span></dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">2. Crate a class</h5>
+                                    <dl>
+                                        <dd>class <span class="text-danger">FromName</span>(<span class="text-info">forms</span>.ModelForm)</dd>
+                                        <dd>class Meta:</dd>
+                                        <dd>model = <span class="text-success">ModelName</span></dd>
+                                        <dd>fields = (<span class="text-danger">'only', 'required', 'user', 'editable', 'fields'</span>)</dd>
                                     </dl>
                                 </div>
                             </div>
@@ -856,20 +895,29 @@
     <!-- pillow (backend) -->
     <div class="modal-style closed" id="pillowModal">
         <div class="page-container p-2 pt-3">
-            <img src="https://img.icons8.com/plasticine/50/000000/crossed-arrow.png" class="float-right pillowModalButton arrow-button click-icon" />
+            <img src="https://img.icons8.com/plasticine/50/000000/crossed-arrow.png" class="float-right arrow-button click-icon" onclick="call_modal('pillowModal', 'pw-letter', 'off')" />
             <h4 class="mt-2">
-                <span class="pillow-letter letter-style">P</span>
-                <span class="pillow-letter letter-style">i</span>
-                <span class="pillow-letter letter-style">l</span>
-                <span class="pillow-letter letter-style">l</span>
-                <span class="pillow-letter letter-style">o</span>
-                <span class="pillow-letter letter-style">w</span>
+                <span class="pw-letter l-s">P</span><span class="pw-letter l-s">i</span><span class="pw-letter l-s">l</span><span class="pw-letter l-s">l</span><span class="pw-letter l-s">o</span><span class="pw-letter l-s">w</span>
             </h4>
             <hr class="mt-3 dark-hr">
             <!-- content -->
             <div class="scroll-container">
                 <div class="row m-0 p-0">
-
+                    <div class="col-12 m-0 p-0">
+                        <p>This module allows us to use the imageField on our models.py file.</p>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>1. Installation</h4>
+                            <dl class="list-no-margin">
+                                <dd>pip install whitenoise</dd>
+                            </dl>
+                            <dl class="list-no-margin">
+                                <dt>Add this to the requirements file:</dt>
+                                <dd>pip install freeze --local > requirements.txt</dd>
+                            </dl>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -887,14 +935,31 @@
             <!-- content -->
             <div class="scroll-container">
                 <div class="row m-0 p-0">
+                    <div class="col-12 m-0 p-0">
+                        <p>This module allows us to host static files such as Css and JavaScript.</p>
+                    </div>
                     <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
                         <div class="section-container ">
-                            <h4>1. Setting up the database</h4>
+                            <h4>1. Installation</h4>
                             <dl>
-                                <dt>Configure Add-ons</dt>
-                                <dd>Heroku Postgres</dd>
+                                <dd>pip install whitenoise</dd>
                             </dl>
-                            <p>This will create a new database using Postgres.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>2. Middleware (settings.py)</h4>
+                            <dl>
+                                <dd>'whitenoise.middleware.WhiteNoiseMiddleware',</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>3. Static files (settings.py)</h4>
+                            <dl>
+                                <dd>STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')</dd>
+                            </dl>
                         </div>
                     </div>
                 </div>
@@ -987,7 +1052,21 @@
             <!-- content -->
             <div class="scroll-container">
                 <div class="row m-0 p-0">
-
+                    <div class="col-12 m-0 p-0">
+                        <p>This allow the project to be connected to postgres.</p>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container">
+                            <h4>1. Installation</h4>
+                            <dl>
+                                <dd>pip install psycopg2-binary</dd>
+                            </dl>
+                            <dl>
+                                <dt>Add this to the requirements file:</dt>
+                                <dd>pip install freeze --local > requirements.txt</dd>
+                            </dl>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1090,6 +1169,33 @@
                             </dl>
                             <p>First a script has to be created with the Stripe publishable key and added into the base head, then the payment details form can be created and submitted by the user.</p>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Technologies modals (developed) -->
+
+    <!-- heroku (developed) -->
+    <div class="modal-style closed" id="herokuModal">
+        <div class="page-container p-2 pt-3">
+            <img src="https://img.icons8.com/plasticine/50/000000/crossed-arrow.png" class="float-right arrow-button click-icon" onclick="call_modal('herokuModal', 'hku-letter', 'off')" />
+            <h4 class="mt-2">
+                <span class="hku-letter l-s">H</span><span class="hku-letter l-s">e</span><span class="hku-letter l-s">r</span><span class="hku-letter l-s">o</span><span class="hku-letter l-s">k</span><span class="hku-letter l-s">u</span>
+
+            </h4>
+            <hr class="mt-3 dark-hr">
+            <!-- content -->
+            <div class="scroll-container">
+                <div class="col-12 m-0 p-0">
+                    <p>Heroku is used to host projects that require a server, just as projects built using a backend framework. Heroku uses a ephemeral file system and everytime the worker restarts, approximately in <b>12 hours</b>, all user uploaded content
+                        is deleted. To get around this, store media files on a external sorce such as <b>Amazon Web Services</b>.
+                    </p>
+                </div>
+                <div class="row m-0 p-0">
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+
                     </div>
                 </div>
             </div>
@@ -1499,7 +1605,10 @@
                                     data-toggle="collapse" href="#framework"></i></dt>
                                 <div class="collapse wrapper" id="framework">
                                     <div class="p-2">
-                                        <dd>Flask</dd>
+                                        <dd>Flask
+                                            <a href="https://flask.palletsprojects.com/en/1.1.x/quickstart/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                            <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 click-icon">
+                                        </dd>
                                         <hr>
                                         <dd>Django
                                             <a href="https://www.djangoproject.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
@@ -1569,7 +1678,7 @@
                                         <hr>
                                         <dd>Pillow
                                             <a href="https://pypi.org/project/Pillow/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
-                                            <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 pillowModalButton click-icon">
+                                            <img src="images/question-mark.png" style="width:25px;" onclick="call_modal('pillowModal', 'pw-letter', 'on')" class="float-right mr-2 click-icon">
                                         </dd>
                                         <hr>
                                         <dd>Whitenoise
@@ -1791,7 +1900,7 @@
                             <dl>
 
                                 <dt><img src="https://img.icons8.com/office/16/000000/static-views.png"
-                                    class="mr-2" />Static Hosting<i class="far fa-plus-square ml-2 small-icon"
+                                    class="mr-2" />Hosting Static Projects<i class="far fa-plus-square ml-2 small-icon"
                                     data-toggle="collapse" href="#statichosting"></i></dt>
                                 <div class="collapse wrapper" id="statichosting">
                                     <div class="p-2">
@@ -1802,15 +1911,27 @@
                                     </div>
                                 </div>
                                 <hr>
-                                <dt><img src="https://img.icons8.com/dusk/17/000000/server.png" class="mr-2" />Dynamic
-                                Hosting<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse"
+                                <dt><img src="https://img.icons8.com/dusk/17/000000/server.png" class="mr-2" />Hosting Dynamic Projects
+                                <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse"
                                     href="#dynamichosting"></i></dt>
                                 <div class="collapse wrapper mt-2" id="dynamichosting">
                                     <div class="p-2">
                                         <dd class="ml-3">Heroku
                                             <a href="https://dashboard.heroku.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                            <img src="images/question-mark.png" style="width:25px;" onclick="call_modal('herokuModal', 'hku-letter', 'on')" class="float-right mr-2 click-icon">
                                         </dd>
-
+                                    </div>
+                                </div>
+                                <hr>
+                                <dt><img src="https://img.icons8.com/dotty/17/000000/static-view-level1.png" class="mr-2" />Hosting Static Files
+                                    <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse"
+                                        href="#staticFilesHosting"></i></dt>
+                                <div class="collapse wrapper mt-2" id="staticFilesHosting">
+                                    <div class="p-2">
+                                        <dd class="ml-3">Amazon Web Services
+                                            <a href="https://aws.amazon.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                            <img src="images/question-mark.png" style="width:25px;" onclick="call_modal('amazonModal', 'az-letter', 'on')" class="float-right mr-2 click-icon">
+                                        </dd>
                                     </div>
                                 </div>
 
@@ -1968,7 +2089,11 @@
                                     href="#wireframes"></i></dt>
                                 <div class="collapse wrapper" id="wireframes">
                                     <div class="p-2">
-                                        <dd class="ml-3">Flask</dd>
+                                        <dd class="ml-3">Flask
+                                            <a href="https://flask.palletsprojects.com/en/1.1.x/quickstart/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                            <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 click-icon">
+
+                                        </dd>
                                         <hr>
                                         <dd>Django
                                             <a href="https://www.djangoproject.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
@@ -2205,7 +2330,6 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
         <script src="static/js/modal.js"></script>
         <script src="static/js/javascript.js"></script>
-
 </body>
 
 </html>
