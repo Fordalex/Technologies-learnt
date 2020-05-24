@@ -42,6 +42,9 @@ $('#open-all-back').on('click', function() {
     $('#django').collapse('toggle');
     $('#modules').collapse('toggle');
     $('#database').collapse('toggle');
+    $('#automation').collapse('toggle');
+    $('#flask-modules').collapse('toggle');
+    $('#django-modules').collapse('toggle');
 });
 
 $('.far').on('click', function() {
