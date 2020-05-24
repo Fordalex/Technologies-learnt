@@ -208,8 +208,13 @@
                         <p class="m-0 text-danger">Name should be changed</p>
                         <hr>
                     </div>
+                    <div class="col-12 m-0 p-0">
+                        <h3 class="mt-3 mb-4 text-center">Each File</h3>
+                        <hr>
+                    </div>
                     <div class="col-12 m-0 p-0 mt-2">
-                        <h4>Settings.py <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_settings"></i></h4>
+                        <!-- settings -->
+                        <h4><img src="https://img.icons8.com/fluent/32/000000/settings.png" class="mr-2" />Settings.py <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_settings"></i></h4>
                     </div>
                     <div class="col-12 m-0 p-0">
                         <div id="django_settings" class="collapse row m-0">
@@ -241,8 +246,9 @@
                                     <h5 class="my-2">3. ALLOWED_HOSTS:</h5>
                                     <dl>
                                         <dt>['127.0.0.1', '<span
-                                            class="text-danger">herokuProjectname</span>.herokuapp.com']</dt>
-                                        <dd>The project name needs to be added to the allowed hosts to run the project.</dd>
+                                                class="text-danger">herokuProjectname</span>.herokuapp.com']</dt>
+                                        <dd>The project name needs to be added to the allowed hosts to run the project.
+                                        </dd>
                                     </dl>
                                 </div>
                             </div>
@@ -251,8 +257,9 @@
                                     <h5 class="my-2">4. INSTALLED_APPS:</h5>
                                     <dl>
                                         <dt>'<span class="text-danger">appname</span>',</dt>
-                                        <dd>After creating a new app with <span class="text-secondary">django-admin startapp
-                                            <span class="text-danger">appname</span> the app then needs to be install.
+                                        <dd>After creating a new app with <span class="text-secondary">django-admin
+                                                startapp
+                                                <span class="text-danger">appname</span> the app then needs to be install.
                                         </dd>
                                     </dl>
                                 </div>
@@ -330,7 +337,8 @@
                     </div>
                     <div class="col-12 m-0 p-0 mt-2">
                         <hr class="mb-4">
-                        <h4>admin.py <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_admin"></i></h4>
+                        <!-- admin -->
+                        <h4><img src="https://img.icons8.com/color/32/000000/admin-settings-male.png" class="mr-2" />admin.py <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_admin"></i></h4>
                     </div>
                     <div class="col-12 m-0 p-0">
                         <div id="django_admin" class="collapse row m-0">
@@ -351,7 +359,8 @@
                     </div>
                     <div class="col-12 m-0 p-0 mt-2">
                         <hr class="mb-4">
-                        <h4>views.py <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_views"></i></h4>
+                        <!-- views -->
+                        <h4><img src="https://img.icons8.com/color/32/000000/eyes-cartoon.png" class="mr-2" />views.py <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_views"></i></h4>
                     </div>
                     <div class="col-12 m-0 p-0">
                         <div id="django_views" class="collapse row m-0">
@@ -375,13 +384,19 @@
                                 <div class="section-container">
                                     <h5 class="my-2">3. Render a page:</h5>
                                     <dl>
-                                        <dd>return render(request, '<span class="text-danger">pagename</span>.html')</dd>
+                                        <dd>return render(request, '<span class="text-danger">pagename</span>.html')
+                                        </dd>
                                     </dl>
                                 </div>
                             </div>
+
+
+
+
+
                             <div class="col-12 col-md-6 m-0 pl-lg-2 py-2 px-1 p-md-2">
                                 <div class="section-container">
-                                    <h5 class="my-2">3. Passing data into a view:</h5>
+                                    <h5 class="my-2">4. Passing data into a HTML page:</h5>
                                     <dl class="list-no-margin">
                                         <dd>from .models import <span class="text-info">Products</span></dd>
                                         <dd>
@@ -389,26 +404,69 @@
                                         </dd>
                                         <dd>def <span class="text-danger">route_name</span>(request):</dd>
                                         <dd><span class="text-success">products</span> = <span class="text-info">products</span>.objects.all()</dd>
-                                        <dd>return render(request, '<span class="text-danger">pagename</span>.html', {<span class="text-danger">"products": <span
-                                                class="text-success">products</span></span>})</dd>
+                                        <dd>return render(request, '<span class="text-danger">pagename</span>.html', {
+                                            <span class="text-danger">"products": <span
+                                                    class="text-success">products</span></span>})</dd>
                                     </dl>
                                 </div>
                             </div>
 
+                            <div class="col-12">
+                                <dl>
+                                    <dt>Saving the data:</dt>
+                                    <dd>if request.method == 'POST'</dd>
+                                    <dd>data = formName(request.POST)</dd>
+                                    <dd>if data.is_valid():</dd>
+                                    <dd>data.save()</dd>
+                                </dl>
+                                <dl>
+                                    <dt>Changing data before saving:</dt>
+                                    <dd>item = inputItem(request.POST)</dd>
+                                    <dd>if item.is_valid():</dd>
+                                    <dd>instance = item.save(commit=False)</dd>
+                                    <dd>instance.author = request.user.username</dd>
+                                    <dd>instance.save()</dd>
+                                </dl>
+                            </div>
                         </div>
                     </div>
                     <div class="col-12 m-0 p-0 mt-2">
                         <hr class="mb-4">
-                        <h4>urls.py <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_urls"></i></h4>
+                        <!-- urls -->
+                        <h4><img src="https://img.icons8.com/clouds/32/000000/cloud-network.png" class="mr-2" />urls.py <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_urls"></i></h4>
                     </div>
                     <div class="col-12 m-0 p-0">
                         <div id="django_urls" class="collapse row m-0">
                             <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
                                 <div class="section-container">
-                                    <h5 class="my-2">1. imports:</h5>
+                                    <h5 class="my-2">1. Django 1.11:</h5>
                                     <dl>
-                                        <dt></dt>
-                                        <dd></dd>
+                                        <dt>Import url and include:</dt>
+                                        <dd>from django.conf.urls import url, include</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>Url patterns:</dt>
+                                        <dd>urlpatterns = []</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>Standard url:</dt>
+                                        <dd>url(r'^$', index, name="index"),</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>Pass data into a route:</dt>
+                                        <dd>url(r'^edit/(?P&lt;id&gt;\d+)$', editTask),</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>Get urls from a different app:</dt>
+                                        <dd>from appname import urls as urls_appname</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>Adding the urls:</dt>
+                                        <dd>url(r'^accounts/', include(urls_accounts))</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>Linking to a url:</dt>
+                                        <dd>url(r'^accounts/', include(urls_accounts))</dd>
                                     </dl>
                                 </div>
                             </div>
@@ -416,7 +474,8 @@
                     </div>
                     <div class="col-12 m-0 p-0 mt-2">
                         <hr class="mb-4">
-                        <h4>tests.py <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_tests"></i></h4>
+                        <!-- test -->
+                        <h4><img src="https://img.icons8.com/ios-filled/32/000000/test.png" class="mr-2" />tests.py <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_tests"></i></h4>
                     </div>
                     <div class="col-12 m-0 p-0">
                         <div id="django_tests" class="collapse row m-0">
@@ -433,7 +492,8 @@
                     </div>
                     <div class="col-12 m-0 p-0 mt-2">
                         <hr class="mb-4">
-                        <h4>models.py <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_models"></i></h4>
+                        <!-- models -->
+                        <h4><img src="https://img.icons8.com/dotty/32/000000/3d-scale.png" class="mr-2" />models.py <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_models"></i></h4>
                     </div>
                     <div class="col-12 m-0 p-0">
                         <div id="django_models" class="collapse row m-0">
@@ -511,11 +571,18 @@
                                     </dl>
                                 </div>
                             </div>
+                            <div class="col-12 m-0 p-0 px-2 mt-1">
+                                <div class="container-fluid d-flex justify-content-between p-0 mb-1">
+                                    <a href="https://docs.djangoproject.com/en/3.0/topics/db/queries/" target="_blank" class="main-colour btn text-light">Making queries</a>
+                                    <a href="https://docs.djangoproject.com/en/3.0/ref/models/instances/" target="_blank" class="main-colour btn text-light">Model instance reference</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-12 m-0 p-0 mt-2">
                         <hr class="mb-4">
-                        <h4>forms.py <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_forms"></i></h4>
+                        <!-- forms -->
+                        <h4><img src="https://img.icons8.com/dotty/32/000000/form.png" class="mr-2" />forms.py <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_forms"></i></h4>
                     </div>
                     <div class="col-12 m-0 p-0">
                         <div id="django_forms" class="collapse row m-0">
@@ -524,26 +591,41 @@
                                     <h5 class="my-2">1. Imports</h5>
                                     <dl>
                                         <dd>from django import <span class="text-info">forms</span></dd>
+                                        <dd>from django.forms import ModelForm</dd>
                                         <dd>from .models import <span class="text-success">ModelName</span></dd>
                                     </dl>
                                 </div>
                             </div>
                             <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
                                 <div class="section-container">
-                                    <h5 class="my-2">2. Crate a class</h5>
+                                    <h5 class="my-2">2. Create a class</h5>
                                     <dl>
                                         <dd>class <span class="text-danger">FromName</span>(<span class="text-info">forms</span>.ModelForm)</dd>
                                         <dd>class Meta:</dd>
                                         <dd>model = <span class="text-success">ModelName</span></dd>
-                                        <dd>fields = (<span class="text-danger">'only', 'required', 'user', 'editable', 'fields'</span>)</dd>
+                                        <dd>fields = (<span class="text-danger">'only', 'required', 'user', 'editable',
+                                                'fields'</span>)</dd>
+                                    </dl>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">3. Create a HTML form</h5>
+                                    <dl>
+                                        <dd>&lt;form method="POST" action="/<span class="text-danger">routeName</span>/"></dd>
                                     </dl>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="col-12 m-0 p-0">
+                        <hr>
+                        <h3 class="mt-3 mb-4 text-center">Overall</h3>
+                    </div>
                     <div class="col-12 m-0 p-0 mt-2">
                         <hr class="mb-4">
-                        <h4>Creating a project <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_project"></i></h4>
+                        <h4><img src="https://img.icons8.com/plasticine/32/000000/resume-website.png" class="mr-2" />Creating a project <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_project"></i></h4>
                     </div>
                     <div class="col-12 m-0 p-0">
                         <div id="django_project" class="collapse row m-0">
@@ -623,110 +705,12 @@
                             <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
                                 <div class="section-container">
                                     <h5 class="my-2">4. Create urls</h5>
-                                    <dl>
-                                        <dt>Import url and include:</dt>
-                                        <dd>from django.conf.urls import url, include</dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>Url patterns:</dt>
-                                        <dd>urlpatterns = []</dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>Standard url:</dt>
-                                        <dd>url(r'^$', index, name="index"),</dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>Pass data into a route:</dt>
-                                        <dd>url(r'^edit/(?P&lt;id&gt;\d+)$', editTask),</dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>Get urls from a different app:</dt>
-                                        <dd>from appname import urls as urls_appname</dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>Adding the urls:</dt>
-                                        <dd>url(r'^accounts/', include(urls_accounts))</dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>Linking to a url:</dt>
-                                        <dd>url(r'^accounts/', include(urls_accounts))</dd>
-                                    </dl>
+
                                 </div>
                             </div>
                             <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
                                 <div class="section-container">
                                     <h5 class="my-2">5. Create views</h5>
-                                    <dl>
-                                        <dt>import render, redirect, reverse:</dt>
-                                        <dd>from django.shortcuts import render</dd>
-                                    </dl>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
-                                <div class="section-container">
-                                    <h5 class="my-2">6. Models</h5>
-
-                                    <dl>
-                                        <dt>Create a class:</dt>
-                                        <dd>class Task(models.Model):</dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>Text field:</dt>
-                                        <dd>models.CharField(max_length=200)</dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>True or false</dt>
-                                        <dd>models.BooleanField(blank=True)</dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>Add time:</dt>
-                                        <dd>from django.utils import timezone</dd>
-                                        <dd>models.DateTimeField(blank=True, null=True, default=timezone.now)</dd>
-                                    </dl>
-                                    <div class="container-fluid d-flex justify-content-between p-0 mb-1">
-                                        <a href="https://docs.djangoproject.com/en/3.0/topics/db/queries/" target="_blank" class="main-colour btn text-light">Making queries</a>
-                                        <a href="https://docs.djangoproject.com/en/3.0/ref/models/instances/" target="_blank" class="main-colour btn text-light">Model instance reference</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
-                                <div class="section-container">
-                                    <h5 class="my-2">7. Forms</h5>
-                                    <dl>
-                                        <dt>Import forms and models:</dt>
-                                        <dd>from django import forms</dd>
-                                        <dd>from django.forms import ModelForm</dd>
-                                        <dd>form .models import Name, Name</dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>Create a class:</dt>
-                                        <dd>class inputTask(forms.ModelForm):</dd>
-                                        <dd>class Meta:</dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>define modal name and fields:</dt>
-                                        <dd>model = Food</dd>
-                                        <dd>fields = ('name', 'complete', 'notes')</dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>HTML form:</dt>
-                                        <dd>method="POST" action="/addFood/"</dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>Saving the data:</dt>
-                                        <dd>if request.method == 'POST'</dd>
-                                        <dd>data = formName(request.POST)</dd>
-                                        <dd>if data.is_valid():</dd>
-                                        <dd>data.save()</dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>Changing data before saving:</dt>
-                                        <dd>item = inputItem(request.POST)</dd>
-                                        <dd>if item.is_valid():</dd>
-                                        <dd>instance = item.save(commit=False)</dd>
-                                        <dd>instance.author = request.user.username</dd>
-                                        <dd>instance.save()</dd>
-                                    </dl>
                                 </div>
                             </div>
                             <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
@@ -759,30 +743,20 @@
                     </div>
                     <div class="col-12 m-0 p-0 mt-2">
                         <hr class="mb-4">
-                        <h4>Hosting the project <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_hosting"></i></h4>
+                        <h4><img src="https://img.icons8.com/fluent/32/000000/domain.png" class="mr-2" />Hosting the project (Heroku) <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_hosting"></i></h4>
                     </div>
                     <div class="col-12 m-0 p-0">
                         <div id="django_hosting" class="collapse row m-0">
                             <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
                                 <div class="section-container">
                                     <h5 class="my-2">1. Install dependencies:</h5>
-                                    <dl class="list-no-margin">
-                                        <dt>Install dj_database_url<input type="checkbox" class="ml-2"></dt>
-                                        <dd>pip install dj_database_url</dd>
-                                        <dt>settings.py<input type="checkbox" class="ml-2"></dt>
-                                        <dd>import dj_database_url</dd>
+                                    <dl>
+                                        <dt>gunicorn</dt>
+                                        <dd>pip install gunicorn</dd>
                                     </dl>
                                     <dl>
-                                        <dt>Install pillow (images)<input type="checkbox" class="ml-2"></dt>
-                                        <dd>pip install pillow</dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>Install whitenoise (static)<input type="checkbox" class="ml-2"></dt>
-                                        <dd>pip install whitenoise</dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>psycopy2<input type="checkbox" class="ml-2"></dt>
-                                        <dd>pip install psycopg2-binary</dd>
+                                        <dt>requirements.txt:</dt>
+                                        <dd>pip freeze --local > requirements.txt</dd>
                                     </dl>
                                 </div>
                             </div>
@@ -790,55 +764,21 @@
                                 <div class="section-container">
                                     <h5 class="my-2">2. Creating the required files:</h5>
                                     <dl>
-                                        <dt>Procfile:<input type="checkbox" class="ml-2"></dt>
-                                        <dd>web: gunicorn <span class="text-danger">projectname</span>.wsgi:application</dd>
+                                        <dt>Procfile:</dt>
+                                        <dd>web: gunicorn <span class="text-danger">projectname</span>.wsgi:application
+                                        </dd>
                                     </dl>
                                     <dl>
-                                        <dt>requirements.txt:<input type="checkbox" class="ml-2"></dt>
+                                        <dt>requirements.txt:</dt>
                                         <dd>pip freeze --local > requirements.txt</dd>
                                     </dl>
                                 </div>
                             </div>
                             <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
                                 <div class="section-container">
-                                    <h5 class="my-2">3. Postgres:</h5>
+                                    <h5 class="my-2">3. Heroku:</h5>
                                     <dl class="list-no-margin">
-                                        <dt>settings.py<input type="checkbox" class="ml-2"></dt>
-                                        <dd>if os.path.exists('env.py'):</dd>
-                                        <dd>&emsp;import env</dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>env.py <input type="checkbox" class="ml-2"></dt>
-                                        <dd>os.environ.setdefault('<span class="text-primary">DATABASE_URL</span>', '<span class="text-success">postgres://</span>')</dd>
-                                    </dl>
-                                    <dl class="list-no-margin">
-                                        <dt>Settings.py:<input type="checkbox" class="ml-2"></dt>
-                                        <dd>if "<span class="text-primary">DATABASE_URL</span>" in os.environ:</dd>
-                                        <dd>&emsp;DATABASES = {</dd>
-                                        <dd>&emsp;'default': dj_database_url.parse(os.environ.get('<span class="text-primary">DATABASE_URL</span>'))</dd>
-                                        <dd>&emsp;} </dd>
-                                        <dd>else:</dd>
-                                        <dd>&emsp;print("postgres URL not found, using sqlite instead")</dd>
-                                        <dd>&emsp;DATABASES = {</dd>
-                                        <dd>&emsp;&emsp;'default': {</dd>
-                                        <dd>&emsp;&emsp;&emsp;'ENGINE': 'django.db.backends.sqlite3',</dd>
-                                        <dd>&emsp;&emsp;&emsp;'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),</dd>
-                                        <dd>&emsp;&emsp;}</dd>
-                                        <dd>&emsp;}</dd>
-                                    </dl>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
-                                <div class="section-container">
-                                    <h5 class="my-2">4. Heroku:</h5>
-                                    <dl>
-                                        <dt>Configure Add-ons<input type="checkbox" class="ml-2"></dt>
-                                        <dd>Add 'Heroku Postgres'</dd>
-                                    </dl>
-                                    <dl class="list-no-margin">
-                                        <dt>Config Vars<input type="checkbox" class="ml-2"></dt>
-                                        <dd>DATABASE_URL &emsp;&emsp;&emsp; <span class="text-success">postgres://</span>
-                                        </dd>
+                                        <dt>Config Vars</dt>
                                         <dd>DISABLE_COLLECTSTATIC &emsp;&emsp; 1</dd>
                                     </dl>
                                 </div>
@@ -877,7 +817,8 @@
                         <div class="section-container ">
                             <h4>2. Procfile</h4>
                             <dl>
-                                <dd>web: gunicorn <span class="text-danger">projectname</span>.wsgi:application</dd>
+                                <dd>web: gunicorn <span class="text-danger">projectname</span>.wsgi:application
+                                </dd>
                             </dl>
                         </div>
                     </div>
@@ -1009,7 +950,8 @@
                         <div class="section-container">
                             <h4>3. env.py</h4>
                             <dl>
-                                <dd>os.environ.setdefault('<span class="text-info">DATABASE_URL</span>', 'postgres://')</dd>
+                                <dd>os.environ.setdefault('<span class="text-info">DATABASE_URL</span>', 'postgres://')
+                                </dd>
                             </dl>
                         </div>
                     </div>
@@ -1122,11 +1064,13 @@
                                 <dd>class MakePaymentForm(forms.Form):</dd>
                                 <dd>MONTH_CHOICES = [(i, i) for i in range(1, 12)]</dd>
                                 <dd>YEAR_CHOICES = [(i, i) for i in range(2019, 2036)]</dd>
-                                <dd>credit_card_number = forms.CharField(label='Credit card number', required=False)</dd>
+                                <dd>credit_card_number = forms.CharField(label='Credit card number', required=False)
+                                </dd>
                                 <dd>cvv = forms.CharField(label='Security code (CVV)', required=False)</dd>
                                 <dd>expiry_month = forms.ChoiceField(label='Month', choices=MONTH_CHOICES, required=False)
                                 </dd>
-                                <dd>expiry_year = forms.ChoiceField(label='Year', choices=YEAR_CHOICES, required=False)</dd>
+                                <dd>expiry_year = forms.ChoiceField(label='Year', choices=YEAR_CHOICES, required=False)
+                                </dd>
                                 <dd>stripe_id = forms.CharField(widget=forms.HiddenInput)</dd>
                             </dl>
 
@@ -1160,14 +1104,17 @@
                             <dl>
                                 <dt>The page:</dt>
                                 <dd>{% block head_js %}</dd>
-                                <dd>&lt;script type="text/javascript" src="https://js.stripe.com/v2/">&lt;/script></dd>
+                                <dd>&lt;script type="text/javascript" src="https://js.stripe.com/v2/">&lt;/script>
+                                </dd>
                                 <dd>&lt;script type="text/javascript"></dd>
                                 <dd>Stripe.publishableKey = '{{ publishable }}';</dd>
                                 <dd>&lt;/script></dd>
-                                <dd>&lt;script type="text/javascript" src="{% static 'js/stripe.js' %}">&lt;/script></dd>
+                                <dd>&lt;script type="text/javascript" src="{% static 'js/stripe.js' %}">&lt;/script>
+                                </dd>
                                 <dd>{% endblock %}</dd>
                             </dl>
-                            <p>First a script has to be created with the Stripe publishable key and added into the base head, then the payment details form can be created and submitted by the user.</p>
+                            <p>First a script has to be created with the Stripe publishable key and added into the base head, then the payment details form can be created and submitted by the user.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -1190,7 +1137,8 @@
             <div class="scroll-container">
                 <div class="col-12 m-0 p-0">
                     <p>Heroku is used to host projects that require a server, just as projects built using a backend framework. Heroku uses a ephemeral file system and everytime the worker restarts, approximately in <b>12 hours</b>, all user uploaded content
-                        is deleted. To get around this, store media files on a external sorce such as <b>Amazon Web Services</b>.
+                        is deleted. To get around this, store media files on a external sorce such as <b>Amazon Web
+                            Services</b>.
                     </p>
                 </div>
                 <div class="row m-0 p-0">
@@ -1229,11 +1177,14 @@
                     </div>
                     <div class="col-12 px-0 px-lg-2">
                         <dl>
-                            <dt><img src="https://img.icons8.com/color/15/000000/html-5.png" class="mr-2" />HTML</dt>
+                            <dt><img src="https://img.icons8.com/color/15/000000/html-5.png" class="mr-2" />HTML
+                            </dt>
                             <hr>
                             <dt><img src="https://img.icons8.com/color/15/000000/css3.png" class="mr-2" />CSS <i
                                     class="far fa-plus-square ml-2 small-icon front-plus" data-toggle="collapse"
-                                    href="#css"></i><img src="images/question-mark.png" style="width:25px;" onclick="call_modal('cssModal', 'css-letter', 'on')" class="float-right mr-2 click-icon"></dt>
+                                    href="#css"></i><img src="images/question-mark.png" style="width:25px;"
+                                    onclick="call_modal('cssModal', 'css-letter', 'on')"
+                                    class="float-right mr-2 click-icon"></dt>
 
                             <div class="collapse wrapper" id="css">
                                 <div class="p-2">
@@ -1911,7 +1862,8 @@
                                     </div>
                                 </div>
                                 <hr>
-                                <dt><img src="https://img.icons8.com/dusk/17/000000/server.png" class="mr-2" />Hosting Dynamic Projects
+                                <dt><img src="https://img.icons8.com/dusk/17/000000/server.png" class="mr-2" />Hosting
+                                Dynamic Projects
                                 <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse"
                                     href="#dynamichosting"></i></dt>
                                 <div class="collapse wrapper mt-2" id="dynamichosting">
@@ -1923,9 +1875,10 @@
                                     </div>
                                 </div>
                                 <hr>
-                                <dt><img src="https://img.icons8.com/dotty/17/000000/static-view-level1.png" class="mr-2" />Hosting Static Files
-                                    <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse"
-                                        href="#staticFilesHosting"></i></dt>
+                                <dt><img src="https://img.icons8.com/dotty/17/000000/static-view-level1.png"
+                                    class="mr-2" />Hosting Static Files
+                                <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse"
+                                    href="#staticFilesHosting"></i></dt>
                                 <div class="collapse wrapper mt-2" id="staticFilesHosting">
                                     <div class="p-2">
                                         <dd class="ml-3">Amazon Web Services
@@ -1986,7 +1939,8 @@
                                     </div>
                                 </div>
                                 <hr>
-                                <dt><img src="https://img.icons8.com/color/15/000000/python.png" class="mr-2" />Python</dt>
+                                <dt><img src="https://img.icons8.com/color/15/000000/python.png" class="mr-2" />Python
+                            </dt>
                             </dl>
                         </div>
                         <!-- More -->

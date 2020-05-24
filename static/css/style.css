@@ -363,7 +363,7 @@ span {
 
 .scroll-container {
     margin-top: 15px;
-    height: 0vh;
+    height: 87vh;
     width: 100%;
     overflow-y: auto;
     padding: 10px;
@@ -413,7 +413,7 @@ span {
     border: solid rgb(218, 218, 218) 1px;
     border-radius: 8px 0px 8px 0px;
     box-shadow: 1px 2px 6px 2px rgba(0, 0, 0, 0.08) inset;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(230, 230, 230);
 }
 
 
