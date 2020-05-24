@@ -12,6 +12,7 @@ function call_modal(id_name, title, state) {
         tl.to('.scroll-container', { duration: 0.8, height: '87vh', backgroundColor: 'white', ease: 'power3' }, '-=0.1')
         tl.to(titleTarget, { duration: 0.5, opacity: 1, bottom: 0, ease: 'power3', stagger: 0.07, color: 'white' }, '-=0.8')
         tl.to('.arrow-button', { duration: 0.8, rotateY: 720, ease: 'back' }, '-=2.2')
+        tl.from('.section-container', 1.5, { border: 'solid white 1px', borderRadius: '0px', boxShadow: '0px 0px 0px 0px rgba(0, 0, 0, 0.0) inset', backgroundColor: 'rgb(255,255,255)' }, '-=1')
     } else {
         tl.to(modalTarget, { duration: 0.3, left: 0, top: '110vh', backgroundColor: 'white', ease: 'power3' });
         tl.to('.mobile-navigation', 0.2, { top: '0px' }, '-=0.2');

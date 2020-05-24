@@ -311,6 +311,7 @@ span {
     border-left: solid white 1px;
     border-right: solid white 1px;
     background-color: rgba(61, 153, 208, 0.23);
+    height: 100%;
 }
 
 .secondary-background {
@@ -412,7 +413,7 @@ span {
     padding: 10px;
     border: solid rgb(218, 218, 218) 1px;
     border-radius: 8px 0px 8px 0px;
-    box-shadow: 1px 2px 6px 2px rgba(0, 0, 0, 0.08) inset;
+    box-shadow: 1px 2px 8px 4px rgba(0, 0, 0, 0.12) inset;
     background-color: rgb(230, 230, 230);
 }
 

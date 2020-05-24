@@ -190,6 +190,85 @@
 
     <!-- Technologies modals (backend) -->
 
+    <!-- jinja (backend) -->
+    <div class="modal-style closed" id="jinjaModal">
+        <div class="page-container p-2 pt-3">
+            <img src="https://img.icons8.com/plasticine/50/000000/crossed-arrow.png" class="float-right arrow-button click-icon" onclick="call_modal('jinjaModal', 'jin-letter', 'off')" />
+            <h4 class="mt-2">
+                <span class="jin-letter l-s">J</span><span class="jin-letter l-s">i</span><span class="jin-letter l-s">n</span><span class="jin-letter l-s">j</span><span class="jin-letter l-s">a</span>
+            </h4>
+            <hr class="mt-3 dark-hr">
+            <!-- content -->
+            <div class="scroll-container">
+                <div class="row m-0 p-0">
+
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>1. Block content</h4>
+                            <dl>
+                                <dt>Add template:</dt>
+                                <dd>{% extends 'base.html' %}</dd>
+                            </dl>
+                            <dl>
+                                <dt>Add content:</dt>
+                                <dd>{% block content %}{% endblock %}</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>2. Load in static folder</h4>
+                            <dl>
+                                <dd class="mb-0">{% load static %}</dd>
+                                <dd>href="{% static 'css/style.css' %}"</dd>
+                            </dl>
+                            <p class="ml-3">If using <b>whitenoise</b> the line bellow should be used:</p>
+                            <dl>
+                                <dd class="mb-0">{% load static from staticfiles %}</dd>
+                                <dd>href="{% static 'css/style.css' %}"</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>3. Jinja & JavaScript</h4>
+                            <dl>
+                                <dt>page.html:</dt>
+                                <dd>{% block name_js %}</dd>
+                                <dd><span class="text-danger">JavaScript</span></dd>
+                                <dd>{% endblock %}</dd>
+                                <dt>base.html in the head:</dt>
+                                <dd>{% block name_js %}</dd>
+                                <dd>{% endblock %}</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>4. Django user logged in:</h4>
+                            <dl>
+                                <dt>When a user is logged in:</dt>
+                                <dd>{% if user.is_authenticated %}</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>4. For loop:</h4>
+                            <dl>
+                                <dt>When a user is logged in:</dt>
+                                <dd>{% if user.is_authenticated %}</dd>
+                            </dl>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Django (backend) -->
     <div class="modal-style closed" id="djangoModal">
         <div class="page-container p-2 pt-3">
@@ -214,7 +293,8 @@
                     </div>
                     <div class="col-12 m-0 p-0 mt-2">
                         <!-- settings -->
-                        <h4><img src="https://img.icons8.com/fluent/32/000000/settings.png" class="mr-2" />Settings.py <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_settings"></i></h4>
+                        <h4><img src="https://img.icons8.com/fluent/32/000000/settings.png" class="mr-2" />Settings.py
+                            <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_settings"></i></h4>
                     </div>
                     <div class="col-12 m-0 p-0">
                         <div id="django_settings" class="collapse row m-0">
@@ -360,7 +440,8 @@
                     <div class="col-12 m-0 p-0 mt-2">
                         <hr class="mb-4">
                         <!-- views -->
-                        <h4><img src="https://img.icons8.com/color/32/000000/eyes-cartoon.png" class="mr-2" />views.py <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_views"></i></h4>
+                        <h4><img src="https://img.icons8.com/color/32/000000/eyes-cartoon.png" class="mr-2" />views.py
+                            <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_views"></i></h4>
                     </div>
                     <div class="col-12 m-0 p-0">
                         <div id="django_views" class="collapse row m-0">
@@ -433,7 +514,8 @@
                     <div class="col-12 m-0 p-0 mt-2">
                         <hr class="mb-4">
                         <!-- urls -->
-                        <h4><img src="https://img.icons8.com/clouds/32/000000/cloud-network.png" class="mr-2" />urls.py <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_urls"></i></h4>
+                        <h4><img src="https://img.icons8.com/clouds/32/000000/cloud-network.png" class="mr-2" />urls.py
+                            <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_urls"></i></h4>
                     </div>
                     <div class="col-12 m-0 p-0">
                         <div id="django_urls" class="collapse row m-0">
@@ -673,37 +755,6 @@
                             </div>
                             <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
                                 <div class="section-container">
-                                    <h5 class="my-2">3. Jinja</h5>
-                                    <dl>
-                                        <dt>Load in static folder:</dt>
-                                        <dd class="mb-0">{% load static %}</dd>
-                                        <dd>href="{% static 'css/style.css' %}"</dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>Add content:</dt>
-                                        <dd>{% block content %}{% endblock %}</dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>Add template file:</dt>
-                                        <dd>{% extends 'base.html' %}</dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>When a user is logged in:</dt>
-                                        <dd>{% if user.is_authenticated %}</dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>Jinja and javascipt:</dt>
-                                        <dt>template</dt>
-                                        <dd>{% block name_js %}</dd>
-                                        <dd>{% endblock %}</dd>
-                                        <dt>base.html in the head:</dt>
-                                        <dd>{% block name_js %}</dd>
-                                        <dd>{% endblock %}</dd>
-                                    </dl>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
-                                <div class="section-container">
                                     <h5 class="my-2">4. Create urls</h5>
 
                                 </div>
@@ -827,6 +878,60 @@
 
 
 
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- django-forms-bootstrap (backend) -->
+    <div class="modal-style closed" id="djangoBootModal">
+        <div class="page-container p-2 pt-3">
+            <img src="https://img.icons8.com/plasticine/50/000000/crossed-arrow.png" class="float-right arrow-button click-icon" onclick="call_modal('djangoBootModal', 'djb-letter', 'off')" />
+            <h4 class="mt-2">
+                <span class="djb-letter l-s">djan</span><span class="djb-letter l-s">go-f</span><span class="djb-letter l-s">orms</span><span class="djb-letter l-s">-boot</span><span class="djb-letter l-s">str</span><span class="djb-letter l-s">ap</span>
+            </h4>
+            <hr class="mt-3 dark-hr">
+            <!-- content -->
+            <div class="scroll-container">
+                <div class="row m-0 p-0">
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>1. Installation</h4>
+                            <dl>
+                                <dd>pip install django-forms-bootstrap</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>2. Install app</h4>
+                            <dl class="list-no-margin">
+                                <dd>INSTALLED_APPS = [</dd>
+                                <dd>'django_forms_bootstrap',</dd>
+                                <dd>]</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>3. Load onto page</h4>
+                            <dl class="list-no-margin">
+                                <dd>{% load bootstrap_tags %}</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>4. Creating the form</h4>
+                            <dl class="list-no-margin">
+                                <dd>&lt;form method="POST" enctype="<span class="text-danger">routeName</span>"></dd>
+                                <dd>{% csrf_token %}</dd>
+                                <dd>{{ form | as_bootstrap }}</dd>
+                                <dd>&lt;button type="submit">Save&lt;/button></dd>
+                            </dl>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1539,6 +1644,7 @@
                                     <div class="p-2">
                                         <dd>Jinja
                                             <a href="https://jinja.palletsprojects.com/en/2.11.x/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                            <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 click-icon" onclick="call_modal('jinjaModal', 'jin-letter', 'on')">
                                         </dd>
                                     </div>
                                 </div>
@@ -1625,6 +1731,11 @@
                                         <dd>psycopg2-binary
                                             <a href="https://pypi.org/project/dj-database-url/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
                                             <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 click-icon" onclick="call_modal('psycopg2Modal', 'ps-letter','on' )">
+                                        </dd>
+                                        <hr>
+                                        <dd>django-forms-bootstrap
+                                            <a href="https://pypi.org/project/django-forms-bootstrap/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                            <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 click-icon" onclick="call_modal('djangoBootModal', 'djb-letter','on' )">
                                         </dd>
                                         <hr>
                                         <dd>Pillow
