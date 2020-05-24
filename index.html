@@ -269,6 +269,60 @@
         </div>
     </div>
 
+    <!-- flask (backend) -->
+    <div class="modal-style closed" id="flaskModal">
+        <div class="page-container p-2 pt-3">
+            <img src="https://img.icons8.com/plasticine/50/000000/crossed-arrow.png" class="float-right arrow-button click-icon" onclick="call_modal('flaskModal', 'fk-letter', 'off')" />
+            <h4 class="mt-2">
+                <span class="fk-letter l-s">F</span><span class="fk-letter l-s">l</span><span class="fk-letter l-s">a</span><span class="fk-letter l-s">s</span><span class="fk-letter l-s">k</span>
+            </h4>
+            <hr class="mt-3 dark-hr">
+            <!-- content -->
+            <div class="scroll-container">
+                <div class="row m-0 p-0">
+                    <div class="col-12 m-0 p-0">
+                        <p>Flask is a micro framework, to run a pytho the command is <b>python app.py</b></p>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>1. Installation</h4>
+                            <dl>
+                                <dt>Create a virtual environment:</dt>
+                                <dd>python3 -m venv .venv</dd>
+                            </dl>
+                            <dl>
+                                <dt>Run the virtual environment:</dt>
+                                <dd>source .venv/bin/activate</dd>
+                            </dl>
+                            <dl>
+                                <dt>Install Flask:</dt>
+                                <dd>pip install flask</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>1. app.py</h4>
+                            <dl>
+                                <dt>Import:</dt>
+                                <dd>import os</dd>
+                                <dd>from flask import Flask, render_template</dd>
+                            </dl>
+                            <dl>
+                                <dt>Run the virtual environment:</dt>
+                                <dd>source .venv/bin/activate</dd>
+                            </dl>
+                            <dl>
+                                <dt>Install Flask:</dt>
+                                <dd>pip install flask</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Django (backend) -->
     <div class="modal-style closed" id="djangoModal">
         <div class="page-container p-2 pt-3">
@@ -301,10 +355,6 @@
                             <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
                                 <div class="section-container">
                                     <h5 class="my-2">1. imports:</h5>
-                                    <dl>
-                                        <dt>dj_database_url</dt>
-                                        <dd>This module to connect postgres with heroku.</dd>
-                                    </dl>
                                     <dl class="list-no-margin">
                                         <dt>env</dt>
                                         <dd>if os.path.exists('env.py'):</dd>
@@ -316,8 +366,7 @@
                                 <div class="section-container">
                                     <h5 class="my-2">2. SECRET_KEY:</h5>
                                     <dl>
-                                        <dt>SECRET_KEY = os.environ.get('SECRET_KEY')</dt>
-                                        <dd>It's important to add the SECRET_KEY in a env.py file and when hosting the project on heroku to add the SECRET_KEY to the Config Vars.</dd>
+                                        <dd>SECRET_KEY = os.environ.get('SECRET_KEY')</dd>
                                     </dl>
                                 </div>
                             </div>
@@ -325,10 +374,7 @@
                                 <div class="section-container">
                                     <h5 class="my-2">3. ALLOWED_HOSTS:</h5>
                                     <dl>
-                                        <dt>['127.0.0.1', '<span
-                                                class="text-danger">herokuProjectname</span>.herokuapp.com']</dt>
-                                        <dd>The project name needs to be added to the allowed hosts to run the project.
-                                        </dd>
+                                        <dd>ALLOWED_HOSTS = ['127.0.0.1', '<span class="text-danger">herokuProjectname</span>.herokuapp.com']</dd>
                                     </dl>
                                 </div>
                             </div>
@@ -336,30 +382,18 @@
                                 <div class="section-container">
                                     <h5 class="my-2">4. INSTALLED_APPS:</h5>
                                     <dl>
-                                        <dt>'<span class="text-danger">appname</span>',</dt>
-                                        <dd>After creating a new app with <span class="text-secondary">django-admin
-                                                startapp
-                                                <span class="text-danger">appname</span> the app then needs to be install.
-                                        </dd>
+                                        <dd>INSTALLED_APPS = [</dd>
+                                        <dd>'<span class="text-danger">appname</span>',</dd>
+                                        <dd>]</dd>
                                     </dl>
                                 </div>
                             </div>
                             <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
                                 <div class="section-container">
-                                    <h5 class="my-2">5. MIDDLEWARE:</h5>
-                                    <dl>
-                                        <dt>'whitenoise.middleware.WhiteNoiseMiddleware',</dt>
-                                        <dd>This is used when adding static files to a Django project.</dd>
-                                    </dl>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
-                                <div class="section-container">
-                                    <h5 class="my-2">6. TEMPLATES:</h5>
+                                    <h5 class="my-2">5. TEMPLATES:</h5>
                                     <dl>
                                         <dd>'DIRS': [os.path.join(BASE_DIR, 'templates')],</dd>
                                     </dl>
-                                    <p>The name of the directory used to keep the HTML files.</p>
                                     <dl class="list-no-margin">
                                         <dd>'OPTIONS': {</dd>
                                         <dd>'context_processors': [</dd>
@@ -370,7 +404,7 @@
                             </div>
                             <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
                                 <div class="section-container">
-                                    <h5 class="my-2">7. DATABASES:</h5>
+                                    <h5 class="my-2">6. DATABASES:</h5>
                                     <dl class="list-no-margin">
                                         <dt>Use postgres or db.sqlite3</dt>
                                         <dd>if "<span class="text-primary">DATABASE_URL</span>" in os.environ:</dd>
@@ -392,24 +426,19 @@
                                 <div class="section-container">
                                     <h5 class="my-2">7. Static files:</h5>
                                     <dl class="list-no-margin">
-                                        <dd>STATIC_URL =</dd>
-                                        <dd>'/static/'</dd>
+                                        <dd>STATIC_URL = '/static/'</dd>
                                     </dl>
                                     <dl class="list-no-margin">
-                                        <dd>STATICFILES_DIRS =</dd>
-                                        <dd>(os.path.join(BASE_DIR, 'static'), )</dd>
+                                        <dd>STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'), )</dd>
                                     </dl>
                                     <dl class="list-no-margin">
-                                        <dd>STATIC_ROOT =</dd>
-                                        <dd>os.path.join(BASE_DIR, 'staticfiles')</dd>
+                                        <dd>STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')</dd>
                                     </dl>
                                     <dl class="list-no-margin">
-                                        <dd>MEDIA_URL =</dd>
-                                        <dd>'/media/'</dd>
+                                        <dd>MEDIA_URL = '/media/'</dd>
                                     </dl>
                                     <dl class="list-no-margin">
-                                        <dd>MEDIA_ROOT =</dd>
-                                        <dd>os.path.join(BASE_DIR, 'media')</dd>
+                                        <dd>MEDIA_ROOT = os.path.join(BASE_DIR, 'media')</dd>
                                     </dl>
                                 </div>
                             </div>
@@ -470,11 +499,6 @@
                                     </dl>
                                 </div>
                             </div>
-
-
-
-
-
                             <div class="col-12 col-md-6 m-0 pl-lg-2 py-2 px-1 p-md-2">
                                 <div class="section-container">
                                     <h5 class="my-2">4. Passing data into a HTML page:</h5>
@@ -491,23 +515,28 @@
                                     </dl>
                                 </div>
                             </div>
-
-                            <div class="col-12">
-                                <dl>
-                                    <dt>Saving the data:</dt>
-                                    <dd>if request.method == 'POST'</dd>
-                                    <dd>data = formName(request.POST)</dd>
-                                    <dd>if data.is_valid():</dd>
-                                    <dd>data.save()</dd>
-                                </dl>
-                                <dl>
-                                    <dt>Changing data before saving:</dt>
-                                    <dd>item = inputItem(request.POST)</dd>
-                                    <dd>if item.is_valid():</dd>
-                                    <dd>instance = item.save(commit=False)</dd>
-                                    <dd>instance.author = request.user.username</dd>
-                                    <dd>instance.save()</dd>
-                                </dl>
+                            <div class="col-12 col-md-6 m-0 pl-lg-2 py-2 px-1 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">5. Saving the data:</h5>
+                                    <dl>
+                                        <dd>if request.method == 'POST'</dd>
+                                        <dd>data = formName(request.POST)</dd>
+                                        <dd>if data.is_valid():</dd>
+                                        <dd>data.save()</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 pl-lg-2 py-2 px-1 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">6. Making changes before saving the data:</h5>
+                                    <dl>
+                                        <dd>item = inputItem(request.POST)</dd>
+                                        <dd>if item.is_valid():</dd>
+                                        <dd>instance = item.save(commit=False)</dd>
+                                        <dd>instance.author = request.user.username</dd>
+                                        <dd>instance.save()</dd>
+                                    </dl>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -707,7 +736,7 @@
                     </div>
                     <div class="col-12 m-0 p-0 mt-2">
                         <hr class="mb-4">
-                        <h4><img src="https://img.icons8.com/plasticine/32/000000/resume-website.png" class="mr-2" />Creating a project <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_project"></i></h4>
+                        <h4><img src="https://img.icons8.com/plasticine/32/000000/resume-website.png" class="mr-2" />Creating a project<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_project"></i></h4>
                     </div>
                     <div class="col-12 m-0 p-0">
                         <div id="django_project" class="collapse row m-0">
@@ -755,46 +784,20 @@
                             </div>
                             <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
                                 <div class="section-container">
-                                    <h5 class="my-2">4. Create urls</h5>
+                                    <h5 class="my-2">3. Create urls</h5>
 
                                 </div>
                             </div>
                             <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
                                 <div class="section-container">
-                                    <h5 class="my-2">5. Create views</h5>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
-                                <div class="section-container">
-                                    <h5 class="my-2">8. Admin</h5>
-                                    <dl>
-                                        <dt>Show data on admin panel:</dt>
-                                        <dd>form .models import Data</dd>
-                                        <dd>admin.site.register(Data)</dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>Show model name:</dt>
-                                        <dd>def __str__(self):</dd>
-                                        <dd> return self.name</dd>
-                                    </dl>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
-                                <div class="section-container">
-                                    <h5 class="my-2">8. Showing the data on a page:</h5>
-                                    <dl>
-                                        <dt>Passing into a view:</dt>
-                                        <dd>from .models import Data</dd>
-                                        <dd>data = Data.objects.all()</dd>
-                                        <dd>"page.html", {"data": data}</dd>
-                                    </dl>
+                                    <h5 class="my-2">4. Create views</h5>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-12 m-0 p-0 mt-2">
                         <hr class="mb-4">
-                        <h4><img src="https://img.icons8.com/fluent/32/000000/domain.png" class="mr-2" />Hosting the project (Heroku) <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_hosting"></i></h4>
+                        <h4><img src="https://img.icons8.com/fluent/32/000000/domain.png" class="mr-2" />Hosting on Heroku<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_hosting"></i></h4>
                     </div>
                     <div class="col-12 m-0 p-0">
                         <div id="django_hosting" class="collapse row m-0">
@@ -873,11 +876,6 @@
                             </dl>
                         </div>
                     </div>
-
-
-
-
-
                 </div>
             </div>
         </div>
@@ -961,6 +959,16 @@
                             <dl class="list-no-margin">
                                 <dt>Add this to the requirements file:</dt>
                                 <dd>pip install freeze --local > requirements.txt</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>2. Middleware</h4>
+                            <dl class="list-no-margin">
+                                <dd>MIDDLEWARE = [</dd>
+                                <dd>'whitenoise.middleware.WhiteNoiseMiddleware',</dd>
+                                <dd>]</dd>
                             </dl>
                         </div>
                     </div>
@@ -1664,7 +1672,7 @@
                                     <div class="p-2">
                                         <dd>Flask
                                             <a href="https://flask.palletsprojects.com/en/1.1.x/quickstart/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
-                                            <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 click-icon" onclick="call_modal('flaskModal', 'd-letter','on' )">
+                                            <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 click-icon" onclick="call_modal('flaskModal', 'fk-letter', 'on')">
                                         </dd>
                                         <hr>
                                         <dd>Django
