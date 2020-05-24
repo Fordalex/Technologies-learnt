@@ -1,6 +1,5 @@
 // on load animation
 
-
 window.addEventListener("load", function() {
     var tl = gsap.timeline()
     tl.to('.page-container', 0.1, { opacity: 1 }, '-=0.7')
@@ -13,10 +12,6 @@ window.addEventListener("load", function() {
         $('.loading-align-center').remove()
     });
 });
-
-
-
-
 
 // open all categories for a selected section.
 

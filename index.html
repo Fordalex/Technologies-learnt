@@ -793,7 +793,7 @@
     <!-- gunicorn (backend) -->
     <div class="modal-style closed" id="gunicornModal">
         <div class="page-container p-2 pt-3">
-            <img src="https://img.icons8.com/plasticine/50/000000/crossed-arrow.png" class="float-right gunicornModalButton arrow-button click-icon" />
+            <img src="https://img.icons8.com/plasticine/50/000000/crossed-arrow.png" class="float-right arrow-button click-icon" onclick="call_modal('gunicornModal', 'gun-letter', 'off')" />
             <h4 class="mt-2">
                 <span class="gun-letter letter-style">Gu</span><span class="gun-letter letter-style">ni</span><span class="gun-letter letter-style">co</span><span class="gun-letter letter-style">r</span><span class="gun-letter letter-style">n</span>
 
@@ -867,7 +867,7 @@
     <!-- whitenoise (backend) -->
     <div class="modal-style closed" id="whiteNoiseModal">
         <div class="page-container p-2 pt-3">
-            <img src="https://img.icons8.com/plasticine/50/000000/crossed-arrow.png" class="float-right whiteNoiseModalButton arrow-button click-icon" />
+            <img src="https://img.icons8.com/plasticine/50/000000/crossed-arrow.png" class="float-right  arrow-button click-icon" onclick="call_modal('whiteNoiseModal', 'dd-letter', 'off')" />
             <h4 class="mt-2">
                 <span class="dd-letter l-s">Wh</span><span class="dd-letter l-s">it</span><span class="dd-letter l-s">e</span> <span class="dd-letter l-s">No</span><span class="dd-letter l-s">is</span><span class="dd-letter l-s">e</span>
 
@@ -909,9 +909,9 @@
     </div>
 
     <!-- dj_database_url (backend) -->
-    <div class="modal-style closed" id="dj_database_modal">
+    <div class="modal-style closed" id="djDatabaseModal">
         <div class="page-container p-2 pt-3">
-            <img src="https://img.icons8.com/plasticine/50/000000/crossed-arrow.png" class="float-right djdatabaseModalButton arrow-button click-icon" />
+            <img src="https://img.icons8.com/plasticine/50/000000/crossed-arrow.png" class="float-right arrow-button click-icon" onclick="call_modal('djDatabaseModal', 'tt-letter', 'off')" />
             <h4 class="mt-2">
                 <span class="tt-letter l-s">d</span><span class="tt-letter l-s">j</span>
                 <span class="tt-letter l-s">d</span><span class="tt-letter l-s">a</span><span class="tt-letter l-s">t</span><span class="tt-letter l-s">a</span><span class="tt-letter l-s">b</span><span class="tt-letter l-s">a</span><span class="tt-letter l-s">se</span>
@@ -984,9 +984,9 @@
     </div>
 
     <!-- psycopg2-binary (backend) -->
-    <div class="modal-style closed" id="psycopg2_modal">
+    <div class="modal-style closed" id="psycopg2Modal">
         <div class="page-container p-2 pt-3">
-            <img src="https://img.icons8.com/plasticine/50/000000/crossed-arrow.png" class="float-right psycopg2ModalButton arrow-button click-icon" />
+            <img src="https://img.icons8.com/plasticine/50/000000/crossed-arrow.png" class="float-right arrow-button click-icon" onclick="call_modal('psycopg2Modal', 'ps-letter', 'off')" />
             <h4 class="mt-2">
                 <span class="ps-letter l-s">Psy</span><span class="ps-letter l-s">co</span><span class="ps-letter l-s">pg</span><span class="ps-letter l-s">2-</span><span class="ps-letter l-s">bin</span><span class="ps-letter l-s">ary</span>
             </h4>
@@ -1017,7 +1017,7 @@
     <!-- stripe (backend) -->
     <div class="modal-style closed" id="stripeModal">
         <div class="page-container p-2 pt-3">
-            <img src="https://img.icons8.com/plasticine/50/000000/crossed-arrow.png" class="float-right stripeModalButton arrow-button click-icon" />
+            <img src="https://img.icons8.com/plasticine/50/000000/crossed-arrow.png" class="float-right arrow-button click-icon" onclick="call_modal('stripeModal', 't-letter', 'off')" />
             <h4 class="mt-2"><span class="t-letter">S</span><span class="t-letter">t</span><span class="t-letter">r</span><span class="t-letter">i</span><span class="t-letter">p</span><span class="t-letter">e</span></h4>
             <hr class="mt-3 dark-hr">
             <!-- content -->
@@ -1614,17 +1614,17 @@
                                     <div class="p-2">
                                         <dd>Gunicorn
                                             <a href="https://gunicorn.org/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
-                                            <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 click-icon" onclick="call_modal('gunicornModal', 'd-letter','on' )">
+                                            <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 click-icon" onclick="call_modal('gunicornModal', 'gun-letter','on' )">
                                         </dd>
                                         <hr>
                                         <dd>dj_database_url
                                             <a href="https://pypi.org/project/dj-database-url/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
-                                            <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 click-icon" onclick="call_modal('djDatabaseModal', 'd-letter','on' )">
+                                            <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 click-icon" onclick="call_modal('djDatabaseModal', 'tt-letter','on' )">
                                         </dd>
                                         <hr>
                                         <dd>psycopg2-binary
                                             <a href="https://pypi.org/project/dj-database-url/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
-                                            <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 click-icon" onclick="call_modal('psycopg2Modal', 'd-letter','on' )">
+                                            <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 click-icon" onclick="call_modal('psycopg2Modal', 'ps-letter','on' )">
                                         </dd>
                                         <hr>
                                         <dd>Pillow
@@ -1634,12 +1634,12 @@
                                         <hr>
                                         <dd>Whitenoise
                                             <a href="http://whitenoise.evans.io/en/stable/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
-                                            <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 click-icon" onclick="call_modal('whiteNoiseModal', 'd-letter','on' )">
+                                            <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 click-icon" onclick="call_modal('whiteNoiseModal', 'dd-letter','on' )">
                                         </dd>
                                         <hr>
                                         <dd>Stripe
                                             <a href="https://dashboard.stripe.com/test/apikeys" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
-                                            <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 click-icon" onclick="call_modal('stripeModal', 'd-letter','on' )">
+                                            <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 click-icon" onclick="call_modal('stripeModal', 't-letter','on' )">
                                         </dd>
                                     </div>
                                 </div>
