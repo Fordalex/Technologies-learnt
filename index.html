@@ -53,6 +53,58 @@
 
     <!-- Technologies modals (frontend) -->
 
+    <!-- html (frontend) -->
+    <div class="modal-style closed" id="htmlModal">
+        <div class="page-container p-2 pt-3">
+            <img src="https://img.icons8.com/plasticine/50/000000/crossed-arrow.png" class="float-right arrow-button click-icon" onclick="call_modal('htmlModal', 'css-letter', 'off')" />
+            <h4 class="mt-2 l-s">HTML</h4>
+            <hr class="mt-3 dark-hr">
+            <!-- content -->
+            <div class="scroll-container">
+                <div class="row m-0 p-0">
+                    <div class="col-6 col-md-3 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>1. Entities (symbols)</h4>
+                            <dl class="list-no-margin">
+                                <dt>&lt;</dt>
+                                <dd>&l<span>t;</span></dd>
+                            </dl>
+                            <dl class="list-no-margin">
+                                <dt>&gt;</dt>
+                                <dd>&g<span>t;</span></dd>
+                            </dl>
+                            <dl class="list-no-margin">
+                                <dt>&amp;</dt>
+                                <dd>&a<span>mp;</span></dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>1. Entities (spaces)</h4>
+                            <dl class="list-no-margin">
+                                <dt>One space</dt>
+                                <dd>&nb<span>sp;</span></dd>
+                            </dl>
+                            <dl class="list-no-margin">
+                                <dt>Two spaces</dt>
+                                <dd>&en<span>sp;</span></dd>
+                            </dl>
+                            <dl class="list-no-margin">
+                                <dt>Four spaces</dt>
+                                <dd>&em<span>sp;</span></dd>
+                            </dl>
+                            <dl class="list-no-margin">
+                                <dt>Tab</dt>
+                                <dd>&nb<span>sp;</span>&nb<span>sp;</span>&nb<span>sp;</span>&nb<span>sp;</span></dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- css (frontend) -->
     <div class="modal-style closed" id="cssModal">
         <div class="page-container p-2 pt-3">
@@ -221,6 +273,17 @@
                             <h4>4. Copy the link with username and password</h4>
                         </div>
                     </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <p class="ml-2">The name/password and the database name all need to be inculded into the link. The default database name is set to "test".</p>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>5. env.py</h4>
+                            <dl>
+                                <dd>os.environ["DATABASE_URL"] = '<span class="text-danger">DBURL</span>'</dd>
+                            </dl>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -346,11 +409,9 @@
                     <div class="col-12 m-0 p-0">
                         <p>Flask is a micro framework, to run a pytho the command is <b>python app.py</b>. HTML files need to be kept in a directory called templates.</p>
                     </div>
-
-
                     <div class="col-12 m-0 p-0">
-                        <p class="m-0"><b>Key:</b></p>
-                        <p class="m-0 text-danger">Name should be changed</p>
+                        <p class="m-0"><b>Key:</b> <span class="text-danger">Name should be changed</span></p>
+                        <p class="m-0"><b>Run project:</b> python app.py</p>
                         <hr>
                     </div>
                     <div class="col-12 m-0 p-0 mt-2">
@@ -379,7 +440,7 @@
                             </div>
                             <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
                                 <div class="section-container ">
-                                    <h4>2. app.py</h4>
+                                    <h4>2. create app.py</h4>
                                     <dl>
                                         <dd>import os</dd>
                                         <dd>from flask import Flask, render_template</dd>
@@ -390,13 +451,29 @@
                                     <dl>
                                         <dd>@app.route('/')</dd>
                                         <dd>def index():</dd>
-                                        <dd>return render_template('profile.html')</dd>
+                                        <dd>return render_template('<span class="text-danger">profile.html</span>')</dd>
                                     </dl>
                                     <dl>
                                         <dd>if __name__ == '__main__':</dd>
-                                        <dd>app.secret_key = 'mysecret'</dd>
-                                        <dd>app.run(host=os.getenv("IP", "0.0.0.0"),</dd>
-                                        <dd>port=int(os.getenv("PORT", "5000")), debug=True)</dd>
+                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;app.secret_key = 'mysecret'</dd>
+                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;app.run(host=os.getenv("IP", "0.0.0.0"),</dd>
+                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;port=int(os.getenv("PORT", "5000")), debug=True)</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container ">
+                                    <h4>3. templates directory</h4>
+                                    <dl>
+                                        <dt>Add the html files inside.</dt>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container ">
+                                    <h4>4. static directory</h4>
+                                    <dl>
+                                        <dt>Add css/img/js folders inside.</dt>
                                     </dl>
                                 </div>
                             </div>
@@ -404,21 +481,49 @@
                     </div>
                     <div class="col-12 m-0 p-0 mt-2">
                         <hr class="mb-4">
-                        <!-- admin -->
-                        <h4><img src="https://img.icons8.com/plasticine/32/000000/database.png" class="mr-2" />Connection to a database<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_admin"></i></h4>
+                        <!-- connect to a database -->
+                        <h4><img src="https://img.icons8.com/plasticine/32/000000/database.png" class="mr-2" />Connect to a database<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_admin"></i></h4>
                     </div>
                     <div class="col-12 m-0 p-0">
                         <div id="django_admin" class="collapse row m-0">
-                            <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
                                 <div class="section-container">
-                                    <h5 class="my-2">1. Add model to the admin panel:</h5>
+                                    <h5 class="my-2">1. Create env.py</h5>
                                     <dl class="list-no-margin">
-                                        <dd>from django.contrib import admin</dd>
-                                        <dd>from .models import <span class="text-primary">Data</span></dd>
+                                        <dd>import os</dd>
+                                        <dd>os.environ.setdefault('<span class="text-success">DATABASE_URL</span>', '<span class="text-danger">DB:URL</span>')</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">2. Install flask_pymongo</h5>
+                                    <dl class="list-no-margin">
+                                        <dd>pip install flask_pymongo</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">3. Update app.py</h5>
+                                    <dl class="list-no-margin">
+                                        <dd>from os import path</dd>
+                                        <dd>from flask_pymongo import PyMongo, pymongo</dd>
+                                    </dl>
+                                    <dl class="list-no-margin">
+                                        <dd>if path.exists("env.py"):</dd>
+                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;import env</dd>
+                                    </dl>
+                                    <dl class="list-no-margin">
+                                        <dd><span class="text-info">DBURL</span> = os.environ.get('<span class="text-success">DATABASE_URL</span>')</dd>
                                         <dd>
                                             <p></p>
                                         </dd>
-                                        <dd>admin.site.register(<span class="text-primary">Data</span>)</dd>
+                                        <dd>app.config["MONGO_DBNAME"] = 'DatabaseName'</dd>
+                                        <dd>app.config["MONGO_URI"] = <span class="text-info">DBURL</span></dd>
+                                    </dl>
+                                    <dl class="list-no-margin">
+                                        <dd>mongo = PyMongo(app)</dd>
                                     </dl>
                                 </div>
                             </div>
@@ -426,9 +531,80 @@
                     </div>
                     <div class="col-12 m-0 p-0 mt-2">
                         <hr class="mb-4">
-                        <!-- views -->
-                        <h4><img src="https://img.icons8.com/color/32/000000/eyes-cartoon.png" class="mr-2" />......
-                            <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_views"></i></h4>
+                        <!-- manipulating data -->
+                        <h4><img src="https://img.icons8.com/material-two-tone/32/000000/change--v1.png" class="mr-2" />Manipulating data
+                            <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#flask_man_data"></i></h4>
+                    </div>
+                    <div class="col-12 m-0 p-0">
+                        <div id="flask_man_data" class="collapse row m-0">
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">1. Create data</h5>
+                                    <dl class="list-no-margin">
+                                        <dt>page.html</dt>
+                                        <dd>
+                                            <p></p>
+                                        </dd>
+                                        <dd>&lt;form action="{{ url_for('<span class="text-warning">route_name</span>') }}" method="POST"></dd>
+                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;&lt;input name="<span class="text-primary">name</span>"></dd>
+                                    </dl>
+                                    <dl class="list-no-margin">
+                                        <dt>app.py</dt>
+                                        <dd>
+                                            <p></p>
+                                        </dd>
+                                        <dd>from flask_pymongo import request</dd>
+                                        <dd>
+                                            <p></p>
+                                        </dd>
+                                        <dd>@app.route('/<span class="text-warning">route_name</span>', methods=['POST'])</dd>
+                                        <dd>
+                                            <p></p>
+                                        </dd>
+                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-success">dataName</span> = mongo.db.<span class="text-danger">dataBaseEntity</span></dd>
+                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-info">data</span> = {</dd>
+                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;'name': request.form['<span class="text-primary">name</span>']</dd>
+                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;}</dd>
+                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-success">dataName</span>.insert_one(<span class="text-info">data</span>)</dd>
+                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;</dd>
+                                    </dl>
+
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">2. Read data</h5>
+                                    <h6>All data form the collection</h6>
+                                    <dl class="list-no-margin">
+                                        <dt>app.py</dt>
+                                        <dd>
+                                            <p></p>
+                                        </dd>
+                                        <dd><span class="text-warning">data</span> = mongo.db.<span class="text-danger">dataCollectionName</span>.find()</dd>
+                                        <dd>
+                                            <p></p>
+                                        </dd>
+                                        <dd>return render_template('index.html', data_name=<span class="text-warning">data</span>)</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">3. Update data</h5>
+                                    <dl class="list-no-margin">
+                                        <dd>from os import path</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">4. Delete data</h5>
+                                    <dl class="list-no-margin">
+                                        <dd>from os import path</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1404,7 +1580,15 @@
                         </div>
                         <div class="col-12 px-0 px-lg-2">
                             <dl>
-                                <dt><img src="https://img.icons8.com/color/15/000000/html-5.png" class="mr-2" />HTML
+
+
+
+
+
+                                <dt><img src="https://img.icons8.com/color/15/000000/html-5.png" class="mr-2"/>HTML
+                                    <img src="images/question-mark.png" style="width:25px;"
+                                    onclick="call_modal('htmlModal', 'css-letter', 'on')" 
+                                    class="float-right mr-4 click-icon">
                                 </dt>
                                 <hr>
                                 <dt><img src="https://img.icons8.com/color/15/000000/css3.png" class="mr-2" />CSS <i
@@ -1495,11 +1679,7 @@
                                             <dd>
                                                 ScrollMagic
                                                 <a href="https://scrollmagic.io/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
-
                                             </dd>
-
-
-
                                         </div>
                                         </dd>
                                     </div>
@@ -1540,7 +1720,6 @@
                                         </div>
                                     </div>
                             </dl>
-
                             </div>
                             <!-- styling -->
                             <div class="col-12 p-0">
