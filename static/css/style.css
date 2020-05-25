@@ -45,22 +45,19 @@ html {
     background-color: orange;
     height: 80px;
     width: 40px;
-    animation: spinning 0.55s linear infinite;
+    animation: spinning 1.5s linear infinite;
     position: static;
 }
 
 @keyframes spinning {
     0% {
         transform: rotatez(0deg);
-        background-color: rgb(252, 218, 48);
     }
     50% {
         transform: rotatez(180deg);
-        background-color: orange;
     }
     100% {
         transform: rotatez(360deg);
-        background-color: rgb(252, 218, 48);
     }
 }
 
@@ -351,12 +348,10 @@ span {
 }
 
 .modal-style {
+    transform: translate(0vw, 100vh);
     background: url('../../images/code-background-1.png') center fixed;
     background-size: 100%;
-    left: 0;
-    top: 100vh;
     z-index: 10;
-    background-color: rgb(200, 200, 200);
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -375,31 +370,27 @@ span {
 }
 
 .letter-style {
-    bottom: 1000px;
     position: relative;
-    color: black;
+    color: white;
     opacity: 0;
 }
 
 .l-s {
-    bottom: 1000px;
+    display: inline-block;
     position: relative;
-    color: black;
-    opacity: 0;
+    color: white;
 }
 
 .t-letter {
-    bottom: 1000px;
+    display: inline-block;
     position: relative;
-    color: black;
-    opacity: 0;
+    color: white;
 }
 
 .d-letter {
-    bottom: 1000px;
+    display: inline-block;
     position: relative;
-    color: black;
-    opacity: 0;
+    color: white;
 }
 
 .tip-container {
