@@ -149,6 +149,10 @@ input:hover {
     border-radius: 8px 0px;
 }
 
+.text-faint {
+    color: rgba(0, 0, 0, 0.2);
+}
+
 
 /* mobile navigation */
 

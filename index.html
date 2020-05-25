@@ -304,7 +304,90 @@
                 <div class="row m-0 p-0">
                     <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
                         <div class="section-container ">
-                            <h4>1. Create a cluster</h4>
+                            <h4>1. Installation</h4>
+                            <dl>
+                                <dd>pip install flask_pymongo</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>2. app.py</h4>
+                            <dl>
+                                <dd>from flask_pymongo import PyMongo, pymongo, request</dd>
+                                <dd>
+                                    <p></p>
+                                </dd>
+                                <dd>mongo = PyMongo(app)</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>3. Request</h4>
+                            <p>Getting data from a form when it's sent to the route.</p>
+                            <dl>
+                                <dd class="text-faint">@app.route('/insert_name', methods=["POST"])</dd>
+                                <dd class="text-faint">def insert_name():</dd>
+                                <dd>&nbsp;&nbsp;&nbsp;&nbsp;data = request.form['data']</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>4. Getting data</h4>
+                            <p>This will get all the data from a mongoDB collection.</p>
+                            <dl>
+                                <dd class="text-faint">@app.route('/insert_name', methods=["POST"])</dd>
+                                <dd class="text-faint">def insert_name():</dd>
+                                <dd>&nbsp;&nbsp;&nbsp;&nbsp;data = mongo.db.<span class="text-danger">collection</span>.find()</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>4. Sorting data</h4>
+                            <p>This will sort the data coming from a mongoDB collection.</p>
+                            <dl>
+                                <dd class="text-faint">@app.route('/insert_name', methods=["POST"])</dd>
+                                <dd class="text-faint">def insert_name():</dd>
+                                <dd class="text-faint">&nbsp;&nbsp;&nbsp;&nbsp;data = mongo.db.<span class="text-danger">collection</span>.find()<span class="text-dark">.sort([</span></dd>
+                                <dd>&nbsp;&nbsp;&nbsp;&nbsp;('date', pymongo.ASCENDING)</dd>
+                                <dd>&nbsp;&nbsp;&nbsp;&nbsp;])</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>4. Filtering data</h4>
+                            <p>This will filter data coming from a mongoDB collection.</p>
+                            <dl>
+                                <dd class="text-faint">@app.route('/insert_name', methods=["POST"])</dd>
+                                <dd class="text-faint">def insert_name():</dd>
+                                <dd>&nbsp;&nbsp;&nbsp;&nbsp;data = mongo.db.<span class="text-danger">collection</span>.find({'name': 'alex'})</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>5. Updating data</h4>
+                            <p>Updates a chosen piece of data from mongoDB collections.</p>
+                            <dl>
+                                <dd class="text-faint">@app.route('/insert_name/<span class="text-dark">&lt;data_id</span>>', methods=["POST"])</dd>
+                                <dd class="text-faint">def insert_name(<span class="text-dark">data_id</span>):</dd>
+                                <dd>&nbsp;&nbsp;&nbsp;&nbsp;data = mongo.db.<span class="text-danger">collection</span>.remove({'_id': ObjectId(data_id)})</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>6. Removing data</h4>
+                            <p>This will allow us to remove data from a collection.</p>
+                            <dl>
+                                <dd class="text-faint">@app.route('/insert_name/<span class="text-dark">&lt;data_id</span>>', methods=["POST"])</dd>
+                                <dd class="text-faint">def insert_name(<span class="text-dark">data_id</span>):</dd>
+                                <dd>&nbsp;&nbsp;&nbsp;&nbsp;data = mongo.db.<span class="text-danger">collection</span>.remove({'_id': ObjectId(data_id)})</dd>
+                            </dl>
                         </div>
                     </div>
                 </div>
@@ -519,7 +602,7 @@
                                         <dd>
                                             <p></p>
                                         </dd>
-                                        <dd>app.config["MONGO_DBNAME"] = 'DatabaseName'</dd>
+                                        <dd class="text-faint">app.config["MONGO_DBNAME"] = 'task_manager'</dd>
                                         <dd>app.config["MONGO_URI"] = <span class="text-info">DBURL</span></dd>
                                     </dl>
                                     <dl class="list-no-margin">
@@ -574,17 +657,16 @@
                             <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
                                 <div class="section-container">
                                     <h5 class="my-2">2. Read data</h5>
-                                    <h6>All data form the collection</h6>
+                                    <h6>All data from the collection</h6>
                                     <dl class="list-no-margin">
                                         <dt>app.py</dt>
                                         <dd>
                                             <p></p>
                                         </dd>
-                                        <dd><span class="text-warning">data</span> = mongo.db.<span class="text-danger">dataCollectionName</span>.find()</dd>
-                                        <dd>
-                                            <p></p>
-                                        </dd>
-                                        <dd>return render_template('index.html', data_name=<span class="text-warning">data</span>)</dd>
+                                        <dd class="text-faint">@app.route('/')</dd>
+                                        <dd class="text-faint">def index():</dd>
+                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-warning">data</span> = mongo.db.<span class="text-danger">dataCollectionName</span>.find()</dd>
+                                        <dd><span class="text-faint">return render_template('index.html'</span>, data_name=<span class="text-warning">data</span>)</dd>
                                     </dl>
                                 </div>
                             </div>
@@ -600,7 +682,29 @@
                                 <div class="section-container">
                                     <h5 class="my-2">4. Delete data</h5>
                                     <dl class="list-no-margin">
-                                        <dd>from os import path</dd>
+                                        <dt>page.html</dt>
+                                        <dd>
+                                            <p></p>
+                                        </dd>
+                                        <dd>&lt;a href="{{ url_for('<span class="text-success">delete_data</span>', <span class="text-warning">data_id</span>=data._id )}}"></a>
+                                        </dd>
+                                        <dd class="text-faint">&nbsp;&nbsp;&nbsp;&nbsp;&lt;button class="btn btn-danger">Delete&lt;/button></dd>
+                                        <dd class="text-faint">&lt;/a></dd>
+                                    </dl>
+                                    <dl class="list-no-margin">
+                                        <dt>app.py</dt>
+                                        <dd>
+                                            <p></p>
+                                        </dd>
+                                        <dd>from bson.objectid import <span class="text-info">ObjectId</span></dd>
+                                        <dd>
+                                            <p></p>
+                                        </dd>
+                                        <dd><span class="text-faint">@app.route('/<span class="text-success">delete_data</span></span>/ <span class="text-warning">&lt;data_id></span>')
+                                        </dd>
+                                        <dd><span class="text-faint">delete_bodyweight</span>(<span class="text-warning">data_id</span>):</dd>
+                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;mongo.db.<span class="text-danger">collection</span>.remove({'_id': <span class="text-info">ObjectId</span>(<span class="text-warning">data_id</span>)})</dd>
+                                        <dd class="text-faint">&nbsp;&nbsp;&nbsp;&nbsp;return redirect(url_for('users_records'))</dd>
                                     </dl>
                                 </div>
                             </div>
@@ -625,8 +729,8 @@
                         <a href="https://docs.djangoproject.com/en/3.0/ref/models/instances/" target="_blank" class="main-colour">Model instance reference</a>
                     </div> -->
                     <div class="col-12 m-0 p-0">
-                        <p class="m-0"><b>Key:</b></p>
-                        <p class="m-0 text-danger">Name should be changed</p>
+                        <p class="m-0"><b>Key:</b> <span class="text-danger">Name should be changed</span></p>
+                        <p class="m-0"><b>Run project:</b> python manage.py runserver</p>
                         <hr>
                     </div>
                     <div class="col-12 m-0 p-0">
@@ -1911,15 +2015,16 @@
                                     </div>
                                 </dl>
                             </div>
-                            <!-- How
                             <div class="col-12 p-0">
-                                <h4 class="mb-3">How?<i class="fas fa-question ml-2"></i></h4>
+                                <h4 class="mb-3">??<i class="fas fa-question ml-2"></i></h4>
                             </div>
                             <div class="col-12 px-0 px-lg-2">
                                 <dl>
-                                    <dd>Animate an SVG</dd>
+                                    <dd>Morph an SVG</dd>
+                                    <hr>
+                                    <dd>Pagination</dd>
                                 </dl>
-                            </div> -->
+                            </div>
                         </div>
                     </div>
 
