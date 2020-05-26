@@ -396,8 +396,38 @@
     </div>
 
 
-
     <!-- Technologies modals (backend)(Django) -->
+
+    <!-- python (backend) -->
+    <div class="modal-style closed" id="pythonModal">
+        <div class="page-container p-2 pt-3">
+            <img src="https://img.icons8.com/plasticine/50/000000/crossed-arrow.png" class="float-right arrow-button click-icon" onclick="call_modal('pythonModal', 'css-letter', 'off')" />
+            <h4 class="mt-2 text-light">Python</h4>
+            <hr class="mt-3 dark-hr">
+            <!-- content -->
+            <div class="scroll-container">
+                <div class="row m-0 p-0">
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>For loops</h4>
+                            <dl>
+                                <dt>Loop Through Integer</dt>
+                                <dd>for value in range(100)</dd>
+                            </dl>
+                            <dl>
+                                <dt>Loop Through Array</dt>
+                                <dd>for value in arrayName:</dd>
+                            </dl>
+                            <dl>
+                                <dt>Enumerate Through An Array</dt>
+                                <dd>for index, value in enumerate(arrayName):</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- jinja (backend) -->
     <div class="modal-style closed" id="jinjaModal">
@@ -475,7 +505,8 @@
                                     <h4>4. For loop:</h4>
                                     <dl>
                                         <dd>{% for data in datas %}</dd>
-                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;{{ data.<span class="text-danger">attribute</span> }}</dd>
+                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;{{ data.<span class="text-danger">attribute</span> }}
+                                        </dd>
                                         <dd>{% endfor %}</dd>
                                     </dl>
                                 </div>
@@ -597,7 +628,8 @@
                                     <h5 class="my-2">1. Create env.py</h5>
                                     <dl class="list-no-margin">
                                         <dd>import os</dd>
-                                        <dd>os.environ.setdefault('<span class="text-success">DATABASE_URL</span>', '<span class="text-danger">DB:URL</span>')</dd>
+                                        <dd>os.environ.setdefault('<span class="text-success">DATABASE_URL</span>', '
+                                            <span class="text-danger">DB:URL</span>')</dd>
                                     </dl>
                                 </div>
                             </div>
@@ -651,7 +683,8 @@
                                         <dd>
                                             <p></p>
                                         </dd>
-                                        <dd>&lt;form action="{{ url_for('<span class="text-warning">route_name</span>') }}" method="POST"></dd>
+                                        <dd>&lt;form action="{{ url_for('<span class="text-warning">route_name</span>') }}" method="POST">
+                                        </dd>
                                         <dd>&nbsp;&nbsp;&nbsp;&nbsp;&lt;input name="<span class="text-primary">name</span>"></dd>
                                     </dl>
                                     <dl class="list-no-margin">
@@ -663,11 +696,13 @@
                                         <dd>
                                             <p></p>
                                         </dd>
-                                        <dd>@app.route('/<span class="text-warning">route_name</span>', methods=['POST'])</dd>
+                                        <dd>@app.route('/<span class="text-warning">route_name</span>', methods=['POST'])
+                                        </dd>
                                         <dd>
                                             <p></p>
                                         </dd>
-                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-success">dataName</span> = mongo.db.<span class="text-danger">dataBaseEntity</span></dd>
+                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-success">dataName</span> = mongo.db.
+                                            <span class="text-danger">dataBaseEntity</span></dd>
                                         <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-info">data</span> = {</dd>
                                         <dd>&nbsp;&nbsp;&nbsp;&nbsp;'name': request.form['<span class="text-primary">name</span>']</dd>
                                         <dd>&nbsp;&nbsp;&nbsp;&nbsp;}</dd>
@@ -688,8 +723,10 @@
                                         </dd>
                                         <dd class="text-faint">@app.route('/')</dd>
                                         <dd class="text-faint">def index():</dd>
-                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-warning">data</span> = mongo.db.<span class="text-danger">dataCollectionName</span>.find()</dd>
-                                        <dd><span class="text-faint">return render_template('index.html'</span>, data_name=<span class="text-warning">data</span>)</dd>
+                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-warning">data</span> = mongo.db.
+                                            <span class="text-danger">dataCollectionName</span>.find()</dd>
+                                        <dd><span class="text-faint">return render_template('index.html'</span>, data_name=
+                                            <span class="text-warning">data</span>)</dd>
                                     </dl>
                                 </div>
                             </div>
@@ -711,7 +748,8 @@
                                         </dd>
                                         <dd>&lt;a href="{{ url_for('<span class="text-success">delete_data</span>', <span class="text-warning">data_id</span>=data._id )}}"></a>
                                         </dd>
-                                        <dd class="text-faint">&nbsp;&nbsp;&nbsp;&nbsp;&lt;button class="btn btn-danger">Delete&lt;/button></dd>
+                                        <dd class="text-faint">&nbsp;&nbsp;&nbsp;&nbsp;&lt;button class="btn btn-danger">Delete&lt;/button>
+                                        </dd>
                                         <dd class="text-faint">&lt;/a></dd>
                                     </dl>
                                     <dl class="list-no-margin">
@@ -723,11 +761,13 @@
                                         <dd>
                                             <p></p>
                                         </dd>
-                                        <dd><span class="text-faint">@app.route('/<span class="text-success">delete_data</span></span>/ <span class="text-warning">&lt;data_id></span>')
+                                        <dd><span class="text-faint">@app.route('/<span
+                                                    class="text-success">delete_data</span></span>/ <span class="text-warning">&lt;data_id></span>')
                                         </dd>
                                         <dd><span class="text-faint">delete_bodyweight</span>(<span class="text-warning">data_id</span>):</dd>
                                         <dd>&nbsp;&nbsp;&nbsp;&nbsp;mongo.db.<span class="text-danger">collection</span>.remove({'_id': <span class="text-info">ObjectId</span>(<span class="text-warning">data_id</span>)})</dd>
-                                        <dd class="text-faint">&nbsp;&nbsp;&nbsp;&nbsp;return redirect(url_for('users_records'))</dd>
+                                        <dd class="text-faint">&nbsp;&nbsp;&nbsp;&nbsp;return redirect(url_for('users_records'))
+                                        </dd>
                                     </dl>
                                 </div>
                             </div>
@@ -1212,7 +1252,8 @@
                     </div>
                     <div class="col-12 m-0 p-0 mt-2">
                         <hr class="mb-4">
-                        <h4><img src="https://img.icons8.com/fluent/32/000000/domain.png" class="mr-2" />Hosting on Heroku<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_hosting"></i></h4>
+                        <h4><img src="https://img.icons8.com/fluent/32/000000/domain.png" class="mr-2" />Hosting on Heroku
+                            <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_hosting"></i></h4>
                     </div>
                     <div class="col-12 m-0 p-0">
                         <div id="django_hosting" class="collapse row m-0">
@@ -1712,10 +1753,10 @@
 
 
 
-                                <dt><img src="https://img.icons8.com/color/15/000000/html-5.png" class="mr-2"/>HTML
+                                <dt><img src="https://img.icons8.com/color/15/000000/html-5.png" class="mr-2" />HTML
                                     <img src="images/question-mark.png" style="width:25px;"
-                                    onclick="call_modal('htmlModal', 'css-letter', 'on')" 
-                                    class="float-right mr-4 click-icon">
+                                        onclick="call_modal('htmlModal', 'css-letter', 'on')"
+                                        class="float-right mr-4 click-icon">
                                 </dt>
                                 <hr>
                                 <dt><img src="https://img.icons8.com/color/15/000000/css3.png" class="mr-2" />CSS <i
@@ -1782,8 +1823,9 @@
                             <dl>
                                 <div>
                                     <dt><img src="https://img.icons8.com/color/18/000000/pixar-lamp.png"
-                                            class="mr-2" />Animation<i class="far fa-plus-square ml-2 small-icon front-plus"
-                                            data-toggle="collapse" href="#animation"></i></dt>
+                                            class="mr-2" />Animation<i
+                                            class="far fa-plus-square ml-2 small-icon front-plus" data-toggle="collapse"
+                                            href="#animation"></i></dt>
                                     <div class="collapse wrapper" id="animation">
                                         <div class="p-2">
                                             <dd>
@@ -1831,8 +1873,9 @@
                                     </div>
                                     <hr>
                                     <dt><img src="https://img.icons8.com/plasticine/18/000000/combo-chart.png"
-                                            class="mr-2" />Charts<i class="far fa-plus-square ml-2 small-icon front-plus"
-                                            data-toggle="collapse" href="#charts"></i></dt>
+                                            class="mr-2" />Charts<i
+                                            class="far fa-plus-square ml-2 small-icon front-plus" data-toggle="collapse"
+                                            href="#charts"></i></dt>
                                     <div class="collapse wrapper mt-2" id="charts">
                                         <div class="p-2">
                                             <dd>d3.js
@@ -1853,9 +1896,9 @@
                                         </div>
                                     </div>
                                     <hr>
-                                    <dt><img src="https://img.icons8.com/ios-glyphs/17/000000/3d-scale.png" class="mr-2" />3D<i
-                                        class="far fa-plus-square ml-2 small-icon front-plus" data-toggle="collapse"
-                                        href="#threeD"></i></dt>
+                                    <dt><img src="https://img.icons8.com/ios-glyphs/17/000000/3d-scale.png"
+                                            class="mr-2" />3D<i class="far fa-plus-square ml-2 small-icon front-plus"
+                                            data-toggle="collapse" href="#threeD"></i></dt>
                                     <div class="collapse wrapper" id="threeD">
                                         <div class="p-2">
                                             <dd>
@@ -1866,10 +1909,11 @@
                                         </dd>
                                     </div>
                                     <hr>
-                                    <dt><img src="https://img.icons8.com/fluent/17/000000/star.png" class="mr-2" />premium<i
-                                        class="far fa-plus-square ml-2 small-icon front-plus" data-toggle="collapse"
-                                        href="#favico"></i></dt>
-                                    <div class="collapse wrapper mt-2" id="favico">
+                                    <dt><img src="https://img.icons8.com/fluent/17/000000/star.png"
+                                            class="mr-2" />premium<i
+                                            class="far fa-plus-square ml-2 small-icon front-plus" data-toggle="collapse"
+                                            href="#premium"></i></dt>
+                                    <div class="collapse wrapper mt-2" id="premium">
                                         <div class="p-2">
                                             <dd>
                                                 Dynamic favicons
@@ -1966,7 +2010,8 @@
                                     <hr>
                                     <!-- photos -->
                                     <div>
-                                        <dt><img src="https://img.icons8.com/color/17/000000/image.png" class="mr-2" />Photos<i
+                                        <dt><img src="https://img.icons8.com/color/17/000000/image.png"
+                                            class="mr-2" />Photos<i
                                             class="far fa-plus-square ml-2 small-icon front-plus" data-toggle="collapse"
                                             href="#photos"></i></dt>
                                         <div class="collapse wrapper mt-2" id="photos">
@@ -2045,8 +2090,9 @@
                                     <!-- Themes -->
                                     <div>
                                         <dt><img src="https://img.icons8.com/dusk/17/000000/change-theme.png"
-                                            class="mr-2" />Themes<i class="far fa-plus-square ml-2 small-icon front-plus"
-                                            data-toggle="collapse" href="#themes"></i></dt>
+                                            class="mr-2" />Themes<i
+                                            class="far fa-plus-square ml-2 small-icon front-plus" data-toggle="collapse"
+                                            href="#themes"></i></dt>
                                         <div class="collapse wrapper mt-2" id="themes">
                                             <div class="p-2">
                                                 <dd>coolors
@@ -2063,8 +2109,9 @@
                                     <!-- Loaders -->
                                     <div>
                                         <dt><img src="https://img.icons8.com/ios-filled/17/000000/loading.png"
-                                            class="mr-2" />Loaders<i class="far fa-plus-square ml-2 small-icon front-plus"
-                                            data-toggle="collapse" href="#loaders"></i></dt>
+                                            class="mr-2" />Loaders<i
+                                            class="far fa-plus-square ml-2 small-icon front-plus" data-toggle="collapse"
+                                            href="#loaders"></i></dt>
                                         <div class="collapse wrapper mt-2" id="loaders">
                                             <div class="p-2">
                                                 <dd>Loaders
@@ -2105,7 +2152,11 @@
                                 <dl>
                                     <dt><img src="https://img.icons8.com/color/15/000000/python.png" class="mr-2" />Python<i
                                         class="far fa-plus-square ml-2 small-icon" data-toggle="collapse"
-                                        href="#python"></i></dt>
+                                        href="#python"></i>
+                                    <img src="images/question-mark.png" style="width:25px;"
+                                        class="float-right mr-2 click-icon"
+                                        onclick="call_modal('pythonModal', 'jin-letter', 'on')">
+                                </dt>
                                     <div class="collapse wrapper mt-2" id="python">
                                         <div class="p-2">
                                             <dd>Jinja
@@ -2251,7 +2302,8 @@
                                         </div>
                                     </div>
                                     <hr>
-                                    <dt><img src="https://img.icons8.com/color/18/000000/pixar-lamp.png" class="mr-2" />Multi
+                                    <dt><img src="https://img.icons8.com/color/18/000000/pixar-lamp.png"
+                                        class="mr-2" />Multi
                                     Page<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse"
                                         href="#animationlearning"></i></dt>
                                     <div class="collapse wrapper" id="animationlearning">
@@ -2291,7 +2343,8 @@
                             <div class="col-12 px-0 px-lg-2">
                                 <dl>
 
-                                    <dt><img src="https://img.icons8.com/color/17/000000/google-sites.png" class="mr-2" />Full
+                                    <dt><img src="https://img.icons8.com/color/17/000000/google-sites.png"
+                                        class="mr-2" />Full
                                     Framework<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse"
                                         href="#framework"></i></dt>
                                     <div class="collapse wrapper" id="framework">
@@ -2372,9 +2425,9 @@
                                         </div>
                                     </div>
                                     <hr>
-                                    <dt><img src="https://img.icons8.com/dotty/17/000000/grid-3.png" class="mr-2" />Wireframes<i
-                                        class="far fa-plus-square ml-2 small-icon" data-toggle="collapse"
-                                        href="#wireframes"></i></dt>
+                                    <dt><img src="https://img.icons8.com/dotty/17/000000/grid-3.png"
+                                        class="mr-2" />Wireframes<i class="far fa-plus-square ml-2 small-icon"
+                                        data-toggle="collapse" href="#wireframes"></i></dt>
                                     <div class="collapse wrapper" id="wireframes">
                                         <div class="p-2">
                                             <dd>Adobe XD</dd>
@@ -2431,8 +2484,9 @@
                                 <dl>
 
                                     <dt><img src="https://img.icons8.com/office/16/000000/static-views.png"
-                                        class="mr-2" />Hosting Static Projects<i class="far fa-plus-square ml-2 small-icon"
-                                        data-toggle="collapse" href="#statichosting"></i></dt>
+                                        class="mr-2" />Hosting Static Projects<i
+                                        class="far fa-plus-square ml-2 small-icon" data-toggle="collapse"
+                                        href="#statichosting"></i></dt>
                                     <div class="collapse wrapper" id="statichosting">
                                         <div class="p-2">
                                             <dd class="ml-3">Github
@@ -2529,7 +2583,8 @@
                             </div>
                             <div class="col-12 px-0 px-lg-2">
                                 <dl>
-                                    <dt><img src="https://img.icons8.com/color/17/000000/travis-ci.png" class="mr-2" />Testing
+                                    <dt><img src="https://img.icons8.com/color/17/000000/travis-ci.png"
+                                        class="mr-2" />Testing
                                     <i class="far fa-plus-square ml-2 small-icon front-plus" data-toggle="collapse"
                                         href="#testing"></i></dt>
 
@@ -2636,9 +2691,9 @@
                                         </div>
                                     </div>
                                     <hr>
-                                    <dt><img src="https://img.icons8.com/dusk/17/000000/edit-image.png" class="mr-2" />Udemy<i
-                                        class="far fa-plus-square ml-2 small-icon" data-toggle="collapse"
-                                        href="#photoedit"></i></dt>
+                                    <dt><img src="https://img.icons8.com/dusk/17/000000/edit-image.png"
+                                        class="mr-2" />Udemy<i class="far fa-plus-square ml-2 small-icon"
+                                        data-toggle="collapse" href="#photoedit"></i></dt>
                                     <div class="collapse wrapper mt-2" id="photoedit">
                                         <div class="p-2">
                                             <dd>Photoshop</dd>
@@ -2647,9 +2702,9 @@
                                         </div>
                                     </div>
                                     <hr>
-                                    <dt><img src="https://img.icons8.com/clouds/18/000000/vector.png" class="mr-2" />Youtube<i
-                                        class="far fa-plus-square ml-2 small-icon" data-toggle="collapse"
-                                        href="#illustrationssvg"></i></dt>
+                                    <dt><img src="https://img.icons8.com/clouds/18/000000/vector.png"
+                                        class="mr-2" />Youtube<i class="far fa-plus-square ml-2 small-icon"
+                                        data-toggle="collapse" href="#illustrationssvg"></i></dt>
                                     <div class="collapse wrapper mt-2" id="illustrationssvg">
                                         <div class="p-2">
                                             <dd>Adobe Illustrator</dd>
@@ -2658,9 +2713,9 @@
                                         </div>
                                     </div>
                                     <hr>
-                                    <dt><img src="https://img.icons8.com/clouds/18/000000/vector.png" class="mr-2" />Superhi<i
-                                        class="far fa-plus-square ml-2 small-icon" data-toggle="collapse"
-                                        href="#illustrationssvg"></i></dt>
+                                    <dt><img src="https://img.icons8.com/clouds/18/000000/vector.png"
+                                        class="mr-2" />Superhi<i class="far fa-plus-square ml-2 small-icon"
+                                        data-toggle="collapse" href="#illustrationssvg"></i></dt>
                                     <div class="collapse wrapper mt-2" id="illustrationssvg">
                                         <div class="p-2">
                                             <dd>Adobe Illustrator</dd>
@@ -2708,9 +2763,9 @@
                                         </div>
                                     </div>
                                     <hr>
-                                    <dt><img src="https://img.icons8.com/dusk/17/000000/edit-image.png" class="mr-2" />Youtube<i
-                                        class="far fa-plus-square ml-2 small-icon" data-toggle="collapse"
-                                        href="#photoedit"></i></dt>
+                                    <dt><img src="https://img.icons8.com/dusk/17/000000/edit-image.png"
+                                        class="mr-2" />Youtube<i class="far fa-plus-square ml-2 small-icon"
+                                        data-toggle="collapse" href="#photoedit"></i></dt>
                                     <div class="collapse wrapper mt-2" id="photoedit">
                                         <div class="p-2">
                                             <dd>Photoshop</dd>
@@ -2757,9 +2812,9 @@
                             <div class="col-12 px-0 px-lg-2">
                                 <dl>
 
-                                    <dt><img src="https://img.icons8.com/dotty/17/000000/grid-3.png" class="mr-2" />Wireframes<i
-                                        class="far fa-plus-square ml-2 small-icon" data-toggle="collapse"
-                                        href="#wireframes"></i></dt>
+                                    <dt><img src="https://img.icons8.com/dotty/17/000000/grid-3.png"
+                                        class="mr-2" />Wireframes<i class="far fa-plus-square ml-2 small-icon"
+                                        data-toggle="collapse" href="#wireframes"></i></dt>
                                     <div class="collapse wrapper" id="wireframes">
                                         <div class="p-2">
                                             <dd class="ml-3">Flask</dd>
@@ -2801,9 +2856,9 @@
                             <div class="col-12 px-0 px-lg-2">
                                 <dl>
 
-                                    <dt><img src="https://img.icons8.com/dotty/17/000000/grid-3.png" class="mr-2" />Wireframes<i
-                                        class="far fa-plus-square ml-2 small-icon" data-toggle="collapse"
-                                        href="#wireframes"></i></dt>
+                                    <dt><img src="https://img.icons8.com/dotty/17/000000/grid-3.png"
+                                        class="mr-2" />Wireframes<i class="far fa-plus-square ml-2 small-icon"
+                                        data-toggle="collapse" href="#wireframes"></i></dt>
                                     <div class="collapse wrapper" id="wireframes">
                                         <div class="p-2">
                                             <dd class="ml-3">Flask</dd>
