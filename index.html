@@ -410,69 +410,92 @@
             <!-- content -->
             <div class="scroll-container">
                 <div class="row m-0 p-0">
+                    <div class="col-12 m-0 p-0 mt-2">
+                        <!-- Django -->
+                        <h4><img src="https://img.icons8.com/material-sharp/32/000000/django.png" class="mr-2" />Django
+                            <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#jinja_django"></i></h4>
+                    </div>
+                    <div class="col-12 m-0 p-0">
+                        <div id="jinja_django" class="collapse row m-0">
 
-                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
-                        <div class="section-container ">
-                            <h4>1. Block content</h4>
-                            <dl>
-                                <dt>Add template:</dt>
-                                <dd>{% extends 'base.html' %}</dd>
-                            </dl>
-                            <dl>
-                                <dt>Add content:</dt>
-                                <dd>{% block content %}{% endblock %}</dd>
-                            </dl>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
-                        <div class="section-container ">
-                            <h4>2. Load in static folder</h4>
-                            <dl>
-                                <dd class="mb-0">{% load static %}</dd>
-                                <dd>href="{% static 'css/style.css' %}"</dd>
-                            </dl>
-                            <p class="ml-3">If using <b>whitenoise</b> the line bellow should be used:</p>
-                            <dl>
-                                <dd class="mb-0">{% load static from staticfiles %}</dd>
-                                <dd>href="{% static 'css/style.css' %}"</dd>
-                            </dl>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
-                        <div class="section-container ">
-                            <h4>3. Jinja & JavaScript</h4>
-                            <dl>
-                                <dt>page.html:</dt>
-                                <dd>{% block name_js %}</dd>
-                                <dd><span class="text-danger">JavaScript</span></dd>
-                                <dd>{% endblock %}</dd>
-                                <dt>base.html in the head:</dt>
-                                <dd>{% block name_js %}</dd>
-                                <dd>{% endblock %}</dd>
-                            </dl>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
-                        <div class="section-container ">
-                            <h4>4. Django user logged in:</h4>
-                            <dl>
-                                <dt>When a user is logged in:</dt>
-                                <dd>{% if user.is_authenticated %}</dd>
-                            </dl>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
-                        <div class="section-container ">
-                            <h4>4. For loop:</h4>
-                            <dl>
-                                <dt>When a user is logged in:</dt>
-                                <dd>{% if user.is_authenticated %}</dd>
-                            </dl>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container ">
+                                    <h4>1. Block content</h4>
+                                    <dl>
+                                        <dt>Add template:</dt>
+                                        <dd>{% extends 'base.html' %}</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>Add content:</dt>
+                                        <dd>{% block content %}{% endblock %}</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container ">
+                                    <h4>2. Load in static folder</h4>
+                                    <dl>
+                                        <dd class="mb-0">{% load static %}</dd>
+                                        <dd>href="{% static 'css/style.css' %}"</dd>
+                                    </dl>
+                                    <p class="ml-3">If using <b>whitenoise</b> the line bellow should be used:</p>
+                                    <dl>
+                                        <dd class="mb-0">{% load static from staticfiles %}</dd>
+                                        <dd>href="{% static 'css/style.css' %}"</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container ">
+                                    <h4>3. Jinja & JavaScript</h4>
+                                    <dl class="list-no-margin">
+                                        <dt>page.html:</dt>
+                                        <dd>{% block name_js %}</dd>
+                                        <dd><span class="text-danger">JavaScript</span></dd>
+                                        <dd>{% endblock %}</dd>
+                                    </dl>
+                                    <dl class="list-no-margin">
+                                        <dt>base.html in the head:</dt>
+                                        <dd>{% block name_js %}</dd>
+                                        <dd>{% endblock %}</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container ">
+                                    <h4>4. Django user logged in:</h4>
+                                    <dl class="list-no-margin">
+                                        <dt>When a user is logged in:</dt>
+                                        <dd>{% if user.is_authenticated %}</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container ">
+                                    <h4>4. For loop:</h4>
+                                    <dl>
+                                        <dd>{% for data in datas %}</dd>
+                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;{{ data.<span class="text-danger">attribute</span> }}</dd>
+                                        <dd>{% endfor %}</dd>
+                                    </dl>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
 
-
-
+                    <div class="col-12 m-0 p-0 mt-2">
+                        <hr>
+                        <!-- flask -->
+                        <h4><img src="https://img.icons8.com/ios-filled/32/000000/sport-bottle.png" class="mr-2" />Flask
+                            <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#jinja_flask"></i></h4>
+                    </div>
+                    <div class="col-12 m-0 p-0">
+                        <div id="jinja_flask" class="collapse row m-0">
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1784,6 +1807,12 @@
                                                 ScrollMagic
                                                 <a href="https://scrollmagic.io/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
                                             </dd>
+                                            <hr>
+                                            <dd>
+                                                Animate on scroll
+                                                <a href="http://michalsnik.github.io/aos/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                            </dd>
+
                                         </div>
                                         </dd>
                                     </div>
@@ -1822,6 +1851,37 @@
                                                 <a href="https://github.com/mattboldt/typed.js" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
                                             </dd>
                                         </div>
+                                    </div>
+                                    <hr>
+                                    <dt><img src="https://img.icons8.com/ios-glyphs/17/000000/3d-scale.png" class="mr-2" />3D<i
+                                        class="far fa-plus-square ml-2 small-icon front-plus" data-toggle="collapse"
+                                        href="#threeD"></i></dt>
+                                    <div class="collapse wrapper" id="threeD">
+                                        <div class="p-2">
+                                            <dd>
+                                                Three.js
+                                                <a href="https://threejs.org/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                            </dd>
+                                        </div>
+                                        </dd>
+                                    </div>
+                                    <hr>
+                                    <dt><img src="https://img.icons8.com/fluent/17/000000/star.png" class="mr-2" />premium<i
+                                        class="far fa-plus-square ml-2 small-icon front-plus" data-toggle="collapse"
+                                        href="#favico"></i></dt>
+                                    <div class="collapse wrapper mt-2" id="favico">
+                                        <div class="p-2">
+                                            <dd>
+                                                Dynamic favicons
+                                                <a href="http://lab.ejci.net/favico.js/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                            </dd>
+                                            <hr>
+                                            <dd>
+                                                User Guide
+                                                <a href="https://shepherdjs.dev/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                            </dd>
+                                        </div>
+                                        </dd>
                                     </div>
                             </dl>
                             </div>
