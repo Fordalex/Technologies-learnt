@@ -260,27 +260,32 @@
                     </div>
                     <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
                         <div class="section-container ">
-                            <h4>2. Connect</h4>
+                            <h4>2. Create a database</h4>
                         </div>
                     </div>
                     <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
                         <div class="section-container ">
-                            <h4>3. Connect your application</h4>
+                            <h4>3. Network access</h4>
+                            <p>When creating a database make sure that the IP is set to any if wanting to use the database with heroku.</p>
                         </div>
                     </div>
                     <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
                         <div class="section-container ">
-                            <h4>4. Copy the link with username and password</h4>
+                            <h4>4. Creating Database Access</h4>
+                            <p>Do not use any non-alphanumeric characters (e.g.: ?, %,@ or &) in your username or password!</p>
                         </div>
                     </div>
                     <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
-                        <p class="ml-2">The name/password and the database name all need to be inculded into the link. The default database name is set to "test".</p>
+                        <div class="section-container ">
+                            <h4>5. Connect your application</h4>
+                            <p>Use the srv connection string.</p>
+                        </div>
                     </div>
                     <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
                         <div class="section-container ">
-                            <h4>5. env.py</h4>
+                            <h4>6. env.py</h4>
                             <dl>
-                                <dd>os.environ["DATABASE_URL"] = '<span class="text-danger">DBURL</span>'</dd>
+                                <dd>os.environ["DATABASE_URL"] = '<span class="text-danger">MongoDB_url</span>'</dd>
                             </dl>
                         </div>
                     </div>
@@ -589,19 +594,28 @@
                                     <dl>
                                         <dd>@app.route('/')</dd>
                                         <dd>def index():</dd>
-                                        <dd>return render_template('<span class="text-danger">profile.html</span>')</dd>
+                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;return render_template('<span class="text-danger">profile.html</span>')</dd>
                                     </dl>
                                     <dl>
                                         <dd>if __name__ == '__main__':</dd>
                                         <dd>&nbsp;&nbsp;&nbsp;&nbsp;app.secret_key = 'mysecret'</dd>
-                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;app.run(host=os.getenv("IP", "0.0.0.0"),</dd>
-                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;port=int(os.getenv("PORT", "5000")), debug=True)</dd>
+                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;app.run(host=os.environ.get("IP"),</dd>
+                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;port=int(os.environ.get("PORT")), debug=True)</dd>
                                     </dl>
                                 </div>
                             </div>
                             <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
                                 <div class="section-container ">
-                                    <h4>3. templates directory</h4>
+                                    <h4>3. env.py</h4>
+                                    <dl>
+                                        <dd>os.environ['IP'] = '0.0.0.0'</dd>
+                                        <dd>os.environ['PORT'] = '5000'</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container ">
+                                    <h4>4. templates directory</h4>
                                     <dl>
                                         <dt>Add the html files inside.</dt>
                                     </dl>
@@ -609,9 +623,11 @@
                             </div>
                             <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
                                 <div class="section-container ">
-                                    <h4>4. static directory</h4>
-                                    <dl>
+                                    <h4>5. static directory</h4>
+                                    <dl class="list-no-margin">
                                         <dt>Add css/img/js folders inside.</dt>
+                                        <dd>&lt;link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}} "></dd>
+                                        <dd>&lt;link rel="stylesheet" href="{{ url_for('static', filename='js/javascript.js')}} "></dd>
                                     </dl>
                                 </div>
                             </div>
@@ -626,7 +642,7 @@
                         <div id="django_admin" class="collapse row m-0">
                             <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
                                 <div class="section-container">
-                                    <h5 class="my-2">1. Create env.py</h5>
+                                    <h5 class="my-2">1. env.py</h5>
                                     <dl class="list-no-margin">
                                         <dd>import os</dd>
                                         <dd>os.environ.setdefault('<span class="text-success">DATABASE_URL</span>', '
@@ -693,7 +709,7 @@
                                         <dd>
                                             <p></p>
                                         </dd>
-                                        <dd>from flask_pymongo import request</dd>
+                                        <dd>from flask import request</dd>
                                         <dd>
                                             <p></p>
                                         </dd>
@@ -765,10 +781,73 @@
                                         <dd><span class="text-faint">@app.route('/<span
                                                     class="text-success">delete_data</span></span>/ <span class="text-warning">&lt;data_id></span>')
                                         </dd>
-                                        <dd><span class="text-faint">delete_bodyweight</span>(<span class="text-warning">data_id</span>):</dd>
+                                        <dd><span class="text-faint">def delete_bodyweight</span>(<span class="text-warning">data_id</span>):</dd>
                                         <dd>&nbsp;&nbsp;&nbsp;&nbsp;mongo.db.<span class="text-danger">collection</span>.remove({'_id': <span class="text-info">ObjectId</span>(<span class="text-warning">data_id</span>)})</dd>
                                         <dd class="text-faint">&nbsp;&nbsp;&nbsp;&nbsp;return redirect(url_for('users_records'))
                                         </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 m-0 p-0 mt-2">
+                        <hr class="mb-4">
+                        <!-- host on heroku -->
+                        <h4><img src="https://img.icons8.com/fluent/32/000000/domain.png" class="mr-2" />Host on heroku<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#flask_heroku"></i></h4>
+                    </div>
+                    <div class="col-12 m-0 p-0">
+                        <div id="flask_heroku" class="collapse row m-0">
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">1. Installation</h5>
+                                    <dl class="list-no-margin">
+                                        <dd>pip install dnspython</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">2. Procfile</h5>
+                                    <dl class="list-no-margin">
+                                        <dd>web: python app.py</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">3. requirements.txt</h5>
+                                    <dl class="list-no-margin">
+                                        <dd>pip install freeze --local > requirements.txt</dd>
+                                        <div class="text-success">
+                                            <dd>click==7.1.2</dd>
+                                            <dd>dnspython==1.16.0</dd>
+                                            <dd>Flask==1.1.2</dd>
+                                            <dd>Flask-PyMongo==2.3.0</dd>
+                                            <dd>itsdangerous==1.1.0</dd>
+                                            <dd>Jinja2==2.11.2</dd>
+                                            <dd>MarkupSafe==1.1.1</dd>
+                                            <dd>pymongo==3.10.1</dd>
+                                            <dd>Werkzeug==1.0.1</dd>
+                                        </div>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">4. app.py</h5>
+                                    <dl class="list-no-margin">
+                                        <dd>debug=False</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">5. Add database config var (Heroku)</h5>
+                                    <dl class="list-no-margin">
+                                        <dt>Config Vars</dt>
+                                        <dd>DATABASE_URL&nbsp;&nbsp;&nbsp;&nbsp;MongoDB_url</dd>
+                                        <dd>PORT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5000</dd>
+                                        <dd>IP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.0.0.0</dd>
                                     </dl>
                                 </div>
                             </div>
@@ -1415,7 +1494,7 @@
                             </dl>
                             <dl class="list-no-margin">
                                 <dt>Add this to the requirements file:</dt>
-                                <dd>pip install freeze --local > requirements.txt</dd>
+                                <dd>pip freeze --local > requirements.txt</dd>
                             </dl>
                         </div>
                     </div>
