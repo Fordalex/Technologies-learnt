@@ -1549,7 +1549,7 @@
                         <h4><img src="https://img.icons8.com/color/32/000000/eyes-cartoon.png" class="mr-2" />views.py
                             <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_views"></i></h4>
                     </div>
-                    <div class="col-12 m-0 px-4">
+                    <div class="col-12 m-0 px-1 px-md-4">
                         <div id="django_views" class="collapse row m-0 section-container-dropdown mt-2">
                             <div class="col-12 m-0">
                                 <h5 class="my-3"><img src="https://img.icons8.com/ios/25/000000/file-preview.png" class="mr-2" />Overview<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_overview"></i></h5>
@@ -1631,16 +1631,29 @@
                             <!-- import -->
                             <div class="col-12 m-0 p-0">
                                 <div id="django_views_import" class="collapse row m-0">
-
-
                                     <div class="col-12 col-md-6 m-0 pl-lg-2 py-2 px-1 p-md-2">
                                         <div class="section-container">
-                                            <h5 class="my-2">1.</h5>
+                                            <h5 class="my-2">render</h5>
                                             <dl>
-
+                                                <dd>import django.shortcuts import <span class="text-success">render</span></dd>
+                                            </dl>
+                                            <dl>
+                                                <dd class="text-faint">def function_name(request):</dd>
+                                                <dd>&nbsp;&nbsp;&nbsp;&nbsp;return <span class="text-success">render</span>(request, "page.html")</dd>
                                             </dl>
                                         </div>
-
+                                    </div>
+                                    <div class="col-12 col-md-6 m-0 pl-lg-2 py-2 px-1 p-md-2">
+                                        <div class="section-container">
+                                            <h5 class="my-2">httpResponce</h5>
+                                            <dl>
+                                                <dd>import django.shortcuts import <span class="text-success">httpResponce</span></dd>
+                                            </dl>
+                                            <dl>
+                                                <dd class="text-faint">def function_name(request):</dd>
+                                                <dd>&nbsp;&nbsp;&nbsp;&nbsp;return <span class="text-success">httpResponce</span>("&lt;h1>Helo!&lt;/h1>")</dd>
+                                            </dl>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1648,7 +1661,7 @@
                                 <hr>
                                 <h5 class="my-3"><img src="https://img.icons8.com/ultraviolet/25/000000/preview-pane.png" class="mr-2" />Example<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_views_example"></i></h5>
                             </div>
-                            <!-- preview -->
+                            <!-- Example -->
                             <div class="col-12 m-0 p-0">
                                 <div id="django_views_example" class="collapse row m-0">
                                     <div class="col-12 col-md-6 m-0 pl-lg-2 py-2 px-1 p-md-2">
@@ -1671,39 +1684,92 @@
                         <h4><img src="https://img.icons8.com/clouds/32/000000/cloud-network.png" class="mr-2" />urls.py
                             <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_urls"></i></h4>
                     </div>
-                    <div class="col-12 m-0 p-0">
-                        <div id="django_urls" class="collapse row m-0">
-                            <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
-                                <div class="section-container">
-                                    <h5 class="my-2">1. Django 1.11:</h5>
-                                    <dl>
-                                        <dt>Import url and include:</dt>
-                                        <dd>from django.conf.urls import url, include</dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>Url patterns:</dt>
-                                        <dd>urlpatterns = []</dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>Standard url:</dt>
-                                        <dd>url(r'^$', index, name="index"),</dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>Pass data into a route:</dt>
-                                        <dd>url(r'^edit/(?P&lt;id&gt;\d+)$', editTask),</dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>Get urls from a different app:</dt>
-                                        <dd>from appname import urls as urls_appname</dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>Adding the urls:</dt>
-                                        <dd>url(r'^accounts/', include(urls_accounts))</dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>Linking to a url:</dt>
-                                        <dd>url(r'^accounts/', include(urls_accounts))</dd>
-                                    </dl>
+                    <div class="col-12 m-0 px-1 px-md-4">
+                        <div id="django_urls" class="collapse row m-0 section-container-dropdown mt-2">
+                            <div class="col-12 m-0">
+                                <h5 class="my-3"><img src="https://img.icons8.com/fluent/25/000000/process.png" class="mr-2" />Process<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_url_overview"></i></h5>
+                            </div>
+                            <!-- process -->
+                            <div class="col-12 m-0 p-0">
+                                <div id="django_url_overview" class="collapse row m-0 ">
+
+                                    <div class="col-12 col-md-6 m-0 pl-lg-2 py-2 px-1 p-md-2">
+                                        <div class="section-container">
+                                            <h5 class="my-2">Import and display view</h5>
+                                            <dl class="list-no-margin">
+                                                <dd>from django.urls import path</dd>
+                                                <dd>from <strike>appname</strike>.views import <span class="text-warning"><strike>function_name</strike></span></dd>
+                                            </dl>
+                                            <dl>
+                                                <dd class="text-faint">urlpatterns = [</dd>
+                                                <dd>&nbsp;&nbsp;&nbsp;&nbsp;path('<strike>url_label</strike>', <span class="text-warning"><strike>function_name</strike></span>, name="<strike>name</strike>"),</dd>
+                                                <dd class="text-faint">]</dd>
+                                            </dl>
+                                            <p class="m-0">A path will usually take three arguments.</p>
+                                            <p class="m-0"><b>First</b>: Url that the user will type in.</p>
+                                            <p class="m-0"><b>Secound</b>: The view function it will return.</p>
+                                            <p class="m-0"><b>Third</b>: Name parameter for links.</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-md-6 m-0 pl-lg-2 py-2 px-1 p-md-2">
+                                        <div class="section-container">
+                                            <h5 class="my-2">Display home page</h5>
+                                            <dl class="list-no-margin">
+                                                <dd class="text-faint">from django.urls import path</dd>
+                                                <dd class="text-faint">from appname.views import function_name</span>
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dd class="text-faint">urlpatterns = [</dd>
+                                                <dd>&nbsp;&nbsp;&nbsp;&nbsp;path(" ", <span class="text-faint">function_name, name="name"),</span></dd>
+                                                <dd class="text-faint">]</dd>
+                                            </dl>
+                                            <p>Leaving the <b>first</b> path parameter empty this view will be the first page loaded.</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-12 m-0">
+                                <hr>
+                                <h5 class="my-3"><img src="https://img.icons8.com/ios-filled/25/000000/plug.png" class="mr-2" />Import<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_url_import"></i></h5>
+                            </div>
+                            <!-- import -->
+                            <div class="col-12 m-0 p-0">
+                                <div id="django_url_import" class="collapse row m-0">
+                                    <div class="col-12 col-md-6 m-0 pl-lg-2 py-2 px-1 p-md-2">
+                                        <div class="section-container">
+                                            <h5 class="my-2">Path</h5>
+                                            <dl>
+                                                <dd>from django.urls import <span class="text-success">path</span></dd>
+                                                <dd>from <strike>appname</strike>.views import <span class="text-warning"><strike>function_name</strike></span></dd>
+                                            </dl>
+                                            <dl>
+                                                <dd class="text-faint">urlpatterns = [</dd>
+                                                <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-success">path</span>('<strike>url_label</strike>', <span class="text-warning"><strike>function_name</strike></span>, name="<strike>name</strike>"),</dd>
+                                                <dd class="text-faint">]</dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 m-0">
+                                <hr>
+                                <h5 class="my-3"><img src="https://img.icons8.com/ultraviolet/25/000000/preview-pane.png" class="mr-2" />Example<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_url_example"></i></h5>
+                            </div>
+                            <!-- Example -->
+                            <div class="col-12 m-0 p-0">
+                                <div id="django_url_example" class="collapse row m-0">
+                                    <div class="col-12 col-md-6 m-0 pl-lg-2 py-2 px-1 p-md-2">
+                                        <div class="section-container">
+                                            <h5 class="my-2">1.</h5>
+                                            <dl>
+
+                                            </dl>
+                                        </div>
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1844,7 +1910,6 @@
                                     </dl>
                                 </div>
                             </div>
-
                             <div class="col-12 col-md-6 m-0 p-0 pl-lg-2 p-md-2">
                                 <div class="section-container">
                                     <h5 class="my-2">3. Create a HTML form</h5>
@@ -1855,7 +1920,11 @@
                             </div>
                         </div>
                     </div>
-
+                    <div class="col-12 m-0 p-0">
+                        <hr>
+                        <h3 class="mt-3 mb-4 text-center"><img src="https://img.icons8.com/color/32/000000/admin-settings-male.png" class="mr-2">Admin Panel</h3>
+                        <hr>
+                    </div>
                 </div>
             </div>
         </div>
