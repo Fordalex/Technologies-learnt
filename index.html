@@ -199,40 +199,42 @@
                 <div class="row m-0 p-0">
                     <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
                         <div class="section-container ">
-                            <h4>1. Targetting</h4>
                             <dl class="list-no-margin">
                                 <dt>Id</dt>
-                                <dd>#<span class="text-danger">name</span> {</dd>
-                                <dd>}</dd>
+
                             </dl>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- javascript (frontend) -->
+    <div class="modal-style closed" id="javascriptModal">
+        <div class="page-container p-2 pt-3">
+            <img src="https://img.icons8.com/plasticine/50/000000/crossed-arrow.png" class="float-right arrow-button click-icon" onclick="call_modal('javascriptModal', 'sass-letter', 'off')" />
+            <h4 class="mt-2 text-light">JavaScript</h4>
+            <hr class="mt-3 dark-hr">
+            <!-- content -->
+            <div class="scroll-container">
+                <div class="row m-0 p-0">
                     <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
                         <div class="section-container ">
-                            <h4>2. Pseudo-classes</h4>
+                            <h4>1. Loading</h4>
                             <dl class="list-no-margin">
-                                <dt>selected link</dt>
-                                <dd><span class="text-danger">target</span>:active {</dd>
+                                <dt>Reload the page</dt>
+                                <dd>location.reload();</dd>
+                            </dl>
+                            <dl class="list-no-margin">
+                                <dt>On page load</dt>
+                                <dd>window.addEventListener("load", function() {</dd>
+                                <dd>&nbsp;&nbsp;&nbsp;&nbsp;// script here</dd>
                                 <dd>}</dd>
                             </dl>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
-                        <div class="section-container ">
-                            <h4>3. Media queries</h4>
-                            <dl class="list-no-margin">
-                                <dt>@media only screen and (max-width: 600px) {</dt>
-                                <dd>}</dd>
-                            </dl>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
-                        <div class="section-container ">
-                            <h4>4. Keyframe animations</h4>
-                            <dl class="list-no-margin">
-                                <dt>@keyframes <span class="text-danger">animation_name</span> {</dt>
-                                <dd>}</dd>
-                            </dl>
+
+
+
                         </div>
                     </div>
                 </div>
@@ -555,9 +557,14 @@
                     <div class="col-12 m-0 p-0">
                         <p class="m-0"><b>Key:</b> <span class="text-danger">Name should be changed</span></p>
                         <p class="m-0"><b>Run project:</b> python app.py</p>
+                        <p class="m-0"><b>Reload:</b> Shift + Ctrl + R</p>
                         <hr>
                     </div>
+                    <div class="col-12">
+                        <h3 class="text-center mt-3">The set up</h3>
+                    </div>
                     <div class="col-12 m-0 p-0 mt-2">
+                        <hr>
                         <!-- setting up a project -->
                         <h4><img src="https://img.icons8.com/color/32/000000/project.png" class="mr-2" />Setting up a project
                             <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_settings"></i></h4>
@@ -751,7 +758,12 @@
                                 <div class="section-container">
                                     <h5 class="my-2">3. Update data</h5>
                                     <dl class="list-no-margin">
-                                        <dd>from os import path</dd>
+                                        <dd>mongo.db.users.update({'username' : currentUser},</dd>
+                                        <dd>{</dd>
+                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;'username': username,</dd>
+                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;'email': email,</dd>
+                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;'firstName': firstName,</dd>
+                                        <dd>})</dd>
                                     </dl>
                                 </div>
                             </div>
@@ -848,6 +860,69 @@
                                         <dd>DATABASE_URL&nbsp;&nbsp;&nbsp;&nbsp;MongoDB_url</dd>
                                         <dd>PORT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5000</dd>
                                         <dd>IP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.0.0.0</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- more on flask -->
+                    <div class="col-12">
+                        <hr>
+                        <h3 class="text-center mt-3">More</h3>
+                    </div>
+                    <div class="col-12 m-0 p-0 mt-2">
+                        <hr class="mb-4">
+                        <!-- sessions -->
+                        <h4><img src="https://img.icons8.com/plasticine/32/000000/time.png" class="mr-2" />Sessions<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#flask_session"></i></h4>
+                    </div>
+                    <div class="col-12 m-0 p-0">
+                        <div id="flask_session" class="collapse row m-0">
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">1. Import</h5>
+                                    <dl class="list-no-margin">
+                                        <dd>from flask import session</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">2. Saving the session variable</h5>
+                                    <dl class="list-no-margin">
+                                        <dd>@app.route("/", methods=["GET", "POST"])</dd>
+                                        <dd>def index():</dd>
+                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;session["username"] = request.form["username"]</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">3.Passing into another page</h5>
+                                    <dl class="list-no-margin">
+                                        <dd>@app.route("/", methods=["GET", "POST"])</dd>
+                                        <dd>def index():</dd>
+                                        <div class="text-faint">
+                                            <dd>&nbsp;&nbsp;&nbsp;&nbsp;if request.method == "POST":</dd>
+                                            <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;session["username"] = request.form["username"]</dd>
+                                            <dd>
+                                                <p></p>
+                                            </dd>
+                                            <dd>&nbsp;&nbsp;&nbsp;&nbsp;if "username" in session:</dd>
+                                        </div>
+                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return redirect(url_for("user", username=session["username"]))</dd>
+                                    </dl>
+                                    <dl>
+                                        <dd>@app.route("/chat/&lt;username>", methods=["GET", "POST"])</dd>
+                                        <dd>def user(username):</dd>
+                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;return render_template("page.html", username=username)</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">4. Clear session</h5>
+                                    <dl class="list-no-margin">
+                                        <dd>session.clear()</dd>
                                     </dl>
                                 </div>
                             </div>
@@ -1828,11 +1903,6 @@
                         </div>
                         <div class="col-12 px-0 px-lg-2">
                             <dl>
-
-
-
-
-
                                 <dt><img src="https://img.icons8.com/color/15/000000/html-5.png" class="mr-2" />HTML
                                     <img src="images/question-mark.png" style="width:25px;"
                                         onclick="call_modal('htmlModal', 'css-letter', 'on')"
@@ -1857,7 +1927,10 @@
                                 <dt><img src="https://img.icons8.com/color/15/000000/javascript.png"
                                         class="mr-2" />JavaScript (OOP)<i
                                         class="far fa-plus-square ml-2 small-icon front-plus" data-toggle="collapse"
-                                        href="#js"></i></dt>
+                                        href="#js"></i>
+                                        <img src="images/question-mark.png" style="width:25px;"
+                                        onclick="call_modal('javascriptModal', 'css-letter', 'on')"
+                                        class="float-right mr-2 click-icon"></dt>
                                 <div class="collapse wrapper mt-2" id="js">
                                     <div class="p-2">
                                         <dd>Jquery
