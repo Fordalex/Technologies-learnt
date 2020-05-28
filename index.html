@@ -868,12 +868,12 @@
                     <!-- more on flask -->
                     <div class="col-12">
                         <hr>
-                        <h3 class="text-center mt-3">More</h3>
+                        <h3 class="text-center mt-3">from flask import</h3>
                     </div>
                     <div class="col-12 m-0 p-0 mt-2">
                         <hr class="mb-4">
                         <!-- sessions -->
-                        <h4><img src="https://img.icons8.com/plasticine/32/000000/time.png" class="mr-2" />Sessions<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#flask_session"></i></h4>
+                        <h4><img src="https://img.icons8.com/plasticine/32/000000/time.png" class="mr-2" />session<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#flask_session"></i></h4>
                     </div>
                     <div class="col-12 m-0 p-0">
                         <div id="flask_session" class="collapse row m-0">
@@ -923,6 +923,114 @@
                                     <h5 class="my-2">4. Clear session</h5>
                                     <dl class="list-no-margin">
                                         <dd>session.clear()</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 m-0 p-0 mt-2">
+                        <hr class="mb-4">
+                        <!-- url_for -->
+                        <h4><img src="https://img.icons8.com/plasticine/32/000000/time.png" class="mr-2" />url_for<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#flask_url_for"></i></h4>
+                    </div>
+                    <div class="col-12 m-0 p-0">
+                        <div id="flask_url_for" class="collapse row m-0">
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">1. Import</h5>
+                                    <dl class="list-no-margin">
+                                        <dd>from flask import url_for</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">2. redirect</h5>
+                                    <dl class="list-no-margin">
+                                        <dt>import flask import redirect</dt>
+                                        <dd>
+                                            <p></p>
+                                        </dd>
+                                        <dd>redirect(url_for('function_name')</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">3. In HTML</h5>
+                                    <dl class="list-no-margin">
+                                        <dt>Link to style sheet</dt>
+                                        <dd>href="{{ url_for('static', filename='css/style.css')}}"</dd>
+                                    </dl>
+                                    <dl class="list-no-margin">
+                                        <dt>Link to JavaScript</dt>
+                                        <dd>src="{{ url_for('static', filename='js/javascript.js')}} "</dd>
+                                    </dl>
+                                    <dl class="list-no-margin">
+                                        <dt>Call a function from a button</dt>
+                                        <dd>href="{{ url_for('log_out') }}"</dd>
+                                    </dl>
+                                    <dl class="list-no-margin">
+                                        <dt>Send a form</dt>
+                                        <dd>action="{{ url_for('save_alex') }}" method="POST"</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 m-0 p-0 mt-2">
+                        <hr class="mb-4">
+                        <!-- redirect -->
+                        <h4><img src="https://img.icons8.com/plasticine/32/000000/time.png" class="mr-2" />redirect<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#flask_redirect"></i></h4>
+                    </div>
+                    <div class="col-12 m-0 p-0">
+                        <div id="flask_redirect" class="collapse row m-0">
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">1. Import</h5>
+                                    <dl class="list-no-margin">
+                                        <dd>from flask import redirect</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">1. Redirect</h5>
+                                    <dl class="list-no-margin">
+                                        <dd>redirect(url_for('function_name'))</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 m-0 p-0 mt-2">
+                        <hr class="mb-4">
+                        <!-- request -->
+                        <h4><img src="https://img.icons8.com/plasticine/32/000000/time.png" class="mr-2" />request<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#flask_request"></i></h4>
+                    </div>
+                    <div class="col-12 m-0 p-0">
+                        <div id="flask_request" class="collapse row m-0">
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">1. Import</h5>
+                                    <dl class="list-no-margin">
+                                        <dd>from flask import request</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">2. method</h5>
+                                    <dl class="list-no-margin">
+                                        <dd>request.method == "POST"</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">3. form</h5>
+                                    <dl class="list-no-margin">
+                                        <dd>request.form["name"]</dd>
                                     </dl>
                                 </div>
                             </div>
