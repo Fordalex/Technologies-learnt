@@ -78,6 +78,7 @@
                                 <hr class="mb-3">
                                 <h5><img src="https://img.icons8.com/office/32/000000/microscope.png" class="mr-2" />Acronyms<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#development_acronyms"></i></h5>
                             </div>
+                            <!-- acronyms -->
                             <div class="col-12 m-0 p-0">
                                 <div id="development_acronyms" class="collapse row m-0">
                                     <div class="col-12 col-md-4 m-0 py-2 px-2 p-md-2">
@@ -95,6 +96,7 @@
                                 <hr class="mb-3">
                                 <h5><img src="https://img.icons8.com/color/25/000000/project.png" class="mr-2" />Project Plan<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#frontend_plan"></i></h5>
                             </div>
+                            <!-- project plan -->
                             <div class="col-12 m-0 p-0">
                                 <div id="frontend_plan" class="collapse row m-0">
                                     <div class="col-12 col-md-6 m-0 py-2 px-2 p-md-2">
@@ -170,6 +172,7 @@
                                 <hr class="mb-3">
                                 <h5><img src="https://img.icons8.com/cotton/25/000000/mission-of-a-company--v2.png" class="mr-2" />Development Principles<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#development_principles"></i></h5>
                             </div>
+                            <!-- Development Principles -->
                             <div class="col-12 m-0 p-0">
                                 <div id="development_principles" class="collapse row m-0">
                                     <div class="col-12">
@@ -526,6 +529,14 @@
                             </dl>
                         </div>
                     </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>6. Communicating with mongoDB</h4>
+                            <a href="https://docs.mongodb.com/manual/reference/method/db.collection.remove/" target="_blank" class="main-colour btn text-light">Pymongo</a>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
         </div>
@@ -1538,74 +1549,104 @@
                         <h4><img src="https://img.icons8.com/color/32/000000/eyes-cartoon.png" class="mr-2" />views.py
                             <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_views"></i></h4>
                     </div>
-                    <div class="col-12 m-0 p-0">
-                        <div id="django_views" class="collapse row m-0">
-                            <div class="col-12 col-md-6 m-0 pl-lg-2 py-2 px-1 p-md-2">
-                                <div class="section-container">
-                                    <h5 class="my-2">1. imports:</h5>
-                                    <dl>
-                                        <dd>from django.shortcuts import render, redirect, reverse:</dd>
-                                    </dl>
+                    <div class="col-12 m-0 p-0 ">
+                        <div id="django_views" class="collapse row m-0 border">
+                            <div class="col-12 m-0">
+                                <h5 class="my-3"><img src="https://img.icons8.com/office/25/000000/microscope.png" class="mr-2" />overview<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_overview"></i></h5>
+                            </div>
+                            <!-- overview -->
+                            <div class="col-12 m-0 p-0">
+                                <div id="django_overview" class="collapse row m-0">
+                                    <div class="col-12 col-md-6 m-0 pl-lg-2 py-2 px-1 p-md-2">
+                                        <div class="section-container">
+                                            <h5 class="my-2">1. imports:</h5>
+                                            <dl>
+                                                <dd>from django.shortcuts import render, redirect, reverse:</dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 m-0 pl-lg-2 py-2 px-1 p-md-2">
+                                        <div class="section-container">
+                                            <h5 class="my-2">2. Create a route:</h5>
+                                            <dl>
+                                                <dd>def <span class="text-danger">route_name</span>(request):</dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 m-0 pl-lg-2 py-2 px-1 p-md-2">
+                                        <div class="section-container">
+                                            <h5 class="my-2">3. Render a page:</h5>
+                                            <dl>
+                                                <dd>return render(request, '<span class="text-danger">pagename</span>.html')
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 m-0 pl-lg-2 py-2 px-1 p-md-2">
+                                        <div class="section-container">
+                                            <h5 class="my-2">4. Passing data into a HTML page:</h5>
+                                            <dl class="list-no-margin">
+                                                <dd>from .models import <span class="text-info">Products</span></dd>
+                                                <dd>
+                                                    <p></p>
+                                                </dd>
+                                                <dd>def <span class="text-danger">route_name</span>(request):</dd>
+                                                <dd><span class="text-success">products</span> = <span class="text-info">products</span>.objects.all()</dd>
+                                                <dd>return render(request, '<span class="text-danger">pagename</span>.html', {
+                                                    <span class="text-danger">"products": <span
+                                                                    class="text-success">products</span></span>})</dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 m-0 pl-lg-2 py-2 px-1 p-md-2">
+                                        <div class="section-container">
+                                            <h5 class="my-2">5. Saving the data:</h5>
+                                            <dl>
+                                                <dd>if request.method == 'POST'</dd>
+                                                <dd>data = formName(request.POST)</dd>
+                                                <dd>if data.is_valid():</dd>
+                                                <dd>data.save()</dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 m-0 pl-lg-2 py-2 px-1 p-md-2">
+                                        <div class="section-container">
+                                            <h5 class="my-2">6. Making changes before saving the data:</h5>
+                                            <dl>
+                                                <dd>item = inputItem(request.POST)</dd>
+                                                <dd>if item.is_valid():</dd>
+                                                <dd>instance = item.save(commit=False)</dd>
+                                                <dd>instance.author = request.user.username</dd>
+                                                <dd>instance.save()</dd>
+                                            </dl>
+                                        </div>
+
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-12 col-md-6 m-0 pl-lg-2 py-2 px-1 p-md-2">
-                                <div class="section-container">
-                                    <h5 class="my-2">2. Create a route:</h5>
-                                    <dl>
-                                        <dd>def <span class="text-danger">route_name</span>(request):</dd>
-                                    </dl>
-                                </div>
+                            <div class="col-12 m-0">
+                                <hr>
+                                <h5 class="my-3"><img src="https://img.icons8.com/ios-filled/25/000000/plug.png" class="mr-2" />from django.shortcuts import<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_views_import"></i></h5>
                             </div>
-                            <div class="col-12 col-md-6 m-0 pl-lg-2 py-2 px-1 p-md-2">
-                                <div class="section-container">
-                                    <h5 class="my-2">3. Render a page:</h5>
-                                    <dl>
-                                        <dd>return render(request, '<span class="text-danger">pagename</span>.html')
-                                        </dd>
-                                    </dl>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6 m-0 pl-lg-2 py-2 px-1 p-md-2">
-                                <div class="section-container">
-                                    <h5 class="my-2">4. Passing data into a HTML page:</h5>
-                                    <dl class="list-no-margin">
-                                        <dd>from .models import <span class="text-info">Products</span></dd>
-                                        <dd>
-                                            <p></p>
-                                        </dd>
-                                        <dd>def <span class="text-danger">route_name</span>(request):</dd>
-                                        <dd><span class="text-success">products</span> = <span class="text-info">products</span>.objects.all()</dd>
-                                        <dd>return render(request, '<span class="text-danger">pagename</span>.html', {
-                                            <span class="text-danger">"products": <span
-                                                    class="text-success">products</span></span>})</dd>
-                                    </dl>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6 m-0 pl-lg-2 py-2 px-1 p-md-2">
-                                <div class="section-container">
-                                    <h5 class="my-2">5. Saving the data:</h5>
-                                    <dl>
-                                        <dd>if request.method == 'POST'</dd>
-                                        <dd>data = formName(request.POST)</dd>
-                                        <dd>if data.is_valid():</dd>
-                                        <dd>data.save()</dd>
-                                    </dl>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6 m-0 pl-lg-2 py-2 px-1 p-md-2">
-                                <div class="section-container">
-                                    <h5 class="my-2">6. Making changes before saving the data:</h5>
-                                    <dl>
-                                        <dd>item = inputItem(request.POST)</dd>
-                                        <dd>if item.is_valid():</dd>
-                                        <dd>instance = item.save(commit=False)</dd>
-                                        <dd>instance.author = request.user.username</dd>
-                                        <dd>instance.save()</dd>
-                                    </dl>
+                            <!-- from django.shortcuts import -->
+                            <div class="col-12 m-0 p-0">
+                                <div id="django_views_import" class="collapse row m-0">
+
+
+                                    <div class="col-12 col-md-6 m-0 pl-lg-2 py-2 px-1 p-md-2">
+                                        <div class="section-container">
+                                            <h5 class="my-2">1.</h5>
+                                            <dl>
+
+                                            </dl>
+                                        </div>
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                     <div class="col-12 m-0 p-0 mt-2">
                         <hr class="mb-4">
                         <!-- urls -->
