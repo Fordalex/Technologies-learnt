@@ -46,9 +46,244 @@
                 <a class="nav-button toggle-nav" href="#design-section">Design</a>
                 <a class="nav-button toggle-nav" href="#pro-section">Programmes</a>
             </div>
+            <img src="https://img.icons8.com/fluent/32/000000/help.png" class="click-icon mt-3 float-right" onclick="call_modal('developmentModal', 'css-letter', 'on')" />
         </div>
 
         <img src="https://img.icons8.com/cotton/50/000000/beefburger.png" class="burger-button toggle-nav" />
+    </div>
+
+    <!-- Development modal (Overall) -->
+
+    <!-- development (Overall) -->
+    <div class="modal-style closed" id="developmentModal">
+        <div class="page-container p-2 pt-3">
+            <img src="https://img.icons8.com/plasticine/50/000000/crossed-arrow.png" class="float-right arrow-button click-icon" onclick="call_modal('developmentModal', 'css-letter', 'off')" />
+            <h4 class="mt-2 l-s">Web Development</h4>
+            <hr class="mt-3 dark-hr">
+            <!-- content -->
+            <div class="scroll-container">
+                <div class="row m-0 p-0">
+                    <div class="col-12">
+                        <h3 class="text-center mt-3">Overview</h3>
+                    </div>
+                    <div class="col-12 m-0 p-0 mt-2">
+                        <hr class="mb-4">
+                        <!-- development -->
+                        <h4><img src="https://img.icons8.com/cotton/32/000000/edit--v2.png" class="mr-2" />Development
+                            <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#web_development"></i></h4>
+                    </div>
+                    <div class="col-12 m-0 p-0">
+                        <div id="web_development" class="collapse row m-0">
+                            <div class="col-12 m-0 p-0">
+                                <hr class="mb-3">
+                                <h5><img src="https://img.icons8.com/office/32/000000/microscope.png" class="mr-2" />Acronyms<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#development_acronyms"></i></h5>
+                            </div>
+                            <div class="col-12 m-0 p-0">
+                                <div id="development_acronyms" class="collapse row m-0">
+                                    <div class="col-12 col-md-4 m-0 py-2 px-2 p-md-2">
+                                        <div class="section-container ">
+                                            <h6>1. MVP</h6>
+                                            <dl>
+                                                <dd>Minimum Viable Product</dd>
+                                            </dl>
+                                            <p>A version of a product with just enough features to satisfy early customers and provide feedback for future product development.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 m-0 p-0">
+                                <hr class="mb-3">
+                                <h5><img src="https://img.icons8.com/color/25/000000/project.png" class="mr-2" />Project Plan<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#frontend_plan"></i></h5>
+                            </div>
+                            <div class="col-12 m-0 p-0">
+                                <div id="frontend_plan" class="collapse row m-0">
+                                    <div class="col-12 col-md-6 m-0 py-2 px-2 p-md-2">
+                                        <div class="section-container ">
+                                            <h6>1. Strategy</h6>
+                                            <dl>
+                                                <dd>The first section to building a site, is to identify the users needs and the business objectives. Making sure the content is relevant, Is the content culturally appropriate? Are the technologies being used
+                                                    relevant for your demographic? Is the business constantly improving and will information have to updated a regular basis? What's worth doing? What are we creating? What value does it provide? and much
+                                                    time do we have?
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 m-0 py-2 px-2 p-md-2">
+                                        <div class="section-container ">
+                                            <h6>2. Scope</h6>
+                                            <dl>
+                                                <dd>Then we can take a look at the functional specifications, what features will your site need to help your users? What content will be required to provide value, and what is the demographic that your trying
+                                                    to target as this will effect what content will be needed and how to display it.</dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 m-0 py-2 px-2 p-md-2">
+                                        <div class="section-container ">
+                                            <h6>3. Structure</h6>
+                                            <dl>
+                                                <dd>Interaction design is important so the user can navigate themselves throughout your site. The order the navigation is displayed and also how many times the user must select an option before gaining access
+                                                    to their required information can rapidly change the users overall experience.</dd>
+                                            </dl>
+                                            <dl>
+                                                <dd>
+                                                    I'll then look at the Information architecture and will identify the relationships between the different information and group these together ready for the next steps.
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 m-0 py-2 px-2 p-md-2">
+                                        <div class="section-container ">
+                                            <h6>4. Skeleton</h6>
+                                            <dl>
+                                                <dd>Now that fitting information has been assembled together, it's important to recognise the hierarchy of the content, what will the user be subjected to first? This is also the case for the navigation making
+                                                    sure the content most relevant to the business goals get shown to the user on the initial load.
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dd>The design should be intuitive and also should compile with the standard web conventions such as the navigation location and the best arrangement and visual presentation of the elements.</dd>
+                                            </dl>
+                                            <dl>
+                                                <dd>Although this will likely be the first time your customer will be interacting with your site, they should be able to effortlessly locate their desired information and be able to complete tasks with little
+                                                    to no effort.
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dd>At this stage a wireframe or prototype of the site will be created to display the content and get the first visual look at your site. The benefits of this is that it can be changed and perfected quickly
+                                                    and easily, although is only a rough plan. This is still important so that we can make sure before the site goes live we already know what works best for the user and the company.</dd>
+                                            </dl>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 m-0 py-2 px-2 p-md-2">
+                                        <div class="section-container ">
+                                            <h6>5. Surface</h6>
+                                            <dl>
+                                                <dd>Finally, I can now work on developing the site and working on the colours, typography interface design reinforce the meaning of the content guide the user through task and information minimise cognitive
+                                                    overload and maximise intuitive learning Appropriate the content easily disguisable manner If content is KING, context is GOD. "Gary Vaynerchuck"
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 m-0 p-0">
+                                <hr class="mb-3">
+                                <h5><img src="https://img.icons8.com/cotton/25/000000/mission-of-a-company--v2.png" class="mr-2" />Development Principles<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#development_principles"></i></h5>
+                            </div>
+                            <div class="col-12 m-0 p-0">
+                                <div id="development_principles" class="collapse row m-0">
+                                    <div class="col-12">
+                                        <h4 class="text-center">Acronyms</h4>
+                                    </div>
+                                    <div class="col-12 col-md-4 m-0 py-2 px-2 p-md-2">
+                                        <div class="section-container ">
+                                            <h6>1. KIS</h6>
+                                            <dl>
+                                                <dd>Keep It Simple</dd>
+                                            </dl>
+                                            <p>The simpler the code is, the simpler it will be to maintain it in the furture.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-4 m-0 py-2 px-2 p-md-2">
+                                        <div class="section-container ">
+                                            <h6>2. YAGNI</h6>
+                                            <dl>
+                                                <dd>You Aren't Gonna Need It</dd>
+                                            </dl>
+                                            <p class="m-0">If you don't need it now you most likely won't need it later.</p>
+                                            <p class="m-0">Do the simplest thing that could possibly work</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-4 m-0 py-2 px-2 p-md-2">
+                                        <div class="section-container ">
+                                            <h6>3. DRY</h6>
+                                            <dl>
+                                                <dd>Don't Repeat Yourself</dd>
+                                            </dl>
+                                            <p>When this principle is ignored it's offten called <b>WET</b> "We Enjoy Typing" or "Write Everything Twice"</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <h4 class="text-center my-3">Information</h4>
+                                    </div>
+                                    <div class="col-12 col-md-4 m-0 py-2 px-2 p-md-2">
+                                        <div class="section-container ">
+                                            <h6>Separation Of Concerns</h6>
+                                            <dl>
+                                                <dd>User Interface</dd>
+                                            </dl>
+                                            <dl>
+                                                <dd>Datastore Access</dd>
+                                            </dl>
+                                            <dl>
+                                                <dd>Logic that communicates between UI and datastore</dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-4 m-0 py-2 px-2 p-md-2">
+                                        <div class="section-container ">
+                                            <h6>Well Known Pattern</h6>
+                                            <dl>
+                                                <dd>Model</dd>
+                                            </dl>
+                                            <dl>
+                                                <dd>View</dd>
+                                            </dl>
+                                            <dl>
+                                                <dd>Controller</dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 m-0 p-0">
+                        <hr class="mb-4">
+                        <!-- frontend -->
+                        <h4><img src="https://img.icons8.com/color/32/000000/laptop--v1.png" class="mr-2" />Frontend
+                            <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#web_frontend"></i></h4>
+                    </div>
+                    <div class="col-12 m-0 p-0">
+                        <div id="web_frontend" class="collapse row m-0">
+                            <div class="col-12">
+                                <h5><img src="https://img.icons8.com/color/25/000000/project.png" class="mr-2" />Something<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#frontend_plan"></i></h5>
+                            </div>
+                            <div class="col-12">
+                                <div id="frontend_plan" class="collapse row m-0">
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 m-0 p-0 mt-2">
+                        <hr class="mb-4">
+                        <!-- backend -->
+                        <h4><img src="https://img.icons8.com/fluent/32/000000/console.png" class="mr-2" />Backend
+                            <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#web_backend"></i></h4>
+                    </div>
+                    <div class="col-12 m-0 p-0">
+                        <div id="web_backend" class="collapse row m-0">
+                            <div class="col-12">
+                                <h5><img src="https://img.icons8.com/color/25/000000/project.png" class="mr-2" />Something<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#frontend_plan"></i></h5>
+                            </div>
+                            <div class="col-12">
+                                <div id="frontend_plan" class="collapse row m-0">
+
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Technologies modals (frontend) -->
@@ -321,7 +556,7 @@
                         <div class="section-container ">
                             <h4>2. app.py</h4>
                             <dl>
-                                <dd>from flask_pymongo import PyMongo, pymongo, request</dd>
+                                <dd>from flask_pymongo import PyMongo, pymongo</dd>
                                 <dd>
                                     <p></p>
                                 </dd>
@@ -873,7 +1108,7 @@
                     <div class="col-12 m-0 p-0 mt-2">
                         <hr class="mb-4">
                         <!-- sessions -->
-                        <h4><img src="https://img.icons8.com/plasticine/32/000000/time.png" class="mr-2" />session<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#flask_session"></i></h4>
+                        <h4><img src="https://img.icons8.com/ios-filled/32/000000/plug.png" class="mr-2" />session<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#flask_session"></i></h4>
                     </div>
                     <div class="col-12 m-0 p-0">
                         <div id="flask_session" class="collapse row m-0">
@@ -931,7 +1166,7 @@
                     <div class="col-12 m-0 p-0 mt-2">
                         <hr class="mb-4">
                         <!-- url_for -->
-                        <h4><img src="https://img.icons8.com/plasticine/32/000000/time.png" class="mr-2" />url_for<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#flask_url_for"></i></h4>
+                        <h4><img src="https://img.icons8.com/ios-filled/32/000000/plug.png" class="mr-2" />url_for<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#flask_url_for"></i></h4>
                     </div>
                     <div class="col-12 m-0 p-0">
                         <div id="flask_url_for" class="collapse row m-0">
@@ -981,7 +1216,7 @@
                     <div class="col-12 m-0 p-0 mt-2">
                         <hr class="mb-4">
                         <!-- redirect -->
-                        <h4><img src="https://img.icons8.com/plasticine/32/000000/time.png" class="mr-2" />redirect<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#flask_redirect"></i></h4>
+                        <h4><img src="https://img.icons8.com/ios-filled/32/000000/plug.png" class="mr-2" />redirect<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#flask_redirect"></i></h4>
                     </div>
                     <div class="col-12 m-0 p-0">
                         <div id="flask_redirect" class="collapse row m-0">
@@ -1006,7 +1241,7 @@
                     <div class="col-12 m-0 p-0 mt-2">
                         <hr class="mb-4">
                         <!-- request -->
-                        <h4><img src="https://img.icons8.com/plasticine/32/000000/time.png" class="mr-2" />request<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#flask_request"></i></h4>
+                        <h4><img src="https://img.icons8.com/ios-filled/32/000000/plug.png" class="mr-2" />request<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#flask_request"></i></h4>
                     </div>
                     <div class="col-12 m-0 p-0">
                         <div id="flask_request" class="collapse row m-0">
@@ -1057,9 +1292,122 @@
                     <div class="col-12 m-0 p-0">
                         <p class="m-0"><b>Key:</b> <span class="text-danger">Name should be changed</span></p>
                         <p class="m-0"><b>Run project:</b> python manage.py runserver</p>
-                        <hr>
+
                     </div>
                     <div class="col-12 m-0 p-0">
+                        <hr>
+                        <h3 class="mt-3 mb-2 text-center">The set up</h3>
+                    </div>
+                    <div class="col-12 m-0 p-0 mt-2">
+                        <hr class="mb-4">
+                        <h4><img src="https://img.icons8.com/plasticine/32/000000/resume-website.png" class="mr-2" />Creating a project<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_project"></i></h4>
+                    </div>
+                    <!-- creating a project -->
+                    <div class="col-12 m-0 p-0">
+                        <div id="django_project" class="collapse row m-0">
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">1. Installation</h5>
+                                    <dl>
+                                        <dt>Create a virtual environment:</dt>
+                                        <dd>python3 -m venv .venv</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>Run the virtual environment:</dt>
+                                        <dd>source .venv/bin/activate</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>Install django:</dt>
+                                        <dd>pip install django</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>start project:</dt>
+                                        <dd>django-admin startproject project-name .</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>Create app:</dt>
+                                        <dd>django-admin startapp appname</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">2. Settings file</h5>
+                                    <dl>
+                                        <dt>Install apps:</dt>
+                                        <dd>INSTALLED_APPS = ['appname']</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>Locate template folder:</dt>
+                                        <dd>Templates = ['DIRS':[os.path.join(BASE_DIR, 'templates')],]</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>Locate Static folder:</dt>
+                                        <dd>STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">3. Create urls</h5>
+
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">4. Create views</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 m-0 p-0 mt-2">
+                        <hr class="mb-4">
+                        <h4><img src="https://img.icons8.com/fluent/32/000000/domain.png" class="mr-2" />Hosting on Heroku
+                            <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_hosting"></i></h4>
+                    </div>
+                    <!-- Hosting on heroku -->
+                    <div class="col-12 m-0 p-0">
+                        <div id="django_hosting" class="collapse row m-0">
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">1. Install dependencies:</h5>
+                                    <dl>
+                                        <dt>gunicorn</dt>
+                                        <dd>pip install gunicorn</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>requirements.txt:</dt>
+                                        <dd>pip freeze --local > requirements.txt</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">2. Creating the required files:</h5>
+                                    <dl>
+                                        <dt>Procfile:</dt>
+                                        <dd>web: gunicorn <span class="text-danger">projectname</span>.wsgi:application
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>requirements.txt:</dt>
+                                        <dd>pip freeze --local > requirements.txt</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">3. Heroku:</h5>
+                                    <dl class="list-no-margin">
+                                        <dt>Config Vars</dt>
+                                        <dd>DISABLE_COLLECTSTATIC &emsp;&emsp; 1</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 m-0 p-0">
+                        <hr>
                         <h3 class="mt-3 mb-4 text-center">Each File</h3>
                         <hr>
                     </div>
@@ -1448,116 +1796,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 m-0 p-0">
-                        <hr>
-                        <h3 class="mt-3 mb-4 text-center">Overall</h3>
-                    </div>
-                    <div class="col-12 m-0 p-0 mt-2">
-                        <hr class="mb-4">
-                        <h4><img src="https://img.icons8.com/plasticine/32/000000/resume-website.png" class="mr-2" />Creating a project<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_project"></i></h4>
-                    </div>
-                    <div class="col-12 m-0 p-0">
-                        <div id="django_project" class="collapse row m-0">
-                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
-                                <div class="section-container">
-                                    <h5 class="my-2">1. Installation</h5>
-                                    <dl>
-                                        <dt>Create a virtual environment:</dt>
-                                        <dd>python3 -m venv .venv</dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>Run the virtual environment:</dt>
-                                        <dd>source .venv/bin/activate</dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>Install django:</dt>
-                                        <dd>pip install django</dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>start project:</dt>
-                                        <dd>django-admin startproject project-name .</dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>Create app:</dt>
-                                        <dd>django-admin startapp appname</dd>
-                                    </dl>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
-                                <div class="section-container">
-                                    <h5 class="my-2">2. Settings file</h5>
-                                    <dl>
-                                        <dt>Install apps:</dt>
-                                        <dd>INSTALLED_APPS = ['appname']</dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>Locate template folder:</dt>
-                                        <dd>Templates = ['DIRS':[os.path.join(BASE_DIR, 'templates')],]</dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>Locate Static folder:</dt>
-                                        <dd>STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)</dd>
-                                    </dl>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
-                                <div class="section-container">
-                                    <h5 class="my-2">3. Create urls</h5>
 
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
-                                <div class="section-container">
-                                    <h5 class="my-2">4. Create views</h5>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 m-0 p-0 mt-2">
-                        <hr class="mb-4">
-                        <h4><img src="https://img.icons8.com/fluent/32/000000/domain.png" class="mr-2" />Hosting on Heroku
-                            <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_hosting"></i></h4>
-                    </div>
-                    <div class="col-12 m-0 p-0">
-                        <div id="django_hosting" class="collapse row m-0">
-                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
-                                <div class="section-container">
-                                    <h5 class="my-2">1. Install dependencies:</h5>
-                                    <dl>
-                                        <dt>gunicorn</dt>
-                                        <dd>pip install gunicorn</dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>requirements.txt:</dt>
-                                        <dd>pip freeze --local > requirements.txt</dd>
-                                    </dl>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
-                                <div class="section-container">
-                                    <h5 class="my-2">2. Creating the required files:</h5>
-                                    <dl>
-                                        <dt>Procfile:</dt>
-                                        <dd>web: gunicorn <span class="text-danger">projectname</span>.wsgi:application
-                                        </dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>requirements.txt:</dt>
-                                        <dd>pip freeze --local > requirements.txt</dd>
-                                    </dl>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
-                                <div class="section-container">
-                                    <h5 class="my-2">3. Heroku:</h5>
-                                    <dl class="list-no-margin">
-                                        <dt>Config Vars</dt>
-                                        <dd>DISABLE_COLLECTSTATIC &emsp;&emsp; 1</dd>
-                                    </dl>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -1990,8 +2229,11 @@
         <div class="page-container px-0 px-md-2 pt-5 pt-lg-0">
 
             <div class="row m-0 p-0">
-                <div class="col-12">
-                    <h2 class="text-center my-4 main-title">Technologies</h2>
+                <div class="col-12 m-0 px-2 d-flex justify-content-end mt-2">
+                    <img src="https://img.icons8.com/fluent/32/000000/help.png" class="d-none d-lg-block click-icon" onclick="call_modal('developmentModal', 'css-letter', 'on')" />
+                </div>
+                <div class="col-12 mt-2 mt-md-0">
+                    <h2 class="text-center mb-4 mt-0 main-title">Technologies</h2>
                 </div>
             </div>
 
