@@ -421,6 +421,12 @@ span {
     background-color: rgb(230, 230, 230);
 }
 
+.section-container-dropdown {
+    border: rgb(233, 233, 233) solid 1px;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 0px 7px 1px inset;
+    border-radius: 5px;
+}
+
 
 /* width */
 
