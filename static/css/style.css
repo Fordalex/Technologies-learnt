@@ -340,6 +340,14 @@ span {
 }
 
 
+/* mobile */
+
+.mobile-questionmark {
+    margin-top: 12px;
+    margin-left: 12px;
+}
+
+
 /* modal */
 
 .arrow-button {

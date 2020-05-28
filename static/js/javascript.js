@@ -50,14 +50,16 @@ $('.far').on('click', function() {
 $('.toggle-nav').on('click', function() {
     var tl = gsap.timeline()
     if ($('.mobile-navigation').hasClass('closed')) {
-        tl.to('.nav-link-container', 0.5, { left: '40vw' });
+        tl.to('.mobile-questionmark', 0.5, { transform: 'translate( -20vw, 0)' })
+        tl.to('.nav-link-container', 0.5, { left: '40vw' }, '-=0.5');
         tl.to('.nav-backdrop', 0.05, { right: '0vw' }, '-=0.5');
         tl.to('.nav-backdrop', 1, { backdropFilter: 'blur(4px)', backgroundColor: 'rgba(0, 0, 0, 0.25)' }, '-=0.5');
         tl.from('.nav-button', 0.5, { left: '65vw', ease: 'power3', stagger: 0.05 }, '-=0.9');
         tl.from('.nav-button', 0.5, { transform: 'scaleY(0.5)', ease: 'power3', stagger: 0.05 }, '-=0.75');
         $('.mobile-navigation').toggleClass('closed');
     } else {
-        tl.to('.nav-link-container', 0.5, { left: '100vw' });
+        tl.to('.mobile-questionmark', 0.5, { transform: 'translate( 0, 0)' })
+        tl.to('.nav-link-container', 0.5, { left: '100vw' }, '-=0.5');
         tl.to('.nav-backdrop', 0.2, { backdropFilter: 'blur(0px)', backgroundColor: 'rgba(0, 0, 0, 0.0)' }, '-=0.5');
         tl.to('.nav-backdrop', 0.01, { right: '100vw' })
         $('.mobile-navigation').toggleClass('closed');
