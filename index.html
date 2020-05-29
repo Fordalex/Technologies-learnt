@@ -94,7 +94,8 @@
                             </div>
                             <div class="col-12 m-0 p-0">
                                 <hr class="mb-3">
-                                <h5><img src="https://img.icons8.com/color/25/000000/project.png" class="mr-2" />Project Plan<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#frontend_plan"></i></h5>
+                                <h5><img src="https://img.icons8.com/color/25/000000/project.png" class="mr-2" />Project Plan
+                                    <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#frontend_plan"></i></h5>
                             </div>
                             <!-- project plan -->
                             <div class="col-12 m-0 p-0">
@@ -124,7 +125,8 @@
                                             <h6>3. Structure</h6>
                                             <dl>
                                                 <dd>Interaction design is important so the user can navigate themselves throughout your site. The order the navigation is displayed and also how many times the user must select an option before gaining access
-                                                    to their required information can rapidly change the users overall experience.</dd>
+                                                    to their required information can rapidly change the users overall experience.
+                                                </dd>
                                             </dl>
                                             <dl>
                                                 <dd>
@@ -184,7 +186,8 @@
                                             <dl>
                                                 <dd>Keep It Simple</dd>
                                             </dl>
-                                            <p>The simpler the code is, the simpler it will be to maintain it in the furture.</p>
+                                            <p>The simpler the code is, the simpler it will be to maintain it in the furture.
+                                            </p>
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-4 m-0 py-2 px-2 p-md-2">
@@ -193,7 +196,8 @@
                                             <dl>
                                                 <dd>You Aren't Gonna Need It</dd>
                                             </dl>
-                                            <p class="m-0">If you don't need it now you most likely won't need it later.</p>
+                                            <p class="m-0">If you don't need it now you most likely won't need it later.
+                                            </p>
                                             <p class="m-0">Do the simplest thing that could possibly work</p>
                                         </div>
                                     </div>
@@ -235,6 +239,18 @@
                                             <dl>
                                                 <dd>Controller</dd>
                                             </dl>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 py-2 px-2 p-md-2">
+                                        <div class="section-container ">
+                                            <h6>Full stack Development</h6>
+                                            <dl>
+                                                <dt>Three manifestations of data</dt>
+                                                <dd>1. Html is for data that is presented.</dd>
+                                                <dd>2. Python is for data in motion.</dd>
+                                                <dd>3. Sql is for data at rest.</dd>
+                                            </dl>
+
                                         </div>
                                     </div>
                                 </div>
@@ -512,7 +528,8 @@
                     <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
                         <div class="section-container ">
                             <h4>4. Creating Database Access</h4>
-                            <p>Do not use any non-alphanumeric characters (e.g.: ?, %,@ or &) in your username or password!</p>
+                            <p>Do not use any non-alphanumeric characters (e.g.: ?, %,@ or &) in your username or password!
+                            </p>
                         </div>
                     </div>
                     <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
@@ -683,108 +700,6 @@
         </div>
     </div>
 
-    <!-- jinja (backend) -->
-    <div class="modal-style closed" id="jinjaModal">
-        <div class="page-container p-2 pt-3">
-            <img src="https://img.icons8.com/plasticine/50/000000/crossed-arrow.png" class="float-right arrow-button click-icon" onclick="call_modal('jinjaModal', 'jin-letter', 'off')" />
-            <h4 class="mt-2">
-                <span class="jin-letter l-s">J</span><span class="jin-letter l-s">i</span><span class="jin-letter l-s">n</span><span class="jin-letter l-s">j</span><span class="jin-letter l-s">a</span>
-            </h4>
-            <hr class="mt-3 dark-hr">
-            <!-- content -->
-            <div class="scroll-container">
-                <div class="row m-0 p-0">
-                    <div class="col-12 m-0 p-0 mt-2">
-                        <!-- Django -->
-                        <h4><img src="https://img.icons8.com/material-sharp/32/000000/django.png" class="mr-2" />Django
-                            <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#jinja_django"></i></h4>
-                    </div>
-                    <div class="col-12 m-0 p-0">
-                        <div id="jinja_django" class="collapse row m-0">
-
-                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
-                                <div class="section-container ">
-                                    <h4>1. Block content</h4>
-                                    <dl>
-                                        <dt>Add template:</dt>
-                                        <dd>{% extends 'base.html' %}</dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>Add content:</dt>
-                                        <dd>{% block content %}{% endblock %}</dd>
-                                    </dl>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
-                                <div class="section-container ">
-                                    <h4>2. Load in static folder</h4>
-                                    <dl>
-                                        <dd class="mb-0">{% load static %}</dd>
-                                        <dd>href="{% static 'css/style.css' %}"</dd>
-                                    </dl>
-                                    <p class="ml-3">If using <b>whitenoise</b> the line bellow should be used:</p>
-                                    <dl>
-                                        <dd class="mb-0">{% load static from staticfiles %}</dd>
-                                        <dd>href="{% static 'css/style.css' %}"</dd>
-                                    </dl>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
-                                <div class="section-container ">
-                                    <h4>3. Jinja & JavaScript</h4>
-                                    <dl class="list-no-margin">
-                                        <dt>page.html:</dt>
-                                        <dd>{% block name_js %}</dd>
-                                        <dd><span class="text-danger">JavaScript</span></dd>
-                                        <dd>{% endblock %}</dd>
-                                    </dl>
-                                    <dl class="list-no-margin">
-                                        <dt>base.html in the head:</dt>
-                                        <dd>{% block name_js %}</dd>
-                                        <dd>{% endblock %}</dd>
-                                    </dl>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
-                                <div class="section-container ">
-                                    <h4>4. Django user logged in:</h4>
-                                    <dl class="list-no-margin">
-                                        <dt>When a user is logged in:</dt>
-                                        <dd>{% if user.is_authenticated %}</dd>
-                                    </dl>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
-                                <div class="section-container ">
-                                    <h4>4. For loop:</h4>
-                                    <dl>
-                                        <dd>{% for data in datas %}</dd>
-                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;{{ data.<span class="text-danger">attribute</span> }}
-                                        </dd>
-                                        <dd>{% endfor %}</dd>
-                                    </dl>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="col-12 m-0 p-0 mt-2">
-                        <hr>
-                        <!-- flask -->
-                        <h4><img src="https://img.icons8.com/ios-filled/32/000000/sport-bottle.png" class="mr-2" />Flask
-                            <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#jinja_flask"></i></h4>
-                    </div>
-                    <div class="col-12 m-0 p-0">
-                        <div id="jinja_flask" class="collapse row m-0">
-                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- flask (backend) -->
     <div class="modal-style closed" id="flaskModal">
@@ -853,7 +768,8 @@
                                         <dd>if __name__ == '__main__':</dd>
                                         <dd>&nbsp;&nbsp;&nbsp;&nbsp;app.secret_key = 'mysecret'</dd>
                                         <dd>&nbsp;&nbsp;&nbsp;&nbsp;app.run(host=os.environ.get("IP"),</dd>
-                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;port=int(os.environ.get("PORT")), debug=True)</dd>
+                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;port=int(os.environ.get("PORT")), debug=True)
+                                        </dd>
                                     </dl>
                                 </div>
                             </div>
@@ -1051,7 +967,8 @@
                     <div class="col-12 m-0 p-0 mt-2">
                         <hr class="mb-4">
                         <!-- host on heroku -->
-                        <h4><img src="https://img.icons8.com/fluent/32/000000/domain.png" class="mr-2" />Host on heroku<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#flask_heroku"></i></h4>
+                        <h4><img src="https://img.icons8.com/fluent/32/000000/domain.png" class="mr-2" />Host on heroku
+                            <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#flask_heroku"></i></h4>
                     </div>
                     <div class="col-12 m-0 p-0">
                         <div id="flask_heroku" class="collapse row m-0">
@@ -1104,8 +1021,10 @@
                                     <dl class="list-no-margin">
                                         <dt>Config Vars</dt>
                                         <dd>DATABASE_URL&nbsp;&nbsp;&nbsp;&nbsp;MongoDB_url</dd>
-                                        <dd>PORT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5000</dd>
-                                        <dd>IP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.0.0.0</dd>
+                                        <dd>PORT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5000
+                                        </dd>
+                                        <dd>IP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.0.0.0
+                                        </dd>
                                     </dl>
                                 </div>
                             </div>
@@ -1149,7 +1068,8 @@
                                         <dd>def index():</dd>
                                         <div class="text-faint">
                                             <dd>&nbsp;&nbsp;&nbsp;&nbsp;if request.method == "POST":</dd>
-                                            <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;session["username"] = request.form["username"]</dd>
+                                            <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;session["username"] = request.form["username"]
+                                            </dd>
                                             <dd>
                                                 <p></p>
                                             </dd>
@@ -1160,7 +1080,8 @@
                                     <dl>
                                         <dd>@app.route("/chat/&lt;username>", methods=["GET", "POST"])</dd>
                                         <dd>def user(username):</dd>
-                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;return render_template("page.html", username=username)</dd>
+                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;return render_template("page.html", username=username)
+                                        </dd>
                                     </dl>
                                 </div>
                             </div>
@@ -1301,9 +1222,14 @@
                         <a href="https://docs.djangoproject.com/en/3.0/ref/models/instances/" target="_blank" class="main-colour">Model instance reference</a>
                     </div> -->
                     <div class="col-12 m-0 p-0">
-                        <p class="m-0"><b>Key:</b> <span class="text-danger">Name should be changed</span></p>
-                        <p class="m-0"><b>Run project:</b> python manage.py runserver</p>
-
+                        <h3>Commands</h3>
+                        <p class="m-0"><b>Run Project:</b> python manage.py runserver</p>
+                        <p class="m-0"><b>Migrations:</b> python3 manage.py makemigrations</p>
+                        <p class="m-0"><b>Migrations Test:</b> python3 manage.py makemigrations --dry-run</p>
+                        <p class="m-0"><b>Show Migrations:</b> python3 manage.py showmigrations</p>
+                        <p class="m-0"><b>Migrate:</b> python3 manage.py migrate</p>
+                        <p class="m-0"><b>Migrate Test:</b> python3 manage.py migrate --plan</p>
+                        <p class="m-0"><b>Creates Super User:</b> python3 manage.py createsuperuser</p>
                     </div>
                     <div class="col-12 m-0 p-0">
                         <hr>
@@ -1316,7 +1242,7 @@
                     <!-- creating a project -->
                     <div class="col-12 m-0 p-0">
                         <div id="django_project" class="collapse row m-0">
-                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                            <div class="col-12 m-0 py-2 px-0 p-md-2">
                                 <div class="section-container">
                                     <h5 class="my-2">1. Installation</h5>
                                     <dl>
@@ -1341,7 +1267,7 @@
                                     </dl>
                                 </div>
                             </div>
-                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                            <div class="col-12 m-0 py-2 px-0 p-md-2">
                                 <div class="section-container">
                                     <h5 class="my-2">2. Settings file</h5>
                                     <dl>
@@ -1358,15 +1284,20 @@
                                     </dl>
                                 </div>
                             </div>
-                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                            <div class="col-12 m-0 py-2 px-0 p-md-2">
                                 <div class="section-container">
                                     <h5 class="my-2">3. Create urls</h5>
 
                                 </div>
                             </div>
-                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                            <div class="col-12 m-0 py-2 px-0 p-md-2">
                                 <div class="section-container">
                                     <h5 class="my-2">4. Create views</h5>
+                                </div>
+                            </div>
+                            <div class="col-12 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">5. Example</h5>
                                 </div>
                             </div>
                         </div>
@@ -1533,11 +1464,13 @@
                                     <h5 class="my-2">1. Add model to the admin panel:</h5>
                                     <dl class="list-no-margin">
                                         <dd>from django.contrib import admin</dd>
-                                        <dd>from .models import <span class="text-primary">Data</span></dd>
+                                        <dd>from .models import <span class="text-primary"><strike>Data</strike></span>
+                                        </dd>
                                         <dd>
                                             <p></p>
                                         </dd>
-                                        <dd>admin.site.register(<span class="text-primary">Data</span>)</dd>
+                                        <dd>admin.site.register(<span class="text-primary"><strike>Data</strike></span>)
+                                        </dd>
                                     </dl>
                                 </div>
                             </div>
@@ -1552,7 +1485,7 @@
                     <div class="col-12 m-0 px-1 px-md-4">
                         <div id="django_views" class="collapse row m-0 section-container-dropdown mt-2">
                             <div class="col-12 m-0">
-                                <h5 class="my-3"><img src="https://img.icons8.com/ios/25/000000/file-preview.png" class="mr-2" />Overview<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_overview"></i></h5>
+                                <h5 class="my-3"><img src="https://img.icons8.com/fluent/25/000000/process.png" class="mr-2">Process<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_overview"></i></h5>
                             </div>
                             <!-- overview -->
                             <div class="col-12 m-0 p-0">
@@ -1590,11 +1523,15 @@
                                                 <dd>
                                                     <p></p>
                                                 </dd>
-                                                <dd>def <span class="text-danger">route_name</span>(request):</dd>
-                                                <dd><span class="text-success">products</span> = <span class="text-info">products</span>.objects.all()</dd>
-                                                <dd>return render(request, '<span class="text-danger">pagename</span>.html', {
-                                                    <span class="text-danger">"products": <span
-                                                                    class="text-success">products</span></span>})</dd>
+                                                <dd class="text-faint">def <strike>route_name</strike>(request):</dd>
+                                                <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-success">products</span> =
+                                                    <span class="text-info">Products</span>.objects.all()</dd>
+                                                <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-warning"><strike>data</strike></span> = {</dd>
+                                                <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strike>"products"</strike>:
+                                                    <span class="text-success">products</span></dd>
+                                                <dd>&nbsp;&nbsp;&nbsp;&nbsp;}</dd>
+                                                <dd>&nbsp;&nbsp;&nbsp;&nbsp;return render(request, '
+                                                    <strike>pagename</strike>.html',<span class="text-warning"><strike>data</strike></span> )</dd>
                                             </dl>
                                         </div>
                                     </div>
@@ -1602,10 +1539,18 @@
                                         <div class="section-container">
                                             <h5 class="my-2">5. Saving the data:</h5>
                                             <dl>
-                                                <dd>if request.method == 'POST'</dd>
-                                                <dd>data = formName(request.POST)</dd>
-                                                <dd>if data.is_valid():</dd>
-                                                <dd>data.save()</dd>
+                                                <dd>from .forms import <span class="text-warning"><strike>formName</strike></span></dd>
+                                                <dd>
+                                                    <p></p>
+                                                </dd>
+                                                <dd class="text-faint">def <strike>route_name</strike>(request):</dd>
+                                                <dd>&nbsp;&nbsp;&nbsp;&nbsp;if request.method == 'POST'</dd>
+                                                <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data = <span class="text-warning"><strike>formName</strike></span>(request.POST)
+                                                </dd>
+                                                <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if data.is_valid():
+                                                </dd>
+                                                <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data.save()
+                                                </dd>
                                             </dl>
                                         </div>
                                     </div>
@@ -1615,9 +1560,9 @@
                                             <dl>
                                                 <dd>item = inputItem(request.POST)</dd>
                                                 <dd>if item.is_valid():</dd>
-                                                <dd>instance = item.save(commit=False)</dd>
-                                                <dd>instance.author = request.user.username</dd>
-                                                <dd>instance.save()</dd>
+                                                <dd>&nbsp;&nbsp;&nbsp;&nbsp;instance = item.save(commit=False)</dd>
+                                                <dd>&nbsp;&nbsp;&nbsp;&nbsp;instance.author = request.user.username</dd>
+                                                <dd>&nbsp;&nbsp;&nbsp;&nbsp;instance.save()</dd>
                                             </dl>
                                         </div>
 
@@ -1651,7 +1596,8 @@
                                             </dl>
                                             <dl>
                                                 <dd class="text-faint">def function_name(request):</dd>
-                                                <dd>&nbsp;&nbsp;&nbsp;&nbsp;return <span class="text-success">httpResponce</span>("&lt;h1>Helo!&lt;/h1>")</dd>
+                                                <dd>&nbsp;&nbsp;&nbsp;&nbsp;return <span class="text-success">httpResponce</span>("&lt;h1>Helo!&lt;/h1>")
+                                                </dd>
                                             </dl>
                                         </div>
                                     </div>
@@ -1702,7 +1648,8 @@
                                             </dl>
                                             <dl>
                                                 <dd class="text-faint">urlpatterns = [</dd>
-                                                <dd>&nbsp;&nbsp;&nbsp;&nbsp;path('<strike>url_label</strike>', <span class="text-warning"><strike>function_name</strike></span>, name="<strike>name</strike>"),</dd>
+                                                <dd>&nbsp;&nbsp;&nbsp;&nbsp;path('<strike>url_label</strike>', <span class="text-warning"><strike>function_name</strike></span>, name="
+                                                    <strike>name</strike>"),</dd>
                                                 <dd class="text-faint">]</dd>
                                             </dl>
                                             <p class="m-0">A path will usually take three arguments.</p>
@@ -1747,7 +1694,9 @@
                                             </dl>
                                             <dl>
                                                 <dd class="text-faint">urlpatterns = [</dd>
-                                                <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-success">path</span>('<strike>url_label</strike>', <span class="text-warning"><strike>function_name</strike></span>, name="<strike>name</strike>"),</dd>
+                                                <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-success">path</span>('<strike>url_label</strike>',
+                                                    <span class="text-warning"><strike>function_name</strike></span>, name="
+                                                    <strike>name</strike>"),</dd>
                                                 <dd class="text-faint">]</dd>
                                             </dl>
                                         </div>
@@ -1797,86 +1746,133 @@
                         <!-- models -->
                         <h4><img src="https://img.icons8.com/dotty/32/000000/3d-scale.png" class="mr-2" />models.py <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_models"></i></h4>
                     </div>
-                    <div class="col-12 m-0 p-0">
-                        <div id="django_models" class="collapse row m-0">
-                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
-                                <div class="section-container">
-                                    <h5 class="my-2">1. imports</h5>
-                                    <dl>
-                                        <dd>from django.db import <span class="text-info">models</span></dd>
-                                    </dl>
-                                </div>
+                    <div class="col-12 m-0 px-1 px-md-4">
+                        <div id="django_models" class="collapse row m-0 section-container-dropdown mt-2">
+                            <div class="col-12 m-0">
+                                <h5 class="my-3"><img src="https://img.icons8.com/fluent/25/000000/process.png" class="mr-2" />Process<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_models_process"></i></h5>
                             </div>
-                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
-                                <div class="section-container">
-                                    <h5 class="my-2">2. Create a class</h5>
-                                    <dl>
-                                        <dd>class <span class="text-danger">Modelname</span>(<span class="text-info">models</span>.Model):</dd>
-                                    </dl>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
-                                <div class="section-container">
-                                    <h5 class="my-2">3. Fields</h5>
-                                    <dl>
-                                        <dt>Short text field</dt>
-                                        <dd><span class="text-info">models</span>.CharField(max_length=150)</dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>Text field</dt>
-                                        <dd><span class="text-info">models</span>.TextField()</dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>Boolean field</dt>
-                                        <dd><span class="text-info">models</span>.BooleanField()</dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>Integer field</dt>
-                                        <dd><span class="text-info">models</span>.IntegerField(default=0)</dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>Image field</dt>
-                                        <dd><span class="text-info">models</span>.imageField(upload_to="img")</dd>
-                                    </dl>
-                                    <p class="ml-2">upload_to="img" is the name of the folder under the media directory. Also requires <b>Pillow</b>.</p>
-                                    <dl>
-                                        <dt>Time field</dt>
-                                        <dd>from django.utils import <span class="text-success">timezone</span></dd>
-                                        <dd>
+                            <!-- process -->
+                            <div class="col-12 m-0 p-0">
+                                <div id="django_models_process" class="collapse row m-0 ">
+                                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                        <div class="section-container">
+                                            <h5 class="my-2">1. imports</h5>
+                                            <dl>
+                                                <dd>from django.db import <span class="text-info">models</span></dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                        <div class="section-container">
+                                            <h5 class="my-2">2. Create a class</h5>
+                                            <dl>
+                                                <dd>class <span class="text-danger">ModelName</span>(<span class="text-info">models</span>.Model):</dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                        <div class="section-container">
+                                            <h5 class="my-2">3. Fields</h5>
+                                            <dl>
+                                                <dt>Short text field</dt>
+                                                <dd><span class="text-info">models</span>.CharField(max_length=150)</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>Text field</dt>
+                                                <dd><span class="text-info">models</span>.TextField()</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>Boolean field</dt>
+                                                <dd><span class="text-info">models</span>.BooleanField()</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>Integer field</dt>
+                                                <dd><span class="text-info">models</span>.IntegerField(default=0)</dd>
+                                            </dl>
+                                            <dl>
+                                                <dt>Image field</dt>
+                                                <dd><span class="text-info">models</span>.imageField(upload_to="img")
+                                                </dd>
+                                            </dl>
+                                            <p class="ml-2">upload_to="img" is the name of the folder under the media directory. Also requires <b>Pillow</b>.</p>
+                                            <dl>
+                                                <dt>Time field</dt>
+                                                <dd>from django.utils import <span class="text-success">timezone</span>
+                                                </dd>
+                                                <dd>
+                                                    <p></p>
+                                                </dd>
+                                                <dd><span class="text-info">models</span>.DateTimeField(blank=True, null=True, default=
+                                                    <span class="text-success">timezone</span>.now)</dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                        <div class="section-container">
+                                            <h5 class="my-2">4. Restrictions</h5>
+                                            <dl>
+                                                <dd>default=<span class="text-danger">0</span></dd>
+                                            </dl>
+                                            <p>These will be marked at 0 as default.</p>
+                                            <dl>
+                                                <dd>null=<span class="text-danger">True</span></dd>
+                                            </dl>
                                             <p></p>
-                                        </dd>
-                                        <dd><span class="text-info">models</span>.DateTimeField(blank=True, null=True, default=
-                                            <span class="text-success">timezone</span>.now)</dd>
-                                    </dl>
+                                            <dl>
+                                                <dd>blank=<span class="text-danger">False</span></dd>
+                                            </dl>
+                                            <p>Will make it required on forms.</p>
+                                            <dl>
+                                                <dd>max_length=150</dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                        <div class="section-container">
+                                            <h5 class="my-2">5. Display model name in admin panel:</h5>
+                                            <dl>
+                                                <dd>def __str__(self):</dd>
+                                                <dd>&emsp;return self.name</dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 m-0 p-0 px-2 mt-1">
+                                        <div class="container-fluid d-flex justify-content-between p-0 mb-1">
+                                            <a href="https://docs.djangoproject.com/en/3.0/topics/db/queries/" target="_blank" class="main-colour btn text-light">Making queries</a>
+                                            <a href="https://docs.djangoproject.com/en/3.0/ref/models/instances/" target="_blank" class="main-colour btn text-light">Model instance
+                                                reference</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
-                                <div class="section-container">
-                                    <h5 class="my-2">4. Attributes</h5>
-                                    <dl>
-                                        <dt>Non user input:</dt>
-                                        <dd>default=<span class="text-danger">0</span></dd>
-                                    </dl>
-                                    <dl>
-                                        <dt>Allow blank field:</dt>
-                                        <dd>null=<span class="text-danger">True</span></dd>
-                                    </dl>
+                            <div class="col-12 m-0">
+                                <hr>
+                                <h5 class="my-3"><img src="https://img.icons8.com/ios-filled/25/000000/plug.png" class="mr-2" />Import<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_models_import"></i></h5>
+                            </div>
+                            <!-- import -->
+                            <div class="col-12 m-0 p-0">
+                                <div id="django_models_import" class="collapse row m-0">
+                                    <div class="col-12 col-md-6 m-0 pl-lg-2 py-2 px-1 p-md-2">
+                                        <div class="section-container">
 
+
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
-                                <div class="section-container">
-                                    <h5 class="my-2">5. Display model name in admin panel:</h5>
-                                    <dl>
-                                        <dd>def __str__(self):</dd>
-                                        <dd>&emsp;return self.name</dd>
-                                    </dl>
-                                </div>
+                            <div class="col-12 m-0">
+                                <hr>
+                                <h5 class="my-3"><img src="https://img.icons8.com/ultraviolet/25/000000/preview-pane.png" class="mr-2" />Example<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_model_example"></i></h5>
                             </div>
-                            <div class="col-12 m-0 p-0 px-2 mt-1">
-                                <div class="container-fluid d-flex justify-content-between p-0 mb-1">
-                                    <a href="https://docs.djangoproject.com/en/3.0/topics/db/queries/" target="_blank" class="main-colour btn text-light">Making queries</a>
-                                    <a href="https://docs.djangoproject.com/en/3.0/ref/models/instances/" target="_blank" class="main-colour btn text-light">Model instance reference</a>
+                            <!-- Example -->
+                            <div class="col-12 m-0 p-0">
+                                <div id="django_model_example" class="collapse row m-0">
+                                    <div class="col-12 col-md-6 m-0 pl-lg-2 py-2 px-1 p-md-2">
+                                        <div class="section-container">
+
+
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1922,9 +1918,192 @@
                     </div>
                     <div class="col-12 m-0 p-0">
                         <hr>
-                        <h3 class="mt-3 mb-4 text-center"><img src="https://img.icons8.com/color/32/000000/admin-settings-male.png" class="mr-2">Admin Panel</h3>
+                        <h3 class="mt-3 mb-4 text-center"><img src="https://img.icons8.com/color/32/000000/admin-settings-male.png" class="mr-2">Admin Panel
+                        </h3>
                         <hr>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jinja2 (backend) -->
+    <div class="modal-style closed" id="jinjaModal">
+        <div class="page-container p-2 pt-3">
+            <img src="https://img.icons8.com/plasticine/50/000000/crossed-arrow.png" class="float-right arrow-button click-icon" onclick="call_modal('jinjaModal', 'jin-letter', 'off')" />
+            <h4 class="mt-2">
+                <span class="jin-letter l-s">J</span><span class="jin-letter l-s">i</span><span class="jin-letter l-s">n</span><span class="jin-letter l-s">j</span><span class="jin-letter l-s">a2</span>
+            </h4>
+            <hr class="mt-3 dark-hr">
+            <!-- content -->
+            <div class="scroll-container">
+                <div class="row m-0 p-0">
+
+
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>Block content</h4>
+                            <dl>
+                                <dt>Add template:</dt>
+                                <dd>{% extends 'base.html' %}</dd>
+                            </dl>
+                            <dl>
+                                <dt>Add content:</dt>
+                                <dd>{% block content %}{% endblock %}</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>Load in static folder</h4>
+                            <dl>
+                                <dd class="mb-0">{% load static %}</dd>
+                                <dd>href="{% static 'css/style.css' %}"</dd>
+                            </dl>
+                            <p class="ml-3">If using <b>whitenoise</b> the line bellow should be used:</p>
+                            <dl>
+                                <dd class="mb-0">{% load static from staticfiles %}</dd>
+                                <dd>href="{% static 'css/style.css' %}"</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>Jinja & JavaScript</h4>
+                            <dl class="list-no-margin">
+                                <dt>page.html:</dt>
+                                <dd>{% block name_js %}</dd>
+                                <dd><span class="text-danger">JavaScript</span></dd>
+                                <dd>{% endblock %}</dd>
+                            </dl>
+                            <dl class="list-no-margin">
+                                <dt>base.html in the head:</dt>
+                                <dd>{% block name_js %}</dd>
+                                <dd>{% endblock %}</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>Django user logged in:</h4>
+                            <dl class="list-no-margin">
+                                <dt>When a user is logged in:</dt>
+                                <dd>{% if user.is_authenticated %}</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>For loop:</h4>
+                            <dl>
+                                <dd>{% for data in datas %}</dd>
+                                <dd>&nbsp;&nbsp;&nbsp;&nbsp;{{ data.<span class="text-danger">attribute</span> }}
+                                </dd>
+                                <dd>{% endfor %}</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>Array error:</h4>
+                            <dl>
+                                <dd>[u&#39dogs#39;, u&#39cats#39;]</dd>
+                                <dd>{{ dataPassedIn | safe }}</dd>
+                            </dl>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- django templating language (backend) -->
+    <div class="modal-style closed" id="djangoTemplatingModal">
+        <div class="page-container p-2 pt-3">
+            <img src="https://img.icons8.com/plasticine/50/000000/crossed-arrow.png" class="float-right arrow-button click-icon" onclick="call_modal('djangoTemplatingModal', 'jin-letter', 'off')" />
+            <h4 class="mt-2 text-light">django templating language</h4>
+            <hr class="mt-3 dark-hr">
+            <!-- content -->
+            <div class="scroll-container">
+                <div class="row m-0 p-0">
+
+
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>Block content</h4>
+                            <dl>
+                                <dt>Add template:</dt>
+                                <dd>{% extends 'base.html' %}</dd>
+                            </dl>
+                            <dl>
+                                <dt>Add content:</dt>
+                                <dd>{% block content %}{% endblock %}</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>Load in static folder</h4>
+                            <dl>
+                                <dd class="mb-0">{% load static %}</dd>
+                                <dd>href="{% static 'css/style.css' %}"</dd>
+                            </dl>
+                            <p class="ml-3">If using <b>whitenoise</b> the line bellow should be used:</p>
+                            <dl>
+                                <dd class="mb-0">{% load static from staticfiles %}</dd>
+                                <dd>href="{% static 'css/style.css' %}"</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>Jinja & JavaScript</h4>
+                            <dl class="list-no-margin">
+                                <dt>page.html:</dt>
+                                <dd>{% block name_js %}</dd>
+                                <dd><span class="text-danger">JavaScript</span></dd>
+                                <dd>{% endblock %}</dd>
+                            </dl>
+                            <dl class="list-no-margin">
+                                <dt>base.html in the head:</dt>
+                                <dd>{% block name_js %}</dd>
+                                <dd>{% endblock %}</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>Django user logged in:</h4>
+                            <dl class="list-no-margin">
+                                <dt>When a user is logged in:</dt>
+                                <dd>{% if user.is_authenticated %}</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>For loop:</h4>
+                            <dl>
+                                <dd>{% for data in datas %}</dd>
+                                <dd>&nbsp;&nbsp;&nbsp;&nbsp;{{ data.<span class="text-danger">attribute</span> }}
+                                </dd>
+                                <dd>{% endfor %}</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>Array error:</h4>
+                            <dl>
+                                <dd>[u&#39dogs#39;, u&#39cats#39;]</dd>
+                                <dd>{{ dataPassedIn | safe }}</dd>
+                            </dl>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
         </div>
@@ -2382,9 +2561,9 @@
                         <div class="col-12 px-0 px-lg-2">
                             <dl>
                                 <dt><img src="https://img.icons8.com/color/15/000000/html-5.png" class="mr-2" />HTML
-                                    <img src="images/question-mark.png" style="width:25px;"
+                                    <img src="images/question-mark.png" style="width:25px; margin-right:36px;"
                                         onclick="call_modal('htmlModal', 'css-letter', 'on')"
-                                        class="float-right mr-4 click-icon">
+                                        class="float-right click-icon">
                                 </dt>
                                 <hr>
                                 <dt><img src="https://img.icons8.com/color/15/000000/css3.png" class="mr-2" />CSS <i
@@ -2406,7 +2585,7 @@
                                         class="mr-2" />JavaScript (OOP)<i
                                         class="far fa-plus-square ml-2 small-icon front-plus" data-toggle="collapse"
                                         href="#js"></i>
-                                        <img src="images/question-mark.png" style="width:25px;"
+                                    <img src="images/question-mark.png" style="width:25px;"
                                         onclick="call_modal('javascriptModal', 'css-letter', 'on')"
                                         class="float-right mr-2 click-icon"></dt>
                                 <div class="collapse wrapper mt-2" id="js">
@@ -2761,6 +2940,10 @@
                                     <dd>Morph an SVG</dd>
                                     <hr>
                                     <dd>Pagination</dd>
+                                    <hr>
+                                    <dd>API</dd>
+                                    <hr>
+                                    <dd>Node.js for js serverside</dd>
                                 </dl>
                             </div>
                         </div>
@@ -2790,10 +2973,7 @@
                                 </dt>
                                     <div class="collapse wrapper mt-2" id="python">
                                         <div class="p-2">
-                                            <dd>Jinja
-                                                <a href="https://jinja.palletsprojects.com/en/2.11.x/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
-                                                <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 click-icon" onclick="call_modal('jinjaModal', 'jin-letter', 'on')">
-                                            </dd>
+
                                         </div>
                                     </div>
                                 </dl>
@@ -2817,6 +2997,23 @@
                                             <dd>Django
                                                 <a href="https://www.djangoproject.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
                                                 <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 click-icon" onclick="call_modal('djangoModal', 'd-letter','on' )">
+                                            </dd>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <dt><img src="https://img.icons8.com/android/16/000000/data-in-both-directions.png"
+                                        class="mr-2" />Templating languages<i class="far fa-plus-square ml-2 small-icon"
+                                        data-toggle="collapse" href="#Templating"></i></dt>
+                                    <div class="collapse wrapper" id="Templating">
+                                        <div class="p-2">
+                                            <dd>Jinja2
+                                                <a href="https://jinja.palletsprojects.com/en/2.11.x/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 click-icon" onclick="call_modal('jinjaModal', 'jin-letter', 'on')">
+                                            </dd>
+                                            <hr>
+                                            <dd>Django Templating Language
+                                                <a href="https://docs.djangoproject.com/en/3.0/ref/templates/language/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 click-icon" onclick="call_modal('djangoTemplatingModal', 'd-letter','on' )">
                                             </dd>
                                         </div>
                                     </div>
