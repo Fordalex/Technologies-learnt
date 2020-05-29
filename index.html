@@ -290,16 +290,10 @@
                             <div class="col-12">
                                 <div id="frontend_plan" class="collapse row m-0">
 
-
-
-
                                 </div>
                             </div>
                         </div>
                     </div>
-
-
-
                 </div>
             </div>
         </div>
@@ -1348,6 +1342,85 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-12 m-0 p-0 mt-2">
+                        <hr class="mb-4">
+                        <h4><img src="https://img.icons8.com/color/32/000000/approve-and-update.png" class="mr-2" />CRUD
+                            <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_crud"></i></h4>
+                    </div>
+                    <!-- CRUD -->
+                    <div class="col-12 m-0 p-0">
+                        <div id="django_crud" class="collapse row m-0">
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">Create:</h5>
+                                    <dl class="list-no-margin">
+                                        <dt>page.html</dt>
+                                        <dd>&lt;form method="POST" action="/<strike class="text-info">add</strike>"></dd>
+                                        <dd>{% csrf_token %}</dd>
+                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="<strike class="text-warning">name</strike>></dd>
+                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;&lt;input name="<strike class="text-success">itemName</strike> id="<strike class="text-warning">name</strike>></dd>
+                                        <dd>&lt;/form></dd>
+                                        <dd>&lt;button type="submit">Save&lt;/button></dd>
+                                    </dl>
+                                    <dl class="list-no-margin">
+                                        <dt>views.py</dt>
+                                        <dd>from .models import <strike class="text-primary">Item</strike></dd>
+                                        <dd>
+                                            <p></p>
+                                        </dd>
+                                        <dd class="text-faint">def add_item(request):</dd>
+                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;if request.method == "POST":</dd>
+                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-danger"><strike>Varname</strike></span> = request.POST.get("<strike class="text-success">itemName</strike>")</dd>
+                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strike class="text-primary">Item</strike>.objects.create(name=<span class="text-danger"><strike>Varname</strike></span>)</dd>
+                                        <dd class="text-faint">&nbsp;&nbsp;&nbsp;&nbsp;return redirect("<strike>url_name</strike>)</dd>
+                                    </dl>
+                                    <dl class="list-no-margin">
+                                        <dt>url.py</dt>
+
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">Read:</h5>
+                                    <dl>
+                                        <dt>gunicorn</dt>
+                                        <dd>pip install gunicorn</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">Update:</h5>
+                                    <dl>
+                                        <dt>gunicorn</dt>
+                                        <dd>pip install gunicorn</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">Delete:</h5>
+                                    <dl>
+                                        <dt>gunicorn</dt>
+                                        <dd>pip install gunicorn</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 m-0 p-0 mt-2">
+                        <hr class="mb-4">
+                        <h4><img src="https://img.icons8.com/plasticine/32/000000/user.png" class="mr-2" />Authentication & Authorisation
+                            <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_auth"></i></h4>
+                    </div>
+                    <!-- Authentication & Authorisation -->
+                    <div class="col-12 m-0 p-0">
+                        <div id="django_auth" class="collapse row m-0">
+
+
+                        </div>
+                    </div>
                     <div class="col-12 m-0 p-0">
                         <hr>
                         <h3 class="mt-3 mb-4 text-center">Each File</h3>
@@ -1487,12 +1560,12 @@
                             <div class="col-12 m-0">
                                 <h5 class="my-3"><img src="https://img.icons8.com/fluent/25/000000/process.png" class="mr-2">Process<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_overview"></i></h5>
                             </div>
-                            <!-- overview -->
+                            <!-- process -->
                             <div class="col-12 m-0 p-0">
                                 <div id="django_overview" class="collapse row m-0 ">
                                     <div class="col-12 col-md-6 m-0 pl-lg-2 py-2 px-1 p-md-2">
                                         <div class="section-container">
-                                            <h5 class="my-2">1. imports:</h5>
+                                            <h5 class="my-2">imports:</h5>
                                             <dl>
                                                 <dd>from django.shortcuts import render, redirect, reverse:</dd>
                                             </dl>
@@ -1500,7 +1573,7 @@
                                     </div>
                                     <div class="col-12 col-md-6 m-0 pl-lg-2 py-2 px-1 p-md-2">
                                         <div class="section-container">
-                                            <h5 class="my-2">2. Create a route:</h5>
+                                            <h5 class="my-2">Create a route:</h5>
                                             <dl>
                                                 <dd>def <span class="text-danger">route_name</span>(request):</dd>
                                             </dl>
@@ -1508,16 +1581,16 @@
                                     </div>
                                     <div class="col-12 col-md-6 m-0 pl-lg-2 py-2 px-1 p-md-2">
                                         <div class="section-container">
-                                            <h5 class="my-2">3. Render a page:</h5>
+                                            <h5 class="my-2">Render a page:</h5>
                                             <dl>
-                                                <dd>return render(request, '<span class="text-danger">pagename</span>.html')
+                                                <dd>return render(request, '<strike>appname/pagename</strike>.html')
                                                 </dd>
                                             </dl>
                                         </div>
                                     </div>
                                     <div class="col-12 col-md-6 m-0 pl-lg-2 py-2 px-1 p-md-2">
                                         <div class="section-container">
-                                            <h5 class="my-2">4. Passing data into a HTML page:</h5>
+                                            <h5 class="my-2">Passing data into a HTML page:</h5>
                                             <dl class="list-no-margin">
                                                 <dd>from .models import <span class="text-info">Products</span></dd>
                                                 <dd>
@@ -1537,7 +1610,7 @@
                                     </div>
                                     <div class="col-12 col-md-6 m-0 pl-lg-2 py-2 px-1 p-md-2">
                                         <div class="section-container">
-                                            <h5 class="my-2">5. Saving the data:</h5>
+                                            <h5 class="my-2">Saving the data:</h5>
                                             <dl>
                                                 <dd>from .forms import <span class="text-warning"><strike>formName</strike></span></dd>
                                                 <dd>
@@ -2028,8 +2101,6 @@
             <!-- content -->
             <div class="scroll-container">
                 <div class="row m-0 p-0">
-
-
                     <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
                         <div class="section-container ">
                             <h4>Block content</h4>
@@ -2095,15 +2166,13 @@
                     </div>
                     <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
                         <div class="section-container ">
-                            <h4>Array error:</h4>
+                            <h4>For loop empty:</h4>
                             <dl>
-                                <dd>[u&#39dogs#39;, u&#39cats#39;]</dd>
-                                <dd>{{ dataPassedIn | safe }}</dd>
+                                <dd>{{ empty }}</dd>
+                                <dd><strike>content</strike></dd>
                             </dl>
                         </div>
                     </div>
-
-
                 </div>
             </div>
         </div>
