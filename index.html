@@ -73,6 +73,52 @@
                             <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#web_development"></i></h4>
                     </div>
                     <div class="col-12 m-0 p-0">
+                        <hr class="mb-4">
+                        <!-- files -->
+                        <h4><img src="https://img.icons8.com/office/32/000000/show-all-views.png" class="mr-2" />Files
+                            <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#web_files"></i>
+                        </h4>
+                    </div>
+                    <div class="col-12 m-0 p-0">
+                        <div id="web_files" class="collapse row m-0">
+                            <div class="col-12 col-md-6 col-lg-4 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h6>Images</h6>
+                                    <dl>
+                                        <dt>Jpeg</dt>
+                                        <dd></dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>Png</dt>
+                                        <dd></dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h6>API</h6>
+                                    <dl>
+                                        <dt>Json</dt>
+                                        <dd>JavaScript Object Notation</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h6>Images</h6>
+                                    <dl>
+                                        <dt>Jpeg</dt>
+                                        <dd></dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>Png</dt>
+                                        <dd></dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 m-0 p-0">
                         <div id="web_development" class="collapse row m-0">
                             <div class="col-12 m-0 p-0">
                                 <hr class="mb-3">
@@ -849,15 +895,15 @@
                     </div>
                     <div class="col-12 m-0 p-0 mt-2">
                         <hr class="mb-4">
-                        <!-- manipulating data -->
-                        <h4><img src="https://img.icons8.com/material-two-tone/32/000000/change--v1.png" class="mr-2" />Manipulating data
+                        <!-- CRUD -->
+                        <h4><img src="https://img.icons8.com/color/32/000000/approve-and-update.png" class="mr-2">CRUD
                             <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#flask_man_data"></i></h4>
                     </div>
                     <div class="col-12 m-0 p-0">
                         <div id="flask_man_data" class="collapse row m-0">
                             <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
                                 <div class="section-container">
-                                    <h5 class="my-2">1. Create data</h5>
+                                    <h5 class="my-2">1. Create</h5>
                                     <dl class="list-no-margin">
                                         <dt>page.html</dt>
                                         <dd>
@@ -894,7 +940,7 @@
                             </div>
                             <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
                                 <div class="section-container">
-                                    <h5 class="my-2">2. Read data</h5>
+                                    <h5 class="my-2">2. Read</h5>
                                     <h6>All data from the collection</h6>
                                     <dl class="list-no-margin">
                                         <dt>app.py</dt>
@@ -912,7 +958,7 @@
                             </div>
                             <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
                                 <div class="section-container">
-                                    <h5 class="my-2">3. Update data</h5>
+                                    <h5 class="my-2">3. Update</h5>
                                     <dl class="list-no-margin">
                                         <dd>mongo.db.users.update({'username' : currentUser},</dd>
                                         <dd>{</dd>
@@ -925,7 +971,7 @@
                             </div>
                             <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
                                 <div class="section-container">
-                                    <h5 class="my-2">4. Delete data</h5>
+                                    <h5 class="my-2">4. Delete</h5>
                                     <dl class="list-no-margin">
                                         <dt>page.html</dt>
                                         <dd>
@@ -1355,7 +1401,8 @@
                                     <h5 class="my-2">Create:</h5>
                                     <dl class="list-no-margin">
                                         <dt>page.html</dt>
-                                        <dd>&lt;form method="POST" action="/<strike class="text-info">add</strike>"></dd>
+                                        <dd>&lt;form method="POST" action="/<strike class="text-info">add</strike>">
+                                        </dd>
                                         <dd>{% csrf_token %}</dd>
                                         <dd>&nbsp;&nbsp;&nbsp;&nbsp;&lt;label for="<strike class="text-warning">name</strike>></dd>
                                         <dd>&nbsp;&nbsp;&nbsp;&nbsp;&lt;input name="<strike class="text-success">itemName</strike> id="<strike class="text-warning">name</strike>></dd>
@@ -1370,9 +1417,11 @@
                                         </dd>
                                         <dd class="text-faint">def add_item(request):</dd>
                                         <dd>&nbsp;&nbsp;&nbsp;&nbsp;if request.method == "POST":</dd>
-                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-danger"><strike>Varname</strike></span> = request.POST.get("<strike class="text-success">itemName</strike>")</dd>
+                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-danger"><strike>Varname</strike></span> = request.POST.get("
+                                            <strike class="text-success">itemName</strike>")</dd>
                                         <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strike class="text-primary">Item</strike>.objects.create(name=<span class="text-danger"><strike>Varname</strike></span>)</dd>
-                                        <dd class="text-faint">&nbsp;&nbsp;&nbsp;&nbsp;return redirect("<strike>url_name</strike>)</dd>
+                                        <dd class="text-faint">&nbsp;&nbsp;&nbsp;&nbsp;return redirect("
+                                            <strike>url_name</strike>)</dd>
                                     </dl>
                                     <dl class="list-no-margin">
                                         <dt>url.py</dt>
@@ -1417,8 +1466,62 @@
                     <!-- Authentication & Authorisation -->
                     <div class="col-12 m-0 p-0">
                         <div id="django_auth" class="collapse row m-0">
-
-
+                            <div class="col-12 m-0 py-2 px-0 p-md-2">
+                                <h4 class="text-center">Setting up allauth</h4>
+                            </div>
+                            <div class="col-12 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5>Installations</h5>
+                                    <dl>
+                                        <dd>pip3 install django-allauth</dd>
+                                        <dt>Add all the requirements in the settings.py file.</dt>
+                                    </dl>
+                                    <a href="https://django-allauth.readthedocs.io/en/latest/installation.html" class="btn main-colour text-light">Documentation</a>
+                                </div>
+                            </div>
+                            <div class="col-12 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5>settings.py</h5>
+                                    <dl class="list-no-margin">
+                                        <dd>EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'</dd>
+                                        <dd>
+                                            <p></p>
+                                        </dd>
+                                        <dd>ACCOUNT_AUTHENTICATION_METHOD = 'username_email'</dd>
+                                        <dd>ACCOUNT_EMAIL_REQUIRED = True</dd>
+                                        <dd>ACCOUNT_EMAIL_VERIFICATION = 'mandatory'</dd>
+                                        <dd>ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True</dd>
+                                        <dd>ACCOUNT_USERNAME_MIN_LENGTH = 4</dd>
+                                        <dd>LOGIN_URL = '/accounts/login/'</dd>
+                                        <dd>LOGIN_REDIRECT_URL = '/<strike>success</strike>'</dd>
+                                    </dl>
+                                    <p>allauth.socialaccount allow us to get the user to log in via a social media account.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5>urls.py</h5>
+                                    <dl>
+                                        <dd>path('accounts/', include('allauth.urls')),</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5>To customise the authorisation templates</h5>
+                                    <dl>
+                                        <dt>Creat a directory at the project root level templates/allauth</dt>
+                                        <dd>cp -r .venv/lib/python3.6/site-packages/allauth/templates/* ./templates/allauth/</dd>
+                                        <dt>Also update DIRS</dt>
+                                        <dd>os.path.join(BASE_DIR, 'templates'),</dd>
+                                        <dd>os.path.join(BASE_DIR, 'templates', 'allauth'),</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 m-0 py-2 px-0 p-md-2">
+                                <h4 class="text-center">Using the User data</h4>
+                            </div>
                         </div>
                     </div>
                     <div class="col-12 m-0 p-0">
@@ -3281,18 +3384,18 @@
                         </div>
                     </div>
 
-                    <!-- programmes / Developed -->
+                    <!-- More / Developed -->
 
                     <div class="col-12 col-md-6 col-lg-4 mt-3 mt-md-0 p-0 p-md-2 ">
-                        <!-- programmes -->
+                        <!-- More -->
                         <div class="row m-0 p-1 secondary-background wobble-onload" id="programmes-section">
                             <div class="col-12 p-0 ">
-                                <h3 class="py-3 text-center secondary-title">Programmes<img src="https://img.icons8.com/cotton/32/000000/detective.png" id="open-all-back" class="ml-2 click-icon"></h3>
+                                <h3 class="py-3 text-center secondary-title">More<img src="https://img.icons8.com/cotton/32/000000/detective.png" id="open-all-back" class="ml-2 click-icon"></h3>
                                 <hr>
                             </div>
-                            <!-- Wireframes -->
+                            <!-- Creative -->
                             <div class="col-12 p-0 ">
-                                <h4 class="mb-3 ">Development<i class="fas fa-laptop-code ml-2"></i></h4>
+                                <h4 class="mb-3 ">Creative<i class="fas fa-laptop-code ml-2"></i></h4>
                             </div>
                             <div class="col-12 px-0 px-lg-2">
                                 <dl>
@@ -3352,6 +3455,41 @@
                                             <dd>Adobe Illustrator</dd>
                                             <hr>
                                             <dd>Figma</dd>
+                                        </div>
+                                    </div>
+                                </dl>
+                            </div>
+                            <!-- More -->
+                            <div class="col-12 p-0 ">
+                                <h4 class="mb-3 ">API's<i class="fas fa-laptop-code ml-2"></i></h4>
+                            </div>
+                            <div class="col-12 px-0 px-lg-2">
+                                <dl>
+                                    <div>
+                                        <dt><img src="https://img.icons8.com/plasticine/17/000000/google-logo.png"
+                                            class="mr-2" />Google<i
+                                            class="far fa-plus-square ml-2 small-icon front-plus" data-toggle="collapse"
+                                            href="#googleApi"></i></dt>
+                                        <div class="collapse wrapper mt-2" id="googleApi">
+                                            <div class="p-2">
+                                                <dd>Place Autocomplete Address Form
+                                                    <a href="https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-addressform" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                </dd>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div>
+                                        <dt><img src="https://img.icons8.com/color/17/000000/chance-of-storm.png"
+                                            class="mr-2" />Weather<i
+                                            class="far fa-plus-square ml-2 small-icon front-plus" data-toggle="collapse"
+                                            href="#weatherapi"></i></dt>
+                                        <div class="collapse wrapper mt-2" id="weatherapi">
+                                            <div class="p-2">
+                                                <dd>Open Weather
+                                                    <a href="https://openweathermap.org/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                </dd>
+                                            </div>
                                         </div>
                                     </div>
                                 </dl>
