@@ -1318,26 +1318,114 @@
                                         <dt>Locate template folder:</dt>
                                         <dd>Templates = ['DIRS':[os.path.join(BASE_DIR, 'templates')],]</dd>
                                     </dl>
-                                    <dl>
-                                        <dt>Locate Static folder:</dt>
+                                </div>
+                            </div>
+
+                            <div class="col-12 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">3. Static and media folders:</h5>
+                                    <dl class="list-no-margin">
+                                        <dd>STATIC_URL = '/static/'</dd>
                                         <dd>STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)</dd>
+                                        <dd>MEDIA_URL = '/media/'</dd>
+                                        <dd>MEDIA_ROOT = os.path.join(BASE_DIR, 'media')</dd>
+                                    </dl>
+                                    <dl class="list-no-margin">
+                                        <dt>Add urls in project urls</dt>
+                                        <dd>from django.conf import settings</dd>
+                                        <dd>from django.conf.urls.static import static</dd>
+                                        <dd>
+                                            <p></p>
+                                        </dd>
+                                        <dd>] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)</dd>
                                     </dl>
                                 </div>
                             </div>
                             <div class="col-12 m-0 py-2 px-0 p-md-2">
                                 <div class="section-container">
-                                    <h5 class="my-2">3. Create urls</h5>
+                                    <h5 class="my-2">4. Create urls</h5>
 
                                 </div>
                             </div>
                             <div class="col-12 m-0 py-2 px-0 p-md-2">
                                 <div class="section-container">
-                                    <h5 class="my-2">4. Create views</h5>
+                                    <h5 class="my-2">5. Create views</h5>
                                 </div>
                             </div>
                             <div class="col-12 m-0 py-2 px-0 p-md-2">
                                 <div class="section-container">
-                                    <h5 class="my-2">5. Example</h5>
+                                    <h5 class="my-2">6. Includes</h5>
+                                    <dl>
+                                        <dt>Create a directory templates/includes</dt>
+                                        <dd>{% include 'includes/page_name.html' %}</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 m-0 p-0 mt-2">
+                        <hr class="mb-4">
+                        <h4><img src="https://img.icons8.com/clouds/32/000000/cloud-database.png" class="mr-2" />Connecting to postgres
+                            <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_postgres"></i></h4>
+                    </div>
+                    <!-- Connecting to postgres -->
+                    <div class="col-12 m-0 p-0">
+                        <div id="django_postgres" class="collapse row m-0">
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">1. Heroku</h5>
+                                    <dl>
+                                        <dt>Configure Add-ons</dt>
+                                        <dd>Heroku Postgres</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>Settings</dt>
+                                        <dd>DATABASE_URL</dd>
+                                    </dl>
+                                    <p>Copy the url for the next step.</p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">2. env.py</h5>
+                                    <dl>
+                                        <dd>import os</dd>
+                                        <dd>os.environ.setdefault('DATABASE_URL', '<strike>postgres://</strike>')</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">3. Installations</h5>
+                                    <dl>
+                                        <dd>pip3 install dj_database_url</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">4. settings.py</h5>
+                                    <dl>
+                                        <dd>from os import path</dd>
+                                        <dd>import dj_database_url</dd>
+                                        <dd>if path.exists('env.py'):</dd>
+                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;import env</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>Use postgres or db.sqlite3</dt>
+                                        <dd>if "<span class="text-info">DATABASE_URL</span>" in os.environ:</dd>
+                                        <dd>&emsp;DATABASES = {</dd>
+                                        <dd>&emsp;'default': dj_database_url.parse(os.environ.get('<span class="text-info">DATABASE_URL</span>'))</dd>
+                                        <dd>&emsp;} </dd>
+                                        <dd>else:</dd>
+                                        <dd>&emsp;print("postgres URL not found, using sqlite instead")</dd>
+                                        <dd>&emsp;DATABASES = {</dd>
+                                        <dd>&emsp;&emsp;'default': {</dd>
+                                        <dd>&emsp;&emsp;&emsp;'ENGINE': 'django.db.backends.sqlite3',</dd>
+                                        <dd>&emsp;&emsp;&emsp;'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),</dd>
+                                        <dd>&emsp;&emsp;}</dd>
+                                        <dd>&emsp;}</dd>
+                                    </dl>
                                 </div>
                             </div>
                         </div>
@@ -1371,15 +1459,19 @@
                                         <dd>web: gunicorn <span class="text-danger">projectname</span>.wsgi:application
                                         </dd>
                                     </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">3. Allowed Hosts:</h5>
                                     <dl>
-                                        <dt>requirements.txt:</dt>
-                                        <dd>pip freeze --local > requirements.txt</dd>
+                                        <dd>ALLOWED_HOSTS = [<strike>heroku_project_name</strike>.herokuapp.com]</dd>
                                     </dl>
                                 </div>
                             </div>
                             <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
                                 <div class="section-container">
-                                    <h5 class="my-2">3. Heroku:</h5>
+                                    <h5 class="my-2">4. Heroku:</h5>
                                     <dl class="list-no-margin">
                                         <dt>Config Vars</dt>
                                         <dd>DISABLE_COLLECTSTATIC &emsp;&emsp; 1</dd>
@@ -1512,7 +1604,8 @@
                                     <h5>To customise the authorisation templates</h5>
                                     <dl>
                                         <dt>Creat a directory at the project root level templates/allauth</dt>
-                                        <dd>cp -r .venv/lib/python3.6/site-packages/allauth/templates/* ./templates/allauth/</dd>
+                                        <dd>cp -r .venv/lib/python3.6/site-packages/allauth/templates/* ./templates/allauth/
+                                        </dd>
                                         <dt>Also update DIRS</dt>
                                         <dd>os.path.join(BASE_DIR, 'templates'),</dd>
                                         <dd>os.path.join(BASE_DIR, 'templates', 'allauth'),</dd>
@@ -2252,7 +2345,8 @@
                             <h4>Django user logged in:</h4>
                             <dl class="list-no-margin">
                                 <dt>When a user is logged in:</dt>
-                                <dd>{% if user.is_authenticated %}</dd>
+                                <dd>{% if request.user.is_authenticated %}</dd>
+                                <dd>{% if request.user.is_superuser %}</dd>
                             </dl>
                         </div>
                     </div>
@@ -3232,6 +3326,11 @@
                                                 <a href="https://gunicorn.org/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
                                                 <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 click-icon" onclick="call_modal('flaskPYModal', 'fpy-letter','on' )">
                                             </dd>
+                                            <hr>
+                                            <dd>dnspython
+                                                <a href="https://pypi.org/project/dnspython/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+
+                                            </dd>
                                         </div>
                                     </div>
                                     <hr>
@@ -3459,7 +3558,7 @@
                                     </div>
                                 </dl>
                             </div>
-                            <!-- More -->
+                            <!-- api's -->
                             <div class="col-12 p-0 ">
                                 <h4 class="mb-3 ">API's<i class="fas fa-laptop-code ml-2"></i></h4>
                             </div>
@@ -3488,6 +3587,27 @@
                                             <div class="p-2">
                                                 <dd>Open Weather
                                                     <a href="https://openweathermap.org/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                </dd>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </dl>
+                            </div>
+                            <!-- data -->
+                            <div class="col-12 p-0 ">
+                                <h4 class="mb-3 ">Data<i class="fas fa-laptop-code ml-2"></i></h4>
+                            </div>
+                            <div class="col-12 px-0 px-lg-2">
+                                <dl>
+                                    <div>
+                                        <dt><img src="https://img.icons8.com/windows/17/000000/placeholder-thumbnail-json-1.png"
+                                            class="mr-2" />Datasets<i
+                                            class="far fa-plus-square ml-2 small-icon front-plus" data-toggle="collapse"
+                                            href="#data"></i></dt>
+                                        <div class="collapse wrapper mt-2" id="data">
+                                            <div class="p-2">
+                                                <dd>kaggle
+                                                    <a href="https://www.kaggle.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
                                                 </dd>
                                             </div>
                                         </div>
