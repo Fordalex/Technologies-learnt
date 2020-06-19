@@ -340,6 +340,31 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-12 m-0 p-0 mt-2">
+                        <hr class="mb-4">
+                        <!-- useful -->
+                        <h4><img src="https://img.icons8.com/color/32/000000/light.png" class="mr-2" />Useful
+                            <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#useful"></i></h4>
+                    </div>
+                    <div class="col-12 m-0 ">
+                        <div id="useful" class="collapse row m-0">
+                            <div class="col-12">
+                                <h5> <img src="https://img.icons8.com/fluent/25/000000/news.png" class="mr-2" />Blogs<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#blogs"></i></h5>
+                            </div>
+                            <div class="col-12">
+                                <div id="blogs" class="collapse row m-0">
+                                    <div class="col-12">
+                                        <a href="https://www.webfx.com/blog/web-design/" target="_blank">Web Fix</a>
+                                        <br>
+                                        <a href="https://speckyboy.com/" target="_blank">Speackyboy</a>
+                                        <br>
+                                        <a href="https://webresourcesdepot.com/" target="_blank">Web</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1351,87 +1376,7 @@
         </div>
     </div>
 
-    <!-- django templating language (backend) -->
-    <div class="modal-style closed" id="djangoTemplatingModal">
-        <div class="page-container p-2 pt-3">
-            <img src="https://img.icons8.com/plasticine/50/000000/crossed-arrow.png" class="float-right arrow-button click-icon" onclick="call_modal('djangoTemplatingModal', 'jin-letter', 'off')" />
-            <h4 class="mt-2 text-light">django templating language</h4>
-            <hr class="mt-3 dark-hr">
-            <!-- content -->
-            <div class="scroll-container">
-                <div class="row m-0 p-0">
-                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
-                        <div class="section-container ">
-                            <h4>Block content</h4>
-                            <dl>
-                                <dt>Add template:</dt>
-                                <dd>{% extends 'base.html' %}</dd>
-                            </dl>
-                            <dl>
-                                <dt>Add content:</dt>
-                                <dd>{% block content %}{% endblock %}</dd>
-                            </dl>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
-                        <div class="section-container ">
-                            <h4>Load in static folder</h4>
-                            <dl>
-                                <dd class="mb-0">{% load static %}</dd>
-                                <dd>href="{% static 'css/style.css' %}"</dd>
-                            </dl>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
-                        <div class="section-container ">
-                            <h4>Jinja & JavaScript</h4>
-                            <dl class="list-no-margin">
-                                <dt>page.html:</dt>
-                                <dd>{% block name_js %}</dd>
-                                <dd><span class="text-danger">JavaScript</span></dd>
-                                <dd>{% endblock %}</dd>
-                            </dl>
-                            <dl class="list-no-margin">
-                                <dt>base.html in the head:</dt>
-                                <dd>{% block name_js %}</dd>
-                                <dd>{% endblock %}</dd>
-                            </dl>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
-                        <div class="section-container ">
-                            <h4>Django user logged in:</h4>
-                            <dl class="list-no-margin">
-                                <dt>When a user is logged in:</dt>
-                                <dd>{% if request.user.is_authenticated %}</dd>
-                                <dd>{% if request.user.is_superuser %}</dd>
-                            </dl>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
-                        <div class="section-container ">
-                            <h4>For loop:</h4>
-                            <dl>
-                                <dd>{% for data in datas %}</dd>
-                                <dd>&nbsp;&nbsp;&nbsp;&nbsp;{{ data.<span class="text-danger">attribute</span> }}
-                                </dd>
-                                <dd>{% endfor %}</dd>
-                            </dl>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
-                        <div class="section-container ">
-                            <h4>For loop empty:</h4>
-                            <dl>
-                                <dd>{{ empty }}</dd>
-                                <dd><strike>content</strike></dd>
-                            </dl>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
     <!-- gunicorn (backend) -->
     <div class="modal-style closed" id="gunicornModal">

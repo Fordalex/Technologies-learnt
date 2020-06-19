@@ -371,9 +371,12 @@ span {
 }
 
 .scroll-container {
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 15px;
     height: 87vh;
     width: 100%;
+    max-width: 1200px;
     overflow-y: auto;
     padding: 10px;
     border: rgb(190, 190, 190) solid 1px;

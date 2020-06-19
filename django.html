@@ -975,6 +975,90 @@
             </div>
         </div>
     </div>
+
+
+    <!-- django templating language (backend) -->
+
+    <h4 class="mt-4 text-light">django templating language</h4>
+    <hr class="mt-3 dark-hr">
+    <!-- content -->
+    <div class="scroll-container">
+        <div class="row m-0 p-0">
+            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                <div class="section-container ">
+                    <h4>Block content</h4>
+                    <dl>
+                        <dt>Add template:</dt>
+                        <dd>{% extends 'base.html' %}</dd>
+                    </dl>
+                    <dl>
+                        <dt>Add content:</dt>
+                        <dd>{% block content %}{% endblock %}</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                <div class="section-container ">
+                    <h4>Load in static folder</h4>
+                    <dl>
+                        <dd class="mb-0">{% load static %}</dd>
+                        <dd>href="{% static 'css/style.css' %}"</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                <div class="section-container ">
+                    <h4>Jinja & JavaScript</h4>
+                    <dl class="list-no-margin">
+                        <dt>page.html:</dt>
+                        <dd>{% block name_js %}</dd>
+                        <dd><span class="text-danger">JavaScript</span></dd>
+                        <dd>{% endblock %}</dd>
+                    </dl>
+                    <dl class="list-no-margin">
+                        <dt>base.html in the head:</dt>
+                        <dd>{% block name_js %}</dd>
+                        <dd>{% endblock %}</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                <div class="section-container ">
+                    <h4>Django user logged in:</h4>
+                    <dl class="list-no-margin">
+                        <dt>When a user is logged in:</dt>
+                        <dd>{% if request.user.is_authenticated %}</dd>
+                        <dd>{% if request.user.is_superuser %}</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                <div class="section-container ">
+                    <h4>For loop:</h4>
+                    <dl>
+                        <dd>{% for data in datas %}</dd>
+                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;{{ data.<span class="text-danger">attribute</span> }}
+                        </dd>
+                        <dd>{% endfor %}</dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                <div class="section-container ">
+                    <h4>For loop empty:</h4>
+                    <dl>
+                        <dd>{{ empty }}</dd>
+                        <dd><strike>content</strike></dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
     <!-- onload shutters -->
     <div class="left-shutter"></div>
     <div class="right-shutter"></div>
