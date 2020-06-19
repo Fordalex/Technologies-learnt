@@ -52,7 +52,7 @@
             <!-- creating a project -->
             <div class="col-12 m-0 p-0">
                 <div id="django_project" class="collapse row m-0">
-                    <div class="col-12 m-0 py-2 px-0 p-md-2">
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
                         <div class="section-container">
                             <h5 class="my-2">1. Installation</h5>
                             <dl>
@@ -69,15 +69,15 @@
                             </dl>
                             <dl>
                                 <dt>start project:</dt>
-                                <dd>django-admin startproject project-name .</dd>
+                                <dd>django-admin startproject <strike>project-name</strike> .</dd>
                             </dl>
                             <dl>
                                 <dt>Create app:</dt>
-                                <dd>django-admin startapp appname</dd>
+                                <dd>django-admin startapp <strike>appname</strike></dd>
                             </dl>
                         </div>
                     </div>
-                    <div class="col-12 m-0 py-2 px-0 p-md-2">
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
                         <div class="section-container">
                             <h5 class="my-2">2. Settings file</h5>
                             <dl>
@@ -91,7 +91,7 @@
                         </div>
                     </div>
 
-                    <div class="col-12 m-0 py-2 px-0 p-md-2">
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
                         <div class="section-container">
                             <h5 class="my-2">3. Static and media folders:</h5>
                             <dl class="list-no-margin">
@@ -111,20 +111,29 @@
                             </dl>
                         </div>
                     </div>
-                    <div class="col-12 m-0 py-2 px-0 p-md-2">
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
                         <div class="section-container">
-                            <h5 class="my-2">4. Create urls</h5>
-
+                            <h5 class="my-2">4. Load static</h5>
+                            <dl>
+                                <dt>base.html</dt>
+                                <dd>{% load static %}</dd>
+                                <dd>&lt;link rel="stylesheet" href="{% static 'css/style.css' %}"></dd>
+                            </dl>
                         </div>
                     </div>
-                    <div class="col-12 m-0 py-2 px-0 p-md-2">
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
                         <div class="section-container">
-                            <h5 class="my-2">5. Create views</h5>
+                            <h5 class="my-2">5. Create urls</h5>
                         </div>
                     </div>
-                    <div class="col-12 m-0 py-2 px-0 p-md-2">
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
                         <div class="section-container">
-                            <h5 class="my-2">6. Includes</h5>
+                            <h5 class="my-2">6. Create views</h5>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container">
+                            <h5 class="my-2">7. Includes</h5>
                             <dl>
                                 <dt>Create a directory templates/includes</dt>
                                 <dd>{% include 'includes/page_name.html' %}</dd>
@@ -966,7 +975,16 @@
             </div>
         </div>
     </div>
+    <!-- onload shutters -->
+    <div class="left-shutter"></div>
+    <div class="right-shutter"></div>
 
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+    <script src="static/js/modal.js"></script>
+    <script src="static/js/javascript.js"></script>
 
 </body>
 
