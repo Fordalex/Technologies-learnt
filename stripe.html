@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d4ed0579d0.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="images/icon.PNG" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/style.css">
+    <title>Technologies - Stripe</title>
+</head>
+
+<body>
+
+    <!-- stripe (backend) -->
+    <div class="page-container p-2 pt-3">
+        <img src="https://img.icons8.com/plasticine/50/000000/crossed-arrow.png" class="float-right arrow-button click-icon" onclick="call_modal('stripeModal', 't-letter', 'off')" />
+        <h4 class="mt-2"><span class="t-letter">S</span><span class="t-letter">t</span><span class="t-letter">r</span><span class="t-letter">i</span><span class="t-letter">p</span><span class="t-letter">e</span></h4>
+        <hr class="mt-3 dark-hr">
+        <!-- content -->
+        <div class="scroll-container">
+            <div class="row m-0 p-0">
+                <div class="col-12 py-2 px-0 p-md-2">
+                    <div class="section-container">
+                        <h5>1. About Stripe</h5>
+                        <dl>
+                            <dd>Stipe working using payment intents.</dd>
+                        </dl>
+                        <dl>
+                            <dt>1.</dt>
+                            <dd>The checkout will callout the Stipe and create a payment intent for the amount of the shopping bag.</dd>
+                        </dl>
+                        <dl>
+                            <dt>2.</dt>
+                            <dd>Stripe will then create a secret key and return that to the template within the project.</dd>
+                        </dl>
+                        <dl>
+                            <dt>3.</dt>
+                            <dd>Then we'll use the js confirmCardPayments() to verify the card payment.</dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                    <div class="section-container">
+                        <h5>1. Installation</h5>
+                        <dl>
+                            <dt>Install</dt>
+                            <dd>pip3 install stripe</dd>
+                        </dl>
+                        <dl>
+                            <dt>Get api keys from Stripe:</dt>
+                            <dd>1. Publishable Key</dd>
+                            <dd>2. Secret Key</dd>
+                        </dl>
+                        <dl>
+                            <dt>Adding the api keys to the settings.py:</dt>
+                            <dd>from os import path</dd>
+                            <dd>if path.exists('env.py'):</dd>
+                            <dd>&nbsp;&nbsp;&nbsp;&nbsp;import env</dd>
+                            <dd>FREE_DELIVERY_THRESHOLD = 50</dd>
+                            <dd>STANDARD_DELIVERY_PERCENTAGE = 10</dd>
+                            <dd>STRIPE_CURRENCY = 'GBP'</dd>
+                            <dd>STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY')</dd>
+                            <dd>STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY')</dd>
+                        </dl>
+                        <dl>
+                            <dt>Add the key values in env.py:</dt>
+                            <dd>import os</dd>
+                            <dd>os.environ.setdefault("STRIPE_PUBLIC_KEY", "")</dd>
+                            <dd>os.environ.setdefault("STRIPE_SECRET_KEY", "")</dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                    <div class="section-container">
+                        <h5>2. Create a form</h5>
+                        <p>Create a new app.</p>
+                        <dl>
+                            <dt>Import the files:</dt>
+                            <dd>from django import forms</dd>
+                            <dd>from django.forms import ModelForm</dd>
+                        </dl>
+                        <dl>
+                            <dt>Payment form:</dt>
+                            <dd>class MakePaymentForm(forms.Form):</dd>
+                            <dd>MONTH_CHOICES = [(i, i) for i in range(1, 12)]</dd>
+                            <dd>YEAR_CHOICES = [(i, i) for i in range(2019, 2036)]</dd>
+                            <dd>credit_card_number = forms.CharField(label='Credit card number', required=False)
+                            </dd>
+                            <dd>cvv = forms.CharField(label='Security code (CVV)', required=False)</dd>
+                            <dd>expiry_month = forms.ChoiceField(label='Month', choices=MONTH_CHOICES, required=False)
+                            </dd>
+                            <dd>expiry_year = forms.ChoiceField(label='Year', choices=YEAR_CHOICES, required=False)
+                            </dd>
+                            <dd>stripe_id = forms.CharField(widget=forms.HiddenInput)</dd>
+                        </dl>
+
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                    <div class="section-container">
+
+                        <h5>3. Creating the view</h5>
+                        <dl>
+                            <dt>Import files:</dt>
+                            <dd>from django.contrib.auth.decorators import login_required</dd>
+                            <dd>from django.conf import settings</dd>
+                            <dd>import stripe</dd>
+                        </dl>
+                        <dl>
+                            <dt>Stripe and login required:</dt>
+                            <dd>stripe.api_key = settings.STRIPE_SECRET</dd>
+                            <dd>@login_required()</dd>
+                            <dt>Pass the publishable key into the view:</dt>
+                            <dd>"publishable": settings.STRIPE_PUBLISHABLE</dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                    <div class="section-container">
+                        <h5>4. Creating the page</h5>
+                        <dl>
+                            <dt>The page:</dt>
+                            <dd>{% block head_js %}</dd>
+                            <dd>&lt;script type="text/javascript" src="https://js.stripe.com/v2/">&lt;/script>
+                            </dd>
+                            <dd>&lt;script type="text/javascript"></dd>
+                            <dd>Stripe.publishableKey = '{{ publishable }}';</dd>
+                            <dd>&lt;/script></dd>
+                            <dd>&lt;script type="text/javascript" src="{% static 'js/stripe.js' %}">&lt;/script>
+                            </dd>
+                            <dd>{% endblock %}</dd>
+                        </dl>
+                        <p>First a script has to be created with the Stripe publishable key and added into the base head, then the payment details form can be created and submitted by the user.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                    <div class="section-container">
+                        <dl>
+                            <dt>Webhooks</dt>
+                            <dd>Webhooks are important so if a payment is made the order is definitely completed even if there is an error or the user closes down the web page before the order is processed but a payment is taken.</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- onload shutters -->
+    <div class="left-shutter"></div>
+    <div class="right-shutter"></div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+    <script src="static/js/modal.js"></script>
+    <script src="static/js/javascript.js"></script>
+
+</body>
+
+</html>

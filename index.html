@@ -136,6 +136,15 @@
                                             <p>A version of a product with just enough features to satisfy early customers and provide feedback for future product development.</p>
                                         </div>
                                     </div>
+                                    <div class="col-12 col-md-4 m-0 py-2 px-2 p-md-2">
+                                        <div class="section-container ">
+                                            <h6>2. PSP</h6>
+                                            <dl>
+                                                <dd>Payment Service Provider</dd>
+                                            </dl>
+                                            <p>Such as Stripe.</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-12 m-0 p-0">
@@ -1661,113 +1670,6 @@
         </div>
     </div>
 
-    <!-- stripe (backend) -->
-    <div class="modal-style closed" id="stripeModal">
-        <div class="page-container p-2 pt-3">
-            <img src="https://img.icons8.com/plasticine/50/000000/crossed-arrow.png" class="float-right arrow-button click-icon" onclick="call_modal('stripeModal', 't-letter', 'off')" />
-            <h4 class="mt-2"><span class="t-letter">S</span><span class="t-letter">t</span><span class="t-letter">r</span><span class="t-letter">i</span><span class="t-letter">p</span><span class="t-letter">e</span></h4>
-            <hr class="mt-3 dark-hr">
-            <!-- content -->
-            <div class="scroll-container">
-                <div class="row m-0 p-0">
-                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
-                        <div class="section-container">
-                            <h5>1. Installation</h5>
-                            <dl>
-                                <dt>Install</dt>
-                                <dd>pip install stripe</dd>
-                            </dl>
-                            <dl>
-                                <dt>Get api keys:</dt>
-                                <dd>1. Develops tab</dd>
-                                <dd>2. API keys</dd>
-                                <dd></dd>
-                            </dl>
-                            <dl>
-                                <dt>Adding the api keys to the settings:</dt>
-                                <dd>import env</dd>
-                                <dd>STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE')</dd>
-                                <dd>STRIPE_SECRET = os.getenv('STRIPE_SECRET')</dd>
-                            </dl>
-                            <dl>
-                                <dt>Add the key values in env.py:</dt>
-                                <dd>import os</dd>
-                                <dd>os.environ.setdefault("STRIPE_PUBLISHABLE", "")</dd>
-                                <dd>os.environ.setdefault("STRIPE_SECRET", "")</dd>
-                            </dl>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
-                        <div class="section-container">
-                            <h5>2. Create a form</h5>
-                            <p>Create a new app.</p>
-                            <dl>
-                                <dt>Import the files:</dt>
-                                <dd>from django import forms</dd>
-                                <dd>from django.forms import ModelForm</dd>
-                            </dl>
-                            <dl>
-                                <dt>Payment form:</dt>
-                                <dd>class MakePaymentForm(forms.Form):</dd>
-                                <dd>MONTH_CHOICES = [(i, i) for i in range(1, 12)]</dd>
-                                <dd>YEAR_CHOICES = [(i, i) for i in range(2019, 2036)]</dd>
-                                <dd>credit_card_number = forms.CharField(label='Credit card number', required=False)
-                                </dd>
-                                <dd>cvv = forms.CharField(label='Security code (CVV)', required=False)</dd>
-                                <dd>expiry_month = forms.ChoiceField(label='Month', choices=MONTH_CHOICES, required=False)
-                                </dd>
-                                <dd>expiry_year = forms.ChoiceField(label='Year', choices=YEAR_CHOICES, required=False)
-                                </dd>
-                                <dd>stripe_id = forms.CharField(widget=forms.HiddenInput)</dd>
-                            </dl>
-
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
-                        <div class="section-container">
-
-                            <h5>3. Creating the view</h5>
-                            <dl>
-                                <dt>Import files:</dt>
-                                <dd>from django.contrib.auth.decorators import login_required</dd>
-                                <dd>from django.conf import settings</dd>
-                                <dd>import stripe</dd>
-                            </dl>
-                            <dl>
-                                <dt>Stripe and login required:</dt>
-                                <dd>stripe.api_key = settings.STRIPE_SECRET</dd>
-                                <dd>@login_required()</dd>
-                                <dt>Pass the publishable key into the view:</dt>
-                                <dd>"publishable": settings.STRIPE_PUBLISHABLE</dd>
-                            </dl>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
-                        <div class="section-container">
-
-
-                            <h5>4. Creating the page</h5>
-                            <dl>
-                                <dt>The page:</dt>
-                                <dd>{% block head_js %}</dd>
-                                <dd>&lt;script type="text/javascript" src="https://js.stripe.com/v2/">&lt;/script>
-                                </dd>
-                                <dd>&lt;script type="text/javascript"></dd>
-                                <dd>Stripe.publishableKey = '{{ publishable }}';</dd>
-                                <dd>&lt;/script></dd>
-                                <dd>&lt;script type="text/javascript" src="{% static 'js/stripe.js' %}">&lt;/script>
-                                </dd>
-                                <dd>{% endblock %}</dd>
-                            </dl>
-                            <p>First a script has to be created with the Stripe publishable key and added into the base head, then the payment details form can be created and submitted by the user.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Technologies modals (developed) -->
 
@@ -2372,9 +2274,18 @@
                                                 <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 click-icon" onclick="call_modal('whiteNoiseModal', 'dd-letter','on' )">
                                             </dd>
                                             <hr>
+                                            <dd>django-crispy-forms
+                                                <a href="http://whitenoise.evans.io/en/stable/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 click-icon" onclick="call_modal('whiteNoiseModal', 'dd-letter','on' )">
+                                            </dd>
+                                            <hr>
                                             <dd>Stripe
-                                                <a href="https://dashboard.stripe.com/test/apikeys" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
-                                                <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 click-icon" onclick="call_modal('stripeModal', 't-letter','on' )">
+                                                <a href="https://stripe.com/docs/payments/accept-a-payment#web-collect-card-details" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                <a href="stripe.html"><img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 click-icon"></a>
+                                            </dd>
+                                            <dd>django-countries
+                                                <a href="https://stripe.com/docs/payments/accept-a-payment#web-collect-card-details" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                <a href="stripe.html"><img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 click-icon"></a>
                                             </dd>
                                         </div>
                                     </div>
@@ -2459,6 +2370,10 @@
                                         <div class="p-2">
                                             <dd>Power In Numbers
                                                 <a href="http://power-in-numbers.herokuapp.com/login_page" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                            </dd>
+                                            <hr>
+                                            <dd>Quiz Master
+                                                <a href="https://family-quiz-night.herokuapp.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
                                             </dd>
                                         </div>
                                     </div>
@@ -2745,7 +2660,25 @@
                                             </dd>
                                         </div>
                                     </div>
+                                    <hr>
+                                    <dt><img src="https://img.icons8.com/windows/17/000000/readme.png"
+                                        class="mr-2" />Readme
+                                    <i class="far fa-plus-square ml-2 small-icon front-plus" data-toggle="collapse"
+                                        href="#readme"></i></dt>
+
+                                    <div class="collapse wrapper mt-2" id="readme">
+                                        <div class="p-2">
+                                            <dd>Readme Template
+                                                <a href="https://github.com/Code-Institute-Solutions/readme-template" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                            </dd>
+                                            <hr>
+                                            <dd>Mastering Markdown
+                                                <a href="https://guides.github.com/features/mastering-markdown/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                            </dd>
+                                        </div>
+                                    </div>
                                 </dl>
+
                             </div>
                             <!-- How -->
                             <div class="col-12 p-0">
