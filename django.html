@@ -39,7 +39,10 @@
                 <br>
                 <p class="m-0"><b>Creates Super User:</b> python3 manage.py createsuperuser</p>
                 <br>
-                <p class="m-0"><b>Shell:</b> python3 manage.py createsuperuser</p>
+                <p class="m-0"><b>Shell:</b> python3 manage.py shell</p>
+                <p class="m-0"><b>Delete all data:</b> python3 manage.py flush</p>
+                <p class="m-0"><b>Migrations set to zero:</b>python3 migrate my_app zero</p>
+                <p class="m-0"><b>Fake migrations:</b>python3 manage.py migrate --fake</p>
             </div>
             <div class="col-12 m-0 p-0">
                 <hr>
@@ -371,6 +374,7 @@
                             </dl>
                             <p>allauth.socialaccount allow us to get the user to log in via a social media account.
                             </p>
+                            <a class="btn btn-warning" href="https://django-allauth.readthedocs.io/en/latest/configuration.html">Configuration</a>
                         </div>
                     </div>
                     <div class="col-12 m-0 py-2 px-0 p-md-2">
