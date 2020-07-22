@@ -1,0 +1,3035 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d4ed0579d0.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="images/icon.PNG" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/style.css">
+    <title>Notes - Web Development</title>
+</head>
+
+<body class="p-0 d-flex justify-content-center">
+
+
+    <!-- loading -->
+    <div class="loading-align-center">
+        <div class="loading-container">
+            <div class="loader"></div>
+            <div class="loading-wrapper">
+                <p class="loading-text m-0">Loading...</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- mobile navigation -->
+
+    <div class="d-block d-lg-none mobile-navigation closed">
+        <img src="https://img.icons8.com/fluent/32/000000/help.png" class="click-icon mobile-questionmark" onclick="call_modal('developmentModal', 'css-letter', 'on')" />
+        <div class="nav-backdrop toggle-nav"></div>
+        <div class="nav-link-container">
+            <h4 class="mt-2 mx-0 text-center nav-header">Technologies</h4>
+            <div>
+                <a class="nav-button toggle-nav" href="#frontend-section">Frontend</a>
+                <a class="nav-button toggle-nav" href="#backend-section">Backend</a>
+                <a class="nav-button toggle-nav" href="#mywork-section">My Work</a>
+                <a class="nav-button toggle-nav" href="#programmes-section">Programmes</a>
+                <a class="nav-button toggle-nav" href="#developed-section">Developed</a>
+            </div>
+            <h4 class="mt-2 mx-0 text-center nav-header">Education</h4>
+            <div>
+                <a class="nav-button toggle-nav" href="#development-section">Development</a>
+                <a class="nav-button toggle-nav" href="#design-section">Design</a>
+                <a class="nav-button toggle-nav" href="#pro-section">Programmes</a>
+            </div>
+
+        </div>
+
+        <img src="https://img.icons8.com/cotton/50/000000/beefburger.png" class="burger-button toggle-nav" />
+    </div>
+
+    <!-- Development modal (Overall) -->
+
+    <!-- development (Overall) -->
+    <div class="modal-style closed" id="developmentModal">
+        <div class="page-container p-2 pt-3">
+            <img src="https://img.icons8.com/plasticine/50/000000/crossed-arrow.png" class="float-right arrow-button click-icon" onclick="call_modal('developmentModal', 'css-letter', 'off')" />
+            <h4 class="mt-2 l-s">Web Development</h4>
+            <hr class="mt-3 dark-hr">
+            <!-- content -->
+            <div class="scroll-container">
+                <div class="row m-0 p-0">
+                    <div class="col-12">
+                        <h3 class="text-center mt-3">Overview</h3>
+                    </div>
+                    <div class="col-12 m-0 p-0 mt-2">
+                        <hr class="mb-4">
+                        <!-- development -->
+                        <h4><img src="https://img.icons8.com/cotton/32/000000/edit--v2.png" class="mr-2" />Development
+                            <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#web_development"></i></h4>
+                    </div>
+                    <div class="col-12 m-0 p-0">
+                        <hr class="mb-4">
+                        <!-- files -->
+                        <h4><img src="https://img.icons8.com/office/32/000000/show-all-views.png" class="mr-2" />Files
+                            <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#web_files"></i>
+                        </h4>
+                    </div>
+                    <div class="col-12 m-0 p-0">
+                        <div id="web_files" class="collapse row m-0">
+                            <div class="col-12 col-md-6 col-lg-4 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h6>Images</h6>
+                                    <dl>
+                                        <dt>Jpeg</dt>
+                                        <dd></dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>Png</dt>
+                                        <dd></dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h6>API</h6>
+                                    <dl>
+                                        <dt>Json</dt>
+                                        <dd>JavaScript Object Notation</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h6>Images</h6>
+                                    <dl>
+                                        <dt>Jpeg</dt>
+                                        <dd></dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>Png</dt>
+                                        <dd></dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 m-0 p-0">
+                        <div id="web_development" class="collapse row m-0">
+                            <div class="col-12 m-0 p-0">
+                                <hr class="mb-3">
+                                <h5><img src="https://img.icons8.com/office/32/000000/microscope.png" class="mr-2" />Acronyms<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#development_acronyms"></i></h5>
+                            </div>
+                            <!-- acronyms -->
+                            <div class="col-12 m-0 p-0">
+                                <div id="development_acronyms" class="collapse row m-0">
+                                    <div class="col-12 col-md-4 m-0 py-2 px-2 p-md-2">
+                                        <div class="section-container ">
+                                            <h6>1. MVP</h6>
+                                            <dl>
+                                                <dd>Minimum Viable Product</dd>
+                                            </dl>
+                                            <p>A version of a product with just enough features to satisfy early customers and provide feedback for future product development.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-4 m-0 py-2 px-2 p-md-2">
+                                        <div class="section-container ">
+                                            <h6>2. PSP</h6>
+                                            <dl>
+                                                <dd>Payment Service Provider</dd>
+                                            </dl>
+                                            <p>Such as Stripe.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 m-0 p-0">
+                                <hr class="mb-3">
+                                <h5><img src="https://img.icons8.com/color/25/000000/project.png" class="mr-2" />Project Plan
+                                    <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#frontend_plan"></i></h5>
+                            </div>
+                            <!-- project plan -->
+                            <div class="col-12 m-0 p-0">
+                                <div id="frontend_plan" class="collapse row m-0">
+                                    <div class="col-12 col-md-6 m-0 py-2 px-2 p-md-2">
+                                        <div class="section-container ">
+                                            <h6>1. Strategy</h6>
+                                            <dl>
+                                                <dd>The first section to building a site, is to identify the users needs and the business objectives. Making sure the content is relevant, Is the content culturally appropriate? Are the technologies being used
+                                                    relevant for your demographic? Is the business constantly improving and will information have to updated a regular basis? What's worth doing? What are we creating? What value does it provide? and much
+                                                    time do we have?
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 m-0 py-2 px-2 p-md-2">
+                                        <div class="section-container ">
+                                            <h6>2. Scope</h6>
+                                            <dl>
+                                                <dd>Then we can take a look at the functional specifications, what features will your site need to help your users? What content will be required to provide value, and what is the demographic that your trying
+                                                    to target as this will effect what content will be needed and how to display it.</dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 m-0 py-2 px-2 p-md-2">
+                                        <div class="section-container ">
+                                            <h6>3. Structure</h6>
+                                            <dl>
+                                                <dd>Interaction design is important so the user can navigate themselves throughout your site. The order the navigation is displayed and also how many times the user must select an option before gaining access
+                                                    to their required information can rapidly change the users overall experience.
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dd>
+                                                    I'll then look at the Information architecture and will identify the relationships between the different information and group these together ready for the next steps.
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 m-0 py-2 px-2 p-md-2">
+                                        <div class="section-container ">
+                                            <h6>4. Skeleton</h6>
+                                            <dl>
+                                                <dd>Now that fitting information has been assembled together, it's important to recognise the hierarchy of the content, what will the user be subjected to first? This is also the case for the navigation making
+                                                    sure the content most relevant to the business goals get shown to the user on the initial load.
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dd>The design should be intuitive and also should compile with the standard web conventions such as the navigation location and the best arrangement and visual presentation of the elements.</dd>
+                                            </dl>
+                                            <dl>
+                                                <dd>Although this will likely be the first time your customer will be interacting with your site, they should be able to effortlessly locate their desired information and be able to complete tasks with little
+                                                    to no effort.
+                                                </dd>
+                                            </dl>
+                                            <dl>
+                                                <dd>At this stage a wireframe or prototype of the site will be created to display the content and get the first visual look at your site. The benefits of this is that it can be changed and perfected quickly
+                                                    and easily, although is only a rough plan. This is still important so that we can make sure before the site goes live we already know what works best for the user and the company.</dd>
+                                            </dl>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6 m-0 py-2 px-2 p-md-2">
+                                        <div class="section-container ">
+                                            <h6>5. Surface</h6>
+                                            <dl>
+                                                <dd>Finally, I can now work on developing the site and working on the colours, typography interface design reinforce the meaning of the content guide the user through task and information minimise cognitive
+                                                    overload and maximise intuitive learning Appropriate the content easily disguisable manner If content is KING, context is GOD. "Gary Vaynerchuck"
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 m-0 p-0">
+                                <hr class="mb-3">
+                                <h5><img src="https://img.icons8.com/cotton/25/000000/mission-of-a-company--v2.png" class="mr-2" />Development Principles<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#development_principles"></i></h5>
+                            </div>
+                            <!-- Development Principles -->
+                            <div class="col-12 m-0 p-0">
+                                <div id="development_principles" class="collapse row m-0">
+                                    <div class="col-12">
+                                        <h4 class="text-center">Acronyms</h4>
+                                    </div>
+                                    <div class="col-12 col-md-4 m-0 py-2 px-2 p-md-2">
+                                        <div class="section-container ">
+                                            <h6>1. KIS</h6>
+                                            <dl>
+                                                <dd>Keep It Simple</dd>
+                                            </dl>
+                                            <p>The simpler the code is, the simpler it will be to maintain it in the furture.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-4 m-0 py-2 px-2 p-md-2">
+                                        <div class="section-container ">
+                                            <h6>2. YAGNI</h6>
+                                            <dl>
+                                                <dd>You Aren't Gonna Need It</dd>
+                                            </dl>
+                                            <p class="m-0">If you don't need it now you most likely won't need it later.
+                                            </p>
+                                            <p class="m-0">Do the simplest thing that could possibly work</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-4 m-0 py-2 px-2 p-md-2">
+                                        <div class="section-container ">
+                                            <h6>3. DRY</h6>
+                                            <dl>
+                                                <dd>Don't Repeat Yourself</dd>
+                                            </dl>
+                                            <p>When this principle is ignored it's offten called <b>WET</b> "We Enjoy Typing" or "Write Everything Twice"</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <h4 class="text-center my-3">Information</h4>
+                                    </div>
+                                    <div class="col-12 col-md-4 m-0 py-2 px-2 p-md-2">
+                                        <div class="section-container ">
+                                            <h6>Separation Of Concerns</h6>
+                                            <dl>
+                                                <dd>User Interface</dd>
+                                            </dl>
+                                            <dl>
+                                                <dd>Datastore Access</dd>
+                                            </dl>
+                                            <dl>
+                                                <dd>Logic that communicates between UI and datastore</dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-4 m-0 py-2 px-2 p-md-2">
+                                        <div class="section-container ">
+                                            <h6>Well Known Pattern</h6>
+                                            <dl>
+                                                <dd>Model</dd>
+                                            </dl>
+                                            <dl>
+                                                <dd>View</dd>
+                                            </dl>
+                                            <dl>
+                                                <dd>Controller</dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 py-2 px-2 p-md-2">
+                                        <div class="section-container ">
+                                            <h6>Full stack Development</h6>
+                                            <dl>
+                                                <dt>Three manifestations of data</dt>
+                                                <dd>1. Html is for data that is presented.</dd>
+                                                <dd>2. Python is for data in motion.</dd>
+                                                <dd>3. Sql is for data at rest.</dd>
+                                            </dl>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 m-0 p-0">
+                        <hr class="mb-4">
+                        <!-- frontend -->
+                        <h4><img src="https://img.icons8.com/color/32/000000/laptop--v1.png" class="mr-2" />Frontend
+                            <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#web_frontend"></i></h4>
+                    </div>
+                    <div class="col-12 m-0 p-0">
+                        <div id="web_frontend" class="collapse row m-0">
+                            <div class="col-12">
+                                <h5><img src="https://img.icons8.com/color/25/000000/project.png" class="mr-2" />Something<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#frontend_plan"></i></h5>
+                            </div>
+                            <div class="col-12">
+                                <div id="frontend_plan" class="collapse row m-0">
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 m-0 p-0 mt-2">
+                        <hr class="mb-4">
+                        <!-- backend -->
+                        <h4><img src="https://img.icons8.com/fluent/32/000000/console.png" class="mr-2" />Backend
+                            <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#web_backend"></i></h4>
+                    </div>
+                    <div class="col-12 m-0 p-0">
+                        <div id="web_backend" class="collapse row m-0">
+                            <div class="col-12">
+                                <h5><img src="https://img.icons8.com/color/25/000000/project.png" class="mr-2" />Something<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#frontend_plan"></i></h5>
+                            </div>
+                            <div class="col-12">
+                                <div id="frontend_plan" class="collapse row m-0">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 m-0 p-0 mt-2">
+                        <hr class="mb-4">
+                        <!-- useful -->
+                        <h4><img src="https://img.icons8.com/color/32/000000/light.png" class="mr-2" />Useful
+                            <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#useful"></i></h4>
+                    </div>
+                    <div class="col-12 m-0 ">
+                        <div id="useful" class="collapse row m-0">
+                            <div class="col-12">
+                                <h5> <img src="https://img.icons8.com/fluent/25/000000/news.png" class="mr-2" />Blogs<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#blogs"></i></h5>
+                            </div>
+                            <div class="col-12">
+                                <div id="blogs" class="collapse row m-0">
+                                    <div class="col-12">
+                                        <a href="https://www.webfx.com/blog/web-design/" target="_blank">Web Fix</a>
+                                        <br>
+                                        <a href="https://speckyboy.com/" target="_blank">Speackyboy</a>
+                                        <br>
+                                        <a href="https://webresourcesdepot.com/" target="_blank">Web</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Technologies modals (frontend) -->
+
+    <!-- html (frontend) -->
+    <div class="modal-style closed" id="htmlModal">
+        <div class="page-container p-2 pt-3">
+            <img src="https://img.icons8.com/plasticine/50/000000/crossed-arrow.png" class="float-right arrow-button click-icon" onclick="call_modal('htmlModal', 'css-letter', 'off')" />
+            <h4 class="mt-2 l-s">HTML</h4>
+            <hr class="mt-3 dark-hr">
+            <!-- content -->
+            <div class="scroll-container">
+                <div class="row m-0 p-0">
+                    <div class="col-6 col-md-3 m-0 py-2 px-2 p-md-2">
+                        <div class="section-container ">
+                            <h4>1. Entities (symbols)</h4>
+                            <dl class="list-no-margin">
+                                <dt>&lt;</dt>
+                                <dd>&l<span>t;</span></dd>
+                            </dl>
+                            <dl class="list-no-margin">
+                                <dt>&gt;</dt>
+                                <dd>&g<span>t;</span></dd>
+                            </dl>
+                            <dl class="list-no-margin">
+                                <dt>&amp;</dt>
+                                <dd>&a<span>mp;</span></dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 m-0 py-2 px-2 p-md-2">
+                        <div class="section-container ">
+                            <h4>1. Entities (spaces)</h4>
+                            <dl class="list-no-margin">
+                                <dt>One space</dt>
+                                <dd>&nb<span>sp;</span></dd>
+                            </dl>
+                            <dl class="list-no-margin">
+                                <dt>Two spaces</dt>
+                                <dd>&en<span>sp;</span></dd>
+                            </dl>
+                            <dl class="list-no-margin">
+                                <dt>Four spaces</dt>
+                                <dd>&em<span>sp;</span></dd>
+                            </dl>
+                            <dl class="list-no-margin">
+                                <dt>Tab</dt>
+                                <dd>&nb<span>sp;</span>&nb<span>sp;</span>&nb<span>sp;</span>&nb<span>sp;</span></dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 m-0 py-2 px-2 p-md-2">
+                        <div class="section-container ">
+                            <h4>1. Data Attributes</h4>
+                            <dl class="list-no-margin">
+                                <dt></dt>
+                                <dd></dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- css (frontend) -->
+    <div class="modal-style closed" id="cssModal">
+        <div class="page-container p-2 pt-3">
+            <img src="https://img.icons8.com/plasticine/50/000000/crossed-arrow.png" class="float-right arrow-button click-icon" onclick="call_modal('cssModal', 'css-letter', 'off')" />
+            <h4 class="mt-2">
+                <span class="css-letter l-s">c</span><span class="css-letter l-s">s</span><span class="css-letter l-s">s</span>
+
+            </h4>
+            <hr class="mt-3 dark-hr">
+            <!-- content -->
+            <div class="scroll-container">
+                <div class="row m-0 p-0">
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>1. Targetting</h4>
+                            <dl class="list-no-margin">
+                                <dt>Element</dt>
+                                <dd><span class="text-danger">name</span> {</dd>
+                                <dd>}</dd>
+                            </dl>
+                            <dl class="list-no-margin">
+                                <dt>Class</dt>
+                                <dd>.<span class="text-danger">name</span> {</dd>
+                                <dd>}</dd>
+                            </dl>
+                            <dl class="list-no-margin">
+                                <dt>Id</dt>
+                                <dd>#<span class="text-danger">name</span> {</dd>
+                                <dd>}</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>2. Pseudo-classes</h4>
+                            <dl class="list-no-margin">
+                                <dt>unvisited link</dt>
+                                <dd><span class="text-danger">target</span>:link {</dd>
+                                <dd>}</dd>
+                            </dl>
+                            <dl class="list-no-margin">
+                                <dt>visited link</dt>
+                                <dd><span class="text-danger">target</span>:visited {</dd>
+                                <dd>}</dd>
+                            </dl>
+                            <dl class="list-no-margin">
+                                <dt>mouse over link</dt>
+                                <dd><span class="text-danger">target</span>:hover {</dd>
+                                <dd>}</dd>
+                            </dl>
+                            <dl class="list-no-margin">
+                                <dt>selected link</dt>
+                                <dd><span class="text-danger">target</span>:active {</dd>
+                                <dd>}</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>3. Media queries</h4>
+                            <dl class="list-no-margin">
+                                <dt>@media only screen and (min-width: 600px) {</dt>
+                                <dd>}</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>4. Keyframe animations</h4>
+                            <dl class="list-no-margin">
+                                <dt>@keyframes <span class="text-danger">animation_name</span> {</dt>
+                                <dd>}</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- sass (frontend) -->
+    <div class="modal-style closed" id="sassModal">
+        <div class="page-container p-2 pt-3">
+            <img src="https://img.icons8.com/plasticine/50/000000/crossed-arrow.png" class="float-right arrow-button click-icon" onclick="call_modal('sassModal', 'sass-letter', 'off')" />
+            <h4 class="mt-2">
+                <span class="sass-letter l-s">s</span><span class="sass-letter l-s">a</span><span class="sass-letter l-s">s</span><span class="sass-letter l-s">s</span>
+
+            </h4>
+            <hr class="mt-3 dark-hr">
+            <!-- content -->
+            <div class="scroll-container">
+                <div class="row m-0 p-0">
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <dl class="list-no-margin">
+                                <dt>Id</dt>
+
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- javascript (frontend) -->
+    <div class="modal-style closed" id="javascriptModal">
+        <div class="page-container p-2 pt-3">
+            <img src="https://img.icons8.com/plasticine/50/000000/crossed-arrow.png" class="float-right arrow-button click-icon" onclick="call_modal('javascriptModal', 'sass-letter', 'off')" />
+            <h4 class="mt-2 text-light">JavaScript</h4>
+            <hr class="mt-3 dark-hr">
+            <!-- content -->
+            <div class="scroll-container">
+                <div class="row m-0 p-0">
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>1. Loading</h4>
+                            <dl class="list-no-margin">
+                                <dt>Reload the page</dt>
+                                <dd>location.reload();</dd>
+                            </dl>
+                            <dl class="list-no-margin">
+                                <dt>On page load</dt>
+                                <dd>window.addEventListener("load", function() {</dd>
+                                <dd>&nbsp;&nbsp;&nbsp;&nbsp;// script here</dd>
+                                <dd>}</dd>
+                            </dl>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Technologies modals (database) -->
+
+    <!-- mongodb (database) -->
+    <div class="modal-style closed" id="mongodbModal">
+        <div class="page-container p-2 pt-3">
+            <img src="https://img.icons8.com/plasticine/50/000000/crossed-arrow.png" class="float-right arrow-button click-icon" onclick="call_modal('mongodbModal', 'mdb-letter', 'off')" />
+            <h4 class="mt-2">
+                <span class="mdb-letter l-s">Mo</span><span class="mdb-letter l-s">ng</span><span class="mdb-letter l-s">o</span><span class="mdb-letter l-s">D</span><span class="mdb-letter l-s">B</span>
+            </h4>
+            <hr class="mt-3 dark-hr">
+            <!-- content -->
+            <div class="scroll-container">
+                <div class="row m-0 p-0">
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>1. Create a cluster</h4>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>2. Create a database</h4>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>3. Network access</h4>
+                            <p>When creating a database make sure that the IP is set to any if wanting to use the database with heroku.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>4. Creating Database Access</h4>
+                            <p>Do not use any non-alphanumeric characters (e.g.: ?, %,@ or &) in your username or password!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>5. Connect your application</h4>
+                            <p>Use the srv connection string.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>6. env.py</h4>
+                            <dl>
+                                <dd>os.environ["DATABASE_URL"] = '<span class="text-danger">MongoDB_url</span>'</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>6. Communicating with mongoDB</h4>
+                            <a href="https://docs.mongodb.com/manual/reference/method/db.collection.remove/" target="_blank" class="main-colour btn text-light">Pymongo</a>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Technologies modals (backend)(Flask) -->
+
+    <!-- flask_pymongo (database) -->
+    <div class="modal-style closed" id="flaskPYModal">
+        <div class="page-container p-2 pt-3">
+            <img src="https://img.icons8.com/plasticine/50/000000/crossed-arrow.png" class="float-right arrow-button click-icon" onclick="call_modal('flaskPYModal', 'fpy-letter','off' )" />
+            <h4 class="mt-2">
+                <span class="fpy-letter l-s">fl</span><span class="fpy-letter l-s">as</span><span class="fpy-letter l-s">k_</span><span class="fpy-letter l-s">pym</span><span class="fpy-letter l-s">on</span><span class="fpy-letter l-s">go</span>
+            </h4>
+            <hr class="mt-3 dark-hr">
+            <!-- content -->
+            <div class="scroll-container">
+                <div class="row m-0 p-0">
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>1. Installation</h4>
+                            <dl>
+                                <dd>pip install flask_pymongo</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>2. app.py</h4>
+                            <dl>
+                                <dd>from flask_pymongo import PyMongo, pymongo</dd>
+                                <dd>
+                                    <p></p>
+                                </dd>
+                                <dd>mongo = PyMongo(app)</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>3. Request</h4>
+                            <p>Getting data from a form when it's sent to the route.</p>
+                            <dl>
+                                <dd class="text-faint">@app.route('/insert_name', methods=["POST"])</dd>
+                                <dd class="text-faint">def insert_name():</dd>
+                                <dd>&nbsp;&nbsp;&nbsp;&nbsp;data = request.form['data']</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>4. Getting data</h4>
+                            <p>This will get all the data from a mongoDB collection.</p>
+                            <dl>
+                                <dd class="text-faint">@app.route('/insert_name', methods=["POST"])</dd>
+                                <dd class="text-faint">def insert_name():</dd>
+                                <dd>&nbsp;&nbsp;&nbsp;&nbsp;data = mongo.db.<span class="text-danger">collection</span>.find()</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>4. Sorting data</h4>
+                            <p>This will sort the data coming from a mongoDB collection.</p>
+                            <dl>
+                                <dd class="text-faint">@app.route('/insert_name', methods=["POST"])</dd>
+                                <dd class="text-faint">def insert_name():</dd>
+                                <dd class="text-faint">&nbsp;&nbsp;&nbsp;&nbsp;data = mongo.db.<span class="text-danger">collection</span>.find()<span class="text-dark">.sort([</span></dd>
+                                <dd>&nbsp;&nbsp;&nbsp;&nbsp;('date', pymongo.ASCENDING)</dd>
+                                <dd>&nbsp;&nbsp;&nbsp;&nbsp;])</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>4. Filtering data</h4>
+                            <p>This will filter data coming from a mongoDB collection.</p>
+                            <dl>
+                                <dd class="text-faint">@app.route('/insert_name', methods=["POST"])</dd>
+                                <dd class="text-faint">def insert_name():</dd>
+                                <dd>&nbsp;&nbsp;&nbsp;&nbsp;data = mongo.db.<span class="text-danger">collection</span>.find({'name': 'alex'})</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>5. Updating data</h4>
+                            <p>Updates a chosen piece of data from mongoDB collections.</p>
+                            <dl>
+                                <dd class="text-faint">@app.route('/insert_name/<span class="text-dark">&lt;data_id</span>>', methods=["POST"])</dd>
+                                <dd class="text-faint">def insert_name(<span class="text-dark">data_id</span>):</dd>
+                                <dd>&nbsp;&nbsp;&nbsp;&nbsp;data = mongo.db.<span class="text-danger">collection</span>.remove({'_id': ObjectId(data_id)})</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>6. Removing data</h4>
+                            <p>This will allow us to remove data from a collection.</p>
+                            <dl>
+                                <dd class="text-faint">@app.route('/insert_name/<span class="text-dark">&lt;data_id</span>>', methods=["POST"])</dd>
+                                <dd class="text-faint">def insert_name(<span class="text-dark">data_id</span>):</dd>
+                                <dd>&nbsp;&nbsp;&nbsp;&nbsp;data = mongo.db.<span class="text-danger">collection</span>.remove({'_id': ObjectId(data_id)})</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Technologies modals (backend)(Django) -->
+
+    <!-- python (backend) -->
+    <div class="modal-style closed" id="pythonModal">
+        <div class="page-container p-2 pt-3">
+            <img src="https://img.icons8.com/plasticine/50/000000/crossed-arrow.png" class="float-right arrow-button click-icon" onclick="call_modal('pythonModal', 'css-letter', 'off')" />
+            <h4 class="mt-2 text-light">Python</h4>
+            <hr class="mt-3 dark-hr">
+            <!-- content -->
+            <div class="scroll-container">
+                <div class="row m-0 p-0">
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>For loops</h4>
+                            <dl>
+                                <dt>Loop Through Integer</dt>
+                                <dd>for value in range(100)</dd>
+                            </dl>
+                            <dl>
+                                <dt>Loop Through Array</dt>
+                                <dd>for value in arrayName:</dd>
+                            </dl>
+                            <dl>
+                                <dt>Enumerate Through An Array</dt>
+                                <dd>for index, value in enumerate(arrayName):</dd>
+                            </dl>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- flask (backend) -->
+    <div class="modal-style closed" id="flaskModal">
+        <div class="page-container p-2 pt-3">
+            <img src="https://img.icons8.com/plasticine/50/000000/crossed-arrow.png" class="float-right arrow-button click-icon" onclick="call_modal('flaskModal', 'fk-letter', 'off')" />
+            <h4 class="mt-2">
+                <span class="fk-letter l-s">F</span><span class="fk-letter l-s">l</span><span class="fk-letter l-s">a</span><span class="fk-letter l-s">s</span><span class="fk-letter l-s">k</span>
+            </h4>
+            <hr class="mt-3 dark-hr">
+            <!-- content -->
+            <div class="scroll-container">
+                <div class="row m-0 p-0">
+                    <div class="col-12 m-0 p-0">
+                        <p>Flask is a micro framework, to run a pytho the command is <b>python app.py</b>. HTML files need to be kept in a directory called templates.</p>
+                    </div>
+                    <div class="col-12 m-0 p-0">
+                        <p class="m-0"><b>Key:</b> <span class="text-danger">Name should be changed</span></p>
+                        <p class="m-0"><b>Run project:</b> python app.py</p>
+                        <p class="m-0"><b>Reload:</b> Shift + Ctrl + R</p>
+                        <hr>
+                    </div>
+                    <div class="col-12">
+                        <h3 class="text-center mt-3">The set up</h3>
+                    </div>
+                    <div class="col-12 m-0 p-0 mt-2">
+                        <hr>
+                        <!-- setting up a project -->
+                        <h4><img src="https://img.icons8.com/color/32/000000/project.png" class="mr-2" />Setting up a project
+                            <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_settings"></i></h4>
+                    </div>
+                    <div class="col-12 m-0 p-0">
+                        <div id="django_settings" class="collapse row m-0">
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container ">
+                                    <h4>1. Installation</h4>
+                                    <dl>
+                                        <dt>Create a virtual environment:</dt>
+                                        <dd>python3 -m venv .venv</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>Run the virtual environment:</dt>
+                                        <dd>source .venv/bin/activate</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>Install Flask:</dt>
+                                        <dd>pip install flask</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container ">
+                                    <h4>2. create app.py</h4>
+                                    <dl>
+                                        <dd>import os</dd>
+                                        <dd>from flask import Flask, render_template</dd>
+                                    </dl>
+                                    <dl>
+                                        <dd>app = Flask(__name__)</dd>
+                                    </dl>
+                                    <dl>
+                                        <dd>@app.route('/')</dd>
+                                        <dd>def index():</dd>
+                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;return render_template('<span class="text-danger">profile.html</span>')</dd>
+                                    </dl>
+                                    <dl>
+                                        <dd>if __name__ == '__main__':</dd>
+                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;app.secret_key = 'mysecret'</dd>
+                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;app.run(host=os.environ.get("IP"),</dd>
+                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;port=int(os.environ.get("PORT")), debug=True)
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container ">
+                                    <h4>3. env.py</h4>
+                                    <dl>
+                                        <dd>os.environ['IP'] = '0.0.0.0'</dd>
+                                        <dd>os.environ['PORT'] = '5000'</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container ">
+                                    <h4>4. templates directory</h4>
+                                    <dl>
+                                        <dt>Add the html files inside.</dt>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container ">
+                                    <h4>5. static directory</h4>
+                                    <dl class="list-no-margin">
+                                        <dt>Add css/img/js folders inside.</dt>
+                                        <dd>&lt;link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}} "></dd>
+                                        <dd>&lt;link rel="stylesheet" href="{{ url_for('static', filename='js/javascript.js')}} "></dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 m-0 p-0 mt-2">
+                        <hr class="mb-4">
+                        <!-- connect to a database -->
+                        <h4><img src="https://img.icons8.com/plasticine/32/000000/database.png" class="mr-2" />Connect to a database<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django_admin"></i></h4>
+                    </div>
+                    <div class="col-12 m-0 p-0">
+                        <div id="django_admin" class="collapse row m-0">
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">1. env.py</h5>
+                                    <dl class="list-no-margin">
+                                        <dd>import os</dd>
+                                        <dd>os.environ.setdefault('<span class="text-success">DATABASE_URL</span>', '
+                                            <span class="text-danger">DB:URL</span>')</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">2. Install flask_pymongo</h5>
+                                    <dl class="list-no-margin">
+                                        <dd>pip install flask_pymongo</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">3. Update app.py</h5>
+                                    <dl class="list-no-margin">
+                                        <dd>from os import path</dd>
+                                        <dd>from flask_pymongo import PyMongo, pymongo</dd>
+                                    </dl>
+                                    <dl class="list-no-margin">
+                                        <dd>if path.exists("env.py"):</dd>
+                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;import env</dd>
+                                    </dl>
+                                    <dl class="list-no-margin">
+                                        <dd><span class="text-info">DBURL</span> = os.environ.get('<span class="text-success">DATABASE_URL</span>')</dd>
+                                        <dd>
+                                            <p></p>
+                                        </dd>
+                                        <dd class="text-faint">app.config["MONGO_DBNAME"] = 'task_manager'</dd>
+                                        <dd>app.config["MONGO_URI"] = <span class="text-info">DBURL</span></dd>
+                                    </dl>
+                                    <dl class="list-no-margin">
+                                        <dd>mongo = PyMongo(app)</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 m-0 p-0 mt-2">
+                        <hr class="mb-4">
+                        <!-- CRUD -->
+                        <h4><img src="https://img.icons8.com/color/32/000000/approve-and-update.png" class="mr-2">CRUD
+                            <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#flask_man_data"></i></h4>
+                    </div>
+                    <div class="col-12 m-0 p-0">
+                        <div id="flask_man_data" class="collapse row m-0">
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">1. Create</h5>
+                                    <dl class="list-no-margin">
+                                        <dt>page.html</dt>
+                                        <dd>
+                                            <p></p>
+                                        </dd>
+                                        <dd>&lt;form action="{{ url_for('<span class="text-warning">route_name</span>') }}" method="POST">
+                                        </dd>
+                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;&lt;input name="<span class="text-primary">name</span>"></dd>
+                                    </dl>
+                                    <dl class="list-no-margin">
+                                        <dt>app.py</dt>
+                                        <dd>
+                                            <p></p>
+                                        </dd>
+                                        <dd>from flask import request</dd>
+                                        <dd>
+                                            <p></p>
+                                        </dd>
+                                        <dd>@app.route('/<span class="text-warning">route_name</span>', methods=['POST'])
+                                        </dd>
+                                        <dd>
+                                            <p></p>
+                                        </dd>
+                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-success">dataName</span> = mongo.db.
+                                            <span class="text-danger">dataBaseEntity</span></dd>
+                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-info">data</span> = {</dd>
+                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;'name': request.form['<span class="text-primary">name</span>']</dd>
+                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;}</dd>
+                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-success">dataName</span>.insert_one(<span class="text-info">data</span>)</dd>
+                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;</dd>
+                                    </dl>
+
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">2. Read</h5>
+                                    <h6>All data from the collection</h6>
+                                    <dl class="list-no-margin">
+                                        <dt>app.py</dt>
+                                        <dd>
+                                            <p></p>
+                                        </dd>
+                                        <dd class="text-faint">@app.route('/')</dd>
+                                        <dd class="text-faint">def index():</dd>
+                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-warning">data</span> = mongo.db.
+                                            <span class="text-danger">dataCollectionName</span>.find()</dd>
+                                        <dd><span class="text-faint">return render_template('index.html'</span>, data_name=
+                                            <span class="text-warning">data</span>)</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">3. Update</h5>
+                                    <dl class="list-no-margin">
+                                        <dd>mongo.db.users.update({'username' : currentUser},</dd>
+                                        <dd>{</dd>
+                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;'username': username,</dd>
+                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;'email': email,</dd>
+                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;'firstName': firstName,</dd>
+                                        <dd>})</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">4. Delete</h5>
+                                    <dl class="list-no-margin">
+                                        <dt>page.html</dt>
+                                        <dd>
+                                            <p></p>
+                                        </dd>
+                                        <dd>&lt;a href="{{ url_for('<span class="text-success">delete_data</span>', <span class="text-warning">data_id</span>=data._id )}}"></a>
+                                        </dd>
+                                        <dd class="text-faint">&nbsp;&nbsp;&nbsp;&nbsp;&lt;button class="btn btn-danger">Delete&lt;/button>
+                                        </dd>
+                                        <dd class="text-faint">&lt;/a></dd>
+                                    </dl>
+                                    <dl class="list-no-margin">
+                                        <dt>app.py</dt>
+                                        <dd>
+                                            <p></p>
+                                        </dd>
+                                        <dd>from bson.objectid import <span class="text-info">ObjectId</span></dd>
+                                        <dd>
+                                            <p></p>
+                                        </dd>
+                                        <dd><span class="text-faint">@app.route('/<span
+                                                    class="text-success">delete_data</span></span>/ <span class="text-warning">&lt;data_id></span>')
+                                        </dd>
+                                        <dd><span class="text-faint">def delete_bodyweight</span>(<span class="text-warning">data_id</span>):</dd>
+                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;mongo.db.<span class="text-danger">collection</span>.remove({'_id': <span class="text-info">ObjectId</span>(<span class="text-warning">data_id</span>)})</dd>
+                                        <dd class="text-faint">&nbsp;&nbsp;&nbsp;&nbsp;return redirect(url_for('users_records'))
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 m-0 p-0 mt-2">
+                        <hr class="mb-4">
+                        <!-- host on heroku -->
+                        <h4><img src="https://img.icons8.com/fluent/32/000000/domain.png" class="mr-2" />Host on heroku
+                            <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#flask_heroku"></i></h4>
+                    </div>
+                    <div class="col-12 m-0 p-0">
+                        <div id="flask_heroku" class="collapse row m-0">
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">1. Installation</h5>
+                                    <dl class="list-no-margin">
+                                        <dd>pip install dnspython</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">2. Procfile</h5>
+                                    <dl class="list-no-margin">
+                                        <dd>web: python app.py</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">3. requirements.txt</h5>
+                                    <dl class="list-no-margin">
+                                        <dd>pip install freeze --local > requirements.txt</dd>
+                                        <div class="text-success">
+                                            <dd>click==7.1.2</dd>
+                                            <dd>dnspython==1.16.0</dd>
+                                            <dd>Flask==1.1.2</dd>
+                                            <dd>Flask-PyMongo==2.3.0</dd>
+                                            <dd>itsdangerous==1.1.0</dd>
+                                            <dd>Jinja2==2.11.2</dd>
+                                            <dd>MarkupSafe==1.1.1</dd>
+                                            <dd>pymongo==3.10.1</dd>
+                                            <dd>Werkzeug==1.0.1</dd>
+                                        </div>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">4. app.py</h5>
+                                    <dl class="list-no-margin">
+                                        <dd>debug=False</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">5. Add database config var (Heroku)</h5>
+                                    <dl class="list-no-margin">
+                                        <dt>Config Vars</dt>
+                                        <dd>DATABASE_URL&nbsp;&nbsp;&nbsp;&nbsp;MongoDB_url</dd>
+                                        <dd>PORT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5000
+                                        </dd>
+                                        <dd>IP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.0.0.0
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- more on flask -->
+                    <div class="col-12">
+                        <hr>
+                        <h3 class="text-center mt-3">from flask import</h3>
+                    </div>
+                    <div class="col-12 m-0 p-0 mt-2">
+                        <hr class="mb-4">
+                        <!-- sessions -->
+                        <h4><img src="https://img.icons8.com/ios-filled/32/000000/plug.png" class="mr-2" />session<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#flask_session"></i></h4>
+                    </div>
+                    <div class="col-12 m-0 p-0">
+                        <div id="flask_session" class="collapse row m-0">
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">1. Import</h5>
+                                    <dl class="list-no-margin">
+                                        <dd>from flask import session</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">2. Saving the session variable</h5>
+                                    <dl class="list-no-margin">
+                                        <dd>@app.route("/", methods=["GET", "POST"])</dd>
+                                        <dd>def index():</dd>
+                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;session["username"] = request.form["username"]</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">3.Passing into another page</h5>
+                                    <dl class="list-no-margin">
+                                        <dd>@app.route("/", methods=["GET", "POST"])</dd>
+                                        <dd>def index():</dd>
+                                        <div class="text-faint">
+                                            <dd>&nbsp;&nbsp;&nbsp;&nbsp;if request.method == "POST":</dd>
+                                            <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;session["username"] = request.form["username"]
+                                            </dd>
+                                            <dd>
+                                                <p></p>
+                                            </dd>
+                                            <dd>&nbsp;&nbsp;&nbsp;&nbsp;if "username" in session:</dd>
+                                        </div>
+                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return redirect(url_for("user", username=session["username"]))</dd>
+                                    </dl>
+                                    <dl>
+                                        <dd>@app.route("/chat/&lt;username>", methods=["GET", "POST"])</dd>
+                                        <dd>def user(username):</dd>
+                                        <dd>&nbsp;&nbsp;&nbsp;&nbsp;return render_template("page.html", username=username)
+                                        </dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">4. Clear session</h5>
+                                    <dl class="list-no-margin">
+                                        <dd>session.clear()</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 m-0 p-0 mt-2">
+                        <hr class="mb-4">
+                        <!-- url_for -->
+                        <h4><img src="https://img.icons8.com/ios-filled/32/000000/plug.png" class="mr-2" />url_for<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#flask_url_for"></i></h4>
+                    </div>
+                    <div class="col-12 m-0 p-0">
+                        <div id="flask_url_for" class="collapse row m-0">
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">1. Import</h5>
+                                    <dl class="list-no-margin">
+                                        <dd>from flask import url_for</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">2. redirect</h5>
+                                    <dl class="list-no-margin">
+                                        <dt>import flask import redirect</dt>
+                                        <dd>
+                                            <p></p>
+                                        </dd>
+                                        <dd>redirect(url_for('function_name')</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">3. In HTML</h5>
+                                    <dl class="list-no-margin">
+                                        <dt>Link to style sheet</dt>
+                                        <dd>href="{{ url_for('static', filename='css/style.css')}}"</dd>
+                                    </dl>
+                                    <dl class="list-no-margin">
+                                        <dt>Link to JavaScript</dt>
+                                        <dd>src="{{ url_for('static', filename='js/javascript.js')}} "</dd>
+                                    </dl>
+                                    <dl class="list-no-margin">
+                                        <dt>Call a function from a button</dt>
+                                        <dd>href="{{ url_for('log_out') }}"</dd>
+                                    </dl>
+                                    <dl class="list-no-margin">
+                                        <dt>Send a form</dt>
+                                        <dd>action="{{ url_for('save_alex') }}" method="POST"</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 m-0 p-0 mt-2">
+                        <hr class="mb-4">
+                        <!-- redirect -->
+                        <h4><img src="https://img.icons8.com/ios-filled/32/000000/plug.png" class="mr-2" />redirect<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#flask_redirect"></i></h4>
+                    </div>
+                    <div class="col-12 m-0 p-0">
+                        <div id="flask_redirect" class="collapse row m-0">
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">1. Import</h5>
+                                    <dl class="list-no-margin">
+                                        <dd>from flask import redirect</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">1. Redirect</h5>
+                                    <dl class="list-no-margin">
+                                        <dd>redirect(url_for('function_name'))</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 m-0 p-0 mt-2">
+                        <hr class="mb-4">
+                        <!-- request -->
+                        <h4><img src="https://img.icons8.com/ios-filled/32/000000/plug.png" class="mr-2" />request<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#flask_request"></i></h4>
+                    </div>
+                    <div class="col-12 m-0 p-0">
+                        <div id="flask_request" class="collapse row m-0">
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">1. Import</h5>
+                                    <dl class="list-no-margin">
+                                        <dd>from flask import request</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">2. method</h5>
+                                    <dl class="list-no-margin">
+                                        <dd>request.method == "POST"</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                                <div class="section-container">
+                                    <h5 class="my-2">3. form</h5>
+                                    <dl class="list-no-margin">
+                                        <dd>request.form["name"]</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- jinja2 (backend) -->
+    <div class="modal-style closed" id="jinjaModal">
+        <div class="page-container p-2 pt-3">
+            <img src="https://img.icons8.com/plasticine/50/000000/crossed-arrow.png" class="float-right arrow-button click-icon" onclick="call_modal('jinjaModal', 'jin-letter', 'off')" />
+            <h4 class="mt-2">
+                <span class="jin-letter l-s">J</span><span class="jin-letter l-s">i</span><span class="jin-letter l-s">n</span><span class="jin-letter l-s">j</span><span class="jin-letter l-s">a2</span>
+            </h4>
+            <hr class="mt-3 dark-hr">
+            <!-- content -->
+            <div class="scroll-container">
+                <div class="row m-0 p-0">
+
+
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>Block content</h4>
+                            <dl>
+                                <dt>Add template:</dt>
+                                <dd>{% extends 'base.html' %}</dd>
+                            </dl>
+                            <dl>
+                                <dt>Add content:</dt>
+                                <dd>{% block content %}{% endblock %}</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>Load in static folder</h4>
+                            <dl>
+                                <dd class="mb-0">{% load static %}</dd>
+                                <dd>href="{% static 'css/style.css' %}"</dd>
+                            </dl>
+                            <p class="ml-3">If using <b>whitenoise</b> the line bellow should be used:</p>
+                            <dl>
+                                <dd class="mb-0">{% load static from staticfiles %}</dd>
+                                <dd>href="{% static 'css/style.css' %}"</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>Jinja & JavaScript</h4>
+                            <dl class="list-no-margin">
+                                <dt>page.html:</dt>
+                                <dd>{% block name_js %}</dd>
+                                <dd><span class="text-danger">JavaScript</span></dd>
+                                <dd>{% endblock %}</dd>
+                            </dl>
+                            <dl class="list-no-margin">
+                                <dt>base.html in the head:</dt>
+                                <dd>{% block name_js %}</dd>
+                                <dd>{% endblock %}</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>Django user logged in:</h4>
+                            <dl class="list-no-margin">
+                                <dt>When a user is logged in:</dt>
+                                <dd>{% if user.is_authenticated %}</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>For loop:</h4>
+                            <dl>
+                                <dd>{% for data in datas %}</dd>
+                                <dd>&nbsp;&nbsp;&nbsp;&nbsp;{{ data.<span class="text-danger">attribute</span> }}
+                                </dd>
+                                <dd>{% endfor %}</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>Array error:</h4>
+                            <dl>
+                                <dd>[u&#39dogs#39;, u&#39cats#39;]</dd>
+                                <dd>{{ dataPassedIn | safe }}</dd>
+                            </dl>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- gunicorn (backend) -->
+    <div class="modal-style closed" id="gunicornModal">
+        <div class="page-container p-2 pt-3">
+            <img src="https://img.icons8.com/plasticine/50/000000/crossed-arrow.png" class="float-right arrow-button click-icon" onclick="call_modal('gunicornModal', 'gun-letter', 'off')" />
+            <h4 class="mt-2">
+                <span class="gun-letter letter-style">Gu</span><span class="gun-letter letter-style">ni</span><span class="gun-letter letter-style">co</span><span class="gun-letter letter-style">r</span><span class="gun-letter letter-style">n</span>
+
+            </h4>
+            <hr class="mt-3 dark-hr">
+            <!-- content -->
+            <div class="scroll-container">
+                <div class="row m-0 p-0">
+                    <div class="col-12 m-0 p-0">
+                        <p>Gunicorn is used to run the application on the server.</p>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>1. Installation</h4>
+                            <dl>
+                                <dd>pip install gunicorn</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>2. Procfile</h4>
+                            <dl>
+                                <dd>web: gunicorn <span class="text-danger">projectname</span>.wsgi:application
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- django-forms-bootstrap (backend) -->
+    <div class="modal-style closed" id="djangoBootModal">
+        <div class="page-container p-2 pt-3">
+            <img src="https://img.icons8.com/plasticine/50/000000/crossed-arrow.png" class="float-right arrow-button click-icon" onclick="call_modal('djangoBootModal', 'djb-letter', 'off')" />
+            <h4 class="mt-2">
+                <span class="djb-letter l-s">djan</span><span class="djb-letter l-s">go-f</span><span class="djb-letter l-s">orms</span><span class="djb-letter l-s">-boot</span><span class="djb-letter l-s">str</span><span class="djb-letter l-s">ap</span>
+            </h4>
+            <hr class="mt-3 dark-hr">
+            <!-- content -->
+            <div class="scroll-container">
+                <div class="row m-0 p-0">
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>1. Installation</h4>
+                            <dl>
+                                <dd>pip install django-forms-bootstrap</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>2. Install app</h4>
+                            <dl class="list-no-margin">
+                                <dd>INSTALLED_APPS = [</dd>
+                                <dd>'django_forms_bootstrap',</dd>
+                                <dd>]</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>3. Load onto page</h4>
+                            <dl class="list-no-margin">
+                                <dd>{% load bootstrap_tags %}</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>4. Creating the form</h4>
+                            <dl class="list-no-margin">
+                                <dd>&lt;form method="POST" enctype="<span class="text-danger">routeName</span>"></dd>
+                                <dd>{% csrf_token %}</dd>
+                                <dd>{{ form | as_bootstrap }}</dd>
+                                <dd>&lt;button type="submit">Save&lt;/button></dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- pillow (backend) -->
+    <div class="modal-style closed" id="pillowModal">
+        <div class="page-container p-2 pt-3">
+            <img src="https://img.icons8.com/plasticine/50/000000/crossed-arrow.png" class="float-right arrow-button click-icon" onclick="call_modal('pillowModal', 'pw-letter', 'off')" />
+            <h4 class="mt-2">
+                <span class="pw-letter l-s">P</span><span class="pw-letter l-s">i</span><span class="pw-letter l-s">l</span><span class="pw-letter l-s">l</span><span class="pw-letter l-s">o</span><span class="pw-letter l-s">w</span>
+            </h4>
+            <hr class="mt-3 dark-hr">
+            <!-- content -->
+            <div class="scroll-container">
+                <div class="row m-0 p-0">
+                    <div class="col-12 m-0 p-0">
+                        <p>This module allows us to use the imageField on our models.py file.</p>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>1. Installation</h4>
+                            <dl class="list-no-margin">
+                                <dd>pip install whitenoise</dd>
+                            </dl>
+                            <dl class="list-no-margin">
+                                <dt>Add this to the requirements file:</dt>
+                                <dd>pip freeze --local > requirements.txt</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>2. Middleware</h4>
+                            <dl class="list-no-margin">
+                                <dd>MIDDLEWARE = [</dd>
+                                <dd>'whitenoise.middleware.WhiteNoiseMiddleware',</dd>
+                                <dd>]</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- whitenoise (backend) -->
+    <div class="modal-style closed" id="whiteNoiseModal">
+        <div class="page-container p-2 pt-3">
+            <img src="https://img.icons8.com/plasticine/50/000000/crossed-arrow.png" class="float-right  arrow-button click-icon" onclick="call_modal('whiteNoiseModal', 'dd-letter', 'off')" />
+            <h4 class="mt-2">
+                <span class="dd-letter l-s">Wh</span><span class="dd-letter l-s">it</span><span class="dd-letter l-s">e</span> <span class="dd-letter l-s">No</span><span class="dd-letter l-s">is</span><span class="dd-letter l-s">e</span>
+
+            </h4>
+            <hr class="mt-3 dark-hr">
+            <!-- content -->
+            <div class="scroll-container">
+                <div class="row m-0 p-0">
+                    <div class="col-12 m-0 p-0">
+                        <p>This module allows us to host static files such as Css and JavaScript.</p>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>1. Installation</h4>
+                            <dl>
+                                <dd>pip install whitenoise</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>2. Middleware (settings.py)</h4>
+                            <dl>
+                                <dd>'whitenoise.middleware.WhiteNoiseMiddleware',</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>3. Static files (settings.py)</h4>
+                            <dl>
+                                <dd>STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- dj_database_url (backend) -->
+    <div class="modal-style closed" id="djDatabaseModal">
+        <div class="page-container p-2 pt-3">
+            <img src="https://img.icons8.com/plasticine/50/000000/crossed-arrow.png" class="float-right arrow-button click-icon" onclick="call_modal('djDatabaseModal', 'tt-letter', 'off')" />
+            <h4 class="mt-2">
+                <span class="tt-letter l-s">d</span><span class="tt-letter l-s">j</span>
+                <span class="tt-letter l-s">d</span><span class="tt-letter l-s">a</span><span class="tt-letter l-s">t</span><span class="tt-letter l-s">a</span><span class="tt-letter l-s">b</span><span class="tt-letter l-s">a</span><span class="tt-letter l-s">se</span>
+
+                <span class="tt-letter l-s">u</span><span class="tt-letter l-s">r</span><span class="tt-letter l-s">l</span></h4>
+            <hr class="mt-3 dark-hr">
+            <!-- content -->
+            <div class="scroll-container">
+                <div class="row m-0 p-0">
+                    <div class="col-12 p-0 m-0">
+                        <p class="m-0 my-2">This python module allows us to parse database urls.</p>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container ">
+                            <h4>1. Setting up the database</h4>
+                            <dl>
+                                <dt>Configure Add-ons</dt>
+                                <dd>Heroku Postgres</dd>
+                            </dl>
+                            <p>This will create a new database using Postgres.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container">
+                            <h4>2. Installation</h4>
+                            <dl>
+                                <dd>pip install dj_database_url</dd>
+                            </dl>
+                            <dl>
+                                <dt>Add this to the requirements file:</dt>
+                                <dd>pip install freeze --local > requirements.txt</dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container">
+                            <h4>3. env.py</h4>
+                            <dl>
+                                <dd>os.environ.setdefault('<span class="text-info">DATABASE_URL</span>', 'postgres://')
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container">
+                            <h4>4. Settings.py</h4>
+                            <dl>
+                                <dd>import dj_database_url</dd>
+                            </dl>
+                            <dl>
+                                <dt>Use postgres or db.sqlite3</dt>
+                                <dd>if "<span class="text-info">DATABASE_URL</span>" in os.environ:</dd>
+                                <dd>&emsp;DATABASES = {</dd>
+                                <dd>&emsp;'default': dj_database_url.parse(os.environ.get('<span class="text-info">DATABASE_URL</span>'))</dd>
+                                <dd>&emsp;} </dd>
+                                <dd>else:</dd>
+                                <dd>&emsp;print("postgres URL not found, using sqlite instead")</dd>
+                                <dd>&emsp;DATABASES = {</dd>
+                                <dd>&emsp;&emsp;'default': {</dd>
+                                <dd>&emsp;&emsp;&emsp;'ENGINE': 'django.db.backends.sqlite3',</dd>
+                                <dd>&emsp;&emsp;&emsp;'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),</dd>
+                                <dd>&emsp;&emsp;}</dd>
+                                <dd>&emsp;}</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- psycopg2-binary (backend) -->
+    <div class="modal-style closed" id="psycopg2Modal">
+        <div class="page-container p-2 pt-3">
+            <img src="https://img.icons8.com/plasticine/50/000000/crossed-arrow.png" class="float-right arrow-button click-icon" onclick="call_modal('psycopg2Modal', 'ps-letter', 'off')" />
+            <h4 class="mt-2">
+                <span class="ps-letter l-s">Psy</span><span class="ps-letter l-s">co</span><span class="ps-letter l-s">pg</span><span class="ps-letter l-s">2-</span><span class="ps-letter l-s">bin</span><span class="ps-letter l-s">ary</span>
+            </h4>
+            <hr class="mt-3 dark-hr">
+            <!-- content -->
+            <div class="scroll-container">
+                <div class="row m-0 p-0">
+                    <div class="col-12 m-0 p-0">
+                        <p>This allow the project to be connected to postgres.</p>
+                    </div>
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+                        <div class="section-container">
+                            <h4>1. Installation</h4>
+                            <dl>
+                                <dd>pip install psycopg2-binary</dd>
+                            </dl>
+                            <dl>
+                                <dt>Add this to the requirements file:</dt>
+                                <dd>pip install freeze --local > requirements.txt</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Technologies modals (developed) -->
+
+    <!-- heroku (developed) -->
+    <div class="modal-style closed" id="herokuModal">
+        <div class="page-container p-2 pt-3">
+            <img src="https://img.icons8.com/plasticine/50/000000/crossed-arrow.png" class="float-right arrow-button click-icon" onclick="call_modal('herokuModal', 'hku-letter', 'off')" />
+            <h4 class="mt-2">
+                <span class="hku-letter l-s">H</span><span class="hku-letter l-s">e</span><span class="hku-letter l-s">r</span><span class="hku-letter l-s">o</span><span class="hku-letter l-s">k</span><span class="hku-letter l-s">u</span>
+
+            </h4>
+            <hr class="mt-3 dark-hr">
+            <!-- content -->
+            <div class="scroll-container">
+                <div class="col-12 m-0 p-0">
+                    <p>Heroku is used to host projects that require a server, just as projects built using a backend framework. Heroku uses a ephemeral file system and everytime the worker restarts, approximately in <b>12 hours</b>, all user uploaded content
+                        is deleted. To get around this, store media files on a external sorce such as <b>Amazon Web
+                            Services</b>.
+                    </p>
+                </div>
+                <div class="row m-0 p-0">
+                    <div class="col-12 col-md-6 m-0 py-2 px-0 p-md-2">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ##################################################### page start ####################################################### -->
+
+    <div class="page-move">
+
+        <div class="page-container px-0 px-md-2 pt-5 pt-lg-0">
+
+            <div class="row m-0 p-0">
+                <div class="col-12 m-0 px-2 d-flex justify-content-end mt-2">
+                    <img src="https://img.icons8.com/fluent/32/000000/help.png" class="d-none d-lg-block click-icon" onclick="call_modal('developmentModal', 'css-letter', 'on')" />
+                </div>
+                <div class="col-12 mt-2 mt-md-0">
+                    <h2 class="text-center mb-4 mt-0 main-title">Web Development</h2>
+                </div>
+            </div>
+
+            <div class="row m-0 p-0">
+
+                <!-- frontend section -->
+
+                <div class="col-12 col-md-6 col-lg-4 p-0 p-md-2">
+                    <div class="row m-0 p-1 secondary-background wobble-onload" id="frontend-section">
+                        <div class="col-12 p-0">
+                            <h3 class="py-3 text-center secondary-title">FrontEnd<img src="https://img.icons8.com/cotton/32/000000/detective.png" id="open-all-front" class="ml-2 click-icon"></h3>
+                            <hr>
+                        </div>
+                        <!-- languages -->
+                        <div class="col-12 p-0">
+                            <h4 class="mb-3">Languages<i class="fas fa-code ml-2"></i></h4>
+                        </div>
+                        <div class="col-12 px-0 px-lg-2">
+                            <dl>
+                                <dt><img src="https://img.icons8.com/color/15/000000/html-5.png" class="mr-2" />HTML
+                                    <img src="images/question-mark.png" style="width:25px; margin-right:36px;"
+                                        onclick="call_modal('htmlModal', 'css-letter', 'on')"
+                                        class="float-right click-icon">
+                                </dt>
+                                <hr>
+                                <dt><img src="https://img.icons8.com/color/15/000000/css3.png" class="mr-2" />CSS <i
+                                        class="far fa-plus-square ml-2 small-icon front-plus" data-toggle="collapse"
+                                        href="#css"></i><img src="images/question-mark.png" style="width:25px;"
+                                        onclick="call_modal('cssModal', 'css-letter', 'on')"
+                                        class="float-right mr-2 click-icon"></dt>
+
+                                <div class="collapse wrapper" id="css">
+                                    <div class="p-2">
+                                        <dd>Sass
+                                            <a href="https://sass-lang.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                            <img src="images/question-mark.png" onclick="call_modal('sassModal', 'sass-letter', 'on')" style="width:25px;" class="float-right mr-2 click-icon">
+                                        </dd>
+                                    </div>
+                                </div>
+                                <hr>
+                                <dt><img src="https://img.icons8.com/color/15/000000/javascript.png"
+                                        class="mr-2" />JavaScript (OOP)<i
+                                        class="far fa-plus-square ml-2 small-icon front-plus" data-toggle="collapse"
+                                        href="#js"></i>
+                                    <img src="images/question-mark.png" style="width:25px;"
+                                        onclick="call_modal('javascriptModal', 'css-letter', 'on')"
+                                        class="float-right mr-2 click-icon"></dt>
+                                <div class="collapse wrapper mt-2" id="js">
+                                    <div class="p-2">
+                                        <dd>Jquery
+                                            <a href="https://jquery.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-1 web-icon" /></a>
+                                            <a href="https://cdnjs.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/download-2.png" class="ml-2 web-icon" /></a>
+                                        </dd>
+
+                                    </div>
+                                </div>
+
+                            </dl>
+                        </div>
+                        <!-- add ons -->
+                        <div class="col-12 p-0">
+                            <h4 class="mb-3">Add ons<i class="fas fa-plug ml-2"></i></h4>
+                        </div>
+                        <div class="col-12 px-0 px-lg-2">
+                            <dl>
+                                <dt><img src="https://img.icons8.com/color/15/000000/under-construction.png"
+                                        class="mr-2" />Framework<i class="far fa-plus-square ml-2 small-icon front-plus"
+                                        data-toggle="collapse" href="#frame"></i></dt>
+                                <div id="frame" class="collapse wrapper mt-2">
+                                    <div class="p-2">
+                                        <dd>Bootstrap
+
+                                            <a href="https://getbootstrap.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                        </dd>
+                                        <hr>
+                                        <dd>Materialize
+                                            <a href="https://materializecss.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                        </dd>
+                                    </div>
+
+                                </div>
+
+                            </dl>
+                        </div>
+                        <!-- libraries -->
+                        <div class="col-12 p-0">
+                            <h4 class="mb-3">Libraries<i class="fas fa-book ml-2"></i></h4>
+                        </div>
+                        <div class="col-12 px-0 px-lg-2">
+                            <dl>
+                                <div>
+                                    <dt><img src="https://img.icons8.com/color/18/000000/pixar-lamp.png"
+                                            class="mr-2" />Animation<i
+                                            class="far fa-plus-square ml-2 small-icon front-plus" data-toggle="collapse"
+                                            href="#animation"></i></dt>
+                                    <div class="collapse wrapper" id="animation">
+                                        <div class="p-2">
+                                            <dd>
+                                                type
+                                                <a href="https://github.com/mattboldt/typed.js" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                            </dd>
+                                            <hr>
+                                            <dd>
+                                                gsap
+                                                <a href="https://greensock.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+
+                                            </dd>
+                                            <hr>
+                                            <dd>
+                                                Anime
+                                                <a href="https://animejs.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+
+                                            </dd>
+                                            <hr>
+                                            <dd>
+                                                ScrollMagic
+                                                <a href="https://scrollmagic.io/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                            </dd>
+                                            <hr>
+                                            <dd>
+                                                Animate on scroll
+                                                <a href="http://michalsnik.github.io/aos/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                            </dd>
+
+                                        </div>
+                                        </dd>
+                                    </div>
+                                    <hr>
+                                    <dt><img src="https://img.icons8.com/dusk/17/000000/form.png" class="mr-2" />Forms<i
+                                            class="far fa-plus-square ml-2 small-icon front-plus" data-toggle="collapse"
+                                            href="#forms"></i></dt>
+                                    <div class="collapse wrapper" id="forms">
+                                        <div class="p-2">
+                                            <dd>
+                                                Cleave.js
+                                                <a href="https://nosir.github.io/cleave.js/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                            </dd>
+                                            <hr>
+                                            <dd>
+                                                Mailjs
+                                                <a href="https://dashboard.emailjs.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                            </dd>
+                                        </div>
+                                        </dd>
+                                    </div>
+                                    <hr>
+                                    <dt><img src="https://img.icons8.com/plasticine/18/000000/combo-chart.png"
+                                            class="mr-2" />Charts<i
+                                            class="far fa-plus-square ml-2 small-icon front-plus" data-toggle="collapse"
+                                            href="#charts"></i></dt>
+                                    <div class="collapse wrapper mt-2" id="charts">
+                                        <div class="p-2">
+                                            <dd>d3.js
+                                                <a href="https://d3js.org/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                            </dd>
+                                            <hr>
+                                            <dd>dc.js
+                                                <a href="https://dc-js.github.io/dc.js/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                            </dd>
+                                            <hr>
+                                            <dd>chart.js
+                                                <a href="https://www.chartjs.org/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                            </dd>
+                                            <hr>
+                                            <dd>crossfilter.js
+                                                <a href="https://github.com/mattboldt/typed.js" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                            </dd>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <dt><img src="https://img.icons8.com/ios-glyphs/17/000000/3d-scale.png"
+                                            class="mr-2" />3D<i class="far fa-plus-square ml-2 small-icon front-plus"
+                                            data-toggle="collapse" href="#threeD"></i></dt>
+                                    <div class="collapse wrapper" id="threeD">
+                                        <div class="p-2">
+                                            <dd>
+                                                Three.js
+                                                <a href="https://threejs.org/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                            </dd>
+                                        </div>
+                                        </dd>
+                                    </div>
+                                    <hr>
+                                    <dt><img src="https://img.icons8.com/fluent/17/000000/star.png"
+                                            class="mr-2" />premium<i
+                                            class="far fa-plus-square ml-2 small-icon front-plus" data-toggle="collapse"
+                                            href="#premium"></i></dt>
+                                    <div class="collapse wrapper mt-2" id="premium">
+                                        <div class="p-2">
+                                            <dd>
+                                                Dynamic favicons
+                                                <a href="http://lab.ejci.net/favico.js/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                            </dd>
+                                            <hr>
+                                            <dd>
+                                                User Guide
+                                                <a href="https://shepherdjs.dev/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                            </dd>
+                                        </div>
+                                        </dd>
+                                    </div>
+                            </dl>
+                            </div>
+                            <!-- styling -->
+                            <div class="col-12 p-0">
+                                <h4 class="mb-3">Styling<i class="fas fa-palette ml-2"></i></h4>
+                            </div>
+                            <div class="col-12 px-0 px-lg-2">
+                                <dl>
+                                    <div>
+                                        <!-- icons -->
+                                        <dt><img src="https://img.icons8.com/color/17/000000/medium-icons.png"
+                                            class="mr-2" />Icons<i class="far fa-plus-square ml-2 small-icon front-plus"
+                                            data-toggle="collapse" href="#icons"></i></dt>
+
+                                        <div class="collapse wrapper mt-2" id="icons">
+                                            <div class="p-2">
+                                                <dd class="ml-3">Fontawesome
+                                                    <a href="https://fontawesome.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                </dd>
+                                                <hr>
+                                                <dd class="ml-3">Icons8
+                                                    <a href="https://icons8.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                </dd>
+                                                <hr>
+                                                <dd class="ml-3">IconsShock
+                                                    <a href="https://www.iconshock.com/open-icons/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                </dd>
+                                                <hr>
+                                                <dd class="ml-3">Flaticon
+                                                    <a href="https://www.flaticon.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                </dd>
+                                                <hr>
+                                                <dd class="ml-3">Endless Icons
+                                                    <a href="http://endlessicons.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                </dd>
+                                                <hr>
+                                                <dd class="ml-3">Round Icons
+                                                    <a href="https://roundicons.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                </dd>
+                                                <hr>
+                                                <dd class="ml-3">Iconmonstr
+                                                    <a href="https://iconmonstr.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                </dd>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <!-- illustrations -->
+                                    <div>
+                                        <dt><img src="https://img.icons8.com/cotton/17/000000/pen-2.png"
+                                            class="mr-2" />Illustration<i
+                                            class="far fa-plus-square ml-2 small-icon front-plus" data-toggle="collapse"
+                                            href="#illustrations"></i></dt>
+
+                                        <div class="collapse wrapper mt-2" id="illustrations">
+                                            <div class="p-2">
+                                                <dd class="ml-3">Pattern Library
+                                                    <a href="http://thepatternlibrary.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                </dd>
+                                                <hr>
+                                                <dd class="ml-3">Illustrations.co
+                                                    <a href="https://illlustrations.co/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                </dd>
+                                                <hr>
+                                                <dd class="ml-3">Open Doodles
+                                                    <a href="https://www.opendoodles.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                </dd>
+                                                <hr>
+                                                <dd class="ml-3">Drawkit.io
+                                                    <a href="https://www.openpeeps.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                </dd>
+                                                <hr>
+                                                <dd class="ml-3">Undraw
+                                                    <a href="https://undraw.co/illustrations" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                </dd>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <!-- photos -->
+                                    <div>
+                                        <dt><img src="https://img.icons8.com/color/17/000000/image.png"
+                                            class="mr-2" />Photos<i
+                                            class="far fa-plus-square ml-2 small-icon front-plus" data-toggle="collapse"
+                                            href="#photos"></i></dt>
+                                        <div class="collapse wrapper mt-2" id="photos">
+                                            <div class="p-2">
+                                                <dd>Unsplash
+                                                    <a href="https://unsplash.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                </dd>
+                                                <hr>
+                                                <dd>Picjumbo
+                                                    <a href="https://picjumbo.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                </dd>
+                                                <hr>
+                                                <dd>Gratisography
+                                                    <a href="https://gratisography.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                </dd>
+                                                <hr>
+                                                <dd>Pexels
+                                                    <a href="https://www.pexels.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                </dd>
+                                                <hr>
+                                                <dd>Magdeleine
+                                                    <a href="https://magdeleine.co/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                </dd>
+                                                <hr>
+                                                <dd>ISO Republic
+                                                    <a href="https://isorepublic.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                </dd>
+                                                <hr>
+                                                <dd>Freepik
+                                                    <a href="https://www.freepik.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                </dd>
+                                                <hr>
+                                                <dd>Pattern 8
+                                                    <a href="https://pattern8.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                </dd>
+                                                <hr>
+                                                <dd>Lost and Taken
+                                                    <a href="https://lostandtaken.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                </dd>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div>
+                                        <dt><img src="https://img.icons8.com/ios-glyphs/16/000000/sentence-case--v2.png"
+                                            class="mr-2" />Fonts<i class="far fa-plus-square ml-2 small-icon front-plus"
+                                            data-toggle="collapse" href="#fonts"></i></dt>
+                                        <div class="collapse wrapper mt-2" id="fonts">
+                                            <div class="p-2">
+                                                <dd>Google Fonts
+                                                    <a href="https://fonts.google.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                </dd>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <!-- Inspiration -->
+                                    <div>
+                                        <dt><img src="https://img.icons8.com/plasticine/18/000000/idea.png"
+                                            class="mr-2" />Inspiration<i
+                                            class="far fa-plus-square ml-2 small-icon front-plus" data-toggle="collapse"
+                                            href="#inspiration"></i></dt>
+                                        <div class="collapse wrapper mt-2" id="inspiration">
+                                            <div class="p-2">
+                                                <dd>95 Inspiring Websites
+                                                    <a href="https://www.awwwards.com/95-inspiring-websites-of-web-design-agencies.html" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                </dd>
+                                                <hr>
+                                                <dd>Creative Market
+                                                    <a href="https://creativemarket.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                </dd>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <!-- Themes -->
+                                    <div>
+                                        <dt><img src="https://img.icons8.com/dusk/17/000000/change-theme.png"
+                                            class="mr-2" />Themes<i
+                                            class="far fa-plus-square ml-2 small-icon front-plus" data-toggle="collapse"
+                                            href="#themes"></i></dt>
+                                        <div class="collapse wrapper mt-2" id="themes">
+                                            <div class="p-2">
+                                                <dd>coolors
+                                                    <a href="https://coolors.co/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                </dd>
+                                                <hr>
+                                                <dd>Bootswatch
+                                                    <a href="https://bootswatch.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                </dd>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <!-- Loaders -->
+                                    <div>
+                                        <dt><img src="https://img.icons8.com/ios-filled/17/000000/loading.png"
+                                            class="mr-2" />Loaders<i
+                                            class="far fa-plus-square ml-2 small-icon front-plus" data-toggle="collapse"
+                                            href="#loaders"></i></dt>
+                                        <div class="collapse wrapper mt-2" id="loaders">
+                                            <div class="p-2">
+                                                <dd>Loaders
+                                                    <a href="https://icons8.com/preloaders/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                </dd>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </dl>
+                            </div>
+                            <div class="col-12 p-0">
+                                <h4 class="mb-3">??<i class="fas fa-question ml-2"></i></h4>
+                            </div>
+                            <div class="col-12 px-0 px-lg-2">
+                                <dl>
+                                    <dd>Morph an SVG</dd>
+                                    <hr>
+                                    <dd>Pagination</dd>
+                                    <hr>
+                                    <dd>API</dd>
+                                    <hr>
+                                    <dd>Node.js for js serverside</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Backend / My Work -->
+
+                    <div class="col-12 col-md-6 col-lg-4 mt-3 mt-md-0 p-0 p-md-2 ">
+                        <!-- backend -->
+                        <div class="row m-0 p-1 secondary-background wobble-onload" id="backend-section">
+                            <div class="col-12 p-0 ">
+                                <h3 class="py-3 text-center secondary-title">Backend<img src="https://img.icons8.com/cotton/32/000000/detective.png" id="open-all-back" class="ml-2 click-icon"></h3>
+                                <hr>
+                            </div>
+                            <!-- languages -->
+                            <div class="col-12 p-0 ">
+                                <h4 class="mb-3 ">Languages<i class="fas fa-code ml-2"></i></h4>
+                            </div>
+                            <div class="col-12 px-0 px-lg-2">
+                                <dl>
+                                    <dt><img src="https://img.icons8.com/color/15/000000/python.png" class="mr-2" />Python<i
+                                        class="far fa-plus-square ml-2 small-icon" data-toggle="collapse"
+                                        href="#python"></i>
+                                    <img src="images/question-mark.png" style="width:25px;"
+                                        class="float-right mr-2 click-icon"
+                                        onclick="call_modal('pythonModal', 'jin-letter', 'on')">
+                                </dt>
+                                    <div class="collapse wrapper mt-2" id="python">
+                                        <div class="p-2">
+
+                                        </div>
+                                    </div>
+                                </dl>
+                            </div>
+                            <!-- add ons -->
+                            <div class="col-12 p-0 ">
+                                <h4 class="mb-3 ">Add ons<i class="fas fa-plug ml-2"></i></h4>
+                            </div>
+                            <div class="col-12 px-0 px-lg-2">
+                                <dl>
+                                    <dt><img src="https://img.icons8.com/color/15/000000/under-construction.png"
+                                        class="mr-2" />Framework<i class="far fa-plus-square ml-2 small-icon"
+                                        data-toggle="collapse" href="#framework"></i></dt>
+                                    <div class="collapse wrapper" id="framework">
+                                        <div class="p-2">
+                                            <dd>Flask
+                                                <a href="https://flask.palletsprojects.com/en/1.1.x/quickstart/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 click-icon" onclick="call_modal('flaskModal', 'fk-letter', 'on')">
+                                            </dd>
+                                            <hr>
+                                            <dd>Django
+                                                <a href="https://www.djangoproject.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                <a href="django.html">
+                                                    <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 click-icon">
+                                                </a>
+                                            </dd>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <dt><img src="https://img.icons8.com/android/16/000000/data-in-both-directions.png"
+                                        class="mr-2" />Templating languages<i class="far fa-plus-square ml-2 small-icon"
+                                        data-toggle="collapse" href="#Templating"></i></dt>
+                                    <div class="collapse wrapper" id="Templating">
+                                        <div class="p-2">
+                                            <dd>Jinja2
+                                                <a href="https://jinja.palletsprojects.com/en/2.11.x/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 click-icon" onclick="call_modal('jinjaModal', 'jin-letter', 'on')">
+                                            </dd>
+                                            <hr>
+                                            <dd>Django Templating Language
+                                                <a href="https://docs.djangoproject.com/en/3.0/ref/templates/language/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 click-icon" onclick="call_modal('djangoTemplatingModal', 'd-letter','on' )">
+                                            </dd>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <dt><img src="https://img.icons8.com/dusk/18/000000/add-database.png"
+                                        class="mr-2" />Databases<i class="far fa-plus-square ml-2 small-icon"
+                                        data-toggle="collapse" href="#database"></i></dt>
+                                    <div class="collapse wrapper mt-2" id="database">
+                                        <div class="p-2">
+                                            <dd>MongoDB
+                                                <a href="https://www.mongodb.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 click-icon" onclick="call_modal('mongodbModal', 'mdb-letter', 'on')">
+                                            </dd>
+                                            <hr>
+                                            <dd>Postgres
+
+                                            </dd>
+                                        </div>
+                                    </div>
+                                </dl>
+                            </div>
+                            <!-- python modules -->
+                            <div class="col-12 p-0">
+                                <h4 class="mb-3">Python modules
+                                    <i class="fas fa-microchip"></i></h4>
+                            </div>
+                            <div class="col-12 px-0 px-lg-2">
+                                <dl>
+                                    <dd><img src="https://img.icons8.com/ios-glyphs/17/000000/settings-3.png" class="mr-2" />Automation<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#automation"></i>
+                                    </dd>
+                                    <div class="collapse wrapper mt-2" id="automation">
+                                        <div class="p-2">
+                                            <dd>Pyperclip
+                                                <a href="https://pypi.org/project/pyperclip/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                            </dd>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <dd><img src="https://img.icons8.com/ios-filled/17/000000/sport-bottle.png" class="mr-2" />Flask<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#flask-modules"></i>
+                                    </dd>
+                                    <div class="collapse wrapper mt-2" id="flask-modules">
+                                        <div class="p-2">
+                                            <dd>flask_pymongo
+                                                <a href="https://gunicorn.org/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 click-icon" onclick="call_modal('flaskPYModal', 'fpy-letter','on' )">
+                                            </dd>
+                                            <hr>
+                                            <dd>dnspython
+                                                <a href="https://pypi.org/project/dnspython/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+
+                                            </dd>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <dd><img src="https://img.icons8.com/windows/17/000000/django.png" class="mr-2" />Django<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse" href="#django-modules"></i></dd>
+                                    <div class="collapse wrapper mt-2" id="django-modules">
+                                        <div class="p-2">
+                                            <dd>Gunicorn
+                                                <a href="https://gunicorn.org/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 click-icon" onclick="call_modal('gunicornModal', 'gun-letter','on' )">
+                                            </dd>
+                                            <hr>
+                                            <dd>dj_database_url
+                                                <a href="https://pypi.org/project/dj-database-url/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 click-icon" onclick="call_modal('djDatabaseModal', 'tt-letter','on' )">
+                                            </dd>
+                                            <hr>
+                                            <dd>psycopg2-binary
+                                                <a href="https://pypi.org/project/dj-database-url/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 click-icon" onclick="call_modal('psycopg2Modal', 'ps-letter','on' )">
+                                            </dd>
+                                            <hr>
+                                            <dd>django-forms-bootstrap
+                                                <a href="https://pypi.org/project/django-forms-bootstrap/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 click-icon" onclick="call_modal('djangoBootModal', 'djb-letter','on' )">
+                                            </dd>
+                                            <hr>
+                                            <dd>Pillow
+                                                <a href="https://pypi.org/project/Pillow/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                <img src="images/question-mark.png" style="width:25px;" onclick="call_modal('pillowModal', 'pw-letter', 'on')" class="float-right mr-2 click-icon">
+                                            </dd>
+                                            <hr>
+                                            <dd>Whitenoise
+                                                <a href="http://whitenoise.evans.io/en/stable/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 click-icon" onclick="call_modal('whiteNoiseModal', 'dd-letter','on' )">
+                                            </dd>
+                                            <hr>
+                                            <dd>django-crispy-forms
+                                                <a href="http://whitenoise.evans.io/en/stable/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 click-icon" onclick="call_modal('whiteNoiseModal', 'dd-letter','on' )">
+                                            </dd>
+                                            <hr>
+                                            <dd>Stripe
+                                                <a href="https://stripe.com/docs/payments/accept-a-payment#web-collect-card-details" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                <a href="stripe.html"><img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 click-icon"></a>
+                                            </dd>
+                                            <hr>
+                                            <dd>django-countries
+                                                <a href="https://stripe.com/docs/payments/accept-a-payment#web-collect-card-details" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                <a href="stripe.html"><img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 click-icon"></a>
+                                            </dd>
+                                        </div>
+                                    </div>
+                                </dl>
+                            </div>
+                        </div>
+                        <!-- My Work -->
+                        <div class="row m-0 p-1 secondary-background wobble-onload mt-3" id="mywork-section">
+                            <div class="col-12 p-0 ">
+                                <h3 class="py-3 text-center secondary-title">My Work<img src="https://img.icons8.com/cotton/32/000000/detective.png" id="open-all-back" class="ml-2 click-icon"></h3>
+                                <hr>
+                            </div>
+                            <!-- languages -->
+                            <div class="col-12 p-0 ">
+                                <h4 class="mb-3 ">Frontend<i class="fas fa-desktop ml-2"></i></h4>
+                            </div>
+                            <div class="col-12 px-0 px-lg-2">
+                                <dl>
+                                    <dt><img src="https://img.icons8.com/nolan/17/vector.png" class="mr-2" />One Scroll<i
+                                        class="far fa-plus-square ml-2 small-icon" data-toggle="collapse"
+                                        href="#svglearning"></i></dt>
+                                    <div class="collapse wrapper" id="svglearning">
+                                        <div class="p-2">
+                                            <!-- <dd>Animating an Isometric SVG
+                                                <a href="https://www.youtube.com/watch?v=_ukSvE5tMrU&t=50s" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+
+                                            </dd> -->
+                                            <dd>Fordsdevelopment
+                                                <a href="https://fordalex.github.io/fordsdevelopment_mainsite/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                <a href="https://github.com/Fordalex/fordsdevelopment_mainsite" target="_blank"><img src="https://img.icons8.com/fluent/25/000000/github.png" class="mr-2 web-icon" /></a>
+                                            </dd>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <dt><img src="https://img.icons8.com/color/18/000000/pixar-lamp.png"
+                                        class="mr-2" />Multi
+                                    Page<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse"
+                                        href="#animationlearning"></i></dt>
+                                    <div class="collapse wrapper" id="animationlearning">
+                                        <div class="p-2">
+                                            <dd>Lavish
+                                                <a href="https://fordalex.github.io/lavish/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                <a href="https://github.com/Fordalex/lavish" target="_blank"><img src="https://img.icons8.com/fluent/25/000000/github.png" class="mr-2 web-icon" /></a>
+                                            </dd>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <dt><img src="https://img.icons8.com/color/17/000000/online-store.png"
+                                        class="mr-2" />Games<i class="far fa-plus-square ml-2 small-icon"
+                                        data-toggle="collapse" href="#ecommerce"></i></dt>
+                                    <div class="collapse wrapper" id="ecommerce">
+                                        <div class="p-2">
+                                            <dd class="ml-3">Mastermind
+                                                <a href="https://fordalex.github.io/mastermind-project/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                <a href="https://github.com/Fordalex/mastermind-project" target="_blank"><img src="https://img.icons8.com/fluent/25/000000/github.png" class="mr-2 web-icon" /></a>
+                                            </dd>
+                                        </div>
+                                    </div>
+
+                                </dl>
+                            </div>
+                            <!-- add ons -->
+                            <div class="col-12 p-0 ">
+                                <h4 class="mb-3 ">Backend<i class="fas fa-lightbulb ml-2"></i></h4>
+                            </div>
+                            <div class="col-12 px-0 px-lg-2">
+                                <dl>
+
+                                    <dt><img src="https://img.icons8.com/color/17/000000/google-sites.png"
+                                        class="mr-2" />Full
+                                    Framework<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse"
+                                        href="#myworkframework"></i></dt>
+                                    <div class="collapse wrapper" id="myworkframework">
+                                        <div class="p-2">
+                                            <dd class="ml-3">Family Organiser
+                                                <!-- <a href="https://todo-home.herokuapp.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a> -->
+                                                <a href="https://github.com/Fordalex/family_organiser" target="_blank"><img src="https://img.icons8.com/fluent/25/000000/github.png" class="mr-2 web-icon" /></a>
+                                            </dd>
+                                            <hr>
+                                            <dd class="ml-3">Shopping List
+                                                <!-- <a href="https://todo-home.herokuapp.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a> -->
+                                                <a href="https://github.com/Fordalex/Shopping-list" target="_blank"><img src="https://img.icons8.com/fluent/25/000000/github.png" class="mr-2 web-icon" /></a>
+                                            </dd>
+                                            <hr>
+                                            <dd class="ml-3">Boutique Ado
+                                                <!-- <a href="https://todo-home.herokuapp.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a> -->
+                                                <a href="https://github.com/Fordalex/boutique_ado" target="_blank"><img src="https://img.icons8.com/fluent/25/000000/github.png" class="mr-2 web-icon" /></a>
+                                            </dd>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <dt><img src="https://img.icons8.com/dotty/17/000000/services.png" class="mr-2" />Micro
+                                    Framework<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse"
+                                        href="#modules"></i></dt>
+                                    <div class="collapse wrapper mt-2" id="modules">
+                                        <div class="p-2">
+                                            <dd>Power In Numbers
+                                                <a href="http://power-in-numbers.herokuapp.com/login_page" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                <a href="https://github.com/Fordalex/power-in-numbers" target="_blank"><img src="https://img.icons8.com/fluent/25/000000/github.png" class="mr-2 web-icon" /></a>
+                                            </dd>
+                                            <hr>
+                                            <dd>Quiz Master
+                                                <a href="https://family-quiz-night.herokuapp.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                <a href="https://github.com/Fordalex/quiz-night" target="_blank"><img src="https://img.icons8.com/fluent/25/000000/github.png" class="mr-2 web-icon" /></a>
+                                            </dd>
+                                        </div>
+                                    </div>
+                                </dl>
+                            </div>
+                            <!-- How -->
+                            <!-- <div class="col-12 p-0">
+                                <h4 class="mb-3">How?<i class="fas fa-question ml-2"></i></h4>
+                            </div>
+                            <div class="col-12 px-0 px-lg-2">
+                                <dl>
+                                    <dd>Jinja and JavaScript to communicate</dd>
+                                    <hr>
+                                    <dd>Add data to a chart</dd>
+                                </dl>
+                            </div> -->
+                        </div>
+                    </div>
+
+                    <!-- More / Developed -->
+
+                    <div class="col-12 col-md-6 col-lg-4 mt-3 mt-md-0 p-0 p-md-2 ">
+                        <!-- More -->
+                        <div class="row m-0 p-1 secondary-background wobble-onload" id="programmes-section">
+                            <div class="col-12 p-0 ">
+                                <h3 class="py-3 text-center secondary-title">More<img src="https://img.icons8.com/cotton/32/000000/detective.png" id="open-all-back" class="ml-2 click-icon"></h3>
+                                <hr>
+                            </div>
+                            <!-- Creative -->
+                            <div class="col-12 p-0 ">
+                                <h4 class="mb-3 ">Creative<i class="fas fa-laptop-code ml-2"></i></h4>
+                            </div>
+                            <div class="col-12 px-0 px-lg-2">
+                                <dl>
+
+                                    <div>
+                                        <dt><img src="https://img.icons8.com/nolan/17/vector.png" class="mr-2" />SVG<i
+                                            class="far fa-plus-square ml-2 small-icon front-plus" data-toggle="collapse"
+                                            href="#svg"></i></dt>
+                                        <div class="collapse wrapper mt-2" id="svg">
+                                            <div class="p-2">
+                                                <dd>Simple SVG path demo
+                                                    <a href="https://getwaves.io/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                </dd>
+                                                <hr>
+                                                <dd>SVG path builder
+                                                    <a href="https://codepen.io/anthonydugois/pen/mewdyZ" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                </dd>
+                                                <hr>
+                                                <dd>Getwaves
+                                                    <a href="https://getwaves.io/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                </dd>
+                                                <hr>
+                                                <dd>Figma
+                                                    <a href="https://www.figma.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                </dd>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <dt><img src="https://img.icons8.com/dotty/17/000000/grid-3.png"
+                                        class="mr-2" />Wireframes<i class="far fa-plus-square ml-2 small-icon"
+                                        data-toggle="collapse" href="#wireframes"></i></dt>
+                                    <div class="collapse wrapper" id="wireframes">
+                                        <div class="p-2">
+                                            <dd>Adobe XD</dd>
+                                            <hr>
+                                            <dd>Figma</dd>
+                                            <hr>
+                                            <dd>Lucidchart
+                                                <a href="https://app.lucidchart.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                            </dd>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <dt><img src="https://img.icons8.com/dusk/17/000000/edit-image.png" class="mr-2" />Photo
+                                    Editors<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse"
+                                        href="#photoedit"></i></dt>
+                                    <div class="collapse wrapper mt-2" id="photoedit">
+                                        <div class="p-2">
+                                            <dd>Photoshop</dd>
+                                            <hr>
+                                            <dd>Gimp</dd>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <dt><img src="https://img.icons8.com/clouds/18/000000/vector.png"
+                                        class="mr-2" />Illustrations / SVG<i class="far fa-plus-square ml-2 small-icon"
+                                        data-toggle="collapse" href="#illustrationssvg"></i></dt>
+                                    <div class="collapse wrapper mt-2" id="illustrationssvg">
+                                        <div class="p-2">
+                                            <dd>Adobe Illustrator</dd>
+                                            <hr>
+                                            <dd>Figma</dd>
+                                        </div>
+                                    </div>
+                                </dl>
+                            </div>
+                            <!-- api's -->
+                            <div class="col-12 p-0 ">
+                                <h4 class="mb-3 ">API's<i class="fas fa-laptop-code ml-2"></i></h4>
+                            </div>
+                            <div class="col-12 px-0 px-lg-2">
+                                <dl>
+                                    <div>
+                                        <dt><img src="https://img.icons8.com/plasticine/17/000000/google-logo.png"
+                                            class="mr-2" />Google<i
+                                            class="far fa-plus-square ml-2 small-icon front-plus" data-toggle="collapse"
+                                            href="#googleApi"></i></dt>
+                                        <div class="collapse wrapper mt-2" id="googleApi">
+                                            <div class="p-2">
+                                                <dd>Place Autocomplete Address Form
+                                                    <a href="https://developers.google.com/maps/documentation/javascript/examples/places-autocomplete-addressform" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                </dd>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div>
+                                        <dt><img src="https://img.icons8.com/color/17/000000/chance-of-storm.png"
+                                            class="mr-2" />Weather<i
+                                            class="far fa-plus-square ml-2 small-icon front-plus" data-toggle="collapse"
+                                            href="#weatherapi"></i></dt>
+                                        <div class="collapse wrapper mt-2" id="weatherapi">
+                                            <div class="p-2">
+                                                <dd>Open Weather
+                                                    <a href="https://openweathermap.org/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                </dd>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </dl>
+                            </div>
+                            <!-- data -->
+                            <div class="col-12 p-0 ">
+                                <h4 class="mb-3 ">Data<i class="fas fa-laptop-code ml-2"></i></h4>
+                            </div>
+                            <div class="col-12 px-0 px-lg-2">
+                                <dl>
+                                    <div>
+                                        <dt><img src="https://img.icons8.com/windows/17/000000/placeholder-thumbnail-json-1.png"
+                                            class="mr-2" />Datasets<i
+                                            class="far fa-plus-square ml-2 small-icon front-plus" data-toggle="collapse"
+                                            href="#data"></i></dt>
+                                        <div class="collapse wrapper mt-2" id="data">
+                                            <div class="p-2">
+                                                <dd>kaggle
+                                                    <a href="https://www.kaggle.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                </dd>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </dl>
+                            </div>
+                            <!-- How -->
+                            <div class="col-12 p-0">
+                                <h4 class="mb-3">How?<i class="fas fa-question ml-2"></i></h4>
+                            </div>
+                            <div class="col-12 px-0 px-lg-2">
+                                <dl>
+                                    <dd>Export an SVG in illustrator</dd>
+
+                                </dl>
+                            </div>
+                        </div>
+                        <!-- developed -->
+                        <div class="row m-0 p-1 secondary-background wobble-onload mt-3" id="developed-section">
+                            <div class="col-12 p-0 ">
+                                <h3 class="py-3 text-center secondary-title">Developed<img src="https://img.icons8.com/cotton/32/000000/detective.png" id="open-all-back" class="ml-2 click-icon"></h3>
+                                <hr>
+                            </div>
+                            <!-- Hosting -->
+                            <div class="col-12 p-0 ">
+                                <h4 class="mb-3 ">Hosting<i class="fas fa-server ml-2"></i></h4>
+                            </div>
+                            <div class="col-12 px-0 px-lg-2">
+                                <dl>
+
+                                    <dt><img src="https://img.icons8.com/office/16/000000/static-views.png"
+                                        class="mr-2" />Hosting Static Projects<i
+                                        class="far fa-plus-square ml-2 small-icon" data-toggle="collapse"
+                                        href="#statichosting"></i></dt>
+                                    <div class="collapse wrapper" id="statichosting">
+                                        <div class="p-2">
+                                            <dd class="ml-3">Github
+                                                <a href="https://github.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                            </dd>
+
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <dt><img src="https://img.icons8.com/dusk/17/000000/server.png" class="mr-2" />Hosting
+                                    Dynamic Projects
+                                    <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse"
+                                        href="#dynamichosting"></i></dt>
+                                    <div class="collapse wrapper mt-2" id="dynamichosting">
+                                        <div class="p-2">
+                                            <dd class="ml-3">Heroku
+                                                <a href="https://dashboard.heroku.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                <img src="images/question-mark.png" style="width:25px;" onclick="call_modal('herokuModal', 'hku-letter', 'on')" class="float-right mr-2 click-icon">
+                                            </dd>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <dt><img src="https://img.icons8.com/dotty/17/000000/static-view-level1.png"
+                                        class="mr-2" />Hosting Static Files
+                                    <i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse"
+                                        href="#staticFilesHosting"></i></dt>
+                                    <div class="collapse wrapper mt-2" id="staticFilesHosting">
+                                        <div class="p-2">
+                                            <dd class="ml-3">Amazon Web Services
+                                                <a href="https://aws.amazon.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                <img src="images/question-mark.png" style="width:25px;" onclick="call_modal('amazonModal', 'az-letter', 'on')" class="float-right mr-2 click-icon">
+                                            </dd>
+                                        </div>
+                                    </div>
+
+                                </dl>
+                            </div>
+                            <!-- Validators -->
+                            <div class="col-12 p-0 ">
+                                <h4 class="mb-3 ">Validators<i class="fas fa-user-tie ml-2"></i></h4>
+                            </div>
+                            <div class="col-12 px-0 px-lg-2">
+                                <dl>
+
+                                    <dt><img src="https://img.icons8.com/color/15/000000/html-5.png" class="mr-2" />HTML <i
+                                        class="far fa-plus-square ml-2 small-icon front-plus" data-toggle="collapse"
+                                        href="#htmlvalidator"></i></dt>
+
+                                    <div class="collapse wrapper" id="htmlvalidator">
+                                        <div class="p-2">
+                                            <dd>Validator
+                                                <a href="https://validator.w3.org/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+
+                                            </dd>
+                                        </div>
+                                    </div>
+
+
+                                    <hr>
+                                    <dt><img src="https://img.icons8.com/color/15/000000/css3.png" class="mr-2" />CSS <i
+                                        class="far fa-plus-square ml-2 small-icon front-plus" data-toggle="collapse"
+                                        href="#css"></i></dt>
+
+                                    <div class="collapse wrapper" id="css">
+                                        <div class="p-2">
+                                            <dd>Sass
+                                                <a href="https://sass-lang.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 sassModalButton">
+                                            </dd>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <dt><img src="https://img.icons8.com/color/15/000000/javascript.png"
+                                        class="mr-2" />JavaScript (OOP)<i
+                                        class="far fa-plus-square ml-2 small-icon front-plus" data-toggle="collapse"
+                                        href="#js"></i></dt>
+                                    <div class="collapse wrapper mt-2" id="js">
+                                        <div class="p-2">
+                                            <dd>Jquery
+                                                <a href="https://jquery.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-1 web-icon" /></a>
+                                                <a href="https://cdnjs.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/download-2.png" class="ml-2 web-icon" /></a>
+                                            </dd>
+
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <dt><img src="https://img.icons8.com/color/15/000000/python.png" class="mr-2" />Python
+                                </dt>
+                                </dl>
+                            </div>
+                            <!-- More -->
+                            <div class="col-12 p-0 ">
+                                <h4 class="mb-3 ">More<i class="fas fa-user-tie ml-2"></i></h4>
+                            </div>
+                            <div class="col-12 px-0 px-lg-2">
+                                <dl>
+                                    <dt><img src="https://img.icons8.com/color/17/000000/travis-ci.png"
+                                        class="mr-2" />Testing
+                                    <i class="far fa-plus-square ml-2 small-icon front-plus" data-toggle="collapse"
+                                        href="#testing"></i></dt>
+
+                                    <div class="collapse wrapper mt-2" id="testing">
+                                        <div class="p-2">
+                                            <dd>Travis
+                                                <a href="https://travis-ci.org/getting_started" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                            </dd>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <dt><img src="https://img.icons8.com/windows/17/000000/readme.png"
+                                        class="mr-2" />Readme
+                                    <i class="far fa-plus-square ml-2 small-icon front-plus" data-toggle="collapse"
+                                        href="#readme"></i></dt>
+
+                                    <div class="collapse wrapper mt-2" id="readme">
+                                        <div class="p-2">
+                                            <dd>Readme Template
+                                                <a href="https://github.com/Code-Institute-Solutions/readme-template" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                            </dd>
+                                            <hr>
+                                            <dd>Mastering Markdown
+                                                <a href="https://guides.github.com/features/mastering-markdown/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                            </dd>
+                                        </div>
+                                    </div>
+                                </dl>
+
+                            </div>
+                            <!-- How -->
+                            <div class="col-12 p-0">
+                                <h4 class="mb-3">How?<i class="fas fa-question ml-2"></i></h4>
+                            </div>
+                            <div class="col-12 px-0 px-lg-2">
+                                <dl>
+                                    <dd>Export an SVG in illustrator</dd>
+
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ##########################################################################################################
+                    ############################################################################################################################ -->
+
+
+                <!-- Technologies modals -->
+
+                <!-- Landing page design -->
+                <!-- <div class="modal-style closed" id="">
+                    <div class="page-container">
+                        <img src="https://img.icons8.com/plasticine/50/000000/crossed-arrow.png" class="float-right arrow-button click-icon" />
+                        <h4 class="mt-2"></h4>
+                        <hr class="mt-3 dark-hr"> -->
+                <!-- content -->
+                <!-- <div class="scroll-container">
+                            <div class="row m-0 p-0">
+                                <div class="col-12 col-lg-6">
+                                    <h5>Coversion Rate</h5>
+                                    <dl>
+                                        <dt>5 Second useability test</dt>
+                                        <dd class="mb-0">What is the name of the company?</dd>
+                                        <dd class="mb-0">What does the company sell?</dd>
+                                        <dd class="mb-0">What service does the company offer?</dd>
+                                    </dl>
+                                    <h5>Visitor Types</h5>
+                                    <dl>
+                                        <dt>No's</dt>
+                                        <dd>These people will not but your product/service, because of the price or they just don't need it.</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>Maybe's</dt>
+                                        <dd>Your design will be the most important for this type of visitor.</dd>
+                                    </dl>
+                                    <dl>
+                                        <dt>Yes's</dt>
+                                        <dd>Doesn't really matter how your site is structured or designed these are people who have already made up their mind.</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+                <div class="row m-0 p-0">
+                    <div class="col-12">
+                        <h2 class="text-center my-4 text-light main-title">Education</h2>
+                    </div>
+                </div>
+
+                <div class="row m-0 p-0">
+                    <!-- Development -->
+                    <div class="col-12 col-md-6 col-lg-4 mt-3 mt-md-0 p-0 p-md-2 ">
+                        <div class="row m-0 p-1 secondary-background wobble-onload" id="development-section">
+                            <div class="col-12 p-0 ">
+                                <h3 class="py-3 text-center secondary-title">Development<img src="https://img.icons8.com/cotton/32/000000/detective.png" id="open-all-back" class="ml-2 click-icon"></h3>
+                                <hr>
+                            </div>
+                            <!-- Wireframes -->
+                            <div class="col-12 p-0 ">
+                                <h4 class="mb-3 ">Frontend/Backend<i class="fas fa-laptop-code ml-2"></i></h4>
+                            </div>
+                            <div class="col-12 px-0 px-lg-2">
+                                <dl>
+                                    <dt><img src="https://img.icons8.com/dotty/17/000000/grid-3.png" class="mr-2" />Code
+                                    Institute<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse"
+                                        href="#wireframes"></i></dt>
+                                    <div class="collapse wrapper" id="wireframes">
+                                        <div class="p-2">
+                                            <dd class="ml-3">Flask
+                                                <a href="https://flask.palletsprojects.com/en/1.1.x/quickstart/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 click-icon">
+
+                                            </dd>
+                                            <hr>
+                                            <dd>Django
+                                                <a href="https://www.djangoproject.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 djangoModalButton click-icon">
+                                            </dd>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <dt><img src="https://img.icons8.com/dusk/17/000000/edit-image.png"
+                                        class="mr-2" />Udemy<i class="far fa-plus-square ml-2 small-icon"
+                                        data-toggle="collapse" href="#photoedit"></i></dt>
+                                    <div class="collapse wrapper mt-2" id="photoedit">
+                                        <div class="p-2">
+                                            <dd>Photoshop</dd>
+                                            <hr>
+                                            <dd></dd>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <dt><img src="https://img.icons8.com/clouds/18/000000/vector.png"
+                                        class="mr-2" />Youtube<i class="far fa-plus-square ml-2 small-icon"
+                                        data-toggle="collapse" href="#illustrationssvg"></i></dt>
+                                    <div class="collapse wrapper mt-2" id="illustrationssvg">
+                                        <div class="p-2">
+                                            <dd>Adobe Illustrator</dd>
+                                            <hr>
+                                            <dd>Figma</dd>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <dt><img src="https://img.icons8.com/clouds/18/000000/vector.png"
+                                        class="mr-2" />Superhi<i class="far fa-plus-square ml-2 small-icon"
+                                        data-toggle="collapse" href="#illustrationssvg"></i></dt>
+                                    <div class="collapse wrapper mt-2" id="illustrationssvg">
+                                        <div class="p-2">
+                                            <dd>Adobe Illustrator</dd>
+                                            <hr>
+                                            <dd>Figma</dd>
+                                        </div>
+                                    </div>
+                                </dl>
+                            </div>
+                            <!-- How
+                            <div class="col-12 p-0">
+                                <h4 class="mb-3">How?<i class="fas fa-question ml-2"></i></h4>
+                            </div>
+                            <div class="col-12 px-0 px-lg-2">
+                                <dl>
+                                    <dd>Export an SVG in illustrator</dd>
+    
+                                </dl>
+                            </div> -->
+                        </div>
+                    </div>
+                    <!-- Design -->
+                    <div class="col-12 col-md-6 col-lg-4 mt-3 mt-md-0 p-0 p-md-2 ">
+                        <div class="row m-0 p-1 secondary-background wobble-onload" id="design-section">
+                            <div class="col-12 p-0 ">
+                                <h3 class="py-3 text-center secondary-title">Design<img src="https://img.icons8.com/cotton/32/000000/detective.png" id="open-all-back" class="ml-2 click-icon"></h3>
+                                <hr>
+                            </div>
+                            <!-- Wireframes -->
+                            <div class="col-12 p-0 ">
+                                <h4 class="mb-3 ">UX/UI<i class="fas fa-laptop-code ml-2"></i></h4>
+                            </div>
+                            <div class="col-12 px-0 px-lg-2">
+                                <dl>
+
+                                    <dt><img src="https://img.icons8.com/dotty/17/000000/grid-3.png" class="mr-2" />Udemy<i
+                                        class="far fa-plus-square ml-2 small-icon" data-toggle="collapse"
+                                        href="#landingpage"></i></dt>
+                                    <div class="collapse wrapper" id="landingpage">
+                                        <div class="p-2">
+                                            <dd>Landing page design.
+                                                <a href="https://www.djangoproject.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 landingModalButton click-icon">
+                                            </dd>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <dt><img src="https://img.icons8.com/dusk/17/000000/edit-image.png"
+                                        class="mr-2" />Youtube<i class="far fa-plus-square ml-2 small-icon"
+                                        data-toggle="collapse" href="#photoedit"></i></dt>
+                                    <div class="collapse wrapper mt-2" id="photoedit">
+                                        <div class="p-2">
+                                            <dd>Photoshop</dd>
+                                            <hr>
+                                            <dd></dd>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <dt><img src="https://img.icons8.com/clouds/18/000000/vector.png"
+                                        class="mr-2" />Illustrations / SVG<i class="far fa-plus-square ml-2 small-icon"
+                                        data-toggle="collapse" href="#illustrationssvg"></i></dt>
+                                    <div class="collapse wrapper mt-2" id="illustrationssvg">
+                                        <div class="p-2">
+                                            <dd>Adobe Illustrator</dd>
+                                            <hr>
+                                            <dd>Figma</dd>
+                                        </div>
+                                    </div>
+                                </dl>
+                            </div>
+                            <!-- How -->
+                            <!-- <div class="col-12 p-0">
+                                <h4 class="mb-3">How?<i class="fas fa-question ml-2"></i></h4>
+                            </div>
+                            <div class="col-12 px-0 px-lg-2">
+                                <dl>
+                                    <dd>Export an SVG in illustrator</dd>
+    
+                                </dl>
+                            </div> -->
+                        </div>
+                    </div>
+                    <!-- Programmes -->
+                    <div class="col-12 col-md-6 col-lg-4 mt-3 mt-md-0 p-0 p-md-2 ">
+                        <div class="row m-0 p-1 secondary-background wobble-onload" id="pro-section">
+                            <div class="col-12 p-0 ">
+                                <h3 class="py-3 text-center secondary-title">Programmes<img src="https://img.icons8.com/cotton/32/000000/detective.png" id="open-all-back" class="ml-2 click-icon"></h3>
+                                <hr>
+                            </div>
+                            <!-- Development -->
+                            <div class="col-12 p-0 ">
+                                <h4 class="mb-3 ">Development<i class="fas fa-laptop-code ml-2"></i></h4>
+                            </div>
+                            <div class="col-12 px-0 px-lg-2">
+                                <dl>
+
+                                    <dt><img src="https://img.icons8.com/dotty/17/000000/grid-3.png"
+                                        class="mr-2" />Wireframes<i class="far fa-plus-square ml-2 small-icon"
+                                        data-toggle="collapse" href="#wireframes"></i></dt>
+                                    <div class="collapse wrapper" id="wireframes">
+                                        <div class="p-2">
+                                            <dd class="ml-3">Flask</dd>
+                                            <hr>
+                                            <dd>Django
+                                                <a href="https://www.djangoproject.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 djangoModalButton click-icon">
+                                            </dd>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <dt><img src="https://img.icons8.com/dusk/17/000000/edit-image.png" class="mr-2" />Photo
+                                    Editors<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse"
+                                        href="#photoedit"></i></dt>
+                                    <div class="collapse wrapper mt-2" id="photoedit">
+                                        <div class="p-2">
+                                            <dd>Photoshop</dd>
+                                            <hr>
+                                            <dd></dd>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <dt><img src="https://img.icons8.com/clouds/18/000000/vector.png"
+                                        class="mr-2" />Illustrations / SVG<i class="far fa-plus-square ml-2 small-icon"
+                                        data-toggle="collapse" href="#illustrationssvg"></i></dt>
+                                    <div class="collapse wrapper mt-2" id="illustrationssvg">
+                                        <div class="p-2">
+                                            <dd>Adobe Illustrator</dd>
+                                            <hr>
+                                            <dd>Figma</dd>
+                                        </div>
+                                    </div>
+                                </dl>
+                            </div>
+                            <!-- Design -->
+                            <div class="col-12 p-0 ">
+                                <h4 class="mb-3 ">Design<i class="fas fa-laptop-code ml-2"></i></h4>
+                            </div>
+                            <div class="col-12 px-0 px-lg-2">
+                                <dl>
+
+                                    <dt><img src="https://img.icons8.com/dotty/17/000000/grid-3.png"
+                                        class="mr-2" />Wireframes<i class="far fa-plus-square ml-2 small-icon"
+                                        data-toggle="collapse" href="#wireframes"></i></dt>
+                                    <div class="collapse wrapper" id="wireframes">
+                                        <div class="p-2">
+                                            <dd class="ml-3">Flask</dd>
+                                            <hr>
+                                            <dd>Django
+                                                <a href="https://www.djangoproject.com/" target="_blank"><img src="https://img.icons8.com/color/25/000000/web.png" class="ml-2 web-icon" /></a>
+                                                <img src="images/question-mark.png" style="width:25px;" class="float-right mr-2 click-icon">
+                                            </dd>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <dt><img src="https://img.icons8.com/dusk/17/000000/edit-image.png" class="mr-2" />Photo
+                                    Editors<i class="far fa-plus-square ml-2 small-icon" data-toggle="collapse"
+                                        href="#photoedit"></i></dt>
+                                    <div class="collapse wrapper mt-2" id="photoedit">
+                                        <div class="p-2">
+                                            <dd>Photoshop</dd>
+                                            <hr>
+                                            <dd></dd>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <dt><img src="https://img.icons8.com/clouds/18/000000/vector.png"
+                                        class="mr-2" />Illustrations / SVG<i class="far fa-plus-square ml-2 small-icon"
+                                        data-toggle="collapse" href="#illustrationssvg"></i></dt>
+                                    <div class="collapse wrapper mt-2" id="illustrationssvg">
+                                        <div class="p-2">
+                                            <dd>Adobe Illustrator</dd>
+                                            <hr>
+                                            <dd>Figma</dd>
+                                        </div>
+                                    </div>
+                                </dl>
+                            </div>
+                            <!-- How -->
+                            <!-- <div class="col-12 p-0">
+                                <h4 class="mb-3">How?<i class="fas fa-question ml-2"></i></h4>
+                            </div>
+                            <div class="col-12 px-0 px-lg-2">
+                                <dl>
+                                    <dd>Export an SVG in illustrator</dd>
+    
+                                </dl>
+                            </div> -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- onload shutters -->
+        <div class="left-shutter"></div>
+        <div class="right-shutter"></div>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+        <script src="static/js/modal.js"></script>
+        <script src="static/js/javascript.js"></script>
+</body>
+
+</html>
