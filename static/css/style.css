@@ -99,6 +99,24 @@ body {
     overflow-x: hidden;
 }
 
+.background-weight {
+    background: url('../../static/media/weight_background.png') center fixed;
+    background-size: 100%;
+    overflow-x: hidden;
+}
+
+.background-electronics {
+    background: url('../../static/media/electronics_background.png') center fixed;
+    background-size: 100%;
+    overflow-x: hidden;
+}
+
+.background-printer {
+    background: url('../../static/media/3d_printer_background.png') center fixed;
+    background-size: 100%;
+    overflow-x: hidden;
+}
+
 hr {
     background-color: rgb(255, 255, 255);
     margin-top: 8px;
